@@ -9,6 +9,7 @@
     Esta é a pagina corregada com smarty
 
     <h2>{$NOME}</h2>
+    <h2>{}</h2>
 
 </body>
 </html>
