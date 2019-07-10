@@ -1,4 +1,22 @@
 <?php
+define("ENVIRONMENT", "development"); //versão para maquina local
+#define("ENVIRONMENT", "production"); //versão para hospedar
+
+
+if(ENVIRONMENT == 'development'){
+    define('BD_HOST', "localhost");
+    define('BD_USER', "root");
+    define('BD_SENHA', "");
+    define('BD_BANCO', "loja_gabymodas");
+    define('BD_PREFIX', "");
+}else{
+    define('BD_HOST', "localhost");
+    define('BD_USER', "u349811508_root");
+    define('BD_SENHA', "yi`4sy]4UKCQwzX]VJ");
+    define('BD_BANCO', "u349811508_ljgab");
+    define('BD_PREFIX', "");
+}
+
 
 class Config{
 
@@ -9,11 +27,6 @@ class Config{
     const SITE_EMAIL_ADMIN = "lojavirtualgabymodas@gmail.com.br";
     const SITE_EMAIL_SENHA = "Gabymodas$123#";
 
-    //INFORMAÇÕES DO BANCO DE DADOS
-    const BD_HOST = "localhost";
-    const BD_USER = "root";
-    const BD_SENHA = "";
-    const BD_BANCO = "loja_gabymodas";
 
     //INFORMAÇÕES PARA PHP MAILLER
     const EMAIL_HOST = "smtp.gmail.com";

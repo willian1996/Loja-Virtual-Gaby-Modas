@@ -20,9 +20,25 @@ $smarty->assign('PAG_MINHACONTA', Rotas::pag_MinhaConta());
 $smarty->assign('TITULO_SITE', Config::SITE_NOME);
 
 
-
+$dados = new Conexao();
+$sql = "SELECT * FROM categorias";
+$dados->ExcecuteSQL($sql);
+echo $dados->GetItens();
 
 
 
 
 $smarty->display('index.tpl');
+
+
+
+
+
+
+
+
+
+
+
+
+
