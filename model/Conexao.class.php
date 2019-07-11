@@ -5,7 +5,7 @@ class Conexao{
     private $user;
     private $senha;
     private $banco;
-    private $prefix;
+    protected $obj, $itens = array(), $prefix;
 
     function __construct(){
         $this->host = BD_HOST;
@@ -43,7 +43,7 @@ class Conexao{
     }
 
     public function ListarDados(){
-        return $this->obj->fetchAll(PDO::FETCH_ASSOC);
+        return $this->obj->fetch(PDO::FETCH_ASSOC);
     }
 
     public function TotalDados(){
@@ -52,7 +52,7 @@ class Conexao{
 
 
     public function GetItens(){
-        //return $this->obj->itens;
+        return $this->itens;
     }
 
 

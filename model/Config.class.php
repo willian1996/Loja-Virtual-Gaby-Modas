@@ -24,7 +24,7 @@ class Config{
     const SITE_URL = "http://localhost";
     const SITE_PASTA = "Loja-Virtual";
     const SITE_NOME = "GABY MODAS";
-    const SITE_EMAIL_ADMIN = "lojavirtualgabymodas@gmail.com.br";
+    const SITE_EMAIL_ADMIN = "contato@gabymodas.com";
     const SITE_EMAIL_SENHA = "Gabymodas$123#";
 
 

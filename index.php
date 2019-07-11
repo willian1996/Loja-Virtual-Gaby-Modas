@@ -23,7 +23,7 @@ $smarty->assign('TITULO_SITE', Config::SITE_NOME);
 $dados = new Conexao();
 $sql = "SELECT * FROM categorias";
 $dados->ExcecuteSQL($sql);
-echo $dados->GetItens();
+//echo $dados->GetItens();
 
 
 
