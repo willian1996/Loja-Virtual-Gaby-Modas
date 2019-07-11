@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 10-Jul-2019 às 13:41
+-- Generation Time: 11-Jul-2019 às 12:53
 -- Versão do servidor: 5.7.21
 -- PHP Version: 7.2.4
 
@@ -71,14 +71,15 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   `pro_ativo` char(1) NOT NULL,
   `pro_frete_gratis` varchar(100) NOT NULL DEFAULT 'Não',
   PRIMARY KEY (`pro_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `produtos`
 --
 
 INSERT INTO `produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `pro_peso`, `pro_valor`, `pro_largura`, `pro_altura`, `pro_comprimento`, `pro_img`, `pro_slug`, `pro_estoque`, `pro_modelo`, `pro_ref`, `pro_fabricante`, `pro_ativo`, `pro_frete_gratis`) VALUES
-(1, 1, 'Camisa Social', 'Esta é uma camisa social manga longa', 15.300, 80.00, 80, 80, 80, 'aaaaaa', 'camisa', 1, 'modelo01', 'ref 01', 1, '1', 'gratuito');
+(1, 2, 'Camisa Social', ' Camisa Social Manga Longa Watkins & Krown Lisa Masculina acompanha o dia a dia do homem moderno. Com um design básico e alinhado, conta com bolso no detalhe e mangas longas', 15.300, 80.00, 80, 80, 80, '44.jpg', 'camisa-polo', 1, 'modelo01', '25601', 1, '1', 'gratuito'),
+(2, 2, 'Camisa Polo', 'Clássico, moderno e cheio de atitude! A Camisa Social Watkins & Krown é a peça coringa para momentos de grandes decisões. Com caimento soltinho, exibe modelagem clássica com bolso ', 50.500, 60.00, 50, 50, 50, 'camisa.jpg', 'camisa-social', 10, 'modelo 054515', '54789', 566, '1', 'Não');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

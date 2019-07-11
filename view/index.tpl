@@ -139,6 +139,7 @@
 
             </div>
 
+        
 
 
 
@@ -148,7 +149,16 @@
 
             <!-- começa div rodape -->
             <div class="row" id="rodape">
-                <center><h4>{$TITULO_SITE}</h4><P>Copyright © 2019 - developed by <a href="https://www.instagram.com/williansales.webdev/">Willian</a></P></center>
+                <footer>
+             <ul> 
+                    <li><a href="https://www.facebook.com/gabytavares.com.br/">
+                    <img src="{$GET_TEMA}/imagens/facebook.png" width="50" height="50"></a></li>
+                    <li><a href="#"><img src="{$GET_TEMA}/imagens/instagram.png" width="50" height="50"></a></li>
+        
+                    <li><a href="#"><img src="{$GET_TEMA}/imagens/twitter.png" width="50" height="50"></a></li>
+                </ul>
+            <p>Copyright &copy; 2019 - Desenvolvido por Willian</p>
+        </footer>
 
 
             </div><!-- fim div rodape-->
