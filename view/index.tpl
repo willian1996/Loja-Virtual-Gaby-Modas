@@ -104,14 +104,14 @@
                 <div class="list-group">
                     <span class="list-group-item active"> Categorias</span>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Saias</a>
+                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Vestidos</a>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Camisas</a>
+                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Blusas</a>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Calças</a>
+                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Shorts</a>
 
 
                 </div><!--fim da list group-->

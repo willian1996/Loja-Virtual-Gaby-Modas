@@ -1,12 +1,19 @@
 <?php
 $smarty = new Template();
-$smarty->display('produtos.tpl');
 
 
 $produtos = new Produtos();
 $produtos->GetProdutos();
 
-var_dump($produtos->GetItens());
+$smarty->assign('PRO', $produtos->GetItens());
+$smarty->assign('PRO_INFO', Rotas::pag_ProdutosInfo());
+
+$smarty->display('produtos.tpl');
+
+
+
+
+
 
 
 ?>

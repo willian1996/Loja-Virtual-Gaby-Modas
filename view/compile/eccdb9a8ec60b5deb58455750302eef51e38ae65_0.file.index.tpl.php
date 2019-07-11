@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-09 20:17:58
+/* Smarty version 3.1.33, created on 2019-07-11 09:02:46
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d24f676476745_16505021',
+  'unifunc' => 'content_5d26fb36118713_20930374',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1562703255,
+      1 => 1562835763,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d24f676476745_16505021 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d26fb36118713_20930374 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -149,14 +149,14 @@ function content_5d24f676476745_16505021 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="list-group">
                     <span class="list-group-item active"> Categorias</span>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Saias</a>
+                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Vestidos</a>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Camisas</a>
+                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Blusas</a>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Calças</a>
+                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Shorts</a>
 
 
                 </div><!--fim da list group-->
