@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-11 12:29:18
+/* Smarty version 3.1.33, created on 2019-07-12 05:11:18
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d272b9e293469_73099698',
+  'unifunc' => 'content_5d281676eb2c02_24722087',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1562848010,
+      1 => 1562908276,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d272b9e293469_73099698 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d281676eb2c02_24722087 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -105,6 +105,9 @@ function content_5d272b9e293469_73099698 (Smarty_Internal_Template $_smarty_tpl)
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_HOME']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
 
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
+"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
+
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
 "><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
@@ -149,15 +152,22 @@ function content_5d272b9e293469_73099698 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="list-group">
                     <span class="list-group-item active"> Categorias</span>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Saias</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Vestidos</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
+" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Camisas</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Blusas</a>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIAS']->value, 'C');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
+?>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
+" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span><?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
+</a>
 
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Calças</a>
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Shorts</a>
-
+                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 </div><!--fim da list group-->
 
@@ -195,18 +205,18 @@ function content_5d272b9e293469_73099698 (Smarty_Internal_Template $_smarty_tpl)
             <!-- começa div rodape -->
             <div class="row" id="rodape">
                 <footer>
-             <ul> 
-                    <li><a href="https://www.facebook.com/gabytavares.com.br/">
-                    <img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+                    <ul>
+                        <li><a href="https://www.facebook.com/gabytavares.com.br/">
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/facebook.png" width="50" height="50"></a></li>
-                    <li><a href="https://www.instagram.com/dr_rodrigo_pedro/?hl=pt-br"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+                        <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/instagram.png" width="50" height="50"></a></li>
-        
-                    <li><a href="https://twitter.com/1coach23"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+
+                        <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/twitter.png" width="50" height="50"></a></li>
-                </ul>
-            <p>Copyright &copy; 2019 - Desenvolvido por Willian</p>
-        </footer>
+                    </ul>
+                    <p>Copyright &copy; 2019 - Desenvolvido por Willian</p>
+                </footer>
 
 
             </div><!-- fim div rodape-->

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-11 09:24:43
+/* Smarty version 3.1.33, created on 2019-07-12 06:55:12
   from 'C:\wamp64\www\Loja-Virtual\view\produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d27005b09af75_25653638',
+  'unifunc' => 'content_5d282ed0c502d3_48353072',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1cd9014533e77aa958d74e9e580de4f2110ccf5f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\produtos.tpl',
-      1 => 1562836989,
+      1 => 1562914509,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d27005b09af75_25653638 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d282ed0c502d3_48353072 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Lista de produtos</h3>
 <hr>
 
-
+<?php if ($_smarty_tpl->tpl_vars['PRO_TOTAL']->value < 1) {?>
+<h4 class="alert alert-danger">Nenhum produto encontrado!!</h4>
+<?php }?>
 <section id="pagincao" class="row">
    <center>
       PAGINAS
@@ -64,7 +66,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
                         <h4 class="text-center"> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
 </h4>
 
-                        <h3 class="text-center text-danger"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
+                        <h3 class="text-center text-danger">R$ <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
 </h3>
 
                     </div>

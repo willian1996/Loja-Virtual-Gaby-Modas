@@ -1,6 +1,6 @@
 <?php
 
-class Conexao{
+class Conexao extends Config{
     private $host;
     private $user;
     private $senha;
@@ -39,6 +39,15 @@ class Conexao{
 
     public function ExcecuteSQL($query, array $params = null){
         $this->obj = $this->Conectar()->prepare($query);
+        if($params){
+            if(count($params) > 0){
+                foreach($params as $key => $value){
+                    $this->obj->bindValue($key, $value);
+
+                }
+            }
+        }
+
         return $this->obj->execute();
     }
 

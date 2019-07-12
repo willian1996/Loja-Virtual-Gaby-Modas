@@ -8,13 +8,13 @@ if(ENVIRONMENT == 'development'){
     define('BD_USER', "root");
     define('BD_SENHA', "");
     define('BD_BANCO', "loja_gabymodas");
-    define('BD_PREFIX', "");
+    define('BD_PREFIX', "gm_");
 }else{
     define('BD_HOST', "localhost");
     define('BD_USER', "u349811508_root");
     define('BD_SENHA', "yi`4sy]4UKCQwzX]VJ");
     define('BD_BANCO', "u349811508_ljgab");
-    define('BD_PREFIX', "");
+    define('BD_PREFIX', "gm_");
 }
 
 
