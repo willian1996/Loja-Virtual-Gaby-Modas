@@ -13,7 +13,7 @@ class Categorias extends Conexao{
         //query para buscar pordutos de uma categoria especifica
         $query = "SELECT * FROM {$this->prefix}categorias";
 
-        $this->ExcecuteSQL($query);
+        $this->ExecuteSQL($query);
 
         $this->GetLista();
 

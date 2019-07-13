@@ -29,6 +29,7 @@ class ComposerStaticInit7ce36c572953fb251aeed1fef5aba345
         'Conexao' => __DIR__ . '/../..' . '/model/Conexao.class.php',
         'Config' => __DIR__ . '/../..' . '/model/Config.class.php',
         'Produtos' => __DIR__ . '/../..' . '/model/Produtos.class.php',
+        'ProdutosImages' => __DIR__ . '/../..' . '/model/ProdutosImages.class.php',
         'Rotas' => __DIR__ . '/../..' . '/model/Rotas.class.php',
         'Sistema' => __DIR__ . '/../..' . '/model/Sistema.class.php',
         'Template' => __DIR__ . '/../..' . '/model/Template.class.php',

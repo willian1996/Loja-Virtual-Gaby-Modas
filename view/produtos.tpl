@@ -1,4 +1,4 @@
-<h3>Lista de produtos</h3>
+
 <hr>
 
 {if $PRO_TOTAL < 1}

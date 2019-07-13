@@ -61,7 +61,7 @@
 
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav">
-                                <li><a href="{$GET_HOME}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
+                                <li><a href="{$GET_SITE_HOME}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
 
                                 <li><a href="{$PAG_PRODUTOS}"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
 
@@ -156,7 +156,7 @@
 
                         <li><a href="#"><img src="{$GET_TEMA}/imagens/twitter.png" width="50" height="50"></a></li>
                     </ul>
-                    <p>Copyright &copy; 2019 - Desenvolvido por Willian</p>
+                    <p>Copyright &copy; {$DATA} -  Willian</p>
                 </footer>
 
 

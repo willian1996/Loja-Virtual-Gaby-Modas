@@ -13,7 +13,7 @@ class Produtos extends Conexao{
         
         $query .= " ORDER BY pro_id DESC";
         
-        $this->ExcecuteSQL($query);
+        $this->ExecuteSQL($query);
         
         $this->GetLista();
         
@@ -29,7 +29,7 @@ class Produtos extends Conexao{
 
         $params = array(':id' => (int)$id);
 
-        $this->ExcecuteSQL($query, $params);
+        $this->ExecuteSQL($query, $params);
 
         $this->GetLista();
 
@@ -44,7 +44,7 @@ class Produtos extends Conexao{
 
         $params = array(':id' => (int)$id);
 
-        $this->ExcecuteSQL($query, $params);
+        $this->ExecuteSQL($query, $params);
 
         $this->GetLista();
 
@@ -59,12 +59,12 @@ class Produtos extends Conexao{
             'pro_nome' => $lista['pro_nome'],
             'pro_desc' => $lista['pro_desc'],
             'pro_peso' => $lista['pro_peso'],
-            'pro_valor' => $lista['pro_valor'],
+            'pro_valor' => Sistema::MoedaBR($lista['pro_valor']),
             'pro_altura' => $lista['pro_altura'],
             'pro_largura' => $lista['pro_largura'],
             'pro_comprimento' => $lista['pro_comprimento'],
-            'pro_img' => Rotas::ImageLink($lista['pro_img'], 180,180),
-            'pro_img_g' => Rotas::ImageLink($lista['pro_img'], 300,300),
+            'pro_img' => Rotas::ImageLink($lista['pro_img'], 180,250),
+            'pro_img_g' => Rotas::ImageLink($lista['pro_img'], 250,300),
             'pro_img_p' => Rotas::ImageLink($lista['pro_img'], 70,70),
             'pro_slug' => $lista['pro_slug'],
             'pro_ref' => $lista['pro_ref'],

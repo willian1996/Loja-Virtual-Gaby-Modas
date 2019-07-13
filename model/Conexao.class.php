@@ -6,6 +6,8 @@ class Conexao extends Config{
     private $senha;
     private $banco;
     protected $obj, $itens = array(), $prefix;
+    public $paginao_links;
+
 
     function __construct(){
         $this->host = BD_HOST;
@@ -37,7 +39,7 @@ class Conexao extends Config{
         return $link;
     }
 
-    public function ExcecuteSQL($query, array $params = null){
+    public function ExecuteSQL($query, array $params = null){
         $this->obj = $this->Conectar()->prepare($query);
         if($params){
             if(count($params) > 0){
@@ -62,6 +64,12 @@ class Conexao extends Config{
 
     public function GetItens(){
         return $this->itens;
+    }
+
+    public function PaginacaoLinks($campo, $tabela){
+        $pag = new Paginacao();
+        $pag->GetPaginacao($campo, $tabela);
+        $this->paginao_links = $pag->link;
     }
 
 

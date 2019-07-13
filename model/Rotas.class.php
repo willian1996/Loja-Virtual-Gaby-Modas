@@ -54,9 +54,11 @@ class Rotas{
                 include $pagina;
             }else{
 
-                include 'erro.php';
+                require 'erro.php';
 
             }
+        }else{
+            require 'home.php';
         }
     }
 
@@ -75,6 +77,11 @@ class Rotas{
         return $imagem;
 
     }
+
+    static function get_Pasta_Controller(){
+        return self::$pasta_controller;
+    }
+
 
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-12 05:11:18
+/* Smarty version 3.1.33, created on 2019-07-12 22:03:42
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d281676eb2c02_24722087',
+  'unifunc' => 'content_5d2903bec41316_15715101',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1562908276,
+      1 => 1562969020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d281676eb2c02_24722087 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d2903bec41316_15715101 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -102,7 +102,7 @@ function content_5d281676eb2c02_24722087 (Smarty_Internal_Template $_smarty_tpl)
 
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav">
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_HOME']->value;?>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
 
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
@@ -215,7 +215,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/twitter.png" width="50" height="50"></a></li>
                     </ul>
-                    <p>Copyright &copy; 2019 - Desenvolvido por Willian</p>
+                    <p>Copyright &copy; <?php echo $_smarty_tpl->tpl_vars['DATA']->value;?>
+ -  Willian</p>
                 </footer>
 
 
