@@ -98,9 +98,14 @@ class Conexao extends Config{
             foreach($paginas as $p):
                 $pag .= '<li><a href="?p='.$p.'">'.$p.'</a></li>';
             endforeach;
+            $pag .= '<li><a href="?p='.$this->totalpags.'"> ...'.$this->totalpags.' >></a></li>';
 
         $pag .= '</ul>';
-        return $pag;
+
+        if($this->totalpags > 1){
+            return $pag;
+        }
+
     }
 
     public function ShowPaginacao(){

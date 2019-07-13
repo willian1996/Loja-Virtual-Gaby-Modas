@@ -39,11 +39,14 @@ class Produtos extends Conexao{
     }
 
     public function GetProdutosCateID($id){
+        $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
         //query para buscar pordutos de uma categoria especifica
         $query = "SELECT * FROM {$this->prefix}produtos p
         INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = c.cate_id";
 
         $query .= " AND pro_categoria = :id";
+
+         $query .= $this->PaginacaoLinks("pro_id", $this->prefix."produtos WHERE pro_categoria =".(int)$id);
 
         $params = array(':id' => (int)$id);
 

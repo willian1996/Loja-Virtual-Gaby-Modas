@@ -4,6 +4,7 @@ class Paginacao extends Conexao{
 
     public $limite;
     public $inicio;
+    public $totalpags;
     public $link = array();
 
     public function GetPaginacao($campo, $tabela){
@@ -18,10 +19,23 @@ class Paginacao extends Conexao{
 
         $p = (int)isset($_GET['p']) ? $_GET['p'] : 1;
 
+        if($p > $paginas){
+            $p = $paginas;
+        }
+
         //TESTAR NA PRATICA
         $this->inicio = ($p * $this->limite) - $this->limite;
 
-        for($i = 1; $i <= $paginas; $i++):
+        $tolerancia = 4;
+        $mostrar = $p + $tolerancia;
+        if($mostrar > $paginas){
+            $mostrar = $paginas;
+        }
+
+        for($i = ($p - $tolerancia); $i <= $mostrar; $i++):
+            if($i < 1){
+                $i = 1;
+            }
             array_push($this->link, $i);
 
 
