@@ -1,5 +1,4 @@
 <?php
-
 class Produtos extends Conexao{
     
     public function __construct(){
@@ -13,6 +12,10 @@ class Produtos extends Conexao{
         
         $query .= " ORDER BY pro_id DESC";
         
+        $query .= $this->PaginacaoLinks("pro_id", $this->prefix."produtos");
+
+
+
         $this->ExecuteSQL($query);
         
         $this->GetLista();
@@ -80,7 +83,7 @@ class Produtos extends Conexao{
 
     
     
-    
+
     
     
     

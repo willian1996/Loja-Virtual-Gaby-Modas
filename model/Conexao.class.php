@@ -7,6 +7,10 @@ class Conexao extends Config{
     private $banco;
     protected $obj, $itens = array(), $prefix;
     public $paginao_links;
+    public $totalpags;
+    public $limite;
+    public $inicio;
+
 
 
     function __construct(){
@@ -70,6 +74,37 @@ class Conexao extends Config{
         $pag = new Paginacao();
         $pag->GetPaginacao($campo, $tabela);
         $this->paginao_links = $pag->link;
+
+        $this->totalpags = $pag->totalpags;
+        $this->limite = $pag->limite;
+        $this->inicio = $pag->inicio;
+
+        $inicio = $pag->inicio;
+        $limite = $pag->limite;
+
+        if($this->totalpags > 0){
+            return " limit {$inicio}, {$limite}";
+        }else{
+            return " ";
+        }
+
+
+    }
+
+    protected function Paginacao($paginas = array()){
+        $pag = '<ul class="pagination">';
+            $pag .= '<li><a href="?p=1"> << Inicio</a></li>';
+
+            foreach($paginas as $p):
+                $pag .= '<li><a href="?p='.$p.'">'.$p.'</a></li>';
+            endforeach;
+
+        $pag .= '</ul>';
+        return $pag;
+    }
+
+    public function ShowPaginacao(){
+        return $this->Paginacao($this->paginao_links);
     }
 
 

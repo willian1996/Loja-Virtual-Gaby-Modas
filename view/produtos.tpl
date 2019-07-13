@@ -4,11 +4,7 @@
 {if $PRO_TOTAL < 1}
 <h4 class="alert alert-danger">Nenhum produto encontrado!!</h4>
 {/if}
-<section id="pagincao" class="row">
-   <center>
-      PAGINAS
-   </center>
-</section>
+
 
 
     <!--  começa lista de produtos  ---->
@@ -57,6 +53,7 @@
      <!--  paginação inferior   -->
     <section id="pagincao" class="row">
     <center>
-    PAGINAS
+
+        {$PAGINAS}
     </center>
     </section>

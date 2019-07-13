@@ -28,6 +28,7 @@ class ComposerStaticInit7ce36c572953fb251aeed1fef5aba345
         'Categorias' => __DIR__ . '/../..' . '/model/Categorias.class.php',
         'Conexao' => __DIR__ . '/../..' . '/model/Conexao.class.php',
         'Config' => __DIR__ . '/../..' . '/model/Config.class.php',
+        'Paginacao' => __DIR__ . '/../..' . '/model/Paginacao.class.php',
         'Produtos' => __DIR__ . '/../..' . '/model/Produtos.class.php',
         'ProdutosImages' => __DIR__ . '/../..' . '/model/ProdutosImages.class.php',
         'Rotas' => __DIR__ . '/../..' . '/model/Rotas.class.php',
