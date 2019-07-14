@@ -1,1 +1,12 @@
-<h2>Esta é a página do carrinho</h2>
+<?php
+$smarty = new Template();
+
+$carrinho = new Carrinho();
+
+$smarty->assign('PRO', $carrinho->GetCarrinho());
+
+
+$smarty->display('carrinho.tpl');
+
+var_dump($carrinho->GetCarrinho());
+?>
