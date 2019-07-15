@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-13 06:44:22
+/* Smarty version 3.1.33, created on 2019-07-15 08:48:45
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d297dc6412156_31809888',
+  'unifunc' => 'content_5d2c3ded044d96_08010433',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1562977450,
+      1 => 1563180523,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d297dc6412156_31809888 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d2c3ded044d96_08010433 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -209,14 +209,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <li><a href="https://www.facebook.com/gabytavares.com.br/">
                         <img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/facebook.png" width="50" height="50"></a></li>
-                        <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+                        <li><a href="https://www.instagram.com/gaby.sallys.9"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/instagram.png" width="50" height="50"></a></li>
 
                         <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/twitter.png" width="50" height="50"></a></li>
                     </ul>
-                    <p>Copyright &copy; <?php echo $_smarty_tpl->tpl_vars['DATA']->value;?>
- -  Willian</p>
+                    <h6>Copyright &copy; 2019 - desenvolvido por Willian Sales</h6>
                 </footer>
 
 

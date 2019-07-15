@@ -11,8 +11,9 @@ $image->GetIMagesPRO(Rotas::$pag[1]);
 $smarty->assign('PRO', $produtos->GetItens());
 $smarty->assign('TEMA', Rotas::get_SiteTEMA());
 $smarty->assign('IMAGES', $image->GetItens());
+$smarty->assign('PAG_COMPRAR', Rotas::pag_CarrinhoAlterar());
 
-
+/*
 $ID = Rotas::$pag[1];
 foreach($produtos->GetItens() as $pro){
     $_SESSION['PRO'][$ID]['ID']  = $pro['pro_id'];
@@ -25,7 +26,7 @@ foreach($produtos->GetItens() as $pro){
     $_SESSION['PRO'][$ID]['LINK'] = 'sssslink';
     $ID++;
 }
-
+*/
 
 $smarty->display('produtos_info.tpl');
 

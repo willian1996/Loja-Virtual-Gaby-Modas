@@ -73,7 +73,7 @@
 
             <div class="col-md-4 text-right text-danger bg-warning">
             <h4>
-               Total : R$
+               Total : R$ {$TOTAL}
             </h4>
             </div>
 

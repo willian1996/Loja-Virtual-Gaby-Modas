@@ -1,12 +1,21 @@
 <?php
-$smarty = new Template();
+if(isset($_SESSION['PRO'])){
+    $smarty = new Template();
 
-$carrinho = new Carrinho();
+    $carrinho = new Carrinho();
 
-$smarty->assign('PRO', $carrinho->GetCarrinho());
+    $smarty->assign('PRO', $carrinho->GetCarrinho());
+    $smarty->assign('TOTAL', Sistema::MoedaBR($carrinho->GetTotal()));
 
 
-$smarty->display('carrinho.tpl');
+    $smarty->display('carrinho.tpl');
 
-var_dump($carrinho->GetCarrinho());
+
+}else{
+    echo '<h4 class="alert alert-danger"> Não possui produtos no carrinho! </h4>';
+
+    Rotas::Redirecionar(4,Rotas::pag_Produtos());
+}
+
+
 ?>

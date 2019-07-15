@@ -152,11 +152,11 @@
                     <ul>
                         <li><a href="https://www.facebook.com/gabytavares.com.br/">
                         <img src="{$GET_TEMA}/imagens/facebook.png" width="50" height="50"></a></li>
-                        <li><a href="#"><img src="{$GET_TEMA}/imagens/instagram.png" width="50" height="50"></a></li>
+                        <li><a href="https://www.instagram.com/gaby.sallys.9"><img src="{$GET_TEMA}/imagens/instagram.png" width="50" height="50"></a></li>
 
                         <li><a href="#"><img src="{$GET_TEMA}/imagens/twitter.png" width="50" height="50"></a></li>
                     </ul>
-                    <p>Copyright &copy; {$DATA} -  Willian</p>
+                    <h6>Copyright &copy; 2019 - desenvolvido por Willian Sales</h6>
                 </footer>
 
 

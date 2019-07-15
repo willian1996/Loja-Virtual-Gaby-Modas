@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-14 07:41:15
+/* Smarty version 3.1.33, created on 2019-07-15 08:46:17
   from 'C:\wamp64\www\Loja-Virtual\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2adc9b055b97_51773896',
+  'unifunc' => 'content_5d2c3d5955ba93_53035068',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '33324844194d42459632d068196736c3ce6eb6cf' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\carrinho.tpl',
-      1 => 1563090072,
+      1 => 1563180375,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d2adc9b055b97_51773896 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d2c3d5955ba93_53035068 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Meu Carrinho</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -109,7 +109,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             <div class="col-md-4 text-right text-danger bg-warning">
             <h4>
-               Total : R$
+               Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
+
             </h4>
             </div>
 
@@ -147,5 +148,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
        <br>
        <br>
        <br>
-       <br><?php }
+       <br>
+<?php }
 }
