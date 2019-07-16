@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-16 05:15:07
+/* Smarty version 3.1.33, created on 2019-07-16 08:18:46
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2d5d5b6c4300_39330206',
+  'unifunc' => 'content_5d2d88669e9109_40825499',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1563254088,
+      1 => 1563265123,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d2d5d5b6c4300_39330206 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d2d88669e9109_40825499 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -215,7 +215,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/twitter.png" width="50" height="50"></a></li>
                     </ul>
-                    <h6>Copyright &copy; 2019 - desenvolvido por Willian Sales</h6>
+                    <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel/">Willian Sales</a></h6>
                 </footer>
 
 
