@@ -29,6 +29,10 @@
         <div class="col-md-6">
             <form name="carrinho" method="post" action="{$PAG_COMPRAR}">
                 <input type="hidden" name="pro_id" value="{$P.pro_id}">
+
+<!--                adicionar um select option para P M G GG -->
+
+
                 <input type="hidden" name="acao" value="add">
             <button  class="btn btn-geral btn-lg">Comprar</button>
              </form>

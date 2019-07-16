@@ -42,6 +42,17 @@ class Rotas{
         return self::get_SiteHOME() . '/minhaconta';
     }
 
+    static function pag_PedidoConfirmar(){
+        return self::get_SiteHOME() . '/pedido_confirmar';
+    }
+
+    static function pag_PedidoFinzalizar(){
+        return self::get_SiteHOME() . '/pedido_finalizar';
+    }
+
+
+
+
     static function get_Pagina(){
         if(isset($_GET['pag'])){
 

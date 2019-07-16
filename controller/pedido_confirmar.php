@@ -7,14 +7,15 @@ if(isset($_SESSION['PRO'])){
     $smarty->assign('PRO', $carrinho->GetCarrinho());
     $smarty->assign('TOTAL', Sistema::MoedaBR($carrinho->GetTotal()));
 
-    $smarty->assign('PAG_PRODUTOS', Rotas::pag_Produtos());
-
     $smarty->assign('PAG_CARRINHO_ALTERAR', Rotas::pag_CarrinhoAlterar());
 
-    $smarty->assign('PAG_CONFIRMAR', Rotas::pag_PedidoConfirmar());
+    $smarty->assign('PAG_CARRINHO', Rotas::pag_Carrinho());
+
+    $smarty->assign('PAG_FINALIZAR', Rotas::pag_PedidoFinzalizar());
 
 
-    $smarty->display('carrinho.tpl');
+    $smarty->display('pedido_confirmar.tpl');
+
 
 
 }else{

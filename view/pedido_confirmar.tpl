@@ -1,10 +1,10 @@
-<h3>Meu Carrinho</h3>
+<h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
 <section class="row">
 
     <div class="col-md-4 ">
-        <a href="{$PAG_PRODUTOS}" class="btn btn-success" title="">Comprar mais</a>
+        <a href="{$PAG_CARRINHO}" class="btn btn-success" title="">Voltar para Carrinho</a>
     </div>
 
 
@@ -36,17 +36,7 @@
             <td> {$P.pro_nome} </td>
             <td> {$P.pro_valor} </td>
             <td> {$P.pro_qtd} </td>
-            <td> {$P.pro_subTotal}
-                <form name="carrinho_dell" method="post" action="{$PAG_CARRINHO_ALTERAR}">
-
-                    <input type="hidden" name="pro_id" value="{$P.pro_id}">
-                    <input type="hidden" name="acao" value="del">
-
-                    <button class="btn btn-danger btn-sm"> <i class="glyphicon glyphicon-trash"></i> </button>
-                </form>
-
-
-            </td>
+            <td> {$P.pro_subTotal}</td>
 <!--
             <td>
 
@@ -72,34 +62,23 @@
 
             </div>
 
-            <div class="col-md-4 text-right text-danger bg-warning">
+            <div class="col-md-12 text-right text-danger bg-warning">
             <h4>
                Total : R$ {$TOTAL}
             </h4>
             </div>
 
-            <!-- botão de limpar-->
-            <div class="col-md-4 ">
 
-                <form name="limpar" method="post" action="{$PAG_CARRINHO_ALTERAR}">
-                    <input type="hidden" name="acao" value="limpar">
-                    <input type="hidden" name="pro_id" value="1">
-
-                    <button class="btn btn-danger btn-block"> <i class="glyphicon glyphicon-trash"></i> Limpar Tudo</button>
-
-                </form>
-
-            </div>
         </section>
                     <br>
                     <hr>
 <section class="row" id="confirmarpedido">
     <div class="col-lg-12 ">
 
-        <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="{$PAG_CONFIRMAR}">
+        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
 
            <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
+           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
 
 
        </form>

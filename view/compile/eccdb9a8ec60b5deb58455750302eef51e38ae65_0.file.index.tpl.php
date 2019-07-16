@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-15 08:48:45
+/* Smarty version 3.1.33, created on 2019-07-16 05:15:07
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2c3ded044d96_08010433',
+  'unifunc' => 'content_5d2d5d5b6c4300_39330206',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1563180523,
+      1 => 1563254088,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d2c3ded044d96_08010433 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d2d5d5b6c4300_39330206 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>

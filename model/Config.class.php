@@ -26,7 +26,7 @@ class Config{
     const SITE_NOME = "GABY MODAS";
     const SITE_EMAIL_ADMIN = "contato@gabymodas.com";
     const SITE_EMAIL_SENHA = "Gabymodas$123#";
-    const DB_LIMIT_POR_PG = 6;
+    const DB_LIMIT_POR_PG = 12;
 
 
     //INFORMAÇÕES PARA PHP MAILLER

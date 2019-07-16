@@ -81,10 +81,12 @@ class Carrinho{
 
                 break;
             case 'del':
-                #code
+                $this->CarrinhoDEL($id);
+                echo '<h4 class="alert alert-success"> Produto Removido!</h4>';
                 break;
             case 'limpar':
-                #code
+                $this->CarrinhoLimpar();
+                echo '<h4 class="alert alert-success"> Produtos Removidos!</h4>';
                 break;
         }
 
@@ -94,7 +96,7 @@ class Carrinho{
         unset($_SESSION['PRO']);
     }
 
-    private function CarrinhoDEL(){
+    private function CarrinhoDEL($id){
         unset($_SESSION['PRO'][$id]);
     }
 
