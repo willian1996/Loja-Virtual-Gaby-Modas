@@ -1,26 +1,26 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-16 06:54:34
+/* Smarty version 3.1.33, created on 2019-07-17 04:58:46
   from 'C:\wamp64\www\Loja-Virtual\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2d74aaecdbd2_35964144',
+  'unifunc' => 'content_5d2eab0606eb99_32410676',
   'has_nocache_code' => false,
-  'file_dependency' =>
+  'file_dependency' => 
   array (
-    '559a64b756d6b06784de5cd49879433d73ba7f2f' =>
+    '559a64b756d6b06784de5cd49879433d73ba7f2f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\pedido_confirmar.tpl',
-      1 => 1563260071,
+      1 => 1563262777,
       2 => 'file',
     ),
   ),
-  'includes' =>
+  'includes' => 
   array (
   ),
 ),false)) {
-function content_5d2d74aaecdbd2_35964144 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d2eab0606eb99_32410676 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -130,5 +130,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
        <br>
        <br>
        <br>
-       <br><?php }
+       <br>
+<?php }
 }

@@ -9,6 +9,13 @@ if(isset($_SESSION['PRO'])){
     $smarty->assign('TOTAL', Sistema::MoedaBR($carrinho->GetTotal()));
 
     $smarty->assign('TEMA', Rotas::get_SiteTEMA());
+    
+    $pedido = new Pedidos();
+    $cliente = 1;
+    $codigo = $_SESSION['pedido'];
+    $ref = '0544551ref';
+    
+    $pedido->PedidoGravar($cliente, $codigo, $ref);
 
 
 

@@ -156,7 +156,7 @@
 
                         <li><a href="#"><img src="{$GET_TEMA}/imagens/twitter.png" width="50" height="50"></a></li>
                     </ul>
-                    <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel/">Willian Sales</a></h6>
+                    <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel">Willian Sales</a></h6>
                 </footer>
 
 

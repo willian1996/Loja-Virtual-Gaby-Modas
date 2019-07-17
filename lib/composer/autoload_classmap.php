@@ -11,6 +11,7 @@ return array(
     'Conexao' => $baseDir . '/model/Conexao.class.php',
     'Config' => $baseDir . '/model/Config.class.php',
     'Paginacao' => $baseDir . '/model/Paginacao.class.php',
+    'Pedidos' => $baseDir . '/model/Pedidos.class.php',
     'Produtos' => $baseDir . '/model/Produtos.class.php',
     'ProdutosImages' => $baseDir . '/model/ProdutosImages.class.php',
     'Rotas' => $baseDir . '/model/Rotas.class.php',

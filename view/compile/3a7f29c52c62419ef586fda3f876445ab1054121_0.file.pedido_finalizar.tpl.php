@@ -1,34 +1,40 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-16 07:38:16
+/* Smarty version 3.1.33, created on 2019-07-17 05:09:46
   from 'C:\wamp64\www\Loja-Virtual\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2d7ee85b8f69_94567728',
+  'unifunc' => 'content_5d2ead9a55d353_69413446',
   'has_nocache_code' => false,
-  'file_dependency' =>
+  'file_dependency' => 
   array (
-    '3a7f29c52c62419ef586fda3f876445ab1054121' =>
+    '3a7f29c52c62419ef586fda3f876445ab1054121' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\pedido_finalizar.tpl',
-      1 => 1563262678,
+      1 => 1563340179,
       2 => 'file',
     ),
   ),
-  'includes' =>
+  'includes' => 
   array (
   ),
 ),false)) {
-function content_5d2d7ee85b8f69_94567728 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d2ead9a55d353_69413446 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Finalizar Pedido</h3>
 <hr>
 
 
 <!--  table listagem de itens -->
 <section class="row ">
+    
+    
 
     <center>
+        <div class="alert alert-success">
+        Pedido Finalizado com Sucesso
+    
+    </div>
     <table class="table table-bordered" style="width: 95%">
 
 
@@ -101,9 +107,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 <section class="row">
             <h3 class="text-center"> Formas de pagamento </h3>
-            <div class="col-md-2">
-
-            </div>
+            
 
             <!-- botao de pagamento  -->
             <div class="col-md-4">
@@ -111,8 +115,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 
-                <img src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
-/imagens/pagamento_na_entrega.png"  alt="">
+                
 
 
 <!--                   <?php echo '<script'; ?>
@@ -128,7 +131,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-4">
 
             </div>
 
@@ -141,5 +144,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
        <br>
        <br>
        <br>
-       <br><?php }
+       <br>
+<?php }
 }

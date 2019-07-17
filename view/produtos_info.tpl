@@ -34,7 +34,7 @@
 
 
                 <input type="hidden" name="acao" value="add">
-            <button  class="btn btn-geral btn-lg">Comprar</button>
+            <button  class="btn btn-success btn-lg">Comprar</button>
              </form>
 
         </div>

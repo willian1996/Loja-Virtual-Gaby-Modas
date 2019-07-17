@@ -4,8 +4,14 @@
 
 <!--  table listagem de itens -->
 <section class="row ">
+    
+    
 
     <center>
+        <div class="alert alert-success">
+        Pedido Finalizado com Sucesso
+    
+    </div>
     <table class="table table-bordered" style="width: 95%">
 
 
@@ -64,9 +70,7 @@
 
 <section class="row">
             <h3 class="text-center"> Formas de pagamento </h3>
-            <div class="col-md-2">
-
-            </div>
+            
 
             <!-- botao de pagamento  -->
             <div class="col-md-4">
@@ -74,7 +78,7 @@
 
 
 
-                <img src="{$TEMA}/imagens/pagamento_na_entrega.png"  alt="">
+                
 
 
 <!--                   <script type="text/javascript" src="{$PS_SCRIPT}"></script>-->
@@ -86,7 +90,7 @@
 
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-4">
 
             </div>
 
