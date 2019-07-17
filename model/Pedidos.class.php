@@ -42,19 +42,24 @@ class Pedidos extends Conexao{
         foreach($carrinho->GetCarrinho() as $item){
             
             $query  = "INSERT INTO ".$this->prefix."pedidos_itens ";
-            $query .= "(item_produto, item_valor, item_qtd, item_ped_cod)";
-            $query .= "VALUES  (:produto,:valor,:qtd,:cod)";
+            $query .= "(item_produto, item_valor, item_qtd, item_ped_cod) ";
+            $query .= "VALUES (:produto, :valor, :qtd, :cod)";
 
             $params = array(
                 ':produto' => $item['pro_id'],
                 ':valor'   => $item['pro_valor_us'],
                 ':qtd'     => (int)$item['pro_qtd'],
-                ':cod'     =>  $codpedido  
+                ':cod'     =>  $codPedido  
             );
             
             $this->ExecuteSQL($query, $params);
             echo $query;
         }
+    }
+    
+    public function LimparSessoes(){
+        unset($_SESSION['PRO']);
+        unset($_SESSION['pedido']);
     }
     
     

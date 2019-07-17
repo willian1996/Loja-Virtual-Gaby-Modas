@@ -14,20 +14,26 @@ if(isset($_SESSION['PRO'])){
     $cliente = 1;
     $codigo = $_SESSION['pedido'];
     $ref = '0544551ref';
+    $freteValor = 22.90;
+    $freteTipo = "pac";
     
-    $pedido->PedidoGravar($cliente, $codigo, $ref);
+    
+    
+    if($pedido->PedidoGravar($cliente, $codigo, $ref, $freteValor, $freteTipo)){
+        $pedido->LimparSessoes();
+    }
 
-
+    
 
     $smarty->display('pedido_finalizar.tpl');
-
+    
 
 
 }else{
     echo '<h4 class="alert alert-danger"> Seu carrinho está vazio!</h4>
 <h4 class="alert alert-danger">Adicione produtos clicando no botão “Comprar” na página de produto.</h4> ';
 
-    Rotas::Redirecionar(5,Rotas::pag_Produtos());
+    Rotas::Redirecionar(1,Rotas::pag_Produtos());
 }
 
 

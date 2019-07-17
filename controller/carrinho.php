@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_SESSION['PRO'])){
     $smarty = new Template();
 

@@ -4,7 +4,7 @@ if(!isset($_SESSION)){
 }
 
 if(!isset($_SESSION['pedido'])){
-    $_SESSION['pedido'] = '1234';
+    $_SESSION['pedido'] = md5(uniqid(date('YmdHms')));
 }
 
 

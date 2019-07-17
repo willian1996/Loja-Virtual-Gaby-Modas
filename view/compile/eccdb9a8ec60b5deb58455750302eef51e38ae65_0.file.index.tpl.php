@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-17 05:27:53
+/* Smarty version 3.1.33, created on 2019-07-17 14:56:28
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2eb1d9aac851_46592903',
+  'unifunc' => 'content_5d2f371c8748c7_99318792',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1563341265,
+      1 => 1563375386,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d2eb1d9aac851_46592903 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d2f371c8748c7_99318792 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -213,7 +213,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 /imagens/instagram.png" width="50" height="50"></a></li>
 
                         <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/imagens/twitter.png" width="50" height="50"></a></li>
+/imagens/whatsapp.png" width="50" height="50"></a></li>
                     </ul>
                     <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel">Willian Sales</a></h6>
                 </footer>
