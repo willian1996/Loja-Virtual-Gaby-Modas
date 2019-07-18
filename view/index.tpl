@@ -33,13 +33,21 @@
 
 
                 <div class="container">
-                <img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt="">
-
+                    <div id="logotipo" class="col-md-6" >
+                        <img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt="">
+                    </div>
+                    <div id="botaosair" class="col-md-6 text-right">
+                         {if $LOGADO == true}
+                          Olá: {$USER} <a href="{$PAG_LOGOFF}" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-log-out"></i> Sair </a> 
+                         {/if}
+                        
+                    </div>
                 </div>
+                
 
             </div><!-- fim da div topo -->
 
-            <!-- começa a barra MENU-->
+           <!-- começa a barra MENU-->
             <div class="row" id="barra-menu">
 
                 <!--começa navBAR-->
@@ -62,16 +70,10 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav">
                                 <li><a href="{$GET_SITE_HOME}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-
                                 <li><a href="{$PAG_PRODUTOS}"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
-
                                 <li><a href="{$PAG_MINHACONTA}"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="{$PAG_CARRINHO}"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
                                 <li><a href="{$PAG_CONTATO}" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
-
-
-
-
                             </ul>
 
 
@@ -94,7 +96,6 @@
 
 
             </div> <!-- fim barra menu-->
-
             <!-- começa DIV conteudo-->
             <div class="row" id="conteudo">
 
@@ -156,7 +157,7 @@
 
                         <li><a href="#"><img src="{$GET_TEMA}/imagens/whatsapp.png" width="50" height="50"></a></li>
                     </ul>
-                    <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel">Willian Sales</a></h6>
+                    <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel">Willian</a></h6>
                 </footer>
 
 
@@ -165,6 +166,7 @@
 
 
            </div> <!-- fim do container geral -->
+
 
 
 

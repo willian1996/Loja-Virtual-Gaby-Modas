@@ -62,28 +62,29 @@
 
             </div>
 
-            <div class="col-md-12 text-right text-danger bg-warning">
+            <div class="col-md-4 text-right text-danger bg-warning">
             <h4>
                Total : R$ {$TOTAL}
             </h4>
             </div>
+            <div class="col-md-4 ">
+
+        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
+
+           <!-- botão finalzar -->
+           <button class="btn btn-success btn-block btn-md" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+
+
+       </form>
+
+   </div>
 
 
         </section>
                     <br>
                     <hr>
 <section class="row" id="confirmarpedido">
-    <div class="col-lg-12 ">
-
-        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
-
-           <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
-
-
-       </form>
-
-   </div>
+    
 
 
 

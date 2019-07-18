@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-17 04:58:46
+/* Smarty version 3.1.33, created on 2019-07-18 07:53:22
   from 'C:\wamp64\www\Loja-Virtual\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2eab0606eb99_32410676',
+  'unifunc' => 'content_5d3025722fd4e6_04467631',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '559a64b756d6b06784de5cd49879433d73ba7f2f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\pedido_confirmar.tpl',
-      1 => 1563262777,
+      1 => 1563436399,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d2eab0606eb99_32410676 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3025722fd4e6_04467631 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -99,30 +99,31 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </div>
 
-            <div class="col-md-12 text-right text-danger bg-warning">
+            <div class="col-md-4 text-right text-danger bg-warning">
             <h4>
                Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 
             </h4>
             </div>
+            <div class="col-md-4 ">
+
+        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_FINALIZAR']->value;?>
+">
+
+           <!-- botão finalzar -->
+           <button class="btn btn-success btn-block btn-md" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+
+
+       </form>
+
+   </div>
 
 
         </section>
                     <br>
                     <hr>
 <section class="row" id="confirmarpedido">
-    <div class="col-lg-12 ">
-
-        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_FINALIZAR']->value;?>
-">
-
-           <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
-
-
-       </form>
-
-   </div>
+    
 
 
 

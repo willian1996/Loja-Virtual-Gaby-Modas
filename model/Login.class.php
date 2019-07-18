@@ -48,17 +48,64 @@ class Login extends Conexao{
             $_SESSION['CLI']['cli_data_cad']  =  $lista['cli_data_cad'];
             $_SESSION['CLI']['cli_pass']      =  $lista['cli_pass']; 
 
-            echo "Login efetuado";
+            
         }else{
-            echo "Login não efetuado";
+            
         }
+        
+    }
+    
+    static function AcessoNegado(){
+        Rotas::Redirecionar(1, Rotas::pag_ClienteLogin());
         
     }
     
     static function Logado(){
         if(isset($_SESSION['CLI']['cli_email']) && isset($_SESSION['CLI']['cli_id'])){
-            
+            return true;
+        }else{
+            return false;
         }
+    }
+    
+    static function Logoff(){
+        unset($_SESSION['CLI']);
+        echo '<h4 class="alert alert-success"> Saindo...</h4>';
+        Rotas::Redirecionar(1, Rotas::get_SiteHOME());
+    }
+    
+    //FUNÇÃO PARA MOSTRAR MENU DO CLIENTE 
+    
+    static function MenuCliente(){
+        
+     // verifo se não esta logado 
+            if(!self::Logado()):
+
+                self::AcessoNegado();
+                Rotas::Redirecionar(0, Rotas::pag_ClienteLogin());
+                              
+                // caso nao redirecione  saiu  do bloco
+                exit();
+                            
+            // caso esteja mostra a tela minha conta 
+            else:
+                
+        $smarty = new Template();
+        
+        $smarty->assign('PAG_CONTA', Rotas::pag_ClienteConta());
+        $smarty->assign('PAG_CARRINHO', Rotas::pag_Carrinho());
+        $smarty->assign('PAG_LOGOFF', Rotas::pag_Logoff());
+        /*
+        $smarty->assign('PAG_CLIENTE_PEDIDOS', Rotas::pag_CLientePedidos());
+        $smarty->assign('PAG_CLIENTE_DADOS', Rotas::pag_CLienteDados());
+        $smarty->assign('PAG_CLIENTE_SENHA', Rotas::pag_CLienteSenha());
+        */
+        $smarty->assign('USER', $_SESSION['CLI']['cli_nome']);
+        
+        
+        $smarty->display('menu_cliente.tpl');
+        
+              endif;
     }
     
     private function setUser($user){
@@ -76,6 +123,8 @@ class Login extends Conexao{
     private function getSenha(){
         return $this->senha;
     }
+    
+    
     
     
     

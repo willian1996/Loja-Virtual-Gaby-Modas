@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-17 14:56:28
+/* Smarty version 3.1.33, created on 2019-07-18 07:15:07
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2f371c8748c7_99318792',
+  'unifunc' => 'content_5d301c7b3fa2d8_80180671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1563375386,
+      1 => 1563434097,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d2f371c8748c7_99318792 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d301c7b3fa2d8_80180671 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -73,14 +73,24 @@ function content_5d2f371c8748c7_99318792 (Smarty_Internal_Template $_smarty_tpl)
 
 
                 <div class="container">
-                <img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+                    <div id="logotipo" class="col-md-6" >
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/logo-gaby.jpg" alt="">
-
+                    </div>
+                    <div id="botaosair" class="col-md-6 text-right">
+                         <?php if ($_smarty_tpl->tpl_vars['LOGADO']->value == true) {?>
+                          Olá: <?php echo $_smarty_tpl->tpl_vars['USER']->value;?>
+ <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_LOGOFF']->value;?>
+" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-log-out"></i> Sair </a> 
+                         <?php }?>
+                        
+                    </div>
                 </div>
+                
 
             </div><!-- fim da div topo -->
 
-            <!-- começa a barra MENU-->
+           <!-- começa a barra MENU-->
             <div class="row" id="barra-menu">
 
                 <!--começa navBAR-->
@@ -104,20 +114,14 @@ function content_5d2f371c8748c7_99318792 (Smarty_Internal_Template $_smarty_tpl)
                             <ul class="nav navbar-nav">
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
 "><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
-
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
 "><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
 "><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CONTATO']->value;?>
 " ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
-
-
-
-
                             </ul>
 
 
@@ -140,7 +144,6 @@ function content_5d2f371c8748c7_99318792 (Smarty_Internal_Template $_smarty_tpl)
 
 
             </div> <!-- fim barra menu-->
-
             <!-- começa DIV conteudo-->
             <div class="row" id="conteudo">
 
@@ -215,7 +218,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/whatsapp.png" width="50" height="50"></a></li>
                     </ul>
-                    <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel">Willian Sales</a></h6>
+                    <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel">Willian</a></h6>
                 </footer>
 
 
@@ -224,6 +227,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
            </div> <!-- fim do container geral -->
+
 
 
 

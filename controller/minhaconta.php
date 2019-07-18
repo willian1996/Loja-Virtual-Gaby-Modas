@@ -1,1 +1,7 @@
-<h2>Página de minha conta</h2>
+<?php
+
+$smarty = new Template();
+
+Login::MenuCliente();
+
+$smarty->display('minha_conta.tpl');

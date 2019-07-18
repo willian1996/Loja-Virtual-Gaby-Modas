@@ -21,6 +21,14 @@ class Rotas{
     static function pag_Carrinho(){
         return self::get_SiteHOME() . '/carrinho';
     }
+    
+    static function pag_Logoff(){
+        return self::get_SiteHOME() . '/logoff';
+    }
+    
+    static function pag_ClienteLogin(){
+        return self::get_SiteHOME() . '/login';
+    }
 
     static function pag_CarrinhoAlterar(){
         return self::get_SiteHOME() . '/carrinho_alterar';
@@ -41,6 +49,12 @@ class Rotas{
     static function pag_MinhaConta(){
         return self::get_SiteHOME() . '/minhaconta';
     }
+    
+    static function pag_ClienteConta(){
+        return self::get_SiteHOME() . '/minhaconta';
+    }
+    
+   
 
     static function pag_PedidoConfirmar(){
         return self::get_SiteHOME() . '/pedido_confirmar';

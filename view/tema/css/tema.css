@@ -7,6 +7,21 @@ background-color: #F60C89;
 color: #fff;
 
 }
+#botaosair{
+    margin-top: 17px;
+}
+@media only screen and (max-width: 990px) {
+    #logotipo {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+    }
+    #botaosair{
+        
+        display: none;
+    }
+}
+
 .row {
     margin-right: 0px !important;
 }
@@ -82,6 +97,19 @@ a.list-group-item{
 
 }
 
+section.minhaconta{
+    padding-top: 20px;
+    min-height: 300px;
+}
+section#fazerlogin{
+    padding-top: 20px;
+    min-height: 400px;
+}
+
+#minhaconta div a{
+    margin-bottom: 5px;
+}
+
 
 /*footer*/
 
@@ -119,6 +147,9 @@ footer ul{
     list-style-type:none;
     padding: 0;
     
+}
+footer a{
+    color: #000;
 }
 
 

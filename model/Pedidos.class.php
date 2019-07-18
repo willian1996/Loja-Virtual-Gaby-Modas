@@ -7,7 +7,7 @@ class Pedidos extends Conexao{
     }
     
     public function PedidoGravar($cliente, $cod, $ref, $freteValor=null, $freteTipo=null){
-        
+         
         $retorno = FALSE;
         
         $query  = "INSERT INTO ".$this->prefix."pedidos ";   
@@ -27,13 +27,18 @@ class Pedidos extends Conexao{
         
     
         $this->ExecuteSQL($query, $params);
-        echo $query;
+        
         
         //GRAVAR OS ITENS DO PEDIDO
         $this->ItensGravar($cod);
         
         $retorno = TRUE;
         return $retorno;
+    }
+    
+    public function GetPedidosCliente($cliente =null){
+        $query = "";
+        
     }
     
     public function ItensGravar($codPedido){
@@ -53,7 +58,7 @@ class Pedidos extends Conexao{
             );
             
             $this->ExecuteSQL($query, $params);
-            echo $query;
+            
         }
     }
     
