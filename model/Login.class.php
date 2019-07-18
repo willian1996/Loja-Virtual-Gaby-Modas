@@ -95,8 +95,9 @@ class Login extends Conexao{
         $smarty->assign('PAG_CONTA', Rotas::pag_ClienteConta());
         $smarty->assign('PAG_CARRINHO', Rotas::pag_Carrinho());
         $smarty->assign('PAG_LOGOFF', Rotas::pag_Logoff());
-        /*
+
         $smarty->assign('PAG_CLIENTE_PEDIDOS', Rotas::pag_CLientePedidos());
+        /*
         $smarty->assign('PAG_CLIENTE_DADOS', Rotas::pag_CLienteDados());
         $smarty->assign('PAG_CLIENTE_SENHA', Rotas::pag_CLienteSenha());
         */

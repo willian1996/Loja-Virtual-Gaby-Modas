@@ -22,6 +22,16 @@ class Rotas{
         return self::get_SiteHOME() . '/carrinho';
     }
     
+    static function pag_CLientePedidos(){
+        return self::get_SiteHOME() . '/clientes_pedidos';
+    }
+
+    static function pag_ClienteItens(){
+        return self::get_SiteHOME() . '/cliente_itens';
+    }
+
+
+
     static function pag_Logoff(){
         return self::get_SiteHOME() . '/logoff';
     }
