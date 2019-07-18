@@ -10,8 +10,7 @@
             <td>Data</td>
             <td>Hora</td>
             <td>Ref</td>
-
-<!--            <td>Status</td>-->
+            <td>Status</td>
             <td></td>
         </tr>
 
@@ -22,7 +21,6 @@
             <td style="width: 10%">{$P.ped_hora}</td>
             <td style="width: 10%">{$P.ped_ref}</td>
 
-<!--
 
             {if $P.ped_pag_status == 'NAO'}
              <td style="width: 15%"><span class="label label-danger">{$P.ped_pag_status}</span></td>
@@ -32,7 +30,6 @@
               <td style="width: 15%">{$P.ped_pag_status}</td>
             {/if}
 
--->
         <form name="itens" method="post" action="{$PAG_ITENS}">
 
              <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">

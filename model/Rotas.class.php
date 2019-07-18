@@ -26,11 +26,25 @@ class Rotas{
         return self::get_SiteHOME() . '/clientes_pedidos';
     }
 
+    static function pag_ClienteCadastro(){
+        return self::get_SiteHOME() . '/cadastro';
+    }
+
+    static function pag_CLienteDados(){
+        return self::get_SiteHOME() . '/cadastro';
+    }
+
+    static function pag_CLienteSenha(){
+        return self::get_SiteHOME() . '/cadastro';
+    }
+
+    static function pag_ClienteRecovery(){
+        return self::get_SiteHOME() . '/clientes_recovery';
+    }
+
     static function pag_ClienteItens(){
         return self::get_SiteHOME() . '/cliente_itens';
     }
-
-
 
     static function pag_Logoff(){
         return self::get_SiteHOME() . '/logoff';

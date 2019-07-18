@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-18 15:01:39
+/* Smarty version 3.1.33, created on 2019-07-18 22:18:27
   from 'C:\wamp64\www\Loja-Virtual\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3089d3e817d7_82977426',
+  'unifunc' => 'content_5d30f0331e3013_24632058',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '768417b6169df2343d3b1bdbec284070de7e4999' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\clientes_pedidos.tpl',
-      1 => 1563462097,
+      1 => 1563488304,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3089d3e817d7_82977426 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d30f0331e3013_24632058 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br><br>
 <section class="row" id="pedidos">
 
@@ -33,8 +33,7 @@ function content_5d3089d3e817d7_82977426 (Smarty_Internal_Template $_smarty_tpl)
             <td>Data</td>
             <td>Hora</td>
             <td>Ref</td>
-
-<!--            <td>Status</td>-->
+            <td>Status</td>
             <td></td>
         </tr>
 
@@ -52,7 +51,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
             <td style="width: 10%"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_ref'];?>
 </td>
 
-<!--
 
             <?php if ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'NAO') {?>
              <td style="width: 15%"><span class="label label-danger"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_pag_status'];?>
@@ -65,7 +63,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 </td>
             <?php }?>
 
--->
         <form name="itens" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_ITENS']->value;?>
 ">
 
@@ -86,5 +83,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 </section>
-      <?php }
+<?php }
 }

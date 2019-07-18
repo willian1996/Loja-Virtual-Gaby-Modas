@@ -49,6 +49,7 @@ class Login extends Conexao{
             $_SESSION['CLI']['cli_pass']      =  $lista['cli_pass']; 
 
             
+
         }else{
             
         }
@@ -97,10 +98,10 @@ class Login extends Conexao{
         $smarty->assign('PAG_LOGOFF', Rotas::pag_Logoff());
 
         $smarty->assign('PAG_CLIENTE_PEDIDOS', Rotas::pag_CLientePedidos());
-        /*
+
         $smarty->assign('PAG_CLIENTE_DADOS', Rotas::pag_CLienteDados());
         $smarty->assign('PAG_CLIENTE_SENHA', Rotas::pag_CLienteSenha());
-        */
+
         $smarty->assign('USER', $_SESSION['CLI']['cli_nome']);
         
         

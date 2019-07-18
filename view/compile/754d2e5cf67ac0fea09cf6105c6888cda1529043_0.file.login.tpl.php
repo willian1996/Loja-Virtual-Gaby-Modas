@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-18 08:05:24
+/* Smarty version 3.1.33, created on 2019-07-18 22:48:35
   from 'C:\wamp64\www\Loja-Virtual\view\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3028443bbd41_86233513',
+  'unifunc' => 'content_5d30f743f2d6d5_87257805',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '754d2e5cf67ac0fea09cf6105c6888cda1529043' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\login.tpl',
-      1 => 1563437122,
+      1 => 1563489782,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3028443bbd41_86233513 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d30f743f2d6d5_87257805 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <section class="row" id="fazerlogin">
         
@@ -61,10 +61,13 @@ function content_5d3028443bbd41_86233513 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="form-group"> 
 
-                    <a href="" class="btn btn-default "><i class="glyphicon glyphicon-pencil"></i> Me Cadastrar</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CADASTRO']->value;?>
+" class="btn btn-default "><i class="glyphicon glyphicon-pencil"></i> Me Cadastrar</a>
 
 
-                    <a href="" class="btn btn-default "><i class="glyphicon glyphicon-question-sign"></i> Esqueci a Senha</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_RECOVERY']->value;?>
+" class="btn btn-default "><i class="glyphicon glyphicon-question-sign"></i> Esqueci a Senha</a>
+
 
 
 
