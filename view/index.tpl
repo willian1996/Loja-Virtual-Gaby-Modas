@@ -7,10 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="{$GET_TEMA}/tema/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <script src="{$GET_TEMA}/tema/js/jquery-2.2.1.min.js" type="text/javascript"></script>
-        <script src="{$GET_TEMA}/tema/js/bootstrap.min.js" type="text/javascript"></script>
 
-        <script src="{$GET_TEMA}/tema/contatos/contatos.js" type="text/javascript"></script>
         <!-- meu aquivo pessoal de CSS-->
         <link href="{$GET_TEMA}/tema/css/tema.css" rel="stylesheet" type="text/css"/>
 
@@ -169,7 +166,10 @@
 
 
 
-
-
+<!--        Arquivos JavaScript    -->
+        <script src="{$GET_TEMA}/tema/js/jquery-2.2.1.min.js" type="text/javascript"></script>
+        <script src="{$GET_TEMA}/tema/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="{$GET_TEMA}/tema/js/script-cep.js" type="text/javascript"></script>
+        <script src="{$GET_TEMA}/tema/contatos/contatos.js" type="text/javascript"></script>
     </body>
 </html>

@@ -16,6 +16,11 @@ class Carrinho{
 
             $this->total_valor += $sub;
 
+            $peso = $lista['PESO'] * $lista['QTD'];
+            $this->total_peso += $peso;
+
+
+
             $this->itens[$i] = array(
                 'pro_id' => $lista['ID'],
                 'pro_nome' => $lista['NOME'],

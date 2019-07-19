@@ -14,8 +14,13 @@ if(isset($_SESSION['PRO'])){
 
     $smarty->assign('PAG_CONFIRMAR', Rotas::pag_PedidoConfirmar());
 
+    $smarty->assign('PESO', $carrinho->GetPeso());
+
+    echo $carrinho->GetPeso();
 
     $smarty->display('carrinho.tpl');
+
+
 
 
 }else{

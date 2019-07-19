@@ -55,38 +55,51 @@
 
 </section><!-- fim da listagem itens -->
 
-        <!-- botoes de baixo e valor total -->
-        <section class="row" id="total">
+<!-- botoes de baixo e valor total -->
+<section class="row" id="total">
 
-            <div class="col-md-4 text-right">
+    <div class="col-md-4 text-right">
 
-            </div>
+    </div>
 
-            <div class="col-md-4 text-right text-danger bg-warning">
-            <h4>
-               Total : R$ {$TOTAL}
-            </h4>
-            </div>
-            <div class="col-md-4 ">
+    <div class="col-md-4 text-right">
+
+    </div>
+
+    <div class="col-md-4 text-right text-danger bg-warning">
+        <h4>
+           Total : R$ {$TOTAL}
+        </h4>
+        <h4>
+           Frete : R$ {$FRETE}
+        </h4>
+        <hr>
+        <h4>
+           Total com Frete : R$ {$TOTAL_FRETE}
+        </h4>
+    </div>
+
+
+
+</section>
+            <br>
+            <hr>
+<section class="row" id="confirmarpedido">
+    <div class="col-md-4 ">
+    </div>
+    <div class="col-md-4 ">
 
         <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
 
            <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-md" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
 
 
        </form>
 
    </div>
-
-
-        </section>
-                    <br>
-                    <hr>
-<section class="row" id="confirmarpedido">
-    
-
-
+    <div class="col-md-4 ">
+    </div>
 
 </section>
        <br>

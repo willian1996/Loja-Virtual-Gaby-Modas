@@ -31,11 +31,11 @@ class Rotas{
     }
 
     static function pag_CLienteDados(){
-        return self::get_SiteHOME() . '/cadastro';
+        return self::get_SiteHOME() . '/clientes_dados';
     }
 
     static function pag_CLienteSenha(){
-        return self::get_SiteHOME() . '/cadastro';
+        return self::get_SiteHOME() . '/clientes_senha';
     }
 
     static function pag_ClienteRecovery(){

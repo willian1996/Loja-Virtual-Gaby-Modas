@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-18 07:15:07
+/* Smarty version 3.1.33, created on 2019-07-19 16:48:51
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d301c7b3fa2d8_80180671',
+  'unifunc' => 'content_5d31f4738b4241_56118615',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1563434097,
+      1 => 1563554929,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d301c7b3fa2d8_80180671 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d31f4738b4241_56118615 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -32,19 +32,7 @@ function content_5d301c7b3fa2d8_80180671 (Smarty_Internal_Template $_smarty_tpl)
 
         <link href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /tema/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/tema/js/jquery-2.2.1.min.js" type="text/javascript"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/tema/js/bootstrap.min.js" type="text/javascript"><?php echo '</script'; ?>
->
 
-        <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/tema/contatos/contatos.js" type="text/javascript"><?php echo '</script'; ?>
->
         <!-- meu aquivo pessoal de CSS-->
         <link href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /tema/css/tema.css" rel="stylesheet" type="text/css"/>
@@ -230,8 +218,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 
-
-
+<!--        Arquivos JavaScript    -->
+        <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/js/jquery-2.2.1.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/js/bootstrap.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/js/script-cep.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/contatos/contatos.js" type="text/javascript"><?php echo '</script'; ?>
+>
     </body>
 </html>
 <?php }
