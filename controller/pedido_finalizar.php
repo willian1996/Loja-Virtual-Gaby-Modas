@@ -7,6 +7,11 @@ if(!Login::Logado()){
     
     if(isset($_SESSION['PRO'])){
 
+        if(!isset($_SESSION['PED']['frete'])){
+        Rotas::Redirecionar(2, Rotas::pag_Carrinho().'#dadosfrete');
+        exit('<h4 class="alert alert-danger"> Selecione o frete </h4>');
+        }
+
 
         $smarty = new Template();
 
@@ -28,16 +33,19 @@ if(!Login::Logado()){
 
         $smarty->assign('TEMA', Rotas::get_SiteTEMA());
 
+        $smarty->assign('FRETE', Sistema::MoedaBR($_SESSION['PED']['frete']));
+
+        $smarty->assign('TOTAL_FRETE', Sistema::MoedaBR($_SESSION['PED']['total_com_frete']));
+
         $pedido = new Pedidos();
         $cliente = 1;
         $codigo = $_SESSION['PED']['pedido'];
         $ref = $_SESSION['PED']['ref'];
-        $freteValor = 22.90;
-        $freteTipo = "pac";
+        $frete = $_SESSION['PED']['frete'];
 
 
 
-        if($pedido->PedidoGravar($cliente, $codigo, $ref, $freteValor, $freteTipo)){
+        if($pedido->PedidoGravar($cliente, $codigo, $ref, $frete)){
             $pedido->LimparSessoes();
         }
 

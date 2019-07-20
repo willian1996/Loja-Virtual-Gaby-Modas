@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-19 23:25:57
+/* Smarty version 3.1.33, created on 2019-07-20 07:42:43
   from 'C:\wamp64\www\Loja-Virtual\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d325185c02905_90145304',
+  'unifunc' => 'content_5d32c5f3c1b765_29521297',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '33324844194d42459632d068196736c3ce6eb6cf' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\carrinho.tpl',
-      1 => 1563578747,
+      1 => 1563608460,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d325185c02905_90145304 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d32c5f3c1b765_29521297 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h3>Meu Carrinho</h3>
 <hr>
@@ -40,7 +40,7 @@ function content_5d325185c02905_90145304 (Smarty_Internal_Template $_smarty_tpl)
 <section class="row ">
 
     <center>
-    <table class="table table-bordered" style="width: 95%">
+    <table id="tabelacarrinho" class="table table-bordered" style="width: 95%">
 
 
 

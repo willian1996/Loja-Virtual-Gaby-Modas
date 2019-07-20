@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-18 22:18:27
+/* Smarty version 3.1.33, created on 2019-07-20 07:38:36
   from 'C:\wamp64\www\Loja-Virtual\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d30f0331e3013_24632058',
+  'unifunc' => 'content_5d32c4fcc753c2_14823200',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '768417b6169df2343d3b1bdbec284070de7e4999' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\clientes_pedidos.tpl',
-      1 => 1563488304,
+      1 => 1563608303,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d30f0331e3013_24632058 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d32c4fcc753c2_14823200 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br><br>
 <section class="row" id="pedidos">
 
     <h4 class="text-center">Meus Pedidos</h4>
 
     <center>
-    <table class="table table-bordered" style="width: 90%">
+    <table id="tabelapedidos" class="table table-bordered" style="width: 90%">
 
         <tr class="text-danger bg-danger">
             <td>Data</td>

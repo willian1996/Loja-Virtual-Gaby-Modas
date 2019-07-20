@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-19 23:24:12
+/* Smarty version 3.1.33, created on 2019-07-20 06:12:32
   from 'C:\wamp64\www\Loja-Virtual\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d32511c06b970_88957385',
+  'unifunc' => 'content_5d32b0d057ed09_95268466',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '559a64b756d6b06784de5cd49879433d73ba7f2f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\pedido_confirmar.tpl',
-      1 => 1563578648,
+      1 => 1563578960,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d32511c06b970_88957385 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d32b0d057ed09_95268466 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->

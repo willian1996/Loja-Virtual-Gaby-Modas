@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-17 05:09:46
+/* Smarty version 3.1.33, created on 2019-07-20 08:14:15
   from 'C:\wamp64\www\Loja-Virtual\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2ead9a55d353_69413446',
+  'unifunc' => 'content_5d32cd572048d2_77880697',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a7f29c52c62419ef586fda3f876445ab1054121' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\pedido_finalizar.tpl',
-      1 => 1563340179,
+      1 => 1563610416,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d2ead9a55d353_69413446 (Smarty_Internal_Template $_smarty_tpl) {
-?><h3>Finalizar Pedido</h3>
+function content_5d32cd572048d2_77880697 (Smarty_Internal_Template $_smarty_tpl) {
+?><h2 id="tabelafinalizar">Finalizar Pedido</h2>
 <hr>
 
 
@@ -98,6 +98,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <div class="col-md-12 text-right text-danger bg-warning">
             <h4>
                Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
+
+            </h4>
+                <h4>
+               Frete : R$ <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+
+            </h4>
+                <hr>
+            <h4>
+               Total do Pedido : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
 
             </h4>
             </div>

@@ -1,4 +1,4 @@
-<h3>Finalizar Pedido</h3>
+<h2 id="tabelafinalizar">Finalizar Pedido</h2>
 <hr>
 
 
@@ -62,6 +62,13 @@
             <div class="col-md-12 text-right text-danger bg-warning">
             <h4>
                Total : R$ {$TOTAL}
+            </h4>
+                <h4>
+               Frete : R$ {$FRETE}
+            </h4>
+                <hr>
+            <h4>
+               Total do Pedido : R$ {$TOTAL_FRETE}
             </h4>
             </div>
 

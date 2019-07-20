@@ -4,7 +4,7 @@
     <h4 class="text-center">Meus Pedidos</h4>
 
     <center>
-    <table class="table table-bordered" style="width: 90%">
+    <table id="tabelapedidos" class="table table-bordered" style="width: 90%">
 
         <tr class="text-danger bg-danger">
             <td>Data</td>
