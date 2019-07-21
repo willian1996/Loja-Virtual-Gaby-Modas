@@ -1,5 +1,5 @@
 ﻿<?php
-
+use PHPMailer\PHPMailer\PHPMailer;
 
 class EnviarEmail extends PHPMailer {
     /**
@@ -37,7 +37,7 @@ class EnviarEmail extends PHPMailer {
          * $reply = email que vai a resposta
          */
     function Enviar($assunto, $msg, $destinatarios=array()) {
-
+ 
                   //seto dados da mensagem
         $this->Subject      = $assunto;
         $this->Body         = $msg;

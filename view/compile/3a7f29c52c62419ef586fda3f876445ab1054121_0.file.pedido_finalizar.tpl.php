@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-20 08:14:15
+/* Smarty version 3.1.33, created on 2019-07-21 06:27:28
   from 'C:\wamp64\www\Loja-Virtual\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d32cd572048d2_77880697',
+  'unifunc' => 'content_5d3405d0a20a44_11953428',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a7f29c52c62419ef586fda3f876445ab1054121' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\pedido_finalizar.tpl',
-      1 => 1563610416,
+      1 => 1563613639,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d32cd572048d2_77880697 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3405d0a20a44_11953428 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 id="tabelafinalizar">Finalizar Pedido</h2>
 <hr>
 

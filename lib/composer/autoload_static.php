@@ -33,6 +33,7 @@ class ComposerStaticInit7ce36c572953fb251aeed1fef5aba345
         'EnviarEmail' => __DIR__ . '/../..' . '/model/EnviarEmail.class.php',
         'Itens' => __DIR__ . '/../..' . '/model/ItensPedido.class.php',
         'Login' => __DIR__ . '/../..' . '/model/Login.class.php',
+        'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/../..' . '/model/PHPMailer.php',
         'Paginacao' => __DIR__ . '/../..' . '/model/Paginacao.class.php',
         'Pedidos' => __DIR__ . '/../..' . '/model/Pedidos.class.php',
         'Produtos' => __DIR__ . '/../..' . '/model/Produtos.class.php',

@@ -31,14 +31,14 @@ class Config{
 
 
     //INFORMAÇÕES PARA PHP MAILLER
-    const EMAIL_HOST = "smtp.gmail.com";
-    const EMAIL_USER = "lojavirtualgabymodas@gmail.com.br";
+    const EMAIL_HOST = "smtp.hostinger.com.br";
+    const EMAIL_USER = "contato@gabymodas.com";
     const EMAIL_NOME = "Contato Loja Gaby Modas";
     const EMAIL_SENHA = "Gabymodas$123#";
     const EMAIL_PORTA = 587;
     const EMAIL_SMTPAUTH = true;
-    const EMAIL_SMTPSECURE = "tls";
-    const EMAIL_COPIA = "lojavirtualgabymodas@gmail.com.br";
+    const EMAIL_SMTPSECURE = "false";
+    const EMAIL_COPIA = "lojavirtualgabymodas@gmail.com";
 
 
 
