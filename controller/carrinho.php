@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 if(isset($_SESSION['PRO'])){
     $smarty = new Template();
@@ -14,9 +14,7 @@ if(isset($_SESSION['PRO'])){
 
     $smarty->assign('PAG_CONFIRMAR', Rotas::pag_PedidoConfirmar());
 
-    $smarty->assign('PESO', $carrinho->GetPeso());
-
-    echo $carrinho->GetPeso();
+    $smarty->assign('PESO', number_format($carrinho->GetPeso(),3,'.',''));
 
     $smarty->display('carrinho.tpl');
 
