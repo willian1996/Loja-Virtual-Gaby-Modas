@@ -108,7 +108,7 @@ class Clientes extends Conexao{
         
         $this->ExecuteSQL($query, $params);
         return true;
-    }
+    } 
 
 //Verificando se o CPF do cliente ja existe
     public function GetClienteCPF($cpf){
@@ -120,6 +120,8 @@ class Clientes extends Conexao{
         return $this->TotalDados();
 
     }
+    
+    
 
 //Verificando se o EMAIL do cliente ja existe
     public function GetClienteEmail($email){
@@ -141,7 +143,18 @@ class Clientes extends Conexao{
         return $this->TotalDados();
     }
 
-
+public function SenhaUpdate($senha, $email){
+        $query = "UPDATE {$this->prefix}clientes SET cli_pass = :senha ";
+        
+        $query .="WHERE cli_email = :email ";
+        $this->setCli_senha($senha);
+        $this->setCli_email($email);
+    
+        $params = array(':senha'=> $this->this->setCli_senha(), 
+                        ':email'=> $this->this->setCli_email());
+        $this->ExecuteSQL($query, $params);
+        return $this->TotalDados();
+    }
 
 
 

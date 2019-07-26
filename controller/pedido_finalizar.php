@@ -44,7 +44,7 @@ if(!Login::Logado()){
         $smarty->assign('TOTAL_FRETE', Sistema::MoedaBR($_SESSION['PED']['total_com_frete']));
 
         $pedido = new Pedidos();
-        $cliente = 1;
+        $cliente = $_SESSION['CLI']['cli_id'];
         $codigo = $_SESSION['PED']['pedido'];
         $ref = $_SESSION['PED']['ref'];
         $frete = $_SESSION['PED']['frete'];
