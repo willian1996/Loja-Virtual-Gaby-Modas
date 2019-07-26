@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-26 00:14:21
+/* Smarty version 3.1.33, created on 2019-07-26 16:42:33
   from 'C:\wamp64\www\Loja-Virtual\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3a45ddf3d205_76840499',
+  'unifunc' => 'content_5d3b2d7922d8e9_35733050',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '02618c1eaccb144e37270dd89949810ad5dd85fb' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\cadastro.tpl',
-      1 => 1564100047,
+      1 => 1564159351,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3a45ddf3d205_76840499 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3b2d7922d8e9_35733050 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -253,5 +253,5 @@ function content_5d3a45ddf3d205_76840499 (Smarty_Internal_Template $_smarty_tpl)
         </fieldset>
     </form>
 </div><!-- /.container -->
-    <?php }
+<?php }
 }

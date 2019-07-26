@@ -1,4 +1,21 @@
-﻿
+﻿#minhacontaflutua{
+    margin: 0;
+    font-size: 23px /*smaller*/;
+    font-weight: bold;
+    line-height: 1.1;
+    position: fixed;
+    top: 0.5em;
+    left: auto;
+    width: 0.5em;
+    right: 1em;
+    color: #000;
+    cursor: pointer;
+
+}
+#minhacontaflutua img{
+    border-radius: 50%;
+}
+
 
 #topo{
 
@@ -7,19 +24,14 @@ background-color: #F60C89;
 color: #fff;
 
 }
-#botaosair{
-    margin-top: 17px;
-}
+
 @media only screen and (max-width: 990px) {
     #logotipo {
         margin-top: 30px;
         margin-bottom: 30px;
 
     }
-    #botaosair{
-        
-        display: none;
-    }
+
 }
 
 .row {

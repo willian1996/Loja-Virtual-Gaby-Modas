@@ -22,8 +22,10 @@
     </head>
     <body>
 
-        <!-- começa  o container geral -->
+<!--         começa  o container geral <i class="glyphicon glyphicon-user"></i>-->
         <div class="container-fluid">
+
+            <a id="minhacontaflutua" href="{$PAG_MINHACONTA}#minhaconta"><img src="{$GET_TEMA}/imagens/botaominhaconta.png" alt=""></a>
 
             <!-- começa a div topo -->
             <div class="row" id="topo">
@@ -33,12 +35,7 @@
                     <div id="logotipo" class="col-md-6" >
                         <img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt="">
                     </div>
-                    <div id="botaosair" class="col-md-6 text-right">
-                         {if $LOGADO == true}
-                          Olá: {$USER} <a href="{$PAG_LOGOFF}" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-log-out"></i> Sair </a> 
-                         {/if}
-                        
-                    </div>
+
                 </div>
                 
 

@@ -72,7 +72,7 @@ class Login extends Conexao{
     static function Logoff(){
         unset($_SESSION['CLI']);
         echo '<h4 class="alert alert-success"> Saindo...</h4>';
-        Rotas::Redirecionar(1, Rotas::get_SiteHOME());
+        Rotas::Redirecionar(1, Rotas::pag_ClienteLogin());
     }
     
     //FUNÇÃO PARA MOSTRAR MENU DO CLIENTE 
