@@ -170,6 +170,8 @@
         <script src="{$GET_TEMA}/tema/js/jquery-2.2.1.min.js" type="text/javascript"></script>
         <script src="{$GET_TEMA}/tema/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="{$GET_TEMA}/tema/js/script-cep.js" type="text/javascript"></script>
-        <script src="{$GET_TEMA}/tema/contatos/contatos.js" type="text/javascript"></script>
+<!--        <script src="{$GET_TEMA}/tema/contatos/contatos.js" type="text/javascript"></script>-->
+        <script src="{$GET_TEMA}/tema/js/script.js" type="text/javascript"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
     </body>
 </html>

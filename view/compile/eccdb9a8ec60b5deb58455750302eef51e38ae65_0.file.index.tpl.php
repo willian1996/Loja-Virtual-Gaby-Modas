@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-20 05:30:21
+/* Smarty version 3.1.33, created on 2019-07-25 18:35:40
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d32a6ede9e9e0_48088964',
+  'unifunc' => 'content_5d39f67cf23db2_03137784',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1563600611,
+      1 => 1564079738,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d32a6ede9e9e0_48088964 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d39f67cf23db2_03137784 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -231,9 +231,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
  src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /tema/js/script-cep.js" type="text/javascript"><?php echo '</script'; ?>
 >
-        <?php echo '<script'; ?>
+<!--        <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /tema/contatos/contatos.js" type="text/javascript"><?php echo '</script'; ?>
+>-->
+        <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/js/script.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"><?php echo '</script'; ?>
 >
     </body>
 </html>
