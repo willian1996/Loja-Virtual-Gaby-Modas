@@ -150,8 +150,8 @@ public function SenhaUpdate($senha, $email){
         $this->setCli_senha($senha);
         $this->setCli_email($email);
     
-        $params = array(':senha'=> $this->this->setCli_senha(), 
-                        ':email'=> $this->this->setCli_email());
+        $params = array(':senha'=> $this->getCli_senha(),
+                        ':email'=> $this->getCli_email());
         $this->ExecuteSQL($query, $params);
         return $this->TotalDados();
     }
