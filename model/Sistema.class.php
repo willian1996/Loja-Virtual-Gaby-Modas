@@ -55,26 +55,26 @@ class Sistema {
     * @return string: senha randonica
     */
     static function GerarSenha(){
-		//2	  // fe45214qa  mqws23ma  0o z b
+        //2	  // fe45214qa  mqws23ma  0o z b
         $tamanho = 1;
-	$string ="";
+        $string ="";
 
-	for ($i = 0; $i < $tamanho; $i++) {
+        for($i = 0; $i < $tamanho; $i++){
 
-		 //$string .= (rand(1, 9)) ;
-				   $string .= chr(rand(109, 122));
-                                   $string .= rand(40, 99);
-                                   $string .= chr(rand(109, 122));
-                                   $string .= rand(20, 89);
-                                   $string .= chr(rand(109, 122));
-                                   $string .= chr(rand(109, 122));
-                                   //$string .= rand(20, 89);
-                                   //$string .= rand(20, 89);
-			}
-			$string = str_replace('o', 'z', $string);
-			$string = str_replace('0', 'b', $string);
+            //$string .= (rand(1, 9)) ;
+            $string .= chr(rand(109, 122));
+            $string .= rand(40, 99);
+            $string .= chr(rand(109, 122));
+            $string .= rand(20, 89);
+            $string .= chr(rand(109, 122));
+            $string .= chr(rand(109, 122));
+            //$string .= rand(20, 89);
+            //$string .= rand(20, 89);
+        }
+        $string = str_replace('o', 'z', $string);
+        $string = str_replace('0', 'b', $string);
 
-			return $string;
+        return $string;
 
 	}
 

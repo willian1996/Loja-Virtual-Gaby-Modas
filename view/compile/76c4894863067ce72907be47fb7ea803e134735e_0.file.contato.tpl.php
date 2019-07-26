@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-25 18:31:07
+/* Smarty version 3.1.33, created on 2019-07-26 04:38:11
   from 'C:\wamp64\www\Loja-Virtual\view\contato.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d39f56b2f7424_99720858',
+  'unifunc' => 'content_5d3a83b33f32e4_97476010',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '76c4894863067ce72907be47fb7ea803e134735e' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\contato.tpl',
-      1 => 1564079427,
+      1 => 1564102239,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d39f56b2f7424_99720858 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3a83b33f32e4_97476010 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div>
     <form class="well form-horizontal" action="envio" method="post"  id="contact_form">

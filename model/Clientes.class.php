@@ -55,15 +55,24 @@ class Clientes extends Conexao{
 
     public function Inserir(){
         if($this->GetClienteCPF($this->getCli_cpf()) > 0){
-            echo '<div class="alert alert-danger" id="erro_mostrar">Este CPF já está cadastrado</div>';
+            echo '<div class="alert alert-danger" id="erro_mostrar">Este CPF já está cadastrado! ';
+            Sistema::VoltarPagina();
+            echo "</div>";
+            return false;
         }
 
         if($this->GetClienteEmail($this->getCli_email()) > 0){
-            echo '<div class="alert alert-danger" id="erro_mostrar">Este Email já está cadastrado</div>';
+            echo '<div class="alert alert-danger" id="erro_mostrar">Este Email já está cadastrado! ';
+            Sistema::VoltarPagina();
+            echo "</div>";
+            return false;
         }
 
         if($this->GetClienteCelular($this->getCli_celular()) > 0){
-            echo '<div class="alert alert-danger" id="erro_mostrar">Este Whatsapp já está cadastrado</div>';
+            echo '<div class="alert alert-danger" id="erro_mostrar">Este Whatsapp já está cadastrado! ';
+            Sistema::VoltarPagina();
+            echo "</div>";
+            return false;
         }
 
         //Inserir os dados da função
@@ -96,8 +105,9 @@ class Clientes extends Conexao{
         ':cli_senha'    => $this->getCli_senha()
 
         );
-        echo $query;
+        
         $this->ExecuteSQL($query, $params);
+        return true;
     }
 
 //Verificando se o CPF do cliente ja existe
@@ -372,7 +382,7 @@ class Clientes extends Conexao{
 
     function setCli_senha($cli_senha) {
 
-        $this->cli_senha = Sistema::Criptografia($cli_senha);
+        $this->cli_senha = md5($cli_senha);
         // 123 => md5 = 18513ba35987a447b98f075bd226a1fc
     }
 

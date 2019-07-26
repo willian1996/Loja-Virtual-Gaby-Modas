@@ -27,10 +27,42 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_email']) and isset($_POST['cl
 
     $clientes->Preparar($cli_nome, $cli_sobrenome, $cli_data_nasc, $cli_rg, $cli_cpf, $cli_ddd, $cli_fone, $cli_celular, $cli_endereco, $cli_numero, $cli_bairro, $cli_cidade, $cli_uf, $cli_cep, $cli_email, $cli_data_cad, $cli_hora_cad, $cli_senha);
 
-    $clientes->Inserir();
+    if($clientes->Inserir()){
+        
+
+
+
+
+
+        $smarty->assign('NOME', $cli_nome);
+        $smarty->assign('SITE', Config::SITE_NOME);
+        $smarty->assign('EMAIL', $cli_email);
+        $smarty->assign('SENHA', $cli_senha);
+        $smarty->assign('PAG_MINHA_CONTA', Rotas::pag_ClienteConta());
+        $smarty->assign('SITE_HOME', Rotas::get_SiteHOME());
+        
+    
+    
+        
+        $email = new EnviarEmail();
+        
+        $assunto = "Cadastro Efetuado - ".Config::SITE_NOME;
+        $msg = $smarty->fetch('email_cliente_cadastro.tpl');
+        $destinatarios = array($cli_email, Config::SITE_EMAIL_ADMIN);
+            
+        $email->Enviar($assunto, $msg, $destinatarios);
+            
+        echo '<div class="alert alert-success"> Cadastrado com sucesso!
+        <br> A sua senha foi enviada para o e-mail '.$cli_email.'<br> por favor depois altere essa senha na pagina minha conta</div>';
+        Rotas::Redirecionar(6, Rotas::pag_ClienteLogin());
+        
+        
+    }
+    
+    
+    
 }else{
     $smarty->display('cadastro.tpl');
-
 }
 
 

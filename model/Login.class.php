@@ -115,7 +115,7 @@ class Login extends Conexao{
     }
     
     private function setSenha($senha){
-        $this->senha = /*Sistema::Criptografia(*/$senha/*)*/;
+        $this->senha = /*Sistema::Criptografia(*/md5($senha)/*)*/;
     }
     
     private function getUser(){
