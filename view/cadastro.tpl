@@ -32,6 +32,7 @@
 
             <!-- Data Nasc-->
 
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label" >Data Nasc</label>
                 <div class="col-md-4 inputGroupContainer">
@@ -41,9 +42,11 @@
                 </div>
               </div>
             </div>
+-->
 
             <!-- RG-->
 
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label" >RG</label>
                 <div class="col-md-4 inputGroupContainer">
@@ -53,6 +56,7 @@
                 </div>
               </div>
             </div>
+-->
 
             <!-- CPF-->
 
@@ -61,7 +65,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" placeholder="Digite seu CPF" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required>
+              <input type="text" placeholder="Digite seu CPF" name="cli_cpf" class="form-control" min="11111111111" maxlength="11" required>
                 </div>
               </div>
             </div>
@@ -73,7 +77,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Digite o DDD" name="cli_ddd" class="form-control"  min="10" max="99" required>
+              <input type="number" placeholder="Digite o código sem o zero" name="cli_ddd" class="form-control"   min="10" max="99"  maxlength="2" required>
                 </div>
               </div>
             </div>
@@ -85,7 +89,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Digite seu whatsapp" name="cli_celular" class="form-control" required>
+              <input type="number" placeholder="Digite seu whatsapp" name="cli_celular" class="form-control" maxlength="9" min="111111111" required>
                 </div>
               </div>
             </div>
@@ -97,7 +101,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Digite seu telefone" name="cli_fone" class="form-control" required>
+              <input type="number" placeholder="Opcional" name="cli_fone" class="form-control" maxlength="9" min="11111111">
                 </div>
               </div>
             </div>
@@ -110,7 +114,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                    <input type="text" placeholder="Digite a sua rua" name="cli_endereco" class="form-control"  minlength="3" required>
+                    <input type="text" placeholder="Digite a sua rua ou avenida" name="cli_endereco" class="form-control"  minlength="3" required>
                 </div>
               </div>
             </div>
@@ -137,53 +141,33 @@
               </div>
             </div>
 
+
+<!--            Ponto de Referencia-->
+<!--
+            <div class="form-group">
+              <label class="col-md-4 control-label">Ponto de Referência</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input type="text" placeholder="Próximo de..."  class="form-control" minlength="3" required>
+                </div>
+              </div>
+            </div>
+-->
+
             <!-- Cidade -->
 
             <div class="form-group">
               <label class="col-md-4 control-label">Cidade</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Digite a sua cidade" name="cli_cidade" class="form-control" minlength="3" required>
-                </div>
-              </div>
-            </div>
-
-            <!-- Estado -->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label">Estado</label>
                 <div class="col-md-4 selectContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_uf" class="form-control selectpicker" >
-                    <option value=" " >Selecione seu Estado</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
+                <select name="cli_cidade" class="form-control selectpicker" required>
+                    <option value="">selecione sua cidade</option>
+                    <option value="Caraguatatuba">Caraguatatuba</option>
+                    <option value="Sao Sebastiao">São Sebastião</option>
+                    <option value="Ubatuba">Ubatuba</option>
+                    <option value="Ilha Bela">Ilha Bela</option>
                 </select>
               </div>
             </div>
@@ -196,7 +180,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Digite o seu CEP" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
+              <input type="text" placeholder="Opcional" name="cli_cep" class="form-control" min="11111111" maxlength="8">
                 </div>
             </div>
             </div>

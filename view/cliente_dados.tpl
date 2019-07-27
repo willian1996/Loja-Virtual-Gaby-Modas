@@ -35,6 +35,7 @@
 
             <!-- Data Nasc-->
 
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label" >Data Nasc</label>
                 <div class="col-md-4 inputGroupContainer">
@@ -44,9 +45,11 @@
                 </div>
               </div>
             </div>
+-->
 
             <!-- RG-->
 
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label" >RG</label>
                 <div class="col-md-4 inputGroupContainer">
@@ -56,6 +59,7 @@
                 </div>
               </div>
             </div>
+-->
 
             <!-- CPF-->
 
@@ -88,7 +92,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" value="{$CLI_CELULAR}" name="cli_celular" class="form-control" required>
+              <input type="number" value="{$CLI_CELULAR}" name="cli_celular" class="form-control" required maxlength="9">
                 </div>
               </div>
             </div>
@@ -100,7 +104,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" value="{$CLI_FONE}" name="cli_fone" class="form-control" required>
+              <input type="number" value="{$CLI_FONE}" name="cli_fone" class="form-control" required maxlength="9">
                 </div>
               </div>
             </div>
@@ -144,23 +148,29 @@
 
             <div class="form-group">
               <label class="col-md-4 control-label">Cidade</label>
-                <div class="col-md-4 inputGroupContainer">
+                <div class="col-md-4 selectContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" value="{$CLI_CIDADE}" name="cli_cidade" class="form-control" minlength="3" required>
-                </div>
+                <select name="cli_cidade" class="form-control selectpicker" required>
+                    <option value="">selecione sua cidade</option>
+                    <option value="Caraguatatuba" {if {$CLI_CIDADE} == 'Caraguatatuba'}selected="selected"{/if}>Caraguatatuba</option>
+                    <option value="Sao Sebastiao" {if {$CLI_CIDADE} == 'Sao Sebastiao'}selected="selected"{/if}>São Sebastião</option>
+                    <option value="Ubatuba" {if {$CLI_CIDADE} == 'Ubatuba'}selected="selected"{/if}>Ubatuba</option>
+                    <option value="Ilha Bela" {if {$CLI_CIDADE} == 'Ilha Bela'}selected="selected"{/if}>Ilha Bela</option>
+                </select>
               </div>
+            </div>
             </div>
 
             <!-- Estado -->
-
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label">Estado</label>
                 <div class="col-md-4 selectContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_uf" class="form-control selectpicker" >
-                    <option value=" " >Selecione seu Estado</option>
+                <select name="cli_uf" class="form-control selectpicker" required>
+                    <option value="" >Selecione seu Estado</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -191,6 +201,7 @@
               </div>
             </div>
             </div>
+-->
 
             <!-- CEP-->
 
@@ -199,7 +210,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" value="{$CLI_CEP}" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
+              <input type="number" value="{$CLI_CEP}" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
                 </div>
             </div>
             </div>

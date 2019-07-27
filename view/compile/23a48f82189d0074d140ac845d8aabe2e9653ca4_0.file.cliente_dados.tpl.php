@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-26 18:23:47
+/* Smarty version 3.1.33, created on 2019-07-27 14:39:24
   from 'C:\wamp64\www\Loja-Virtual\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3b45332b32b5_58700728',
+  'unifunc' => 'content_5d3c621c98f590_04404126',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '23a48f82189d0074d140ac845d8aabe2e9653ca4' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\cliente_dados.tpl',
-      1 => 1564165425,
+      1 => 1564238362,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3c621c98f590_04404126 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -60,6 +60,7 @@ function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl)
 
             <!-- Data Nasc-->
 
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label" >Data Nasc</label>
                 <div class="col-md-4 inputGroupContainer">
@@ -70,9 +71,11 @@ function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
             </div>
+-->
 
             <!-- RG-->
 
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label" >RG</label>
                 <div class="col-md-4 inputGroupContainer">
@@ -83,6 +86,7 @@ function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
             </div>
+-->
 
             <!-- CPF-->
 
@@ -118,7 +122,7 @@ function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CELULAR']->value;?>
-" name="cli_celular" class="form-control" required>
+" name="cli_celular" class="form-control" required maxlength="9">
                 </div>
               </div>
             </div>
@@ -131,7 +135,7 @@ function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_FONE']->value;?>
-" name="cli_fone" class="form-control" required>
+" name="cli_fone" class="form-control" required maxlength="9">
                 </div>
               </div>
             </div>
@@ -178,24 +182,41 @@ function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl)
 
             <div class="form-group">
               <label class="col-md-4 control-label">Cidade</label>
-                <div class="col-md-4 inputGroupContainer">
+                <div class="col-md-4 selectContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;?>
-" name="cli_cidade" class="form-control" minlength="3" required>
-                </div>
+                <select name="cli_cidade" class="form-control selectpicker" required>
+                    <option value="">selecione sua cidade</option>
+                    <option value="Caraguatatuba" <?php ob_start();
+echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
+$_prefixVariable1 = ob_get_clean();
+if ($_prefixVariable1 == 'Caraguatatuba') {?>selected="selected"<?php }?>>Caraguatatuba</option>
+                    <option value="Sao Sebastiao" <?php ob_start();
+echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
+$_prefixVariable2 = ob_get_clean();
+if ($_prefixVariable2 == 'Sao Sebastiao') {?>selected="selected"<?php }?>>São Sebastião</option>
+                    <option value="Ubatuba" <?php ob_start();
+echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
+$_prefixVariable3 = ob_get_clean();
+if ($_prefixVariable3 == 'Ubatuba') {?>selected="selected"<?php }?>>Ubatuba</option>
+                    <option value="Ilha Bela" <?php ob_start();
+echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
+$_prefixVariable4 = ob_get_clean();
+if ($_prefixVariable4 == 'Ilha Bela') {?>selected="selected"<?php }?>>Ilha Bela</option>
+                </select>
               </div>
+            </div>
             </div>
 
             <!-- Estado -->
-
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label">Estado</label>
                 <div class="col-md-4 selectContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_uf" class="form-control selectpicker" >
-                    <option value=" " >Selecione seu Estado</option>
+                <select name="cli_uf" class="form-control selectpicker" required>
+                    <option value="" >Selecione seu Estado</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -226,6 +247,7 @@ function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl)
               </div>
             </div>
             </div>
+-->
 
             <!-- CEP-->
 
@@ -234,7 +256,7 @@ function content_5d3b45332b32b5_58700728 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CEP']->value;?>
+              <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CEP']->value;?>
 " name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
                 </div>
             </div>

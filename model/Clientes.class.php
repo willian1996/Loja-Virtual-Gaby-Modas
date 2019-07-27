@@ -406,15 +406,15 @@ class Clientes extends Conexao{
 
          $uf = filter_var($cli_uf, FILTER_SANITIZE_STRING);
 
-       if(strlen($uf) != 2): // 11111
-                echo '<div class="alert alert-danger " id="erro_mostrar"> UF incorreto ';
-                Sistema::VoltarPagina();
-                echo '</div>';
-
-           else:
+//       if(strlen($uf) != 2): // 11111
+//                echo '<div class="alert alert-danger " id="erro_mostrar"> UF incorreto ';
+//                Sistema::VoltarPagina();
+//                echo '</div>';
+//
+//           else:
            $this->cli_uf = $cli_uf;
 
-       endif;
+//       endif;
 
     }
 
