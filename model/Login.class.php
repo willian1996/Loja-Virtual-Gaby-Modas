@@ -48,10 +48,9 @@ class Login extends Conexao{
             $_SESSION['CLI']['cli_data_cad']  =  $lista['cli_data_cad'];
             $_SESSION['CLI']['cli_pass']      =  $lista['cli_pass']; 
 
-            
 
         }else{
-            
+            echo '<script>alert("E-mail ou Senha inválidos");</script>';
         }
         
     }

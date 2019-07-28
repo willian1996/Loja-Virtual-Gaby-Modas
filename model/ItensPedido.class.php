@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 class Itens extends Conexao{
     private $total_valor;
@@ -20,7 +20,7 @@ class Itens extends Conexao{
             $params[':cliente'] = (int)$cliente;
 
         }
-        $params[':pedido'] = (int)$pedido;
+        $params[':pedido'] = $pedido;
 
         $this->ExecuteSQL($query, $params);
         $this->GetLista();
