@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-27 14:29:08
+/* Smarty version 3.1.33, created on 2019-07-28 10:00:24
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3c5fb47a5898_88351163',
+  'unifunc' => 'content_5d3d9c6887ee73_00873131',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1564237344,
+      1 => 1564318822,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3c5fb47a5898_88351163 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3d9c6887ee73_00873131 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -66,8 +66,9 @@ function content_5d3c5fb47a5898_88351163 (Smarty_Internal_Template $_smarty_tpl)
 
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
-                        <img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/imagens/logo-gaby.jpg" alt="">
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/imagens/logo-gaby.jpg" alt=""></a>
                     </div>
 
                 </div>
@@ -200,7 +201,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <li><a href="https://www.instagram.com/gaby.sallys.9"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/instagram.png" width="50" height="50"></a></li>
 
-                        <li><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+                        <li><a href="https://api.whatsapp.com/send?phone=5512981819956"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /imagens/whatsapp.png" width="50" height="50"></a></li>
                     </ul>
                     <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel">Willian</a></h6>

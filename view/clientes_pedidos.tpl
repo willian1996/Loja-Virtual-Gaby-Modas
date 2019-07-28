@@ -36,7 +36,7 @@
         <form name="itens" method="post" action="{$PAG_ITENS}">
 
              <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">
-             <td style="width: 15%;"><button class="btn btn-default">Ver</button></td>
+             <td style="width: 15%;"><center><button class="btn btn-default">Ver</button></center></td>
 
         </form>
 

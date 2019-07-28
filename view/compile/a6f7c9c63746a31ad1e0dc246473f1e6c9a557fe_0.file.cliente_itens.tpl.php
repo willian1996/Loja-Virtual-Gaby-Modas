@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-28 04:07:38
+/* Smarty version 3.1.33, created on 2019-07-28 09:51:53
   from 'C:\wamp64\www\Loja-Virtual\view\cliente_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3d49ba7d1055_10561300',
+  'unifunc' => 'content_5d3d9a69583532_45632328',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a6f7c9c63746a31ad1e0dc246473f1e6c9a557fe' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\cliente_itens.tpl',
-      1 => 1564297656,
+      1 => 1564302342,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3d49ba7d1055_10561300 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3d9a69583532_45632328 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center">Dados do pedido</h4>
 
 <!-- informações sobre o pedido -->
@@ -76,11 +76,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 " alt=""> </td>
             <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_nome'];?>
 </td>
-            <td class="text-right"> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_valor'];?>
+            <td class="text-right"> R$<?php echo $_smarty_tpl->tpl_vars['P']->value['item_valor'];?>
 </td>
             <td class="text-center"> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_qtd'];?>
 </td>
-            <td class="text-right"> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_sub'];?>
+            <td class="text-right"> R$<?php echo $_smarty_tpl->tpl_vars['P']->value['item_sub'];?>
 </td>
             
         </tr>
@@ -105,13 +105,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <table class="table table-bordered" style="width: 80%">
                     <tr>
 
-                        <td class="text-danger"> <b>Frete:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor'];?>
+                        <td class="text-danger"> <b>Frete:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor'];?>
 </td>
 
-                        <td class="text-danger"> <b>Total:</b> <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
+                        <td class="text-danger"> <b>Total:</b> R$<?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 </td>
 
-                        <td class="text-danger"> <b>Final:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value;?>
+                        <td class="text-danger"> <b>Final:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value;?>
 </td>
 
                     </tr>  

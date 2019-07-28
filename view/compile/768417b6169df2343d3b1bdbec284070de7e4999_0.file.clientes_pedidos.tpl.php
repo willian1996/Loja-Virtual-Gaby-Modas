@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-28 04:04:52
+/* Smarty version 3.1.33, created on 2019-07-28 09:56:48
   from 'C:\wamp64\www\Loja-Virtual\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3d4914999233_00017899',
+  'unifunc' => 'content_5d3d9b909c6eb2_01628002',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '768417b6169df2343d3b1bdbec284070de7e4999' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\clientes_pedidos.tpl',
-      1 => 1564297490,
+      1 => 1564318607,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3d4914999233_00017899 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3d9b909c6eb2_01628002 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br><br>
 <section class="row" id="pedidos">
 
@@ -71,7 +71,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 
              <input type="hidden" name="cod_pedido" id="cod_pedido" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['ped_cod'];?>
 ">
-             <td style="width: 15%;"><button class="btn btn-default">Ver</button></td>
+             <td style="width: 15%;"><center><button class="btn btn-default">Ver</button></center></td>
 
         </form>
 

@@ -43,9 +43,9 @@
             
             <td><img src="{$P.item_img}" alt=""> </td>
             <td> {$P.item_nome}</td>
-            <td class="text-right"> {$P.item_valor}</td>
+            <td class="text-right"> R${$P.item_valor}</td>
             <td class="text-center"> {$P.item_qtd}</td>
-            <td class="text-right"> {$P.item_sub}</td>
+            <td class="text-right"> R${$P.item_sub}</td>
             
         </tr>
         
@@ -66,11 +66,11 @@
                 <table class="table table-bordered" style="width: 80%">
                     <tr>
 
-                        <td class="text-danger"> <b>Frete:</b> {$ITENS.1.ped_frete_valor}</td>
+                        <td class="text-danger"> <b>Frete:</b> R${$ITENS.1.ped_frete_valor}</td>
 
-                        <td class="text-danger"> <b>Total:</b> {$TOTAL}</td>
+                        <td class="text-danger"> <b>Total:</b> R${$TOTAL}</td>
 
-                        <td class="text-danger"> <b>Final:</b> {$ITENS.1.ped_frete_valor+$TOTAL}</td>
+                        <td class="text-danger"> <b>Final:</b> R${$ITENS.1.ped_frete_valor+$TOTAL}</td>
 
                     </tr>  
 

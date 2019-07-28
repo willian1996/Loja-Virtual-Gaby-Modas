@@ -33,7 +33,7 @@
 
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
-                        <img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt="">
+                        <a href="{$GET_SITE_HOME}"><img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt=""></a>
                     </div>
 
                 </div>
@@ -149,7 +149,7 @@
                         <img src="{$GET_TEMA}/imagens/facebook.png" width="50" height="50"></a></li>
                         <li><a href="https://www.instagram.com/gaby.sallys.9"><img src="{$GET_TEMA}/imagens/instagram.png" width="50" height="50"></a></li>
 
-                        <li><a href="#"><img src="{$GET_TEMA}/imagens/whatsapp.png" width="50" height="50"></a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5512981819956"><img src="{$GET_TEMA}/imagens/whatsapp.png" width="50" height="50"></a></li>
                     </ul>
                     <h6>Copyright &copy; 2019 - desenvolvido por <a href="https://www.linkedin.com/in/williansalesgabriel">Willian</a></h6>
                 </footer>
