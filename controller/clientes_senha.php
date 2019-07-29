@@ -30,5 +30,5 @@ if(isset($_POST['cli_senha_atual']) and isset($_POST['cli_senha'])){
     $smarty->display('cliente_senha.tpl');
 }
 
-
+?>
 

@@ -1,26 +1,26 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-28 19:50:44
-  from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
+/* Smarty version 3.1.33, created on 2019-07-28 20:40:38
+  from 'C:\wamp64\www\Loja-Virtual\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3e26c456aa08_94832865',
+  'unifunc' => 'content_5d3e32769bde84_15508223',
   'has_nocache_code' => false,
-  'file_dependency' => 
+  'file_dependency' =>
   array (
-    'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
+    'bcf78db8201da0ac1116bbe80cdd45d4541240f8' =>
     array (
-      0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1564318889,
+      0 => 'C:\\wamp64\\www\\Loja-Virtual\\adm\\view\\adm_index.tpl',
+      1 => 1564357236,
       2 => 'file',
     ),
   ),
-  'includes' => 
+  'includes' =>
   array (
   ),
 ),false)) {
-function content_5d3e26c456aa08_94832865 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3e32769bde84_15508223 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -56,9 +56,7 @@ function content_5d3e26c456aa08_94832865 (Smarty_Internal_Template $_smarty_tpl)
 <!--         começa  o container geral <i class="glyphicon glyphicon-user"></i>-->
         <div class="container-fluid">
 
-            <a id="minhacontaflutua" href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
-#minhaconta"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/imagens/botaominhaconta.png" alt=""></a>
+
 
             <!-- começa a div topo -->
             <div class="row" id="topo">
@@ -72,7 +70,7 @@ function content_5d3e26c456aa08_94832865 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
 
                 </div>
-                
+
 
             </div><!-- fim da div topo -->
 
@@ -98,16 +96,16 @@ function content_5d3e26c456aa08_94832865 (Smarty_Internal_Template $_smarty_tpl)
 
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav">
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_ADM']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
-"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
-"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
-"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CONTATO']->value;?>
-" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CATEGORIAS']->value;?>
+"><i class="glyphicon glyphicon-tag"></i> Cetegorias </a> </li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PRODUTOS']->value;?>
+"><i class="glyphicon glyphicon-user"></i> Produtos </a> </li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_CLIENTE']->value;?>
+"><i class="glyphicon glyphicon-shopping-cart"></i> Clientes </a> </li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
+" ><i class="glyphicon glyphicon-envelope"></i> Pedidos </a> </li>
                             </ul>
 
 
@@ -172,7 +170,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <li><a href="#"> Info </a></li>
                     </ul>
                     <!-- fim do menu breadcrumb-->
-                    <?php 
+                    <?php
                     Rotas::get_Pagina();
                     //var_dump(Rotas::$pag);
 
@@ -183,7 +181,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </div>
 
-        
+
 
 
 

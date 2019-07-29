@@ -1,5 +1,19 @@
 <?php
 class Produtos extends Conexao{
+    private $pro_nome;
+    private $pro_categoria;
+    private $pro_ativo;
+    private $pro_modelo;
+    private $pro_ref;
+    private $pro_valor;
+    private $pro_estoque;
+    private $pro_peso;
+    private $pro_altura;
+    private $pro_largura;
+    private $pro_comprimento;
+    private $pro_img;
+    private $pro_desc;
+    private $pro_slug;
     
     public function __construct(){
         parent:: __construct();
@@ -84,6 +98,204 @@ class Produtos extends Conexao{
     }
     
     
+    function Preparar($pro_nome, $pro_categoria, $pro_ativo, $pro_modelo, $pro_ref,
+        $pro_valor, $pro_estoque, $pro_peso , $pro_altura, $pro_largura, $pro_comprimento ,
+        $pro_img, $pro_desc, $pro_slug=null){
+
+        $this->setPro_nome($pro_nome);
+        $this->setPro_categoria($pro_categoria);
+        $this->setPro_ativo($pro_ativo);
+        $this->setPro_modelo($pro_modelo);
+        $this->setPro_ref($pro_ref);
+        $this->setPro_valor($pro_valor);
+        $this->setPro_estoque($pro_estoque);
+        $this->setPro_peso($pro_peso);
+        $this->setPro_altura($pro_altura);
+        $this->setPro_largura($pro_largura);
+        $this->setPro_comprimento($pro_comprimento);
+        $this->setPro_img($pro_img);
+        $this->setPro_desc($pro_desc);
+        $this->setPro_slug($pro_nome);
+    }
+
+
+   function Inserir(){
+
+        $query = "INSERT INTO {$this->prefix}produtos (pro_nome, pro_categoria, pro_ativo, pro_modelo, pro_ref," ;
+        $query.= " pro_valor, pro_estoque, pro_peso , pro_altura, pro_largura, pro_comprimento ,pro_img, pro_desc, pro_slug)";
+        $query.= " VALUES ";
+        $query.= " ( :pro_nome, :pro_categoria, :pro_ativo, :pro_modelo, :pro_ref, :pro_valor, :pro_estoque, :pro_peso ,";
+        $query.= " :pro_altura, :pro_largura, :pro_comprimento ,:pro_img, :pro_desc, :pro_slug)";
+
+        $params = array(
+        ':pro_nome'=> $this->getPro_nome(),
+        ':pro_categoria'=> $this->getPro_categoria(),
+        ':pro_ativo'=> $this->getPro_ativo(),
+        ':pro_modelo'=> $this->getPro_modelo(),
+        ':pro_ref'=> $this->getPro_ref(),
+        ':pro_valor'=> $this->getPro_valor(),
+        ':pro_estoque'=> $this->getPro_estoque(),
+        ':pro_peso'=> $this->getPro_peso(),
+        ':pro_altura'=> $this->getPro_altura() ,
+        ':pro_largura'=> $this->getPro_largura(),
+        ':pro_comprimento'=> $this->getPro_comprimento(),
+        ':pro_img'=> $this->getPro_img(),
+        ':pro_desc'=> $this->getPro_desc(),
+        ':pro_slug'=> $this->getPro_slug(),
+
+        );
+
+
+          if($this->ExecuteSQL($query, $params)):
+
+                   return TRUE;
+
+               else:
+
+                   return FALSE;
+
+           endif;
+
+
+
+
+    }
+
+
+
+    //METODOS GET
+
+    function getPro_nome() {
+        return $this->pro_nome;
+    }
+
+    function getPro_categoria() {
+        return $this->pro_categoria;
+    }
+
+    function getPro_ativo() {
+        return $this->pro_ativo;
+    }
+
+    function getPro_modelo() {
+        return $this->pro_modelo;
+    }
+
+    function getPro_ref() {
+        return $this->pro_ref;
+    }
+
+    function getPro_valor() {
+        return $this->pro_valor;
+    }
+    function getPro_estoque() {
+        return $this->pro_estoque;
+    }
+
+    function getPro_peso() {
+        return $this->pro_peso;
+    }
+
+    function getPro_altura() {
+        return $this->pro_altura;
+    }
+
+    function getPro_largura() {
+        return $this->pro_largura;
+    }
+
+    function getPro_comprimento() {
+        return $this->pro_comprimento;
+    }
+
+    function getPro_img() {
+        return $this->pro_img;
+    }
+
+    function getPro_desc() {
+        return $this->pro_desc;
+    }
+
+    function getPro_slug() {
+        return $this->pro_slug;
+    }
+
+
+
+    //METODOS SET
+
+    function setPro_nome($pro_nome) {
+        $this->pro_nome = $pro_nome;
+    }
+
+    function setPro_categoria($pro_categoria) {
+        $this->pro_categoria = $pro_categoria;
+    }
+
+    function setPro_ativo($pro_ativo) {
+        $this->pro_ativo = $pro_ativo;
+    }
+
+    function setPro_modelo($pro_modelo) {
+        $this->pro_modelo = $pro_modelo;
+    }
+
+    function setPro_ref($pro_ref) {
+        $this->pro_ref = $pro_ref;
+    }
+
+    function setPro_valor($pro_valor) {
+        //1.335,99 => 1.33599
+
+        // procura a virgula e troca por ponto
+      $pro_valor = str_replace('.', '', $pro_valor);
+      $pro_valor = str_replace(',', '.', $pro_valor);
+
+        $this->pro_valor = $pro_valor ;
+       // echo $this->pro_valor;
+
+    }
+
+    function setPro_estoque($pro_estoque) {
+        $this->pro_estoque = $pro_estoque;
+    }
+
+    function setPro_peso($pro_peso) {
+
+       ///  1,600  => 1.600
+        $this->pro_peso = str_replace(',', '.', $pro_peso);
+
+    }
+
+    function setPro_altura($pro_altura) {
+
+        $this->pro_altura = $pro_altura;
+    }
+
+    function setPro_largura($pro_largura) {
+        $this->pro_largura = $pro_largura;
+    }
+
+    function setPro_comprimento($pro_comprimento) {
+        $this->pro_comprimento = $pro_comprimento;
+    }
+
+    function setPro_img($pro_img) {
+        $this->pro_img = $pro_img;
+    }
+
+    function setPro_desc($pro_desc) {
+        $this->pro_desc = $pro_desc;
+    }
+
+    function setPro_slug($pro_slug) {
+
+
+        $this->pro_slug = Sistema::GetSlug($pro_slug);
+    }
+
+
+
 
     
     
