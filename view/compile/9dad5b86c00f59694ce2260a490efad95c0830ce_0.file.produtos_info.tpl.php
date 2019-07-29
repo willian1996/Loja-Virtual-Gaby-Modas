@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-17 05:05:29
+/* Smarty version 3.1.33, created on 2019-07-29 16:21:38
   from 'C:\wamp64\www\Loja-Virtual\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d2eac996de759_81782845',
+  'unifunc' => 'content_5d3f474267c052_88920124',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9dad5b86c00f59694ce2260a490efad95c0830ce' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\produtos_info.tpl',
-      1 => 1563339927,
+      1 => 1564428096,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d2eac996de759_81782845 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3f474267c052_88920124 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
@@ -65,7 +65,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 
 
                 <input type="hidden" name="acao" value="add">
-            <button  class="btn btn-success btn-lg">Comprar</button>
+            <button  class="btn btn-success btn-lg">Colocar no Carrinho</button>
              </form>
 
         </div>

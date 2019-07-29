@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-28 09:56:48
+/* Smarty version 3.1.33, created on 2019-07-29 16:39:24
   from 'C:\wamp64\www\Loja-Virtual\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3d9b909c6eb2_01628002',
+  'unifunc' => 'content_5d3f4b6c5c72d8_89207846',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '768417b6169df2343d3b1bdbec284070de7e4999' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\clientes_pedidos.tpl',
-      1 => 1564318607,
+      1 => 1564428880,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3d9b909c6eb2_01628002 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3f4b6c5c72d8_89207846 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br><br>
 <section class="row" id="pedidos">
 
@@ -92,5 +92,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 </section>
+
+  <!--  paginação inferior   -->
+    <section id="pagincao" class="row">
+    <center>
+    <?php echo $_smarty_tpl->tpl_vars['PAGINAS']->value;?>
+
+    </center>
+    </section>
 <?php }
 }

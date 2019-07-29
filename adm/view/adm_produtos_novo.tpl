@@ -20,7 +20,7 @@
 
             <select name="pro_categoria" id="pro_categoria" class="form-control" required>
 
-                <option value="1"> Escolha </option>
+                <option value=""> Escolha </option>
                     {foreach from=$CATEGORIAS item=C}
                 <option value="{$C.cate_id}">{$C.cate_nome}</option>
                     {/foreach}
@@ -74,7 +74,7 @@
 
            <div class="col-md-2">
             <label>Estoque</label>
-            <input type="text" name="pro_estoque" id="pro_estoque" class="form-control" required >
+            <input type="number" name="pro_estoque" id="pro_estoque" class="form-control" required >
 
           </div>
 
@@ -82,28 +82,28 @@
 
            <div class="col-md-2">
             <label>Peso</label>
-            <input type="text" name="pro_peso" id="pro_peso" class="form-control" required >
+            <input type="text"  name="pro_peso" id="pro_peso" class="form-control" required >
 
           </div>
 
 
            <div class="col-md-2">
             <label>Altura</label>
-            <input type="text" name="pro_altura" id="pro_altura" class="form-control" required >
+            <input type="number" name="pro_altura" id="pro_altura" class="form-control" required >
 
           </div>
 
 
            <div class="col-md-2">
             <label>Largura</label>
-            <input type="text" name="pro_largura" id="pro_largura" class="form-control" required >
+            <input type="number" name="pro_largura" id="pro_largura" class="form-control" required >
 
           </div>
 
 
            <div class="col-md-2">
             <label>Comprimento</label>
-            <input type="text" name="pro_comprimento" id="pro_comprimento" class="form-control" required >
+            <input type="number" name="pro_comprimento" id="pro_comprimento" class="form-control" required >
 
           </div>
 
@@ -118,7 +118,7 @@
 
                  <hr>
                  <label>Imagem Principal</label>
-                 <input type="file" name="pro_img" class="form-control " id="pro_img">
+                 <input type="file" name="pro_img" class="form-control " id="pro_img" required>
             </div>
 
             <div class="col-md-3">
@@ -136,19 +136,21 @@
            <div class="col-md-12">
             <label>Descrição</label>
 
-            <textarea name="pro_desc" id="pro_desc" rows="5" class="form-control">
-            OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)
+            <textarea style="min-height:150px;" name="pro_desc" id="pro_desc" rows="5" class="form-control">
+            <b>OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</b><br><br>
 
-            ->ATENÇÃO CONSULTAR A DATA DE ENTREGA ANTES DE FINALIZAR O PEDIDO
-            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.
-            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.
-            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.
-            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.
+            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega<br><br>
+            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.<br>
+            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br>
+            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br>
+            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.<br><br>
 
-            Aceitamos cartões com 5% de acréscimo
+            <i>Aceitamos cartões com 5% de acréscimo</i><br><br>
 
-            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega
+
             </textarea>
+
+              <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
 
               <script>
               tinymce.init({ selector:'textarea'  });
@@ -177,7 +179,7 @@
 
             <div class="col-md-4">
                 <br>
-                <button class="btn btn-success btn-block btn-lg" name="btn_gravar">  </button>
+                <button class="btn btn-success btn-block btn-lg" name="btn_gravar">Cadastrar Produto</button>
             </div>
 
             <div class="col-md-4">

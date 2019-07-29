@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-29 00:36:19
+/* Smarty version 3.1.33, created on 2019-07-29 16:14:03
   from 'C:\wamp64\www\Loja-Virtual\adm\view\adm_produtos_novo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3e69b35b7d38_39130212',
+  'unifunc' => 'content_5d3f457b2b1e13_33227460',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '9bbac97c2b32a2e218177fbbd176fa217991f7ca' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\adm\\view\\adm_produtos_novo.tpl',
-      1 => 1564371376,
+      1 => 1564427592,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3e69b35b7d38_39130212 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3f457b2b1e13_33227460 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center"> Adicionar novo produto </h4>
 <hr>
 
@@ -43,7 +43,7 @@ function content_5d3e69b35b7d38_39130212 (Smarty_Internal_Template $_smarty_tpl)
 
             <select name="pro_categoria" id="pro_categoria" class="form-control" required>
 
-                <option value="1"> Escolha </option>
+                <option value=""> Escolha </option>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIAS']->value, 'C');
 if ($_from !== null) {
@@ -98,7 +98,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
            <div class="col-md-2">
             <label>Valor</label>
-            <input type="text" name="pro_valor" id="pro_valor" class="form-control" required >
+            <input type="number" step="0.01" name="pro_valor" id="pro_valor" class="form-control" required >
 
         </div>
 
@@ -106,7 +106,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
            <div class="col-md-2">
             <label>Estoque</label>
-            <input type="text" name="pro_estoque" id="pro_estoque" class="form-control" required >
+            <input type="number" name="pro_estoque" id="pro_estoque" class="form-control" required >
 
           </div>
 
@@ -114,28 +114,28 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
            <div class="col-md-2">
             <label>Peso</label>
-            <input type="text" name="pro_peso" id="pro_peso" class="form-control" required >
+            <input type="text"  name="pro_peso" id="pro_peso" class="form-control" required >
 
           </div>
 
 
            <div class="col-md-2">
             <label>Altura</label>
-            <input type="text" name="pro_altura" id="pro_altura" class="form-control" required >
+            <input type="number" name="pro_altura" id="pro_altura" class="form-control" required >
 
           </div>
 
 
            <div class="col-md-2">
             <label>Largura</label>
-            <input type="text" name="pro_largura" id="pro_largura" class="form-control" required >
+            <input type="number" name="pro_largura" id="pro_largura" class="form-control" required >
 
           </div>
 
 
            <div class="col-md-2">
             <label>Comprimento</label>
-            <input type="text" name="pro_comprimento" id="pro_comprimento" class="form-control" required >
+            <input type="number" name="pro_comprimento" id="pro_comprimento" class="form-control" required >
 
           </div>
 
@@ -150,7 +150,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                  <hr>
                  <label>Imagem Principal</label>
-                 <input type="file" name="pro_img" class="form-control " id="pro_img">
+                 <input type="file" name="pro_img" class="form-control " id="pro_img" required>
             </div>
 
             <div class="col-md-3">
@@ -168,19 +168,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
            <div class="col-md-12">
             <label>Descrição</label>
 
-            <textarea name="pro_desc" id="pro_desc" rows="5" class="form-control">
-            OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)
+            <textarea style="min-height:150px;" name="pro_desc" id="pro_desc" rows="5" class="form-control">
+            <b>OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</b><br><br>
 
-            ->ATENÇÃO CONSULTAR A DATA DE ENTREGA ANTES DE FINALIZAR O PEDIDO
-            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.
-            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.
-            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.
-            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.
+            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega<br><br>
+            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.<br>
+            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br>
+            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br>
+            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.<br><br>
 
-            Aceitamos cartões com 5% de acréscimo
+            <i>Aceitamos cartões com 5% de acréscimo</i><br><br>
 
-            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega
+
             </textarea>
+
+              <?php echo '<script'; ?>
+ src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"><?php echo '</script'; ?>
+>
 
               <?php echo '<script'; ?>
 >
@@ -211,7 +215,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             <div class="col-md-4">
                 <br>
-                <button class="btn btn-success btn-block btn-lg" name="btn_gravar">  </button>
+                <button class="btn btn-success btn-block btn-lg" name="btn_gravar">Cadastrar Produto</button>
             </div>
 
             <div class="col-md-4">

@@ -54,3 +54,10 @@
 
 
 </section>
+
+  <!--  paginação inferior   -->
+    <section id="pagincao" class="row">
+    <center>
+    {$PAGINAS}
+    </center>
+    </section>

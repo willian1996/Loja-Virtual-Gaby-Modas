@@ -64,10 +64,11 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav">
                                 <li><a href="{$GET_SITE_ADM}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-                                <li><a href="{$PAG_CATEGORIAS}"><i class="glyphicon glyphicon-tag"></i> Cetegorias </a> </li>
-                                <li><a href="{$PAG_ADM_PRODUTOS}"><i class="glyphicon glyphicon-user"></i> Produtos </a> </li>
-                                <li><a href="{$PAG_ADM_CLIENTE}"><i class="glyphicon glyphicon-shopping-cart"></i> Clientes </a> </li>
-                                <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-envelope"></i> Pedidos </a> </li>
+                                <li><a href="{$PAG_CATEGORIAS}"><i class="glyphicon glyphicon-list-alt"></i> Cetegorias </a> </li>
+                                <li><a href="{$PAG_ADM_PRODUTOS}"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
+                                <li><a href="{$PAG_ADM_CLIENTE}"><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
+                                <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
+                                <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-piggy-bank"></i> Caixa </a> </li>
                             </ul>
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-21 05:17:01
+/* Smarty version 3.1.33, created on 2019-07-29 16:42:48
   from 'C:\wamp64\www\Loja-Virtual\view\menu_cliente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d33f54d86a8c1_49377528',
+  'unifunc' => 'content_5d3f4c38d080f9_43450117',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53aa943acb4c888382a9d4c2e6474ca52c60bcb1' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\menu_cliente.tpl',
-      1 => 1563613638,
+      1 => 1564429366,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d33f54d86a8c1_49377528 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3f4c38d080f9_43450117 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center text-danger"> Olá <b><?php echo $_smarty_tpl->tpl_vars['USER']->value;?>
 </b>, seja bem vindo! O que deseja fazer agora?</h4> 
 <section class="row" id="minhaconta">
@@ -31,7 +31,7 @@ function content_5d33f54d86a8c1_49377528 (Smarty_Internal_Template $_smarty_tpl)
 " class="btn btn-success"><i class="glyphicon glyphicon-home"></i> Minha Conta</a>
         
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CLIENTE_PEDIDOS']->value;?>
-#tabelapedidos" class="btn btn-success"><i class="glyphicon glyphicon-barcode"></i> Pedidos</a>
+#tabelapedidos" class="btn btn-success"><i class="glyphicon glyphicon-barcode"></i> Meus Pedidos</a>
         
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CLIENTE_DADOS']->value;?>
 " class="btn btn-success"><i class="glyphicon glyphicon-edit"></i> Meus Dados </a>

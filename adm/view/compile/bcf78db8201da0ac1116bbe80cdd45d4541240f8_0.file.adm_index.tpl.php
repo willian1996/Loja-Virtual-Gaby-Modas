@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-28 20:40:38
+/* Smarty version 3.1.33, created on 2019-07-29 15:31:57
   from 'C:\wamp64\www\Loja-Virtual\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3e32769bde84_15508223',
+  'unifunc' => 'content_5d3f3b9de428e9_11725119',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     'bcf78db8201da0ac1116bbe80cdd45d4541240f8' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\adm\\view\\adm_index.tpl',
-      1 => 1564357236,
+      1 => 1564425114,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3e32769bde84_15508223 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3f3b9de428e9_11725119 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -99,13 +99,15 @@ function content_5d3e32769bde84_15508223 (Smarty_Internal_Template $_smarty_tpl)
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_ADM']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CATEGORIAS']->value;?>
-"><i class="glyphicon glyphicon-tag"></i> Cetegorias </a> </li>
+"><i class="glyphicon glyphicon-list-alt"></i> Cetegorias </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PRODUTOS']->value;?>
-"><i class="glyphicon glyphicon-user"></i> Produtos </a> </li>
+"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_CLIENTE']->value;?>
-"><i class="glyphicon glyphicon-shopping-cart"></i> Clientes </a> </li>
+"><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
-" ><i class="glyphicon glyphicon-envelope"></i> Pedidos </a> </li>
+" ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
+" ><i class="glyphicon glyphicon-piggy-bank"></i> Caixa </a> </li>
                             </ul>
 
 
