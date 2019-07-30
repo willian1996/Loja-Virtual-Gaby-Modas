@@ -51,7 +51,8 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_email']) and isset($_POST['cl
         $destinatarios = array($cli_email, Config::SITE_EMAIL_ADMIN);
             
         $email->Enviar($assunto, $msg, $destinatarios);
-            
+
+        echo '<script>alert("A sua senha foi enviada para o e-mail '.$cli_email.' faça o login");</script>';
         echo '<div class="alert alert-success"> Cadastrado com sucesso!
         <br> A sua senha foi enviada para o e-mail '.$cli_email.'<br> por favor depois altere essa senha na pagina minha conta</div>';
         Rotas::Redirecionar(6, Rotas::pag_ClienteLogin());

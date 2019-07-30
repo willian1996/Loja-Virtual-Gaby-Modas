@@ -8,6 +8,7 @@ if(!Login::Logado()){
     if(isset($_SESSION['PRO'])){
 
         if(!isset($_SESSION['PED']['frete'])){
+        echo '<script>alert("Selecione o frete");</script>';
         Rotas::Redirecionar(2, Rotas::pag_Carrinho().'#dadosfrete');
         exit('<h4 class="alert alert-danger"> Selecione o frete </h4>');
         }

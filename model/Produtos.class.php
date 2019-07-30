@@ -60,6 +60,8 @@ class Produtos extends Conexao{
 
         $query .= " AND pro_categoria = :id";
 
+        $query .= " ORDER BY pro_id DESC";
+
          $query .= $this->PaginacaoLinks("pro_id", $this->prefix."produtos WHERE pro_categoria =".(int)$id);
 
         $params = array(':id' => (int)$id);

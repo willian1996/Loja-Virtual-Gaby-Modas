@@ -112,6 +112,22 @@ class Conexao extends Config{
         return $this->Paginacao($this->paginao_links);
     }
 
+    /*
+    * MÉTODO PARA PROTEJER O BANCO DE DADOS DE SQL INJECTION
+    * @param DADO A FILTRAR
+    * @return DADO FILTRADO
+    * @author WILLIAN <williansalesgabriel@hotmail.com>
+    */
+    protected function filtraEntrada($campo){
+        // remove espaços no início e no final
+        $campo = trim($campo);
+        // remove tags html
+        $campo = strip_tags($campo);
+        // adiciona caractere de escape nas aspas e apostófros
+        $campo = addslashes($campo);
+        return $campo;
+    }
+
 
 
 

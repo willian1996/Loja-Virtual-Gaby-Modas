@@ -9,6 +9,10 @@ class Login extends Conexao{
     }
     
     public function GetLogin($user, $senha){
+        $user = $this->filtraEntrada($user);
+        $senha = $this->filtraEntrada($senha);
+
+        $this->filtraEntrada($user);
         $this->setUser($user);
         $this->setSenha($senha);
         

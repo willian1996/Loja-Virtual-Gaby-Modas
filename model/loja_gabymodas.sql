@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 27-Jul-2019 às 21:14
+-- Generation Time: 29-Jul-2019 às 21:39
 -- Versão do servidor: 5.7.21
 -- PHP Version: 7.2.4
 
@@ -76,16 +76,14 @@ CREATE TABLE IF NOT EXISTS `gm_clientes` (
   `cli_data_cad` date NOT NULL,
   `cli_hora_cad` time NOT NULL,
   PRIMARY KEY (`cli_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_clientes`
 --
 
 INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_sobrenome`, `cli_endereco`, `cli_numero`, `cli_bairro`, `cli_cidade`, `cli_uf`, `cli_cep`, `cli_cpf`, `cli_rg`, `cli_ddd`, `cli_fone`, `cli_celular`, `cli_email`, `cli_pass`, `cli_data_nasc`, `cli_data_cad`, `cli_hora_cad`) VALUES
-(12, 'Willian', 'Sales Gabriel', 'Rua Cleusa Fátima dos Santos, 62', '62', 'Pegorelli', 'Ubatuba', NULL, '11669309', '43593584824', NULL, '12', '38894092', '996417887', 'williansalesgabriel@hotmail.com', 'f8bf5f221cef51838766c7e8348bf5da', NULL, '2019-07-26', '06:41:18'),
-(13, 'Marcos ', 'Felipe ', 'Rua Safira ', '62', 'Pegorelli', 'Caraguatatuba', NULL, '11669309', '45678912358', NULL, '12', '38834092', '996418789', 'williansales@hotmail.com', '6b195350366f7a3e387446ebfc77a9ca', NULL, '2019-07-27', '13:10:36'),
-(14, 'Reagiane ', 'de Olievira', 'Rua Freitas', '30', 'Topolandia', 'Sao Sebastiao', NULL, '11669309', '43595985858', NULL, '12', '38894092', '996418888', 'regiane@gmail.com', '8517ee9eab4a82138f0d9ba6da22f590', NULL, '2019-07-27', '14:08:37');
+(16, 'Willian', 'Gabriel', 'Rua Cleusa Fátima dos Santos, 62', '62', 'Pegorelli', 'Caraguatatuba', NULL, '11669309', '43593584824', NULL, '12', '38894092', '996417887', 'williansalesgabriel@hotmail.com', 'f8bf5f221cef51838766c7e8348bf5da', NULL, '2019-07-28', '02:10:28');
 
 -- --------------------------------------------------------
 
@@ -131,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos` (
   `ped_frete_valor` double(9,2) DEFAULT NULL,
   `ped_frete_tipo` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`ped_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos`
@@ -169,7 +167,13 @@ INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_
 (50, '2019-07-26', '07:45:34', 1, '19072607073212', '19072607073212', NULL, NULL, NULL, NULL, 115.80, NULL),
 (51, '2019-07-26', '07:48:13', 12, '19072607071212', '19072607071212', NULL, NULL, NULL, NULL, 115.80, NULL),
 (52, '2019-07-26', '07:50:23', 12, '19072607072112', '19072607072112', NULL, NULL, NULL, NULL, 115.80, NULL),
-(53, '2019-07-26', '16:31:05', 12, '19072616070312', '19072616070312', NULL, NULL, NULL, NULL, 112.40, NULL);
+(53, '2019-07-26', '16:31:05', 12, '19072616070312', '19072616070312', NULL, NULL, NULL, NULL, 112.40, NULL),
+(54, '2019-07-28', '02:59:58', 16, '19072802075616', '19072802075616', NULL, NULL, NULL, NULL, 112.40, NULL),
+(55, '2019-07-28', '03:24:22', 16, '19072803072016', '19072803072016', NULL, NULL, NULL, NULL, 112.40, NULL),
+(56, '2019-07-28', '03:33:44', 16, '19072803074316', '19072803074316', NULL, NULL, NULL, NULL, 112.40, NULL),
+(57, '2019-07-28', '04:46:50', 16, '19072804074716', '19072804074716', NULL, NULL, NULL, NULL, 112.40, NULL),
+(58, '2019-07-28', '21:55:44', 16, '19072821074116', '19072821074116', NULL, NULL, NULL, NULL, 112.40, NULL),
+(59, '2019-07-29', '16:22:15', 16, '19072916071216', '19072916071216', NULL, NULL, NULL, NULL, 112.40, NULL);
 
 -- --------------------------------------------------------
 
@@ -185,7 +189,7 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos_itens` (
   `item_qtd` int(6) NOT NULL,
   `item_ped_cod` varchar(50) NOT NULL,
   PRIMARY KEY (`item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos_itens`
@@ -230,7 +234,16 @@ INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_valor`, `item_q
 (53, 5, 89.90, 2, '19072607071212'),
 (54, 9, 56.00, 1, '19072607072112'),
 (55, 7, 49.90, 1, '19072607072112'),
-(56, 7, 49.90, 1, '19072616070312');
+(56, 7, 49.90, 1, '19072616070312'),
+(57, 8, 89.90, 1, '19072802075616'),
+(58, 4, 49.90, 1, '19072803072016'),
+(59, 3, 45.90, 1, '19072803072016'),
+(60, 9, 56.00, 1, '19072803074316'),
+(61, 6, 79.90, 1, '19072804074716'),
+(62, 7, 49.90, 1, '19072804074716'),
+(63, 9, 56.00, 1, '19072821074116'),
+(64, 8, 89.90, 1, '19072916071216'),
+(65, 5, 89.90, 1, '19072916071216');
 
 -- --------------------------------------------------------
 
@@ -246,32 +259,40 @@ CREATE TABLE IF NOT EXISTS `gm_produtos` (
   `pro_desc` text NOT NULL,
   `pro_peso` double(9,3) NOT NULL,
   `pro_valor` double(9,2) NOT NULL,
-  `pro_largura` int(11) NOT NULL,
-  `pro_altura` int(11) NOT NULL,
-  `pro_comprimento` int(11) NOT NULL,
+  `pro_largura` int(11) DEFAULT NULL,
+  `pro_altura` int(11) DEFAULT NULL,
+  `pro_comprimento` int(11) DEFAULT NULL,
   `pro_img` varchar(255) NOT NULL,
   `pro_slug` varchar(100) NOT NULL,
   `pro_estoque` int(11) NOT NULL,
-  `pro_modelo` varchar(100) NOT NULL,
+  `pro_modelo` varchar(100) DEFAULT NULL,
   `pro_ref` varchar(100) NOT NULL,
-  `pro_fabricante` int(11) NOT NULL,
+  `pro_fabricante` int(11) DEFAULT NULL,
   `pro_ativo` char(1) NOT NULL,
   `pro_frete_gratis` varchar(100) NOT NULL DEFAULT 'Não',
   PRIMARY KEY (`pro_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_produtos`
 --
 
 INSERT INTO `gm_produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `pro_peso`, `pro_valor`, `pro_largura`, `pro_altura`, `pro_comprimento`, `pro_img`, `pro_slug`, `pro_estoque`, `pro_modelo`, `pro_ref`, `pro_fabricante`, `pro_ativo`, `pro_frete_gratis`) VALUES
-(8, 5, 'Blusa Moletom adidas ', 'Blusa de moletom confortável inspirada no estilo esportivo. Um contrastante logo simples da adidas na frente adiciona um look autêntico. O pulôver é confeccionado em algodão e poliéster reciclado para um toque de maciez.', 0.050, 89.90, 1, 1, 1, 'blusa-adidas.jpg', 'blusa-adidas-moletom', 1, '4', '5', 6, '1', 'Não'),
+(8, 5, 'Blusa Moletom adidas ', '<b>OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</b><br><br>\r\n\r\n            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega<br><br>\r\n            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.<br>\r\n            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br>\r\n            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br>\r\n            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.<br><br>\r\n\r\n            <i>Aceitamos cartões com 5% de acréscimo</i><br><br>\r\n\r\n            ', 0.050, 89.90, 1, 1, 1, 'blusa-adidas.jpg', 'blusa-adidas-moletom', 1, '4', '5', 6, '1', 'Não'),
 (7, 4, 'Calça Camuflada Feminina', '', 0.050, 49.90, 55, 15, 56, 'calca-camuflada.jpg', 'calca-camuflada-feminina', 2, '2', '2', 1, '1', 'Não'),
-(6, 4, 'Calça Couro Sintetico', 'CLARA MORENA -\r\n\r\n> Calça Couro Fake Cós de Moletom\r\n\r\n+ Composição: 96% Poliéster - 4% Elastano\r\n\r\nP veste até 96cm de quadril, M até 104cm e G até 108cm.\r\n\r\nAconselhamos comprar seu tamanho usual.\r\nConosco você compra tecidos de qualidade e acabamento impecável.\r\nEnviamos em até 1 dia útil após a confirmação do pagamento.\r\n\r\nTodos os nossos produtos acompanham Nota Fiscal.', 0.090, 79.90, 1, 1, 1, 'calca-de-coro.jpg', 'calca-de-coro-preta', 10, '1', '1', 1, '1', 'Não'),
-(5, 3, 'Vestido Azul ', 'Vestido Manga Longa Estampa Étnica Código do produto: 1496734\r\nObservação: Elástico na cintura\r\nTecido: Helanca\r\nComposição: 100% poliéster', 0.060, 89.90, 1, 1, 1, 'vestido-azul.jpg', 'vestido-azul', 12, '456', '456', 5889, '1', 'Não'),
-(3, 3, 'Vestido Zebrado ', 'Vestido Manga Longa Estampa Étnica Código do produto: 1496734\r\nObservação: Elástico na cintura\r\nTecido: Helanca\r\nComposição: 100% poliéster', 0.100, 45.90, 1, 1, 1, 'vestidod-zebrado.jpg', 'vestido-zebrado', 4, '456', '458', 4, '1', 'Não'),
-(4, 3, 'Vestido Cores', 'Vestido Manga Longa Estampa Étnica Código do produto: 1496734\r\nObservação: Elástico na cintura\r\nTecido: Helanca\r\nComposição: 100% poliéster', 0.060, 49.90, 0, 0, 0, 'vestido-cores.jpg', 'vestido-cores', 6, '456', 'ddds', 12, '1', 'Não'),
-(9, 6, 'Saia Roxa  ', '', 0.045, 56.00, 1, 1, 1, 'saia-roxa.jpg', 'saia-roxa', 1, '125', '5666', 5522, '1', 'Não');
+(6, 4, 'Calça Couro Sintetico', '<b>OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</b><br><br>\r\n\r\n            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega<br><br>\r\n            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.<br>\r\n            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br>\r\n            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br>\r\n            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.<br><br>\r\n\r\n            <i>Aceitamos cartões com 5% de acréscimo</i><br><br>\r\n\r\n            ', 0.090, 79.90, 1, 1, 1, 'calca-de-coro.jpg', 'calca-de-coro-preta', 10, '1', '1', 1, '1', 'Não'),
+(5, 3, 'Vestido Azul ', '<b>OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</b><br><br>\r\n\r\n            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega<br><br>\r\n            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.<br>\r\n            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br>\r\n            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br>\r\n            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.<br><br>\r\n\r\n            <i>Aceitamos cartões com 5% de acréscimo</i><br><br>\r\n\r\n            ', 0.060, 89.90, 1, 1, 1, 'vestido-azul.jpg', 'vestido-azul', 12, '456', '456', 5889, '1', 'Não'),
+(3, 3, 'Vestido Zebrado ', '<b>OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</b><br><br>\r\n\r\n            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega<br><br>\r\n            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.<br>\r\n            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br>\r\n            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br>\r\n            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.<br><br>\r\n\r\n            <i>Aceitamos cartões com 5% de acréscimo</i><br><br>\r\n\r\n            ', 0.100, 45.90, 1, 1, 1, 'vestidod-zebrado.jpg', 'vestido-zebrado', 4, '456', '458', 4, '1', 'Não'),
+(4, 3, 'Vestido Cores', '<b>OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</b><br><br>\r\n\r\n            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega<br><br>\r\n            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.<br>\r\n            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br>\r\n            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br>\r\n            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.<br><br>\r\n\r\n            <i>Aceitamos cartões com 5% de acréscimo</i><br><br>\r\n\r\n            ', 0.060, 49.90, 0, 0, 0, 'vestido-cores.jpg', 'vestido-cores', 6, '456', 'ddds', 12, '1', 'Não'),
+(9, 6, 'Saia Roxa  ', '', 0.045, 56.00, 1, 1, 1, 'saia-roxa.jpg', 'saia-roxa', 1, '125', '5666', 5522, '1', 'Não'),
+(11, 6, 'Saia Jeans ', '            OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)\r\n\r\n            ->ATENÇÃO CONSULTAR A DATA DE ENTREGA ANTES DE FINALIZAR O PEDIDO\r\n            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.\r\n            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.\r\n            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.\r\n            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.\r\n\r\n            Aceitamos cartões com 5% de acréscimo\r\n\r\n            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega\r\n            ', 0.500, 99.99, 10, 10, 10, 'saia-jeans.jpg', 'saia-jeans', 10, 'asddff', '45522', NULL, '1', 'Não'),
+(13, 7, 'Short Jeans ', '            OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)\r\n\r\n            ->ATENÇÃO CONSULTAR A DATA DE ENTREGA ANTES DE FINALIZAR O PEDIDO\r\n            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.\r\n            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.\r\n            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.\r\n            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.\r\n\r\n            Aceitamos cartões com 5% de acréscimo\r\n\r\n            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega\r\n            ', 0.500, 99.99, 10, 10, 10, 'shorts-jeans.jpg', 'short-jeans', 10, 'asddff', '45522', NULL, '1', 'Não'),
+(14, 2, 'Camisa Manga Comprida ', '            OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)\r\n\r\n            ->ATENÇÃO CONSULTAR A DATA DE ENTREGA ANTES DE FINALIZAR O PEDIDO\r\n            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.\r\n            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.\r\n            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.\r\n            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.\r\n\r\n            Aceitamos cartões com 5% de acréscimo\r\n\r\n            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega\r\n            ', 0.059, 69.90, 10, 10, 10, 'camisa-manga-comprida.jpg', 'camisa-manga-comprida', 10, 'sssdf', 'ddfff', NULL, '1', 'Não'),
+(15, 3, 'Vestido Vermelho ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 49.90, 10, 10, 10, 'vestido-vermelho.jpg', 'vestido-vermelho', 10, 'asddff', '45522', NULL, '1', 'Não'),
+(17, 4, 'Calca Jeans', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.500, 49.90, 10, 10, 10, '190729160428calca-jeans.jpg.jpg', 'calca-jeans', 10, 'asddff', '45522', NULL, '1', 'Não'),
+(16, 2, 'Conjunto Short e Blusa', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.059, 45.90, 10, 10, 10, '190729154509conjunto.jpg.jpg', 'conjunto-short-e-blusa', 10, 'asddff', '45522', NULL, '1', 'Não'),
+(21, 4, 'Calca Jeans', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.500, 99.90, 10, 10, 10, '190729161710calca-jeans.jpg.jpg', 'calca-jeans', 10, 'asddff', '45522', NULL, '1', 'Não'),
+(22, 3, 'Vestido Preto ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 89.90, NULL, NULL, NULL, '190729175359vestido-preto.jpg.jpg', 'vestido-preto', 10, NULL, '45662255', NULL, '1', 'Não');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

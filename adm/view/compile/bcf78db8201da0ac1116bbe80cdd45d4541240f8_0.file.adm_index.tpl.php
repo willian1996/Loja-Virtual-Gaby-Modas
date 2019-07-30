@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-29 15:31:57
+/* Smarty version 3.1.33, created on 2019-07-29 17:35:18
   from 'C:\wamp64\www\Loja-Virtual\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3f3b9de428e9_11725119',
+  'unifunc' => 'content_5d3f58866a1ae6_44282876',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     'bcf78db8201da0ac1116bbe80cdd45d4541240f8' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\adm\\view\\adm_index.tpl',
-      1 => 1564425114,
+      1 => 1564432516,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3f3b9de428e9_11725119 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3f58866a1ae6_44282876 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -29,6 +29,7 @@ function content_5d3f3b9de428e9_11725119 (Smarty_Internal_Template $_smarty_tpl)
 </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
         <link href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /tema/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -49,7 +50,7 @@ function content_5d3f3b9de428e9_11725119 (Smarty_Internal_Template $_smarty_tpl)
  src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"><?php echo '</script'; ?>
 >
     <![endif]-->
-
+        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -64,9 +65,9 @@ function content_5d3f3b9de428e9_11725119 (Smarty_Internal_Template $_smarty_tpl)
 
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
-                        <a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/imagens/logo-gaby.jpg" alt=""></a>
+                        <br>
+                        <h1>GABY<br> MODAS ADM</h1>
+                        <br>
                     </div>
 
                 </div>
@@ -107,7 +108,7 @@ function content_5d3f3b9de428e9_11725119 (Smarty_Internal_Template $_smarty_tpl)
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
 " ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
-" ><i class="glyphicon glyphicon-piggy-bank"></i> Caixa </a> </li>
+" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
                             </ul>
 
 

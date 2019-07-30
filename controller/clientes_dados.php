@@ -30,6 +30,7 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_email']) and isset($_POST['cl
     $cli_hora_cad  = $_SESSION['CLI']['cli_hora_cad'];
 
     if($_SESSION['CLI']['cli_pass'] != md5($cli_senha)){
+        echo '<script>alert("A senha para confirmar está inválida!");</script>';
         echo '<div class="alert alert-danger"><p>A senha para confirmar está inválida</p>';
         Sistema::VoltarPagina();
         echo "</div>";
@@ -41,6 +42,7 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_email']) and isset($_POST['cl
         $clientes->Preparar($cli_nome, $cli_sobrenome, $cli_data_nasc, $cli_rg, $cli_cpf, $cli_ddd, $cli_fone, $cli_celular, $cli_endereco, $cli_numero, $cli_bairro, $cli_cidade, $cli_uf, $cli_cep, $cli_email, $cli_data_cad, $cli_hora_cad, $cli_senha);
 
         if(!$clientes->Editar($_SESSION['CLI']['cli_id'])){
+            echo '<script>alert("Ocorreu um erro ao editar os dados!");</script>';
             echo '<div class="alert alert-danger">Ocorreu um erro ao editar os dados';
 
         }else{

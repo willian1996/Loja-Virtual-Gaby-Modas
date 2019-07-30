@@ -8,7 +8,7 @@
     <form name="frm_produto" method="post" action=""  enctype="multipart/form-data">
 
         <div class="col-md-6">
-            <label>Produto</label>
+            <label>Nome do Produto</label>
             <input type="text" name="pro_nome" id="pro_nome" class="form-control"  required >
 
         </div>
@@ -49,11 +49,13 @@
 
 
 
+<!--
            <div class="col-md-3">
             <label>Modelo</label>
             <input type="text" name="pro_modelo" id="pro_modelo" class="form-control"  >
 
         </div>
+-->
 
 
            <div class="col-md-2">
@@ -87,6 +89,7 @@
           </div>
 
 
+<!--
            <div class="col-md-2">
             <label>Altura</label>
             <input type="number" name="pro_altura" id="pro_altura" class="form-control" required >
@@ -106,6 +109,7 @@
             <input type="number" name="pro_comprimento" id="pro_comprimento" class="form-control" required >
 
           </div>
+-->
 
 
         <div class="col-md-12">

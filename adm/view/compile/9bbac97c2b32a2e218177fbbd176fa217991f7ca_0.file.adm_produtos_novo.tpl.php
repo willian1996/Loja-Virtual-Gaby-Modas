@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-29 16:14:03
+/* Smarty version 3.1.33, created on 2019-07-29 17:21:47
   from 'C:\wamp64\www\Loja-Virtual\adm\view\adm_produtos_novo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3f457b2b1e13_33227460',
+  'unifunc' => 'content_5d3f555bb0fb43_41703587',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '9bbac97c2b32a2e218177fbbd176fa217991f7ca' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\adm\\view\\adm_produtos_novo.tpl',
-      1 => 1564427592,
+      1 => 1564431705,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3f457b2b1e13_33227460 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3f555bb0fb43_41703587 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center"> Adicionar novo produto </h4>
 <hr>
 
@@ -31,7 +31,7 @@ function content_5d3f457b2b1e13_33227460 (Smarty_Internal_Template $_smarty_tpl)
     <form name="frm_produto" method="post" action=""  enctype="multipart/form-data">
 
         <div class="col-md-6">
-            <label>Produto</label>
+            <label>Nome do Produto</label>
             <input type="text" name="pro_nome" id="pro_nome" class="form-control"  required >
 
         </div>
@@ -81,11 +81,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 
+<!--
            <div class="col-md-3">
             <label>Modelo</label>
             <input type="text" name="pro_modelo" id="pro_modelo" class="form-control"  >
 
         </div>
+-->
 
 
            <div class="col-md-2">
@@ -98,7 +100,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
            <div class="col-md-2">
             <label>Valor</label>
-            <input type="number" step="0.01" name="pro_valor" id="pro_valor" class="form-control" required >
+            <input type="text" name="pro_valor" id="pro_valor" class="form-control" required >
 
         </div>
 
@@ -119,6 +121,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </div>
 
 
+<!--
            <div class="col-md-2">
             <label>Altura</label>
             <input type="number" name="pro_altura" id="pro_altura" class="form-control" required >
@@ -138,6 +141,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <input type="number" name="pro_comprimento" id="pro_comprimento" class="form-control" required >
 
           </div>
+-->
 
 
         <div class="col-md-12">

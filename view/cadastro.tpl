@@ -167,7 +167,7 @@
                     <option value="Caraguatatuba">Caraguatatuba</option>
                     <option value="Sao Sebastiao">São Sebastião</option>
                     <option value="Ubatuba">Ubatuba</option>
-                    <option value="Ilha Bela">Ilha Bela</option>
+                    <option value="Ilhabela">Ilhabela</option>
                 </select>
               </div>
             </div>

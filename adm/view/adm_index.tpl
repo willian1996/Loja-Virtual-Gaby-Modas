@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
         <link href="{$GET_TEMA}/tema/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
         <!-- meu aquivo pessoal de CSS-->
@@ -18,7 +19,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -33,7 +34,9 @@
 
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
-                        <a href="{$GET_SITE_HOME}"><img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt=""></a>
+                        <br>
+                        <h1>GABY<br> MODAS ADM</h1>
+                        <br>
                     </div>
 
                 </div>
@@ -68,7 +71,7 @@
                                 <li><a href="{$PAG_ADM_PRODUTOS}"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
                                 <li><a href="{$PAG_ADM_CLIENTE}"><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
                                 <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
-                                <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-piggy-bank"></i> Caixa </a> </li>
+                                <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
                             </ul>
 
 
