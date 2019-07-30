@@ -17,6 +17,9 @@ $smarty->assign('PRO_INFO', Rotas::pag_ProdutosInfo());
 $smarty->assign('PRO_TOTAL', $produtos->TotalDados());
 $smarty->assign('PAGINAS', $produtos->ShowPaginacao());
 $smarty->assign('PAG_PRODUTO_NOVO', Rotas::pag_ProdutosNovoADM());
+$smarty->assign('PAG_PRODUTO_EDITAR', Rotas::pag_ProdutosEditarADM());
+
+
 
 
 

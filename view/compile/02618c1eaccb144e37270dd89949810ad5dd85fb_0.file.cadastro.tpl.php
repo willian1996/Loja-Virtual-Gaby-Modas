@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-30 02:33:49
+/* Smarty version 3.1.33, created on 2019-07-30 12:24:47
   from 'C:\wamp64\www\Loja-Virtual\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3fd6bdf2e136_03664067',
+  'unifunc' => 'content_5d40613f138c91_24122609',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '02618c1eaccb144e37270dd89949810ad5dd85fb' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\cadastro.tpl',
-      1 => 1564457495,
+      1 => 1564500284,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3fd6bdf2e136_03664067 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d40613f138c91_24122609 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -187,10 +187,11 @@ function content_5d3fd6bdf2e136_03664067 (Smarty_Internal_Template $_smarty_tpl)
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
                 <select name="cli_cidade" class="form-control selectpicker" required>
                     <option value="">selecione sua cidade</option>
-                    <option value="Caraguatatuba">Caraguatatuba</option>
                     <option value="Sao Sebastiao">São Sebastião</option>
-                    <option value="Ubatuba">Ubatuba</option>
                     <option value="Ilhabela">Ilhabela</option>
+                    <option value="Caraguatatuba">Caraguatatuba</option>
+                    <option value="Ubatuba">Ubatuba</option>
+
                 </select>
               </div>
             </div>

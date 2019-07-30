@@ -164,10 +164,11 @@
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
                 <select name="cli_cidade" class="form-control selectpicker" required>
                     <option value="">selecione sua cidade</option>
-                    <option value="Caraguatatuba">Caraguatatuba</option>
                     <option value="Sao Sebastiao">São Sebastião</option>
-                    <option value="Ubatuba">Ubatuba</option>
                     <option value="Ilhabela">Ilhabela</option>
+                    <option value="Caraguatatuba">Caraguatatuba</option>
+                    <option value="Ubatuba">Ubatuba</option>
+
                 </select>
               </div>
             </div>

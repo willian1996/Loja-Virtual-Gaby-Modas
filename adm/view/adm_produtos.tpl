@@ -56,7 +56,7 @@
         <td class="text-right">R$ {$P.pro_valor}</td>
         <td>
 
-            <form name="proeditar" method="post" action="">
+            <form name="proeditar" method="post" action="{$PAG_PRODUTO_EDITAR}">
                 <input type="hidden" name="pro_id" id="pro_id" value="{$P.pro_id}">
                 <button class="btn btn-success btn-sm"> <i class="glyphicon glyphicon-pencil"></i> </button>
 
@@ -70,18 +70,6 @@
 
         </td>
 
-<!--
-        <td>
-
-            <form name="proimg" method="post" action="">
-                <input type="hidden" name="pro_id" id="pro_id" value="{$P.pro_id}">
-                <input type="hidden" name="pro_nome" id="pro_nome" value="{$P.pro_nome}">
-                <button class="btn btn-info"> <i class="glyphicon glyphicon-picture"></i> </button>
-
-            </form>
-
-        </td>
--->
 
 
     </tr>

@@ -127,6 +127,7 @@ class Rotas{
     }
 
 
+
     //ROTAS PARA AREA ADMINISTRATIVA
     static function get_SiteADM(){
         return self::get_SiteHOME(). '/'. self::$pasta_ADM;
