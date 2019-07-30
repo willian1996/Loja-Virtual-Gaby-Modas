@@ -4,7 +4,7 @@
         <fieldset>
 
         <!-- Form Name -->
-        <legend>Contate-nos</legend>
+        <legend id="contato">Contate-nos</legend>
 
         <!-- Text input-->
 

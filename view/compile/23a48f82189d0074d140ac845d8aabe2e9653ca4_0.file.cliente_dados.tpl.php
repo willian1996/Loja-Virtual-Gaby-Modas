@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-27 14:39:24
+/* Smarty version 3.1.33, created on 2019-07-30 03:56:05
   from 'C:\wamp64\www\Loja-Virtual\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3c621c98f590_04404126',
+  'unifunc' => 'content_5d3fea0565b871_43273337',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '23a48f82189d0074d140ac845d8aabe2e9653ca4' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\cliente_dados.tpl',
-      1 => 1564238362,
+      1 => 1564469740,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3c621c98f590_04404126 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3fea0565b871_43273337 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -29,7 +29,7 @@ function content_5d3c621c98f590_04404126 (Smarty_Internal_Template $_smarty_tpl)
 
             <!-- Form Name -->
             <center>
-            <h3>Meus Dados</h3>
+            <h3 id="meusdados">Meus Dados</h3>
             </center>
             <br>
             <!-- Nome-->

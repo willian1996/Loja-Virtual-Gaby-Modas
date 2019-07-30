@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-28 19:50:44
+/* Smarty version 3.1.33, created on 2019-07-30 04:08:53
   from 'C:\wamp64\www\Loja-Virtual\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3e26c456aa08_94832865',
+  'unifunc' => 'content_5d3fed05c45d15_17411848',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eccdb9a8ec60b5deb58455750302eef51e38ae65' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\index.tpl',
-      1 => 1564318889,
+      1 => 1564470531,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3e26c456aa08_94832865 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3fed05c45d15_17411848 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -101,13 +101,13 @@ function content_5d3e26c456aa08_94832865 (Smarty_Internal_Template $_smarty_tpl)
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
-"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
+#produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
 "><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
-"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
+#tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CONTATO']->value;?>
-" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
+#contato" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
                             </ul>
 
 
@@ -142,7 +142,7 @@ function content_5d3e26c456aa08_94832865 (Smarty_Internal_Template $_smarty_tpl)
                     <span class="list-group-item active"> Categorias</span>
 
                     <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
-" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
+#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
 
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIAS']->value, 'C');
@@ -150,7 +150,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
 ?>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
-" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span><?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
+#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span><?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
 </a>
 
                     <?php

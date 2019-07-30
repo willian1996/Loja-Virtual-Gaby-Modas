@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-28 09:51:53
+/* Smarty version 3.1.33, created on 2019-07-30 03:35:56
   from 'C:\wamp64\www\Loja-Virtual\view\cliente_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3d9a69583532_45632328',
+  'unifunc' => 'content_5d3fe54ced00c5_06612247',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a6f7c9c63746a31ad1e0dc246473f1e6c9a557fe' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\cliente_itens.tpl',
-      1 => 1564302342,
+      1 => 1564468555,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3d9a69583532_45632328 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3fe54ced00c5_06612247 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center">Dados do pedido</h4>
 
 <!-- informações sobre o pedido -->
@@ -39,8 +39,7 @@ function content_5d3d9a69583532_45632328 (Smarty_Internal_Template $_smarty_tpl)
             <td><b>Ref:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_ref'];?>
 </td>
             
-<!--            <td><b>Status:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'];?>
-</td>-->
+
             
         </tr>  
         
@@ -103,6 +102,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             <center>
                 <table class="table table-bordered" style="width: 80%">
+
                     <tr>
 
                         <td class="text-danger"> <b>Frete:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor'];?>
@@ -119,7 +119,27 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 </table>
              
-            </center>          
+            </center>
+            <br>
+            <center>
+                <?php if ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'CANCELADO') {?>
+                  <b>Status: </b><span class="label label-danger"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_pag_status'];?>
+</span>
+                <?php } elseif ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'ENTREGUE') {?>
+                  <b>Status: </b><span class="label label-success"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_pag_status'];?>
+</span>
+                <?php } elseif ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'SOLICITADO') {?>
+                  <b>Status: </b><span class="label label-info"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_pag_status'];?>
+</span>
+                <?php } elseif ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'SEPARADO') {?>
+                  <b>Status: </b><span class="label label-warning"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_pag_status'];?>
+</span>
+                <?php } else { ?>
+                  <b>Status:</b><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_pag_status'];?>
+
+                <?php }?>
+            </center>
+            <br>
         </section>  
                         
                         

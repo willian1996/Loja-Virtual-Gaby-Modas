@@ -10,8 +10,8 @@
         <tr class="text-danger bg-danger">
             <td>Data</td>
             <td>Hora</td>
-            <td>Ref</td>
-<!--            <td>Status</td>-->
+<!--            <td>Ref</td>-->
+            <td>Status</td>
             <td></td>
         </tr>
 
@@ -20,18 +20,20 @@
 
             <td style="width: 10%">{$P.ped_data}</td>
             <td style="width: 10%">{$P.ped_hora}</td>
-            <td style="width: 10%">{$P.ped_ref}</td>
+<!--            <td style="width: 10%">{$P.ped_ref}</td>-->
 
 
-<!--
-            {if $P.ped_pag_status == 'NAO'}
+            {if $P.ped_pag_status == 'CANCELADO'}
              <td style="width: 10%;"><span class="label label-danger">{$P.ped_pag_status}</span></td>
-            {elseif $P.ped_pag_status == 'Pago'}
+            {elseif $P.ped_pag_status == 'ENTREGUE'}
               <td style="width: 10%;"><span class="label label-success">{$P.ped_pag_status}</span></td>
+            {elseif $P.ped_pag_status == 'SOLICITADO'}
+              <td style="width: 10%;"><span class="label label-info">{$P.ped_pag_status}</span></td>
+            {elseif $P.ped_pag_status == 'SEPARADO'}
+              <td style="width: 10%;"><span class="label label-warning">{$P.ped_pag_status}</span></td>
             {else}
               <td style="width: 10%;">{$P.ped_pag_status}</td>
             {/if}
--->
 
         <form name="itens" method="post" action="{$PAG_ITENS}">
 

@@ -13,7 +13,7 @@
             
             <td><b>Ref:</b> {$ITENS.1.ped_ref}</td>
             
-<!--            <td><b>Status:</b> {$ITENS.1.ped_pag_status}</td>-->
+
             
         </tr>  
         
@@ -64,6 +64,7 @@
 
             <center>
                 <table class="table table-bordered" style="width: 80%">
+
                     <tr>
 
                         <td class="text-danger"> <b>Frete:</b> R${$ITENS.1.ped_frete_valor}</td>
@@ -77,7 +78,22 @@
 
                 </table>
              
-            </center>          
+            </center>
+            <br>
+            <center>
+                {if $P.ped_pag_status == 'CANCELADO'}
+                  <b>Status: </b><span class="label label-danger">{$P.ped_pag_status}</span>
+                {elseif $P.ped_pag_status == 'ENTREGUE'}
+                  <b>Status: </b><span class="label label-success">{$P.ped_pag_status}</span>
+                {elseif $P.ped_pag_status == 'SOLICITADO'}
+                  <b>Status: </b><span class="label label-info">{$P.ped_pag_status}</span>
+                {elseif $P.ped_pag_status == 'SEPARADO'}
+                  <b>Status: </b><span class="label label-warning">{$P.ped_pag_status}</span>
+                {else}
+                  <b>Status:</b>{$P.ped_pag_status}
+                {/if}
+            </center>
+            <br>
         </section>  
                         
                         
