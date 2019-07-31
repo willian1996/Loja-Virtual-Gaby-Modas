@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-30 12:24:47
+/* Smarty version 3.1.33, created on 2019-07-31 06:30:50
   from 'C:\wamp64\www\Loja-Virtual\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d40613f138c91_24122609',
+  'unifunc' => 'content_5d415fca7958f6_98706127',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '02618c1eaccb144e37270dd89949810ad5dd85fb' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\cadastro.tpl',
-      1 => 1564500284,
+      1 => 1564565438,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d40613f138c91_24122609 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d415fca7958f6_98706127 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -112,7 +112,7 @@ function content_5d40613f138c91_24122609 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Digite seu whatsapp" name="cli_celular" class="form-control" maxlength="9" min="111111111" required>
+              <input type="number" placeholder="Digite seu whatsapp" name="cli_celular" class="form-control" maxlength="11" min="11111111111"  required>
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ function content_5d40613f138c91_24122609 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Opcional" name="cli_fone" class="form-control" maxlength="9" min="11111111">
+              <input type="number" placeholder="Opcional" name="cli_fone" class="form-control">
                 </div>
               </div>
             </div>
@@ -204,7 +204,7 @@ function content_5d40613f138c91_24122609 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Opcional" name="cli_cep" class="form-control" min="11111111" maxlength="8">
+              <input type="text" placeholder="Digite o seu CEP" name="cli_cep" class="form-control">
                 </div>
             </div>
             </div>
@@ -225,7 +225,7 @@ function content_5d40613f138c91_24122609 (Smarty_Internal_Template $_smarty_tpl)
 
 
             <!-- Success message -->
-            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+            <div class="alert alert-success" role="alert" id="success_message">Sucesso <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
 
             <!-- Button -->
             <div class="form-group">

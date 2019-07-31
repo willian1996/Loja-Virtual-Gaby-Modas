@@ -89,7 +89,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Digite seu whatsapp" name="cli_celular" class="form-control" maxlength="9" min="111111111" required>
+              <input type="number" placeholder="Digite seu whatsapp" name="cli_celular" class="form-control" maxlength="11" min="11111111111"  required>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Opcional" name="cli_fone" class="form-control" maxlength="9" min="11111111">
+              <input type="number" placeholder="Opcional" name="cli_fone" class="form-control">
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Opcional" name="cli_cep" class="form-control" min="11111111" maxlength="8">
+              <input type="text" placeholder="Digite o seu CEP" name="cli_cep" class="form-control">
                 </div>
             </div>
             </div>
@@ -202,7 +202,7 @@
 
 
             <!-- Success message -->
-            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+            <div class="alert alert-success" role="alert" id="success_message">Sucesso <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
 
             <!-- Button -->
             <div class="form-group">

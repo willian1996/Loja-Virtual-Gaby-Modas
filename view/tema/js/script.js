@@ -7,83 +7,97 @@
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            first_name: {
+            cli_nome: {
                 validators: {
                         stringLength: {
                         min: 2,
                     },
                         notEmpty: {
-                        message: 'Please supply your first name'
+                        message: 'Por favor, forneça seu primeiro nome'
                     }
                 }
             },
-             last_name: {
+             cli_sobrenome: {
                 validators: {
                      stringLength: {
                         min: 2,
                     },
                     notEmpty: {
-                        message: 'Please supply your last name'
+                        message: 'Por favor, forneça seu sobrenome'
                     }
                 }
             },
-            email: {
+            cli_email: {
                 validators: {
                     notEmpty: {
-                        message: 'Please supply your email address'
+                        message: 'Por favor forneça o seu e-mail'
                     },
                     emailAddress: {
-                        message: 'Please supply a valid email address'
+                        message: 'Por favor, forneça um endereço de email válido'
                     }
                 }
             },
-            phone: {
+            cli_celular: {
                 validators: {
                     notEmpty: {
-                        message: 'Please supply your phone number'
+                        message: 'Por favor, forneça seu número do whatsapp'
                     },
-                    phone: {
-                        country: 'BR',
-                        message: 'Please supply a vaild phone number with area code'
-                    }
+                    regexp: {
+                        regexp: /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/,
+                        message: 'Por favor, forneça um número de Whatsapp com DDD sem o zero'
+                    },
+//                    phone: {
+//                        country: 'BR',
+//                        message: 'Por favor, forneça um número de whatsapp válido com DDD'
+//                    }
                 }
             },
-            address: {
+
+             cli_fone: {
+                validators: {
+//                    notEmpty: {
+//                        message: 'Por favor, forneça seu número do whatsapp'
+//                    },
+                    regexp: {
+                        regexp: /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/,
+                        message: 'Por favor, forneça um número de telefone com DDD sem o zero'
+                    },
+//                    phone: {
+//                        country: 'BR',
+//                        message: 'Por favor, forneça um número de whatsapp válido com DDD'
+//                    }
+                }
+            },
+            cli_endereco: {
                 validators: {
                      stringLength: {
                         min: 8,
                     },
                     notEmpty: {
-                        message: 'Please supply your street address'
+                        message: 'Por favor, forneça seu rua'
                     }
                 }
             },
-            city: {
+            cli_cidade: {
                 validators: {
                      stringLength: {
                         min: 4,
                     },
                     notEmpty: {
-                        message: 'Please supply your city'
+                        message: 'Por favor, selecione sua cidade'
                     }
                 }
             },
-            state: {
+            cli_cep: {
                 validators: {
-                    notEmpty: {
-                        message: 'Please select your state'
-                    }
-                }
-            },
-            zip: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please supply your zip code'
+//                    notEmpty: {
+//                        message: 'Por favor, forneça seu CEP'
+//                    },
+                    regexp: {
+                        regexp: /^\d{8}$/,
+                        message: 'Por favor, forneça um CEP válido'
                     },
-                    zipCode: {
-                        country: 'BR',
-                        message: 'Please supply a vaild zip code'
-                    }
+
                 }
             },
             comment: {
@@ -102,7 +116,7 @@
         })
         .on('success.form.bv', function(e) {
             $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                $('#contact_form').data('bootstrapValidator').resetForm();
+                $('#cadcliente').data('bootstrapValidator').resetForm();
 
             // Prevent form submission
             e.preventDefault();
