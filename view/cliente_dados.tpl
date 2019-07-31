@@ -33,33 +33,6 @@
               </div>
             </div>
 
-            <!-- Data Nasc-->
-
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label" >Data Nasc</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="date" value="{$CLI_DATA_NASC}" name="cli_data_nasc" class="form-control" required>
-                </div>
-              </div>
-            </div>
--->
-
-            <!-- RG-->
-
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label" >RG</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" value="{$CLI_RG}" name="cli_rg" class="form-control" required>
-                </div>
-              </div>
-            </div>
--->
 
             <!-- CPF-->
 
@@ -73,18 +46,6 @@
               </div>
             </div>
 
-            <!-- DDD-->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label" >DDD</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" value="{$CLI_DDD}" name="cli_ddd" class="form-control"  min="10" max="99" required>
-                </div>
-              </div>
-            </div>
-
             <!-- Whatsapp-->
 
             <div class="form-group">
@@ -92,7 +53,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" value="{$CLI_CELULAR}" name="cli_celular" class="form-control" required maxlength="9">
+              <input type="number" value="{$CLI_CELULAR}" name="cli_celular" class="form-control" required maxlength="11" min="11111111111">
                 </div>
               </div>
             </div>
@@ -104,7 +65,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" value="{$CLI_FONE}" name="cli_fone" class="form-control" required maxlength="9">
+              <input type="number" value="{$CLI_FONE}" name="cli_fone" class="form-control" required maxlength="11">
                 </div>
               </div>
             </div>
@@ -129,6 +90,17 @@
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
                     <input type="text" value="{$CLI_NUMERO}" name="cli_numero" class="form-control" required>
+                </div>
+              </div>
+            </div>
+
+            <!--            Ponto de Referencia-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Ponto de Referência</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input type="text" placeholder="Próximo de..." value="{$CLI_PONTO_REFERENCIA}" name="cli_ponto_referencia"  class="form-control" minlength="5">
                 </div>
               </div>
             </div>
@@ -161,47 +133,6 @@
               </div>
             </div>
             </div>
-
-            <!-- Estado -->
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label">Estado</label>
-                <div class="col-md-4 selectContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_uf" class="form-control selectpicker" required>
-                    <option value="" >Selecione seu Estado</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                </select>
-              </div>
-            </div>
-            </div>
--->
 
             <!-- CEP-->
 

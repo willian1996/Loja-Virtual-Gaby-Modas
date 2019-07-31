@@ -30,34 +30,6 @@
               </div>
             </div>
 
-            <!-- Data Nasc-->
-
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label" >Data Nasc</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="date" name="cli_data_nasc" class="form-control" required>
-                </div>
-              </div>
-            </div>
--->
-
-            <!-- RG-->
-
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label" >RG</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" placeholder="Digite seu RG" name="cli_rg" class="form-control" required>
-                </div>
-              </div>
-            </div>
--->
-
             <!-- CPF-->
 
             <div class="form-group">
@@ -70,18 +42,6 @@
               </div>
             </div>
 
-            <!-- DDD-->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label" >DDD</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Digite o código sem o zero" name="cli_ddd" class="form-control"   min="10" max="99"  maxlength="2" required>
-                </div>
-              </div>
-            </div>
-
             <!-- Whatsapp-->
 
             <div class="form-group">
@@ -89,7 +49,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Digite seu whatsapp" name="cli_celular" class="form-control" maxlength="11" min="11111111111"  required>
+              <input type="number" placeholder="Whatsapp com o DDD" name="cli_celular" class="form-control" maxlength="11" min="11111111111"  required>
                 </div>
               </div>
             </div>
@@ -101,7 +61,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" placeholder="Opcional" name="cli_fone" class="form-control">
+              <input type="number" placeholder="Ou celular para recado" name="cli_fone" class="form-control">
                 </div>
               </div>
             </div>
@@ -130,6 +90,18 @@
               </div>
             </div>
 
+            <!--            Ponto de Referencia-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Ponto de Referência</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input type="text" placeholder="Próximo de..." name="cli_ponto_referencia"  class="form-control" minlength="3" required>
+                </div>
+              </div>
+            </div>
+
+
             <!-- Bairro-->
             <div class="form-group">
               <label class="col-md-4 control-label">Bairro</label>
@@ -142,18 +114,6 @@
             </div>
 
 
-<!--            Ponto de Referencia-->
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label">Ponto de Referência</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Próximo de..."  class="form-control" minlength="3" required>
-                </div>
-              </div>
-            </div>
--->
 
             <!-- Cidade -->
 
@@ -208,7 +168,9 @@
             <div class="form-group">
               <label class="col-md-4 control-label"></label>
               <div class="col-md-4">
+                  <center>
                 <button type="submit" class="btn btn-success" >Cadastrar <span class="glyphicon glyphicon-send"></span></button>
+                  </center>
               </div>
             </div>
 

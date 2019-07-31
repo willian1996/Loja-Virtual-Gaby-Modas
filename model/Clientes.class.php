@@ -4,17 +4,14 @@ class Clientes extends Conexao{
 
     private $cli_nome;
     private $cli_sobrenome;
-    private $cli_data_nasc;
-    private $cli_rg;
     private $cli_cpf;
-    private $cli_ddd ;
     private $cli_fone;
     private $cli_celular;
     private $cli_endereco;
     private $cli_numero;
+    private $cli_ponto_referencia;
     private $cli_bairro;
     private $cli_cidade;
-    private $cli_uf;
     private $cli_cep;
     private $cli_email;
     private $cli_data_cad;
@@ -26,24 +23,21 @@ class Clientes extends Conexao{
     }
 
 
-    public function Preparar($cli_nome, $cli_sobrenome , $cli_data_nasc, $cli_rg,
-            $cli_cpf , $cli_ddd  , $cli_fone , $cli_celular , $cli_endereco , $cli_numero,
-            $cli_bairro , $cli_cidade ,$cli_uf ,$cli_cep ,$cli_email , $cli_data_cad,
+    public function Preparar($cli_nome, $cli_sobrenome,
+            $cli_cpf  , $cli_fone , $cli_celular , $cli_endereco , $cli_numero, $cli_ponto_referencia,
+            $cli_bairro , $cli_cidade , $cli_cep ,$cli_email , $cli_data_cad,
             $cli_hora_cad, $cli_senha){
 
         $this->setCli_nome($cli_nome);
         $this->setCli_sobrenome($cli_sobrenome);
-        $this->setCli_data_nasc($cli_data_nasc);
-        $this->setCli_rg($cli_rg);
         $this->setCli_cpf($cli_cpf);
-        $this->setCli_ddd($cli_ddd);
         $this->setCli_fone($cli_fone);
         $this->setCli_celular($cli_celular);
         $this->setCli_endereco($cli_endereco);
         $this->setCli_numero($cli_numero);
+        $this->setCli_ponto_referencia($cli_ponto_referencia);
         $this->setCli_bairro($cli_bairro);
         $this->setCli_cidade($cli_cidade);
-        $this->setCli_uf($cli_uf);
         $this->setCli_cep($cli_cep);
         $this->setCli_email($cli_email);
         $this->setCli_data_cad($cli_data_cad);
@@ -76,28 +70,25 @@ class Clientes extends Conexao{
         }
 
         //Inserir os dados da função
-        $query = " INSERT INTO {$this->prefix}clientes (cli_nome, cli_sobrenome,cli_data_nasc,cli_rg,";
-        $query .=" cli_cpf, cli_ddd,cli_fone,cli_celular ,cli_endereco ,cli_numero,cli_bairro ,";
-        $query .=" cli_cidade ,cli_uf ,cli_cep ,cli_email ,cli_data_cad, cli_hora_cad, cli_pass)";
+        $query = " INSERT INTO {$this->prefix}clientes (cli_nome, cli_sobrenome,";
+        $query .=" cli_cpf, cli_fone,cli_celular ,cli_endereco ,cli_numero, cli_ponto_referencia, cli_bairro ,";
+        $query .=" cli_cidade ,cli_cep ,cli_email ,cli_data_cad, cli_hora_cad, cli_pass)";
         $query .=" VALUES ";
-        $query .=" (:cli_nome, :cli_sobrenome,:cli_data_nasc,:cli_rg,";
-        $query .=" :cli_cpf, :cli_ddd,:cli_fone,:cli_celular ,:cli_endereco ,:cli_numero,:cli_bairro ,";
-        $query .=" :cli_cidade ,:cli_uf ,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
+        $query .=" (:cli_nome, :cli_sobrenome,";
+        $query .=" :cli_cpf, :cli_fone,:cli_celular ,:cli_endereco ,:cli_numero, :cli_ponto_referencia, :cli_bairro ,";
+        $query .=" :cli_cidade ,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
 
         $params = array(
         ':cli_nome'     => $this->getCli_nome() ,
         ':cli_sobrenome'=> $this->getCli_sobrenome() ,
-        ':cli_data_nasc'=> $this->getCli_data_nasc() ,
-        ':cli_rg'       => $this->getCli_rg() ,
         ':cli_cpf'      => $this->getCli_cpf() ,
-        ':cli_ddd'      => $this->getCli_ddd() ,
         ':cli_fone'     => $this->getCli_fone() ,
         ':cli_celular'  => $this->getCli_celular() ,
         ':cli_endereco' => $this->getCli_endereco() ,
         ':cli_numero'   => $this->getCli_numero() ,
+        ':cli_ponto_referencia'   => $this->getCli_ponto_referencia(),
         ':cli_bairro'   => $this->getCli_bairro() ,
         ':cli_cidade'   => $this->getCli_cidade() ,
-        ':cli_uf'       => $this->getCli_uf() ,
         ':cli_cep'      => $this->getCli_cep() ,
         ':cli_email'    => $this->getCli_email() ,
         ':cli_data_cad' => $this->getCli_data_cad() ,
@@ -131,28 +122,25 @@ class Clientes extends Conexao{
 
         // caso passou na verificação grava no banco
 
-        $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, cli_sobrenome=:cli_sobrenome,cli_data_nasc=:cli_data_nasc,cli_rg=:cli_rg,";
-        $query .=" cli_cpf=:cli_cpf, cli_ddd=:cli_ddd,cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero,cli_bairro=:cli_bairro ,";
-        $query .=" cli_cidade=:cli_cidade ,cli_uf=:cli_uf ,cli_cep=:cli_cep ,cli_email=:cli_email ,cli_data_cad=:cli_data_cad, cli_hora_cad=:cli_hora_cad, cli_pass=:cli_senha ";
+        $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, cli_sobrenome=:cli_sobrenome,";
+        $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia , cli_bairro=:cli_bairro ,";
+        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_email=:cli_email ,cli_data_cad=:cli_data_cad, cli_hora_cad=:cli_hora_cad, cli_pass=:cli_senha ";
         $query .=" WHERE  cli_id = :cli_id";
-      //  $query .=" (:cli_nome, :cli_sobrenome,:cli_data_nasc,:cli_rg,";
-      //  $query .=" :cli_cpf, :cli_ddd,:cli_fone,:cli_celular ,:cli_endereco ,:cli_numero,:cli_bairro ,";
-      //  $query .=" :cli_cidade ,:cli_uf ,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
+      //  $query .=" (:cli_nome, :cli_sobrenome,";
+      //  $query .=" :cli_cpf, :cli_fone,:cli_celular ,:cli_endereco ,:cli_numero,:cli_bairro ,";
+      //  $query .=" :cli_cidade ,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
 
         $params = array(
             ':cli_nome'     => $this->getCli_nome() ,
             ':cli_sobrenome'=> $this->getCli_sobrenome() ,
-            ':cli_data_nasc'=> $this->getCli_data_nasc() ,
-            ':cli_rg'       => $this->getCli_rg() ,
             ':cli_cpf'      => $this->getCli_cpf() ,
-            ':cli_ddd'      => $this->getCli_ddd() ,
             ':cli_fone'     => $this->getCli_fone() ,
             ':cli_celular'  => $this->getCli_celular() ,
             ':cli_endereco' => $this->getCli_endereco() ,
             ':cli_numero'   => $this->getCli_numero() ,
+            ':cli_ponto_referencia' => $this->getCli_ponto_referencia(),
             ':cli_bairro'   => $this->getCli_bairro() ,
             ':cli_cidade'   => $this->getCli_cidade() ,
-            ':cli_uf'       => $this->getCli_uf() ,
             ':cli_cep'      => $this->getCli_cep() ,
             ':cli_email'    => $this->getCli_email() ,
             ':cli_data_cad' => $this->getCli_data_cad() ,
@@ -238,21 +226,10 @@ class Clientes extends Conexao{
         return $this->cli_sobrenome;
     }
 
-    function getCli_data_nasc() {
-        return $this->cli_data_nasc;
-    }
-
-    function getCli_rg() {
-        return $this->cli_rg;
-    }
 
     function getCli_cpf() {
 
         return $this->cli_cpf;
-    }
-
-    function getCli_ddd() {
-        return $this->cli_ddd;
     }
 
     function getCli_fone() {
@@ -272,16 +249,17 @@ class Clientes extends Conexao{
         return $this->cli_numero;
 
     }
+
+    function getCli_ponto_referencia(){
+        return $this->cli_ponto_referencia;
+    }
+
     function getCli_bairro() {
         return $this->cli_bairro;
     }
 
     function getCli_cidade() {
         return $this->cli_cidade;
-    }
-
-    function getCli_uf() {
-        return $this->cli_uf;
     }
 
     function getCli_cep() {
@@ -342,38 +320,12 @@ class Clientes extends Conexao{
 
     }
 
-    function setCli_data_nasc($cli_data_nasc) {
-
-
-        $this->cli_data_nasc = $cli_data_nasc;
-    }
-
-    function setCli_rg($cli_rg) {
-        $this->cli_rg = $cli_rg;
-    }
 
     function setCli_cpf($cli_cpf) {
 
 
 
           $this->cli_cpf = $cli_cpf;
-
-    }
-
-    function setCli_ddd($cli_ddd) {
-
-         $ddd = filter_var($cli_ddd, FILTER_SANITIZE_NUMBER_INT);
-
-
-        if(strlen($ddd) != 2):
-                echo '<div class="alert alert-danger " id="erro_mostrar"> DDD incorreto ';
-                Sistema::VoltarPagina();
-                echo '</div>';
-
-           else:
-           $this->cli_ddd = $cli_ddd;
-
-       endif;
 
     }
 
@@ -394,28 +346,20 @@ class Clientes extends Conexao{
         $this->cli_numero = $cli_numero;
     }
 
+    function setCli_ponto_referencia($cli_ponto_referencia){
+
+
+        $this->cli_ponto_referencia = $cli_ponto_referencia;
+
+
+    }
+
     function setCli_bairro($cli_bairro) {
         $this->cli_bairro = $cli_bairro;
     }
 
     function setCli_cidade($cli_cidade) {
         $this->cli_cidade = $cli_cidade;
-    }
-
-    function setCli_uf($cli_uf) {
-
-         $uf = filter_var($cli_uf, FILTER_SANITIZE_STRING);
-
-//       if(strlen($uf) != 2): // 11111
-//                echo '<div class="alert alert-danger " id="erro_mostrar"> UF incorreto ';
-//                Sistema::VoltarPagina();
-//                echo '</div>';
-//
-//           else:
-           $this->cli_uf = $cli_uf;
-
-//       endif;
-
     }
 
     function setCli_cep($cli_cep) {

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-30 03:56:05
+/* Smarty version 3.1.33, created on 2019-07-31 08:15:40
   from 'C:\wamp64\www\Loja-Virtual\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3fea0565b871_43273337',
+  'unifunc' => 'content_5d41785cf09485_72822502',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     '23a48f82189d0074d140ac845d8aabe2e9653ca4' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\view\\cliente_dados.tpl',
-      1 => 1564469740,
+      1 => 1564571733,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3fea0565b871_43273337 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d41785cf09485_72822502 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -58,35 +58,6 @@ function content_5d3fea0565b871_43273337 (Smarty_Internal_Template $_smarty_tpl)
               </div>
             </div>
 
-            <!-- Data Nasc-->
-
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label" >Data Nasc</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="date" value="<?php echo $_smarty_tpl->tpl_vars['CLI_DATA_NASC']->value;?>
-" name="cli_data_nasc" class="form-control" required>
-                </div>
-              </div>
-            </div>
--->
-
-            <!-- RG-->
-
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label" >RG</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_RG']->value;?>
-" name="cli_rg" class="form-control" required>
-                </div>
-              </div>
-            </div>
--->
 
             <!-- CPF-->
 
@@ -101,19 +72,6 @@ function content_5d3fea0565b871_43273337 (Smarty_Internal_Template $_smarty_tpl)
               </div>
             </div>
 
-            <!-- DDD-->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label" >DDD</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_DDD']->value;?>
-" name="cli_ddd" class="form-control"  min="10" max="99" required>
-                </div>
-              </div>
-            </div>
-
             <!-- Whatsapp-->
 
             <div class="form-group">
@@ -122,7 +80,7 @@ function content_5d3fea0565b871_43273337 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CELULAR']->value;?>
-" name="cli_celular" class="form-control" required maxlength="9">
+" name="cli_celular" class="form-control" required maxlength="11" min="11111111111">
                 </div>
               </div>
             </div>
@@ -135,7 +93,7 @@ function content_5d3fea0565b871_43273337 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_FONE']->value;?>
-" name="cli_fone" class="form-control" required maxlength="9">
+" name="cli_fone" class="form-control" required maxlength="11">
                 </div>
               </div>
             </div>
@@ -162,6 +120,18 @@ function content_5d3fea0565b871_43273337 (Smarty_Internal_Template $_smarty_tpl)
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
                     <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_NUMERO']->value;?>
 " name="cli_numero" class="form-control" required>
+                </div>
+              </div>
+            </div>
+
+            <!--            Ponto de Referencia-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Ponto de Referência</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input type="text" placeholder="Próximo de..." value="<?php echo $_smarty_tpl->tpl_vars['CLI_PONTO_REFERENCIA']->value;?>
+" name="cli_ponto_referencia"  class="form-control" minlength="5">
                 </div>
               </div>
             </div>
@@ -207,47 +177,6 @@ if ($_prefixVariable4 == 'Ilha Bela') {?>selected="selected"<?php }?>>Ilha Bela<
               </div>
             </div>
             </div>
-
-            <!-- Estado -->
-<!--
-            <div class="form-group">
-              <label class="col-md-4 control-label">Estado</label>
-                <div class="col-md-4 selectContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_uf" class="form-control selectpicker" required>
-                    <option value="" >Selecione seu Estado</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                </select>
-              </div>
-            </div>
-            </div>
--->
 
             <!-- CEP-->
 
