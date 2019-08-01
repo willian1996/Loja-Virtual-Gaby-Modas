@@ -26,4 +26,37 @@ class ProdutosImages extends Conexao{
         $i++;
         endwhile;
     }
+
+    public function Insert($img,$pro_id){
+
+        $query = "INSERT INTO {$this->prefix}imagens (img_nome,img_pro_id)";
+        $query.= " VALUES (:img_nome,:img_pro_id) ";
+
+        $params = array(':img_nome'=>$img,
+                        ':img_pro_id'=> (int)$pro_id
+                       );
+
+        $this->ExecuteSQL($query, $params);
+
+
+    }
+
+    public function Deletar($img_nome){
+
+        $query = " DELETE FROM {$this->prefix}imagens ";
+        $query .= " WHERE img_nome = :img_nome ";
+
+        $params = array(':img_nome'=>$img_nome);
+
+        $this->ExecuteSQL($query, $params);
+
+    }
+
+
+
+
+
+
+
+
 }

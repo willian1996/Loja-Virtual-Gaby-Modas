@@ -48,7 +48,7 @@
               <label class="col-md-4 control-label">Whatsapp</label>
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
               <input type="number" placeholder="Whatsapp com o DDD" name="cli_celular" class="form-control" maxlength="11" min="11111111111"  required>
                 </div>
               </div>
@@ -73,7 +73,7 @@
               <label class="col-md-4 control-label">Rua</label>
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
                     <input type="text" placeholder="Digite a sua rua ou avenida" name="cli_endereco" class="form-control"  minlength="3" required>
                 </div>
               </div>
@@ -95,7 +95,7 @@
               <label class="col-md-4 control-label">Ponto de Referência</label>
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
               <input type="text" placeholder="Próximo de..." name="cli_ponto_referencia"  class="form-control" minlength="3" required>
                 </div>
               </div>

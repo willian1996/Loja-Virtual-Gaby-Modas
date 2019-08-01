@@ -7,9 +7,9 @@
 
 
     {*  <!--div da esquerda imagem do produto  -->*}
-    <div class="col-md-6 ">
+    <div class="col-md-6">
 
-        <img class="thumbnail" src="{$P.pro_img_g}" alt="" >
+        <img class="thumbnail" src="{$P.pro_img_g}" alt="" width="100%">
 
     </div>
 
@@ -17,24 +17,38 @@
 	{*    <!--div da direita info produtos-->    *}
     <div class="col-md-6 thumbnail">
 
+        <br>
           <img src="{$TEMA}/imagens/logo-pagseguro.png" alt="">
-  <hr>
+
 
 
         <div class="col-md-6">
+            <br>
            <h3 class="text-center preco">R$ {$P.pro_valor}</h3>
 
         </div>
-
         <div class="col-md-6">
             <form name="carrinho" method="post" action="{$PAG_COMPRAR}">
+                <br>
+                <center><h4>Selecione o tamanho</h4></center>
+                <select name="pro_tamanho" class="form-control selectpicker" required>
+                    <option value="">selecione</option>
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+
+                </select>
+                <br>
+
                 <input type="hidden" name="pro_id" value="{$P.pro_id}">
 
 <!--                adicionar um select option para P M G GG -->
 
 
                 <input type="hidden" name="acao" value="add">
-            <button  class="btn btn-success btn-lg">Colocar no Carrinho</button>
+                <center><button  class="btn btn-success btn-lg">Colocar no Carrinho</button></center>
+                <br><br>
              </form>
 
         </div>

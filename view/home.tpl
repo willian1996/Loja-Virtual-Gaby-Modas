@@ -1,4 +1,3 @@
-<!--<center><img src="{$BANNER}" alt="" class="img img-responsive img-rounded"></center>-->
 
 
 
@@ -14,19 +13,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="{$IMG1}" alt="Los Angeles" class="img img-responsive img-rounded"  style="width:100%;">
+        <img src="{$IMG1}" alt="Los Angeles" class="img img-responsive"  style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="{$IMG2}" alt="Chicago" class="img img-responsive img-rounded" style="width:100%;">
+        <img src="{$IMG2}" alt="Chicago" class="img img-responsive" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="{$IMG3}" alt="New york" class="img img-responsive img-rounded" style="width:100%;">
+        <img src="{$IMG3}" alt="New york" class="img img-responsive" style="width:100%;">
       </div>
 
      <div class="item">
-        <img src="{$IMG4}" alt="New york" class="img img-responsive img-rounded" style="width:100%;">
+        <img src="{$IMG4}" alt="New york" class="img img-responsive" style="width:100%;">
       </div>
     </div>
 

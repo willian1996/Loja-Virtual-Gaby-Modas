@@ -39,6 +39,9 @@ color: #fff;
         margin-bottom: 30px;
 
     }
+    #lateraladm{
+        display: none;
+    }
 
 }
 
@@ -129,7 +132,10 @@ section#fazerlogin{
 #minhaconta div a{
     margin-bottom: 5px;
 }
-
+.thumbnail{
+    box-shadow: none;
+    border-radius: 0;
+}
 
 /*footer*/
 

@@ -38,18 +38,11 @@
         <div class="col-md-2">
             <label>Ativo</label>
             <select name="pro_ativo" id="pro_cativo" class="form-control" required >
-
-                <option value="{$PRO.1.pro_ativo}"> {$PRO.1.pro_ativo} </option>
                 <option value=""> Escolha </option>
-                <option value="NAO"> Não </option>
-                <option value="SIM"> Sim </option>
-
+                <option value="NAO" {if {$PRO.1.pro_ativo} == 'NAO'}selected="selected"{/if}> Não </option>
+                <option value="SIM" {if {$PRO.1.pro_ativo} == 'SIM'}selected="selected"{/if}> Sim </option>
             </select>
-
-
         </div>
-
-
 
 
 

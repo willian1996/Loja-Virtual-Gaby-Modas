@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-30 16:22:21
+/* Smarty version 3.1.33, created on 2019-08-01 03:08:06
   from 'C:\wamp64\www\Loja-Virtual\adm\view\adm_produtos_editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4098edce4372_48219781',
+  'unifunc' => 'content_5d4281c66f2fd1_22308360',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     'd30b85689f4f19616dcfd132e7a210c3dd1a31db' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\adm\\view\\adm_produtos_editar.tpl',
-      1 => 1564514527,
+      1 => 1564639474,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4098edce4372_48219781 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4281c66f2fd1_22308360 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <h4 class="text-center"> Editar produto </h4>
@@ -73,20 +73,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div class="col-md-2">
             <label>Ativo</label>
             <select name="pro_ativo" id="pro_cativo" class="form-control" required >
-
-                <option value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ativo'];?>
-"> <?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ativo'];?>
- </option>
                 <option value=""> Escolha </option>
-                <option value="NAO"> Não </option>
-                <option value="SIM"> Sim </option>
-
+                <option value="NAO" <?php ob_start();
+echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ativo'];
+$_prefixVariable1 = ob_get_clean();
+if ($_prefixVariable1 == 'NAO') {?>selected="selected"<?php }?>> Não </option>
+                <option value="SIM" <?php ob_start();
+echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ativo'];
+$_prefixVariable2 = ob_get_clean();
+if ($_prefixVariable2 == 'SIM') {?>selected="selected"<?php }?>> Sim </option>
             </select>
-
-
         </div>
-
-
 
 
 

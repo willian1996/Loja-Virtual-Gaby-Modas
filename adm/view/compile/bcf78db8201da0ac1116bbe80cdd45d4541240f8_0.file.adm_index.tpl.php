@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-29 17:35:18
+/* Smarty version 3.1.33, created on 2019-08-01 02:07:55
   from 'C:\wamp64\www\Loja-Virtual\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3f58866a1ae6_44282876',
+  'unifunc' => 'content_5d4273ab0a3928_36492910',
   'has_nocache_code' => false,
   'file_dependency' =>
   array (
     'bcf78db8201da0ac1116bbe80cdd45d4541240f8' =>
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual\\adm\\view\\adm_index.tpl',
-      1 => 1564432516,
+      1 => 1564636070,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3f58866a1ae6_44282876 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4273ab0a3928_36492910 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -99,10 +99,10 @@ function content_5d3f58866a1ae6_44282876 (Smarty_Internal_Template $_smarty_tpl)
                             <ul class="nav navbar-nav">
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_ADM']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CATEGORIAS']->value;?>
-"><i class="glyphicon glyphicon-list-alt"></i> Cetegorias </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PRODUTOS']->value;?>
 "><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CATEGORIAS']->value;?>
+"><i class="glyphicon glyphicon-list-alt"></i> Cetegorias </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_CLIENTE']->value;?>
 "><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
@@ -137,7 +137,7 @@ function content_5d3f58866a1ae6_44282876 (Smarty_Internal_Template $_smarty_tpl)
             <div class="container">
 
                 <!-- coluna da esquerda -->
-                <div class="col-md-2" id="lateral">
+                <div class="col-md-2" id="lateraladm">
 
                 <div class="list-group">
                     <span class="list-group-item active"> Categorias</span>
