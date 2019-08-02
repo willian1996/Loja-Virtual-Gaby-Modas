@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: 01-Ago-2019 às 06:12
--- Versão do servidor: 5.7.26
--- versão do PHP: 7.3.5
+-- Host: 127.0.0.1
+-- Tempo de geração: 03-Ago-2019 às 00:45
+-- Versão do servidor: 10.3.16-MariaDB
+-- versão do PHP: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `loja_gabymodas`
+-- Banco de dados: `loja_gabymodas`
 --
 
 -- --------------------------------------------------------
@@ -28,14 +28,12 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `gm_bairros`
 --
 
-DROP TABLE IF EXISTS `gm_bairros`;
-CREATE TABLE IF NOT EXISTS `gm_bairros` (
-  `bairros_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gm_bairros` (
+  `bairros_id` int(11) NOT NULL,
   `bairros_nome` varchar(100) NOT NULL,
   `bairros_cidade` varchar(100) NOT NULL,
-  `bairros_frete_valor` double DEFAULT NULL,
-  PRIMARY KEY (`bairros_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=308 DEFAULT CHARSET=utf8;
+  `bairros_frete_valor` double DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_bairros`
@@ -352,13 +350,11 @@ INSERT INTO `gm_bairros` (`bairros_id`, `bairros_nome`, `bairros_cidade`, `bairr
 -- Estrutura da tabela `gm_categorias`
 --
 
-DROP TABLE IF EXISTS `gm_categorias`;
-CREATE TABLE IF NOT EXISTS `gm_categorias` (
-  `cate_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gm_categorias` (
+  `cate_id` int(11) NOT NULL,
   `cate_nome` varchar(50) NOT NULL,
-  `cate_slug` varchar(50) NOT NULL,
-  PRIMARY KEY (`cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+  `cate_slug` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_categorias`
@@ -370,7 +366,8 @@ INSERT INTO `gm_categorias` (`cate_id`, `cate_nome`, `cate_slug`) VALUES
 (3, 'Vestidos', 'categoria-vestidos'),
 (4, 'Calças ', 'categoria-calcas'),
 (5, 'Blusas', 'categoria-blusas'),
-(7, 'Shorts', 'cate-shorts');
+(7, 'Shorts', 'cate-shorts'),
+(14, 'Conjuntos', 'conjuntos');
 
 -- --------------------------------------------------------
 
@@ -378,9 +375,8 @@ INSERT INTO `gm_categorias` (`cate_id`, `cate_nome`, `cate_slug`) VALUES
 -- Estrutura da tabela `gm_clientes`
 --
 
-DROP TABLE IF EXISTS `gm_clientes`;
-CREATE TABLE IF NOT EXISTS `gm_clientes` (
-  `cli_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gm_clientes` (
+  `cli_id` int(11) NOT NULL,
   `cli_nome` varchar(80) NOT NULL,
   `cli_sobrenome` varchar(80) NOT NULL,
   `cli_endereco` varchar(100) NOT NULL,
@@ -395,16 +391,18 @@ CREATE TABLE IF NOT EXISTS `gm_clientes` (
   `cli_email` varchar(150) NOT NULL,
   `cli_pass` varchar(150) NOT NULL,
   `cli_data_cad` date NOT NULL,
-  `cli_hora_cad` time NOT NULL,
-  PRIMARY KEY (`cli_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+  `cli_hora_cad` time NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_clientes`
 --
 
 INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_sobrenome`, `cli_endereco`, `cli_numero`, `cli_ponto_referencia`, `cli_bairro`, `cli_cidade`, `cli_cep`, `cli_cpf`, `cli_fone`, `cli_celular`, `cli_email`, `cli_pass`, `cli_data_cad`, `cli_hora_cad`) VALUES
-(24, 'Willian', 'Sales Gabriel', 'Rua Cleusa Fátima dos Santos, 62', '62', 'Próximo ao Hortifrúti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '43593584824', '1238894092', '12996417887', 'williansalesgabriel@hotmail.com', 'f8bf5f221cef51838766c7e8348bf5da', '2019-07-31', '08:22:41');
+(24, 'Willian', 'Sales', 'Rua Cleusa Fátima dos Santos, 62', '62', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '43593584824', '12996417887', '12996417887', 'williansalesgabriel@hotmail.com', 'f8bf5f221cef51838766c7e8348bf5da', '2019-07-31', '08:22:41'),
+(25, 'Rebeca ', 'Lorraine Mendes de Oliveira ', 'Rua Safira ', '60', 'Proximo ao Rocha ', 'Pegorelli', 'Caraguatatuba', '11669309', '55865748610', '1238833040', '12996278049', 'rebeca@gmail.com', '202cb962ac59075b964b07152d234b70', '2019-08-01', '20:29:21'),
+(26, 'Stephany', 'de Oliveira', 'Rua Avelido Ferreira', '60', 'perto do pier ', 'Praia Deserta ', 'Sao Sebastiao', '11600000', '63346405931', '1238894092', '12980807000', 'stephany@gmail.com', '202cb962ac59075b964b07152d234b70', '2019-08-02', '13:12:29'),
+(27, 'Elaine ', 'de Oliveira', 'Rua Major Aires', '26A', 'Proximo ao Mercadinho Domingues', 'Centro ', 'Ilhabela', '11660000', '28067597308', '', '12988554477', 'elaine@gmail.com', '202cb962ac59075b964b07152d234b70', '2019-08-02', '13:28:49');
 
 -- --------------------------------------------------------
 
@@ -412,14 +410,12 @@ INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_sobrenome`, `cli_endereco`
 -- Estrutura da tabela `gm_imagens`
 --
 
-DROP TABLE IF EXISTS `gm_imagens`;
-CREATE TABLE IF NOT EXISTS `gm_imagens` (
-  `img_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gm_imagens` (
+  `img_id` int(11) NOT NULL,
   `img_nome` varchar(200) NOT NULL,
   `img_pro_id` int(11) NOT NULL,
-  `img_pasta` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`img_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+  `img_pasta` varchar(50) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_imagens`
@@ -435,9 +431,8 @@ INSERT INTO `gm_imagens` (`img_id`, `img_nome`, `img_pro_id`, `img_pasta`) VALUE
 -- Estrutura da tabela `gm_pedidos`
 --
 
-DROP TABLE IF EXISTS `gm_pedidos`;
-CREATE TABLE IF NOT EXISTS `gm_pedidos` (
-  `ped_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gm_pedidos` (
+  `ped_id` int(11) NOT NULL,
   `ped_data` date NOT NULL,
   `ped_hora` time NOT NULL,
   `ped_cliente` int(11) NOT NULL,
@@ -448,54 +443,27 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos` (
   `ped_pag_tipo` varchar(20) DEFAULT NULL,
   `ped_pag_codigo` varchar(220) DEFAULT NULL,
   `ped_frete_valor` double(9,2) DEFAULT NULL,
-  `ped_frete_tipo` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`ped_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+  `ped_frete_tipo` varchar(20) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos`
 --
 
 INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_cod`, `ped_ref`, `ped_pag_status`, `ped_pag_forma`, `ped_pag_tipo`, `ped_pag_codigo`, `ped_frete_valor`, `ped_frete_tipo`) VALUES
-(46, '2019-07-22', '07:24:32', 1, '1907220707301', '1907220707301', 'ENTREGUE', NULL, NULL, NULL, 112.40, NULL),
-(45, '2019-07-22', '05:41:29', 1, '1907220507271', '1907220507271', 'ENTREGUE', NULL, NULL, NULL, 112.40, NULL),
-(44, '2019-07-21', '09:28:34', 1, '1907210907321', '1907210907321', 'ENTREGUE', NULL, NULL, NULL, 115.80, NULL),
-(43, '2019-07-21', '09:19:47', 1, '1907210907451', '1907210907451', NULL, NULL, NULL, NULL, 112.40, NULL),
-(34, '2019-07-21', '06:27:28', 1, '1907210607281', '1907210607281', NULL, NULL, NULL, NULL, 112.40, NULL),
-(35, '2019-07-21', '07:45:15', 1, '1907210607551', '1907210607551', NULL, NULL, NULL, NULL, 112.40, NULL),
-(36, '2019-07-21', '08:05:37', 1, '1907210807351', '1907210807351', NULL, NULL, NULL, NULL, 112.40, NULL),
-(37, '2019-07-21', '08:10:07', 1, '1907210807061', '1907210807061', NULL, NULL, NULL, NULL, 112.40, NULL),
-(38, '2019-07-21', '08:25:57', 1, '1907210807561', '1907210807561', NULL, NULL, NULL, NULL, 112.40, NULL),
-(39, '2019-07-21', '08:33:49', 1, '1907210807471', '1907210807471', NULL, NULL, NULL, NULL, 115.80, NULL),
-(40, '2019-07-21', '08:34:58', 1, '1907210807561', '1907210807561', NULL, NULL, NULL, NULL, 115.80, NULL),
-(41, '2019-07-21', '08:38:15', 1, '1907210807131', '1907210807131', NULL, NULL, NULL, NULL, 115.80, NULL),
-(42, '2019-07-21', '09:08:01', 1, '1907210907001', '1907210907001', NULL, NULL, NULL, NULL, 112.40, NULL),
-(22, '2019-07-18', '23:10:22', 1, '1907182307221', '1907182307221', NULL, NULL, NULL, NULL, 22.90, 'pac'),
-(23, '2019-07-19', '20:24:29', 1, '1907192007291', '1907192007291', NULL, NULL, NULL, NULL, 22.90, 'pac'),
-(24, '2019-07-19', '20:26:27', 1, '1907192007271', '1907192007271', NULL, NULL, NULL, NULL, 22.90, 'pac'),
-(25, '2019-07-20', '07:33:04', 1, '1907200707041', '1907200707041', NULL, NULL, NULL, NULL, 22.90, 'pac'),
-(26, '2019-07-20', '07:35:59', 1, '1907200707591', '1907200707591', NULL, NULL, NULL, NULL, 22.90, 'pac'),
-(27, '2019-07-20', '07:52:03', 1, '1907200707031', '1907200707031', NULL, NULL, NULL, NULL, 115.80, NULL),
-(28, '2019-07-20', '07:59:16', 1, '1907200707161', '1907200707161', NULL, NULL, NULL, NULL, 112.40, NULL),
-(29, '2019-07-20', '08:05:03', 1, '1907200807031', '1907200807031', NULL, NULL, NULL, NULL, 112.40, NULL),
-(30, '2019-07-20', '08:09:15', 1, '1907200807151', '1907200807151', NULL, NULL, NULL, NULL, 112.40, NULL),
-(31, '2019-07-20', '08:12:32', 1, '1907200807321', '1907200807321', NULL, NULL, NULL, NULL, 112.40, NULL),
-(32, '2019-07-20', '08:14:15', 1, '1907200807151', '1907200807151', NULL, NULL, NULL, NULL, 112.40, NULL),
-(33, '2019-07-20', '08:22:46', 12, '1907200807451', '1907200807451', NULL, NULL, NULL, NULL, 115.80, NULL),
-(47, '2019-07-23', '07:05:08', 1, '1907230707051', '1907230707051', 'ENTREGUE', NULL, NULL, NULL, 115.80, NULL),
-(48, '2019-07-24', '04:24:20', 1, '1907240407181', '1907240407181', 'ENTREGUE', NULL, NULL, NULL, 115.80, NULL),
-(49, '2019-07-26', '07:25:02', 1, '19072607070012', '19072607070012', 'ENTREGUE', NULL, NULL, NULL, 115.80, NULL),
-(50, '2019-07-26', '07:45:34', 1, '19072607073212', '19072607073212', 'ENTREGUE', NULL, NULL, NULL, 115.80, NULL),
-(51, '2019-07-26', '07:48:13', 12, '19072607071212', '19072607071212', 'ENTREGUE', NULL, NULL, NULL, 115.80, NULL),
-(52, '2019-07-26', '07:50:23', 12, '19072607072112', '19072607072112', 'ENTREGUE', NULL, NULL, NULL, 115.80, NULL),
-(53, '2019-07-26', '16:31:05', 12, '19072616070312', '19072616070312', 'ENTREGUE', NULL, NULL, NULL, 112.40, NULL),
-(54, '2019-07-28', '02:59:58', 16, '19072802075616', '19072802075616', 'ENTREGUE', NULL, NULL, NULL, 112.40, NULL),
-(55, '2019-07-28', '03:24:22', 16, '19072803072016', '19072803072016', 'ENTREGUE', NULL, NULL, NULL, 112.40, NULL),
-(56, '2019-07-28', '03:33:44', 16, '19072803074316', '19072803074316', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
-(57, '2019-07-28', '04:46:50', 16, '19072804074716', '19072804074716', 'CANCELADO', NULL, NULL, NULL, 112.40, NULL),
-(58, '2019-07-28', '21:55:44', 16, '19072821074116', '19072821074116', 'SEPARADO', NULL, NULL, NULL, 112.40, NULL),
-(59, '2019-07-29', '16:22:15', 16, '19072916071216', '19072916071216', 'ENTREGUE', NULL, NULL, NULL, 112.40, NULL),
-(60, '2019-07-30', '03:41:39', 16, '19073003073716', '19073003073716', 'SOLICITADO', NULL, NULL, NULL, 115.80, NULL);
+(67, '2019-08-02', '16:58:08', 24, '19080216080324', '19080216080324', 'CANCELADO', NULL, NULL, NULL, 112.40, NULL),
+(62, '2019-08-01', '00:03:40', 25, '19080200083525', '19080200083525', 'SEPARADO', NULL, NULL, NULL, 115.80, NULL),
+(63, '2019-08-02', '13:15:45', 26, '19080213084126', '19080213084126', 'ENTREGUE', NULL, NULL, NULL, 112.40, NULL),
+(64, '2019-08-02', '13:30:47', 27, '19080213084427', '19080213084427', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
+(65, '2019-08-02', '13:56:54', 27, '19080213084927', '19080213084927', 'CANCELADO', NULL, NULL, NULL, 112.40, NULL),
+(66, '2019-08-02', '13:59:38', 27, '19080213083427', '19080213083427', 'SEPARADO', NULL, NULL, NULL, 112.40, NULL),
+(68, '2019-08-02', '17:33:48', 24, '19080217084224', '19080217084224', 'CANCELADO', NULL, NULL, NULL, 112.40, NULL),
+(69, '2019-08-02', '17:38:38', 24, '19080217083424', '19080217083424', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
+(70, '2019-08-02', '17:40:04', 24, '19080217080024', '19080217080024', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
+(71, '2019-08-02', '17:40:43', 24, '19080217083924', '19080217083924', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
+(72, '2019-08-02', '17:41:43', 24, '19080217083924', '19080217083924', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
+(73, '2019-08-02', '17:42:43', 24, '19080217083924', '19080217083924', 'SOLICITADO', NULL, NULL, NULL, 115.80, NULL),
+(74, '2019-08-02', '17:43:29', 24, '19080217082524', '19080217082524', 'SOLICITADO', NULL, NULL, NULL, 115.80, NULL);
 
 -- --------------------------------------------------------
 
@@ -503,15 +471,13 @@ INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_
 -- Estrutura da tabela `gm_pedidos_itens`
 --
 
-DROP TABLE IF EXISTS `gm_pedidos_itens`;
-CREATE TABLE IF NOT EXISTS `gm_pedidos_itens` (
-  `item_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gm_pedidos_itens` (
+  `item_id` int(11) NOT NULL,
   `item_produto` int(11) NOT NULL,
   `item_valor` double(9,2) NOT NULL,
   `item_qtd` int(6) NOT NULL,
-  `item_ped_cod` varchar(50) NOT NULL,
-  PRIMARY KEY (`item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
+  `item_ped_cod` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos_itens`
@@ -569,7 +535,26 @@ INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_valor`, `item_q
 (66, 6, 79.90, 1, '19073003073716'),
 (67, 22, 89.90, 3, '19073003073716'),
 (68, 21, 99.90, 1, '19073003073716'),
-(69, 15, 49.90, 1, '19073003073716');
+(69, 15, 49.90, 1, '19073003073716'),
+(83, 22, 99.90, 1, '19080217084224'),
+(82, 23, 40.00, 1, '19080216080324'),
+(81, 26, 40.00, 1, '19080216080324'),
+(73, 16, 45.90, 1, '19080200083525'),
+(74, 13, 99.99, 1, '19080200083525'),
+(75, 7, 49.90, 1, '19080200083525'),
+(76, 11, 99.99, 1, '19080213084126'),
+(77, 14, 69.90, 1, '19080213084427'),
+(78, 13, 99.99, 1, '19080213084427'),
+(79, 5, 89.90, 1, '19080213084927'),
+(80, 22, 99.90, 1, '19080213083427'),
+(84, 8, 89.90, 1, '19080217084224'),
+(85, 6, 79.90, 1, '19080217084224'),
+(86, 8, 89.90, 1, '19080217083424'),
+(87, 8, 89.90, 1, '19080217080024'),
+(88, 13, 99.99, 1, '19080217083924'),
+(89, 11, 99.99, 1, '19080217083924'),
+(90, 5, 89.90, 1, '19080217083924'),
+(91, 14, 69.90, 1, '19080217082524');
 
 -- --------------------------------------------------------
 
@@ -577,9 +562,8 @@ INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_valor`, `item_q
 -- Estrutura da tabela `gm_produtos`
 --
 
-DROP TABLE IF EXISTS `gm_produtos`;
-CREATE TABLE IF NOT EXISTS `gm_produtos` (
-  `pro_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gm_produtos` (
+  `pro_id` int(11) NOT NULL,
   `pro_categoria` int(11) NOT NULL,
   `pro_nome` varchar(100) NOT NULL,
   `pro_desc` text NOT NULL,
@@ -595,9 +579,8 @@ CREATE TABLE IF NOT EXISTS `gm_produtos` (
   `pro_ref` varchar(100) NOT NULL,
   `pro_fabricante` int(11) DEFAULT NULL,
   `pro_ativo` varchar(3) NOT NULL,
-  `pro_frete_gratis` varchar(100) NOT NULL DEFAULT 'Não',
-  PRIMARY KEY (`pro_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+  `pro_frete_gratis` varchar(100) NOT NULL DEFAULT 'Não'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_produtos`
@@ -616,7 +599,103 @@ INSERT INTO `gm_produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `p
 (17, 4, 'Calca Jeans', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.500, 49.90, 10, 10, 10, '190729160428calca-jeans.jpg.jpg', 'calca-jeans', 10, 'asddff', '45522', NULL, 'SIM', 'Não'),
 (16, 2, 'Conjunto Short e Blusa', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.059, 45.90, 10, 10, 10, '190729154509conjunto.jpg.jpg', 'conjunto-short-e-blusa', 10, 'asddff', '45522', NULL, 'SIM', 'Não'),
 (21, 4, 'Calca Jeans', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.500, 99.90, NULL, NULL, NULL, '190730160647calca-jeans-azul-claro-com-barra-mullet-des.jpg', 'calca-jeans', 10, NULL, '45522', NULL, 'SIM', 'Não'),
-(22, 3, 'Vestido Preto Colado ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 99.90, NULL, NULL, NULL, '190730165714vestido-preto.jpg.jpg', 'vestido-preto-colado', 10, NULL, '45662255', NULL, 'SIM', 'Não');
+(22, 3, 'Vestido Preto Colado ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 99.90, NULL, NULL, NULL, '190730165714vestido-preto.jpg.jpg', 'vestido-preto-colado', 10, NULL, '45662255', NULL, 'SIM', 'Não'),
+(23, 14, 'Conjunto Saia e Blusa Brancas ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160010conjunto-branco.jpg.jpg', 'conjunto-saia-e-blusa-brancas', 10, NULL, '78996655223', NULL, '1', 'Não'),
+(24, 14, 'Conjunto Saia Branca e Blusa Preta', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160254conjunto-brancoepreto.jpg.jpg', 'conjunto-saia-branca-e-blusa-preta', 10, NULL, '12335863632', NULL, '1', 'Não'),
+(25, 14, 'Conjunto Saia Branca e Blusa Vermelha', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160452consjunto-brancoevermelho.jpg.jpg', 'conjunto-saia-branca-e-blusa-vermelha', 10, NULL, '422200336589', NULL, '1', 'Não'),
+(26, 14, 'Conjunto Saia Branca e Blusa Rosa', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160643conjunto-brancoerosa.jpg.jpg', 'conjunto-saia-branca-e-blusa-rosa', 10, NULL, '54200033555', NULL, '1', 'Não');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `gm_bairros`
+--
+ALTER TABLE `gm_bairros`
+  ADD PRIMARY KEY (`bairros_id`);
+
+--
+-- Índices para tabela `gm_categorias`
+--
+ALTER TABLE `gm_categorias`
+  ADD PRIMARY KEY (`cate_id`);
+
+--
+-- Índices para tabela `gm_clientes`
+--
+ALTER TABLE `gm_clientes`
+  ADD PRIMARY KEY (`cli_id`);
+
+--
+-- Índices para tabela `gm_imagens`
+--
+ALTER TABLE `gm_imagens`
+  ADD PRIMARY KEY (`img_id`);
+
+--
+-- Índices para tabela `gm_pedidos`
+--
+ALTER TABLE `gm_pedidos`
+  ADD PRIMARY KEY (`ped_id`);
+
+--
+-- Índices para tabela `gm_pedidos_itens`
+--
+ALTER TABLE `gm_pedidos_itens`
+  ADD PRIMARY KEY (`item_id`);
+
+--
+-- Índices para tabela `gm_produtos`
+--
+ALTER TABLE `gm_produtos`
+  ADD PRIMARY KEY (`pro_id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `gm_bairros`
+--
+ALTER TABLE `gm_bairros`
+  MODIFY `bairros_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=308;
+
+--
+-- AUTO_INCREMENT de tabela `gm_categorias`
+--
+ALTER TABLE `gm_categorias`
+  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de tabela `gm_clientes`
+--
+ALTER TABLE `gm_clientes`
+  MODIFY `cli_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT de tabela `gm_imagens`
+--
+ALTER TABLE `gm_imagens`
+  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT de tabela `gm_pedidos`
+--
+ALTER TABLE `gm_pedidos`
+  MODIFY `ped_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+
+--
+-- AUTO_INCREMENT de tabela `gm_pedidos_itens`
+--
+ALTER TABLE `gm_pedidos_itens`
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+
+--
+-- AUTO_INCREMENT de tabela `gm_produtos`
+--
+ALTER TABLE `gm_produtos`
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
