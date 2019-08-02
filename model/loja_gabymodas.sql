@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Ago-2019 às 00:45
+-- Tempo de geração: 03-Ago-2019 às 01:11
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.3.7
 
@@ -28,12 +28,14 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `gm_bairros`
 --
 
-CREATE TABLE `gm_bairros` (
-  `bairros_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `gm_bairros`;
+CREATE TABLE IF NOT EXISTS `gm_bairros` (
+  `bairros_id` int(11) NOT NULL AUTO_INCREMENT,
   `bairros_nome` varchar(100) NOT NULL,
   `bairros_cidade` varchar(100) NOT NULL,
-  `bairros_frete_valor` double DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `bairros_frete_valor` double DEFAULT NULL,
+  PRIMARY KEY (`bairros_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=308 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_bairros`
@@ -350,11 +352,13 @@ INSERT INTO `gm_bairros` (`bairros_id`, `bairros_nome`, `bairros_cidade`, `bairr
 -- Estrutura da tabela `gm_categorias`
 --
 
-CREATE TABLE `gm_categorias` (
-  `cate_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `gm_categorias`;
+CREATE TABLE IF NOT EXISTS `gm_categorias` (
+  `cate_id` int(11) NOT NULL AUTO_INCREMENT,
   `cate_nome` varchar(50) NOT NULL,
-  `cate_slug` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `cate_slug` varchar(50) NOT NULL,
+  PRIMARY KEY (`cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_categorias`
@@ -375,8 +379,9 @@ INSERT INTO `gm_categorias` (`cate_id`, `cate_nome`, `cate_slug`) VALUES
 -- Estrutura da tabela `gm_clientes`
 --
 
-CREATE TABLE `gm_clientes` (
-  `cli_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `gm_clientes`;
+CREATE TABLE IF NOT EXISTS `gm_clientes` (
+  `cli_id` int(11) NOT NULL AUTO_INCREMENT,
   `cli_nome` varchar(80) NOT NULL,
   `cli_sobrenome` varchar(80) NOT NULL,
   `cli_endereco` varchar(100) NOT NULL,
@@ -391,8 +396,9 @@ CREATE TABLE `gm_clientes` (
   `cli_email` varchar(150) NOT NULL,
   `cli_pass` varchar(150) NOT NULL,
   `cli_data_cad` date NOT NULL,
-  `cli_hora_cad` time NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `cli_hora_cad` time NOT NULL,
+  PRIMARY KEY (`cli_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_clientes`
@@ -410,12 +416,14 @@ INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_sobrenome`, `cli_endereco`
 -- Estrutura da tabela `gm_imagens`
 --
 
-CREATE TABLE `gm_imagens` (
-  `img_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `gm_imagens`;
+CREATE TABLE IF NOT EXISTS `gm_imagens` (
+  `img_id` int(11) NOT NULL AUTO_INCREMENT,
   `img_nome` varchar(200) NOT NULL,
   `img_pro_id` int(11) NOT NULL,
-  `img_pasta` varchar(50) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `img_pasta` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`img_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_imagens`
@@ -431,8 +439,9 @@ INSERT INTO `gm_imagens` (`img_id`, `img_nome`, `img_pro_id`, `img_pasta`) VALUE
 -- Estrutura da tabela `gm_pedidos`
 --
 
-CREATE TABLE `gm_pedidos` (
-  `ped_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `gm_pedidos`;
+CREATE TABLE IF NOT EXISTS `gm_pedidos` (
+  `ped_id` int(11) NOT NULL AUTO_INCREMENT,
   `ped_data` date NOT NULL,
   `ped_hora` time NOT NULL,
   `ped_cliente` int(11) NOT NULL,
@@ -443,8 +452,9 @@ CREATE TABLE `gm_pedidos` (
   `ped_pag_tipo` varchar(20) DEFAULT NULL,
   `ped_pag_codigo` varchar(220) DEFAULT NULL,
   `ped_frete_valor` double(9,2) DEFAULT NULL,
-  `ped_frete_tipo` varchar(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `ped_frete_tipo` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`ped_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=75 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos`
@@ -471,13 +481,15 @@ INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_
 -- Estrutura da tabela `gm_pedidos_itens`
 --
 
-CREATE TABLE `gm_pedidos_itens` (
-  `item_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `gm_pedidos_itens`;
+CREATE TABLE IF NOT EXISTS `gm_pedidos_itens` (
+  `item_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_produto` int(11) NOT NULL,
   `item_valor` double(9,2) NOT NULL,
   `item_qtd` int(6) NOT NULL,
-  `item_ped_cod` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `item_ped_cod` varchar(50) NOT NULL,
+  PRIMARY KEY (`item_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos_itens`
@@ -562,8 +574,9 @@ INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_valor`, `item_q
 -- Estrutura da tabela `gm_produtos`
 --
 
-CREATE TABLE `gm_produtos` (
-  `pro_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `gm_produtos`;
+CREATE TABLE IF NOT EXISTS `gm_produtos` (
+  `pro_id` int(11) NOT NULL AUTO_INCREMENT,
   `pro_categoria` int(11) NOT NULL,
   `pro_nome` varchar(100) NOT NULL,
   `pro_desc` text NOT NULL,
@@ -579,8 +592,9 @@ CREATE TABLE `gm_produtos` (
   `pro_ref` varchar(100) NOT NULL,
   `pro_fabricante` int(11) DEFAULT NULL,
   `pro_ativo` varchar(3) NOT NULL,
-  `pro_frete_gratis` varchar(100) NOT NULL DEFAULT 'Não'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `pro_frete_gratis` varchar(100) NOT NULL DEFAULT 'Não',
+  PRIMARY KEY (`pro_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_produtos`
@@ -604,98 +618,6 @@ INSERT INTO `gm_produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `p
 (24, 14, 'Conjunto Saia Branca e Blusa Preta', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160254conjunto-brancoepreto.jpg.jpg', 'conjunto-saia-branca-e-blusa-preta', 10, NULL, '12335863632', NULL, '1', 'Não'),
 (25, 14, 'Conjunto Saia Branca e Blusa Vermelha', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160452consjunto-brancoevermelho.jpg.jpg', 'conjunto-saia-branca-e-blusa-vermelha', 10, NULL, '422200336589', NULL, '1', 'Não'),
 (26, 14, 'Conjunto Saia Branca e Blusa Rosa', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160643conjunto-brancoerosa.jpg.jpg', 'conjunto-saia-branca-e-blusa-rosa', 10, NULL, '54200033555', NULL, '1', 'Não');
-
---
--- Índices para tabelas despejadas
---
-
---
--- Índices para tabela `gm_bairros`
---
-ALTER TABLE `gm_bairros`
-  ADD PRIMARY KEY (`bairros_id`);
-
---
--- Índices para tabela `gm_categorias`
---
-ALTER TABLE `gm_categorias`
-  ADD PRIMARY KEY (`cate_id`);
-
---
--- Índices para tabela `gm_clientes`
---
-ALTER TABLE `gm_clientes`
-  ADD PRIMARY KEY (`cli_id`);
-
---
--- Índices para tabela `gm_imagens`
---
-ALTER TABLE `gm_imagens`
-  ADD PRIMARY KEY (`img_id`);
-
---
--- Índices para tabela `gm_pedidos`
---
-ALTER TABLE `gm_pedidos`
-  ADD PRIMARY KEY (`ped_id`);
-
---
--- Índices para tabela `gm_pedidos_itens`
---
-ALTER TABLE `gm_pedidos_itens`
-  ADD PRIMARY KEY (`item_id`);
-
---
--- Índices para tabela `gm_produtos`
---
-ALTER TABLE `gm_produtos`
-  ADD PRIMARY KEY (`pro_id`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `gm_bairros`
---
-ALTER TABLE `gm_bairros`
-  MODIFY `bairros_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=308;
-
---
--- AUTO_INCREMENT de tabela `gm_categorias`
---
-ALTER TABLE `gm_categorias`
-  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT de tabela `gm_clientes`
---
-ALTER TABLE `gm_clientes`
-  MODIFY `cli_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
---
--- AUTO_INCREMENT de tabela `gm_imagens`
---
-ALTER TABLE `gm_imagens`
-  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT de tabela `gm_pedidos`
---
-ALTER TABLE `gm_pedidos`
-  MODIFY `ped_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
-
---
--- AUTO_INCREMENT de tabela `gm_pedidos_itens`
---
-ALTER TABLE `gm_pedidos_itens`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
-
---
--- AUTO_INCREMENT de tabela `gm_produtos`
---
-ALTER TABLE `gm_produtos`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
