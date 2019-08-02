@@ -1,6 +1,6 @@
 {foreach from=$PRO item=P}
 
-      <h3 class="text-center">{$P.pro_nome} - Ref: {$P.pro_ref}</h3>
+      <h3 id="nomeproduto" class="text-center">{$P.pro_nome} - Ref: {$P.pro_ref}</h3>
 <hr>
 
 <div class="row">
@@ -18,8 +18,8 @@
     <div class="col-md-6 thumbnail">
 
         <br>
-          <img src="{$TEMA}/imagens/logo-pagseguro.png" alt="">
-
+          <img width="80%" src="{$TEMA}/imagens/banner_cartao.jpg" alt="">
+        <hr>
 
 
         <div class="col-md-6">

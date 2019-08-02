@@ -61,6 +61,21 @@
         
         
         <section class="row" id="resumo">
+            <br>
+            <center>
+                {if $P.ped_pag_status == 'CANCELADO'}
+                  <b>Status: </b><span class="label label-danger">{$P.ped_pag_status}</span>
+                {elseif $P.ped_pag_status == 'ENTREGUE'}
+                  <b>Status: </b><span class="label label-success">{$P.ped_pag_status}</span>
+                {elseif $P.ped_pag_status == 'SOLICITADO'}
+                  <b>Status: </b><span class="label label-info">{$P.ped_pag_status}</span>
+                {elseif $P.ped_pag_status == 'SEPARADO'}
+                  <b>Status: </b><span class="label label-warning">{$P.ped_pag_status}</span>
+                {else}
+                  <b>Status:</b>{$P.ped_pag_status}
+                {/if}
+            </center>
+            <br>
 
             <center>
                 <table class="table table-bordered" style="width: 80%">
@@ -79,48 +94,38 @@
                 </table>
              
             </center>
-            <br>
-            <center>
-                {if $P.ped_pag_status == 'CANCELADO'}
-                  <b>Status: </b><span class="label label-danger">{$P.ped_pag_status}</span>
-                {elseif $P.ped_pag_status == 'ENTREGUE'}
-                  <b>Status: </b><span class="label label-success">{$P.ped_pag_status}</span>
-                {elseif $P.ped_pag_status == 'SOLICITADO'}
-                  <b>Status: </b><span class="label label-info">{$P.ped_pag_status}</span>
-                {elseif $P.ped_pag_status == 'SEPARADO'}
-                  <b>Status: </b><span class="label label-warning">{$P.ped_pag_status}</span>
-                {else}
-                  <b>Status:</b>{$P.ped_pag_status}
-                {/if}
-            </center>
-            <br>
+            
         </section>  
                         
                         
-              {if $ITENS.1.ped_pag_status =='NAO'}          
+              {if $ITENS.1.ped_pag_status =='SOLICITADO'}          
                          <!--  modos de pagamento e outras informações --> 
         <section class="row">
-            <h3 class="text-center"> Formas de pagamento </h3>     
+            <h4 class="text-center"> Deseja cancelar este pedido? </h4>     
             
             <div class="col-md-4">
               
             </div>
             <!-- botao de pagamento  -->
             <div class="col-md-4">
-               
-                BOTÃO DE PAGAMENTO
+                <center>
+                    <form name="deletar" method="post" action="">
+                         <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">
+                         <button class="btn btn-danger btn-sm" name="ped_apagar" value="ped_apagar">Cancelar</button>
+                    </form> 
+                </center>
                 
-                
-                   <img src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
-                   <script type="text/javascript" src=""></script>
+                   
                 
             </div>
             <div class="col-md-4">
                 
             </div>
          
-            
+            <br><br>
         </section>
 
  {/if}
+
+
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 23:35:41
+/* Smarty version 3.1.33, created on 2019-08-02 16:05:38
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_produtos_novo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d43a17d3391a1_05837491',
+  'unifunc' => 'content_5d448982706215_62725288',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd8ba3c1454d41ded70018370404433e19481a163' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_produtos_novo.tpl',
-      1 => 1564691744,
+      1 => 1564772734,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d43a17d3391a1_05837491 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d448982706215_62725288 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center"> Adicionar novo produto </h4>
 <hr>
 
@@ -70,7 +70,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 <option value=""> Escolha </option>
                 <option value="0"> Não </option>
-                <option value="1"> Sim </option>
+                <option value="1" selected> Sim </option>
 
             </select>
 

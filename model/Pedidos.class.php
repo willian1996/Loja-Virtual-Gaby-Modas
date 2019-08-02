@@ -1,6 +1,6 @@
-<?php
-
-class Pedidos extends Conexao{
+<?php 
+ 
+class Pedidos extends Conexao{ 
     
     public function __construct(){
         parent::__construct();
@@ -44,10 +44,18 @@ class Pedidos extends Conexao{
         if($cliente != null){
             $cli = (int)$cliente;
             $query .="WHERE ped_cliente = {$cli}";
-            $query .= " ORDER BY ped_id DESC";
-
+            $query .= " ORDER BY ped_id DESC ";
+            
+            $query .= $this->PaginacaoLinks("ped_id", $this->prefix."pedidos WHERE ped_cliente =".(int)$cli);
+            
+        }else{
+            $query .= " ORDER BY ped_id DESC ";
             $query .= $this->PaginacaoLinks("ped_id", $this->prefix."pedidos");
         }
+        
+        
+
+        
 
         $this->ExecuteSQL($query);
         $this->GetLista();
@@ -108,6 +116,71 @@ class Pedidos extends Conexao{
         unset($_SESSION['PRO']);
         unset($_SESSION['PED']['pedido']);
         unset($_SESSION['PED']['ref']);
+    }
+    
+    
+    public function GetPedidosREF($ref){
+        
+          // monto a SQL
+        $query = "SELECT * FROM {$this->prefix}pedidos p INNER JOIN {$this->prefix}clientes c";
+        $query.= " ON p.ped_cliente = c.cli_id";        
+        $query .= " WHERE ped_ref = :ref ";
+        $query .= $this->PaginacaoLinks("ped_id", $this->prefix."pedidos WHERE ped_ref = ".$ref);
+        
+        // passando parametros
+        $params = array(':ref'=>$ref);
+       // executando a SQL                      
+        $this->ExecuteSQL($query,$params);
+        // trazendo a listagem 
+        $this->GetLista();
+    }
+
+
+
+     public function GetPedidosDATA($data_ini,$data_fim){
+        
+         // montando a SQL
+        $query = "SELECT * FROM {$this->prefix}pedidos p INNER JOIN {$this->prefix}clientes c";
+        $query.= " ON p.ped_cliente = c.cli_id";
+        
+        $query.= " WHERE ped_data between :data_ini AND :data_fim";
+         
+        $query .= $this->PaginacaoLinks("ped_id", $this->prefix."pedidos WHERE ped_data between ".$data_ini." AND ".$data_fim);
+          
+       // passando os parametros  
+        $params = array(':data_ini'=>$data_ini, ':data_fim'=>$data_fim);
+        
+        // executando a SQL
+        $this->ExecuteSQL($query,$params);
+        
+        $this->GetLista();
+    }
+
+
+    
+    
+//FUNÇÃO Cancelar PEDIDOS
+
+    public function  Cancelar($ped_cod){
+        $ped_pag_status = 'CANCELADO';
+        
+        // apagando o PEDIDO  
+        
+        // monto a minha SQL de apagar o pedido 
+        $query =  " UPDATE {$this->prefix}pedidos SET ped_pag_status=:ped_pag_status WHERE ped_cod = :ped_cod";        
+        // parametros
+        $params = array(
+            ':ped_pag_status'=> $ped_pag_status,
+            ':ped_cod'=>$ped_cod
+        );
+        
+        // executo a minha SQL
+         if($this->ExecuteSQL($query, $params)){
+             return TRUE;
+         }else{
+             return FALSE;
+         }
+             
     }
     
     

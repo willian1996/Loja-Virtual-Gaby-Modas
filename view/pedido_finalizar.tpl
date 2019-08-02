@@ -1,4 +1,4 @@
-<h2 id="tabelafinalizar">Finalizar Pedido</h2>
+<h2 id="tabelafinalizar">Finalizando Pedido...</h2>
 <hr>
 
 
@@ -8,14 +8,22 @@
     
 
     <center>
+        <script>alert("Pedido Finalizado com Sucesso! avisaremos pelo Whatsapp no momento da saperação e da entrega");</script>
         <div class="alert alert-success">
-        Pedido Finalizado com Sucesso
-    
-    </div>
+        Pedido Finalizado com Sucesso!
+        </div>
+        <div class="alert alert-info">
+        Será separado na proxima segunda-feira e será entregue na quarta-feira da proxima semana!
+        </div>
+        <div class="alert alert-warning">
+        Atenção pagamento será feito no momento da entrega, aceitamos cartões com 5% de acréscimo!
+        </div>
+        <br><br>
+        <h4>Resumo do seu pedido</h4>
     <table class="table table-bordered" style="width: 95%">
 
 
-
+        
         <tr class="text-danger bg-danger">
             <td></td>
             <td>Produto</td>
@@ -76,7 +84,8 @@
         </section>
 
 <section class="row">
-            <h3 class="text-center"> Formas de pagamento </h3>
+            <br><hr>
+            <h4 class="text-center"><a href="{$PAG_MINHA_CONTA}#tabelapedidos">Ver meus pedidos</a></h4>
             
 
             <!-- botao de pagamento  -->
@@ -92,9 +101,9 @@
 
             </div>
             <div class="col-md-4">
-
-                <img src="{$TEMA}/imagens/logo-pagseguro.png"  alt="">
-
+                <br>
+                <img width="100%" src="{$TEMA}/imagens/banner_cartao.jpg" alt="">
+                <br>
             </div>
 
             <div class="col-md-4">

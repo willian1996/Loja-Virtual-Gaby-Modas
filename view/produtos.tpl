@@ -21,7 +21,7 @@
 
                 <div class="thumbnail">
 
-                    <a href="{$PRO_INFO}/{$P.pro_id}/{$P.pro_slug}">
+                    <a href="{$PRO_INFO}/{$P.pro_id}/{$P.pro_slug}#nomeproduto">
 
 
                     <img src="{$P.pro_img}" alt="" >

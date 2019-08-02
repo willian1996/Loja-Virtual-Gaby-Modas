@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 23:53:14
+/* Smarty version 3.1.33, created on 2019-08-02 17:38:38
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d43a59ab9b547_37679396',
+  'unifunc' => 'content_5d449f4e827401_27680965',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7607833ac1fd2d06e33e8ed4b91d3d5328c442e8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\pedido_finalizar.tpl',
-      1 => 1564691744,
+      1 => 1564778149,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d43a59ab9b547_37679396 (Smarty_Internal_Template $_smarty_tpl) {
-?><h2 id="tabelafinalizar">Finalizar Pedido</h2>
+function content_5d449f4e827401_27680965 (Smarty_Internal_Template $_smarty_tpl) {
+?><h2 id="tabelafinalizar">Finalizando Pedido...</h2>
 <hr>
 
 
@@ -31,14 +31,24 @@ function content_5d43a59ab9b547_37679396 (Smarty_Internal_Template $_smarty_tpl)
     
 
     <center>
+        <?php echo '<script'; ?>
+>alert("Pedido Finalizado com Sucesso! avisaremos pelo Whatsapp no momento da saperação e da entrega");<?php echo '</script'; ?>
+>
         <div class="alert alert-success">
-        Pedido Finalizado com Sucesso
-    
-    </div>
+        Pedido Finalizado com Sucesso!
+        </div>
+        <div class="alert alert-info">
+        Será separado na proxima segunda-feira e será entregue na quarta-feira da proxima semana!
+        </div>
+        <div class="alert alert-warning">
+        Atenção pagamento será feito no momento da entrega, aceitamos cartões com 5% de acréscimo!
+        </div>
+        <br><br>
+        <h4>Resumo do seu pedido</h4>
     <table class="table table-bordered" style="width: 95%">
 
 
-
+        
         <tr class="text-danger bg-danger">
             <td></td>
             <td>Produto</td>
@@ -115,7 +125,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </section>
 
 <section class="row">
-            <h3 class="text-center"> Formas de pagamento </h3>
+            <br><hr>
+            <h4 class="text-center"><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHA_CONTA']->value;?>
+#tabelapedidos">Ver meus pedidos</a></h4>
             
 
             <!-- botao de pagamento  -->
@@ -134,10 +146,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </div>
             <div class="col-md-4">
-
-                <img src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
-/imagens/logo-pagseguro.png"  alt="">
-
+                <br>
+                <img width="100%" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
+/imagens/banner_cartao.jpg" alt="">
+                <br>
             </div>
 
             <div class="col-md-4">

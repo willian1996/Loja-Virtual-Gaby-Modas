@@ -10,7 +10,7 @@
         <tr class="text-danger bg-danger">
             <td>Data</td>
             <td>Hora</td>
-<!--            <td>Ref</td>-->
+            <td class="hiddenonmobile">Ref</td>
             <td>Status</td>
             <td></td>
         </tr>
@@ -20,7 +20,7 @@
 
             <td style="width: 10%">{$P.ped_data}</td>
             <td style="width: 10%">{$P.ped_hora}</td>
-<!--            <td style="width: 10%">{$P.ped_ref}</td>-->
+            <td class="hiddenonmobile" style="width: 10%">{$P.ped_ref}</td>
 
 
             {if $P.ped_pag_status == 'CANCELADO'}

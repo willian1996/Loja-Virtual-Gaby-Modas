@@ -67,7 +67,7 @@
                                 <li><a href="{$PAG_PRODUTOS}#produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
                                 <li><a href="{$PAG_MINHACONTA}"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="{$PAG_CARRINHO}#tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
-                                <li><a href="{$PAG_CONTATO}#contato" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
+                                <li><a href="https://api.whatsapp.com/send?phone=5512981819956" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
                             </ul>
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 23:35:37
+/* Smarty version 3.1.33, created on 2019-08-02 12:56:21
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d43a179735f24_79066496',
+  'unifunc' => 'content_5d445d25bb0e93_60294777',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b80ef4538442bb4cc7684f2df6ee04233799106' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_produtos.tpl',
-      1 => 1564713335,
+      1 => 1564761377,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d43a179735f24_79066496 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d445d25bb0e93_60294777 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center">Gerenciar Produtos</h2>
 <hr>
 <section class="row ">
@@ -84,7 +84,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 ">
                     <input type="hidden" name="pro_id" id="pro_id" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
 ">
-                    <button style="border: 0; background-color: #FFF;"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+                    <button style="border: 0; background-color: #FFF; text-decoration: underline;"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
 </button>
                 </form>
             </td>

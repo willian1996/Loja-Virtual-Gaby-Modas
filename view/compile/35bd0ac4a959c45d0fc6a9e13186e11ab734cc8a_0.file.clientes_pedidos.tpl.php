@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-02 00:02:43
+/* Smarty version 3.1.33, created on 2019-08-02 12:41:23
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d43a7d33141c0_89714680',
+  'unifunc' => 'content_5d4459a3b49a61_74676467',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '35bd0ac4a959c45d0fc6a9e13186e11ab734cc8a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\clientes_pedidos.tpl',
-      1 => 1564691744,
+      1 => 1564760481,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d43a7d33141c0_89714680 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4459a3b49a61_74676467 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br><br>
 <section class="row" id="pedidos">
 
@@ -33,7 +33,7 @@ function content_5d43a7d33141c0_89714680 (Smarty_Internal_Template $_smarty_tpl)
         <tr class="text-danger bg-danger">
             <td>Data</td>
             <td>Hora</td>
-<!--            <td>Ref</td>-->
+            <td class="hiddenonmobile">Ref</td>
             <td>Status</td>
             <td></td>
         </tr>
@@ -49,8 +49,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 </td>
             <td style="width: 10%"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_hora'];?>
 </td>
-<!--            <td style="width: 10%"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_ref'];?>
-</td>-->
+            <td class="hiddenonmobile" style="width: 10%"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_ref'];?>
+</td>
 
 
             <?php if ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'CANCELADO') {?>

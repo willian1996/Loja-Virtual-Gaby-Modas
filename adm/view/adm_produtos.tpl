@@ -50,7 +50,7 @@
             <td>
                 <form name="proeditar" method="post" action="{$PAG_PRODUTO_EDITAR}">
                     <input type="hidden" name="pro_id" id="pro_id" value="{$P.pro_id}">
-                    <button style="border: 0; background-color: #FFF;">{$P.pro_nome}</button>
+                    <button style="border: 0; background-color: #FFF; text-decoration: underline;">{$P.pro_nome}</button>
                 </form>
             </td>
             <td>{$P.cate_nome}</td>

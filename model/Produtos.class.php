@@ -6,7 +6,7 @@ class Produtos extends Conexao{
     private $pro_modelo;
     private $pro_ref;
     private $pro_valor;
-    private $pro_estoque;
+    private $pro_estoque; 
     private $pro_peso;
     private $pro_altura;
     private $pro_largura;
@@ -62,7 +62,7 @@ class Produtos extends Conexao{
 
         $query .= " ORDER BY pro_id DESC";
 
-         $query .= $this->PaginacaoLinks("pro_id", $this->prefix."produtos WHERE pro_categoria =".(int)$id);
+        $query .= $this->PaginacaoLinks("pro_id", $this->prefix."produtos WHERE pro_categoria =".(int)$id);
 
         $params = array(':id' => (int)$id);
 

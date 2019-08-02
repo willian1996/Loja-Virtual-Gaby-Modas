@@ -67,54 +67,46 @@
     
       
     <center>
+        <p>Clique na data para ver o pedido</p>
     <table class="table table-bordered " style="width: 90%">
         
         <tr class="text-success bg-success">
             <td>Cliente</td>
             <td>Data</td>
-            <td>Hora</td>
-            <td>Ref</td>
+            <td class="hiddenonmobile">Ref</td>
            
             <td>Status</td>
-            <td></td>
             <td></td>
         </tr>
         
         {foreach from=$PEDIDOS item=P}
         <tr>
+            <td>{$P.cli_nome} {$P.cli_sobrenome}</td>
+            <td style="width: 10%">
+                <form name="itens" method="post" action="{$PAG_ITENS}">
+                     <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">
+                     <button style="background-color: #FFF;">{$P.ped_data} {$P.ped_hora}</button>
+                </form> 
+            </td>
+            <td class="hiddenonmobile" style="width: 10%">{$P.ped_ref}</td>
             
-            <td >{$P.cli_nome} {$P.cli_sobrenome}</td>
-            <td style="width: 10%">{$P.ped_data}</td>
-            <td style="width: 10%">{$P.ped_hora}</td>
-            <td style="width: 10%">{$P.ped_ref}</td>
-          
-            
-            {if $P.ped_pag_status == 'NAO'} 
-             <td style="width: 15%"><span class="label label-danger">{$P.ped_pag_status}</span></td>
+            {if $P.ped_pag_status == 'CANCELADO'}
+             <td style="width: 10%;"><span class="label label-danger">{$P.ped_pag_status}</span></td>
+            {elseif $P.ped_pag_status == 'ENTREGUE'}
+              <td style="width: 10%;"><span class="label label-success">{$P.ped_pag_status}</span></td>
+            {elseif $P.ped_pag_status == 'SOLICITADO'}
+              <td style="width: 10%;"><span class="label label-info">{$P.ped_pag_status}</span></td>
+            {elseif $P.ped_pag_status == 'SEPARADO'}
+              <td style="width: 10%;"><span class="label label-warning">{$P.ped_pag_status}</span></td>
             {else}
-              <td style="width: 15%">{$P.ped_pag_status}</td>
+              <td style="width: 10%;">{$P.ped_pag_status}</td>
             {/if}
-             
-    
-            
-            
-             <td style="width: 10%">
-               <!---- formulario que vai para itens do pedido ---->
-                     <form name="itens" method="post" action="{$PAG_ITENS}">
-                     <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">
-                     <button class="btn btn-info"><i class="glyphicon glyphicon-menu-hamburger"></i> Detalhes</button>
-                     </form> 
-             </td>
-       
-        
-        <td>
-              
-           <form name="deletar" method="post" action="">
-                     <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">
-                     <button class="btn btn-danger" name="ped_apagar" value="ped_apagar"><i class="glyphicon glyphicon-remove"></i> </button>
-           </form> 
-        
-        </td>
+            <td> 
+               <form name="deletar" method="post" action="">
+                         <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">
+                         <button class="btn btn-danger btn-sm" name="ped_apagar" value="ped_apagar"><i class="glyphicon glyphicon-remove"></i> </button>
+               </form> 
+            </td>
             
         </tr>
         {/foreach}
@@ -124,3 +116,9 @@
     
     
 </section>
+  <!--  paginação inferior   -->
+    <section id="pagincao" class="row">
+    <center>
+    {$PAGINAS}
+    </center>
+    </section>

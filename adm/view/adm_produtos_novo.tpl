@@ -38,7 +38,7 @@
 
                 <option value=""> Escolha </option>
                 <option value="0"> Não </option>
-                <option value="1"> Sim </option>
+                <option value="1" selected> Sim </option>
 
             </select>
 
