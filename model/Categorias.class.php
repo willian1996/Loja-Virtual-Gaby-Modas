@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 class Categorias extends Conexao{
 
@@ -29,7 +29,11 @@ class Categorias extends Conexao{
             'cate_nome' => $lista['cate_nome'],
             'cate_slug' => $lista['cate_slug'],
             'cate_link' => Rotas::pag_Produtos(). '/' . $lista['cate_id'] .  '/' . $lista['cate_slug'],
+            'cate_link_adm' => Rotas::pag_ProdutosADM(). '/' . $lista['cate_id'] .  '/' . $lista['cate_slug'],
         );
+        
+
+        
 
 
 

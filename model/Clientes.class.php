@@ -1,5 +1,5 @@
 <?php
-
+ 
 class Clientes extends Conexao{
 
     private $cli_nome;
@@ -163,6 +163,70 @@ class Clientes extends Conexao{
 
 
     }
+    
+//FUNCAO EDITAR CLIENTES ADM
+
+    function EditarADM($id){
+        
+              
+          // verifico se ja tem este CPF no banco
+        if($this->GetClienteCPF($this->getCli_cpf()) > 0 && $this->getCli_cpf() != $_REQUEST['cli_cpf']):
+                echo '<div class="alert alert-danger " id="erro_mostrar"> Este CPF já esta cadastrado ';
+                Sistema::VoltarPagina();
+                echo '</div>';
+                exit();
+        endif;
+          // verifica se o email já esta cadstrado 
+          if($this->GetClienteEmail($this->getCli_email()) > 0 && $this->getCli_email() !=  $_REQUEST['cli_email']):
+                echo '<div class="alert alert-danger " id="erro_mostrar"> Este Email já esta cadastrado ';
+                Sistema::VoltarPagina();
+                echo '</div>';
+                exit();
+        endif;
+        
+        
+        // caso passou na verificação grava no banco
+        
+        $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, cli_sobrenome=:cli_sobrenome,";
+        $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia, cli_bairro=:cli_bairro ,";
+        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_email=:cli_email  ";   
+        $query .=" WHERE  cli_id = :cli_id";
+      //  $query .=" (:cli_nome, :cli_sobrenome,:cli_data_nasc,";
+      //  $query .=" :cli_cpf, :cli_ddd,:cli_fone,:cli_celular ,:cli_endereco ,:cli_numero,:cli_bairro ,";
+      //  $query .=" :cli_cidade,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";  
+   
+        $params = array(
+        ':cli_nome'     => $this->getCli_nome() ,    
+        ':cli_sobrenome'=> $this->getCli_sobrenome() ,   
+        ':cli_cpf'      => $this->getCli_cpf() ,   
+        ':cli_fone'     => $this->getCli_fone() ,   
+        ':cli_celular'  => $this->getCli_celular() , 
+        ':cli_endereco' => $this->getCli_endereco() ,   
+        ':cli_numero'   => $this->getCli_numero() ,
+        ':cli_ponto_referencia' => $this->getCli_ponto_referencia() ,
+        ':cli_bairro'   => $this->getCli_bairro() ,   
+        ':cli_cidade'   => $this->getCli_cidade() ,   
+        ':cli_cep'      => $this->getCli_cep() ,   
+        ':cli_email'    => $this->getCli_email() ,   
+       
+        ':cli_id'       => (int)$id   
+            
+        );
+        
+      //  echo $query;
+        
+                   
+            if($this->ExecuteSQL($query, $params)):
+                
+                    return true;
+                
+            else:
+                
+                    return false;
+            endif;
+
+        
+    }
 
 
 
@@ -212,6 +276,81 @@ class Clientes extends Conexao{
                         ':email'=> $this->getCli_email());
         $this->ExecuteSQL($query, $params);
         return $this->TotalDados();
+    }
+
+    
+    
+    
+    
+//CLASSE DE CLIENTS - FUNÇÕES PARA BUSCAR
+
+  
+    function GetClientes(){
+        
+        $query = " SELECT * FROM {$this->prefix}clientes ";
+        
+        $this->ExecuteSQL($query);
+        
+        $this->GetLista();
+        
+        
+    }
+   /**
+    * 
+    * @param INT $id id do cliente 
+    */
+    function GetClientesID($id){
+        
+        // monto a SQL
+        $query  = " SELECT * FROM {$this->prefix}clientes ";
+        $query .= " WHERE cli_id = :id ";
+        // passo parametros
+        $params = array(':id'=>(int)$id);
+        //executo a SQL
+        $this->ExecuteSQL($query, $params);
+        // chamo a listagem 
+        $this->GetLista();
+        
+        
+    }
+
+
+/**
+ * fazendo a listagem dos dados retornados 
+ */
+ private function GetLista(){
+        
+        $i = 1;
+        while ($lista = $this->ListarDados()):
+            
+        $this->itens[$i] = array(
+        
+             'cli_id'        =>  $lista['cli_id'],
+             'cli_nome'      =>  $lista['cli_nome'],
+             'cli_sobrenome' =>  $lista['cli_sobrenome'],
+             'cli_endereco'  =>  $lista['cli_endereco'],
+             'cli_numero'    =>  $lista['cli_numero'],
+             'cli_ponto_referencia' =>  $lista['cli_ponto_referencia'],
+             'cli_bairro'    =>  $lista['cli_bairro'],
+             'cli_cidade'    =>  $lista['cli_cidade'],
+             'cli_cpf'       =>  $lista['cli_cpf'],
+             'cli_cep'       =>  $lista['cli_cep'],
+             'cli_fone'      =>  $lista['cli_fone'],
+             'cli_email'     =>  $lista['cli_email'],
+             'cli_celular'   =>  $lista['cli_celular'],
+             'cli_pass'      =>  $lista['cli_pass'],
+             'cli_hora_cad'  => $lista['cli_hora_cad'],
+             'cli_data_cad'  =>  Sistema::Fdata($lista['cli_data_cad']),
+           
+            
+        );
+        
+        
+            $i++;
+        
+        endwhile;
+        
+        
     }
 
 

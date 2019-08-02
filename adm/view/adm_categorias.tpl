@@ -1,4 +1,4 @@
-    <h4 class="text-center"> Gerenciar categorias </h4>
+<h2 class="text-center"> Gerenciar Categorias </h2>
 <hr>
 
 <section class="row">

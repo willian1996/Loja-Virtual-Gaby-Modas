@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 class Rotas{
     public static $pag;

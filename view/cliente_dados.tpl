@@ -128,7 +128,7 @@
                     <option value="Caraguatatuba" {if {$CLI_CIDADE} == 'Caraguatatuba'}selected="selected"{/if}>Caraguatatuba</option>
                     <option value="Sao Sebastiao" {if {$CLI_CIDADE} == 'Sao Sebastiao'}selected="selected"{/if}>São Sebastião</option>
                     <option value="Ubatuba" {if {$CLI_CIDADE} == 'Ubatuba'}selected="selected"{/if}>Ubatuba</option>
-                    <option value="Ilha Bela" {if {$CLI_CIDADE} == 'Ilha Bela'}selected="selected"{/if}>Ilha Bela</option>
+                    <option value="Ilhabela" {if {$CLI_CIDADE} == 'Ilhabela'}selected="selected"{/if}>Ilha Bela</option>
                 </select>
               </div>
             </div>

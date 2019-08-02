@@ -22,7 +22,7 @@ class Config{
 
     //INFORMAÇÕES BÁSICAS DO SITE
     const SITE_URL = "http://localhost";
-    const SITE_PASTA = "Loja-Virtual";
+    const SITE_PASTA = "Loja-Virtual-Gaby-Modas";
     const SITE_NOME = "GABY MODAS";
     const SITE_EMAIL_ADMIN = "contato@gabymodas.com";
     const SITE_EMAIL_SENHA = "Gabymodas$123#";

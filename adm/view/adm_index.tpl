@@ -91,7 +91,7 @@
 
 
 
-
+ 
 
             </div> <!-- fim barra menu-->
             <!-- começa DIV conteudo-->
@@ -100,15 +100,15 @@
             <div class="container">
 
                 <!-- coluna da esquerda -->
-                <div class="col-md-2" id="lateraladm">
+                <div class="col-md-2 hiddenonmobile" id="lateraladm">
 
                 <div class="list-group">
                     <span class="list-group-item active"> Categorias</span>
 
-                    <a href="{$PAG_PRODUTOS}" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
+                    <a href="{$PAG_ADM_PRODUTOS}#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
 
                     {foreach from = $CATEGORIAS item = C}
-                    <a href="{$C.cate_link}" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>{$C.cate_nome}</a>
+                    <a href="{$C.cate_link_adm}#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>{$C.cate_nome}</a>
 
                     {/foreach}
 
