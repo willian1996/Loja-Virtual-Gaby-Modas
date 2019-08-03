@@ -5,7 +5,7 @@ class Itens extends Conexao{
 
     public function __construct(){
         parent::__construct();
-    }
+    }  
 
     public function GetItensPedido($pedido, $cliente = null){
         $query = "SELECT * FROM {$this->prefix}pedidos p, {$this->prefix}pedidos_itens i,  {$this->prefix}produtos d ";

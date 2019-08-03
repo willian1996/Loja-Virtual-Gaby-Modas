@@ -34,6 +34,7 @@ if(isset(Rotas::$pag[1])){
 $smarty->assign('PEDIDOS', $pedidos->GetItens());
 $smarty->assign('PAG_ITENS', Rotas::pag_ItensADM());
 $smarty->assign('PAGINAS', $pedidos->ShowPaginacao());
+$smarty->assign('PAG_EDITAR', Rotas::pag_ClientesEditarADM());
 
 if($pedidos->TotalDados() > 0){
     $smarty->display('adm_pedidos.tpl');

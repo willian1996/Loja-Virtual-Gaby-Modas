@@ -68,6 +68,8 @@
       
     <center>
         <p>Clique na data para ver o pedido</p>
+        <p>Clique no nome para abrir o whatsapp</p>
+        <p>Clique no X para cancelar o pedido</p>
     <table class="table table-bordered " style="width: 90%">
         
         <tr class="text-success bg-success">
@@ -81,7 +83,7 @@
         
         {foreach from=$PEDIDOS item=P}
         <tr>
-            <td>{$P.cli_nome} {$P.cli_sobrenome}</td>
+            <td><a href="{$PAG_EDITAR}/{$P.cli_id}">{$P.cli_nome} {$P.cli_sobrenome}</a></td>
             <td style="width: 10%">
                 <form name="itens" method="post" action="{$PAG_ITENS}">
                      <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">

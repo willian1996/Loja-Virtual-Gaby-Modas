@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 23:36:15
+/* Smarty version 3.1.33, created on 2019-08-03 00:38:56
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d43a19fc6f948_14088361',
+  'unifunc' => 'content_5d4501d0d890d0_36395672',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '443e488e8e1a30c8517bafdfb5289131ece01e5e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes.tpl',
-      1 => 1564713373,
+      1 => 1564803534,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d43a19fc6f948_14088361 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4501d0d890d0_36395672 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center">Gerenciar Clientes </h2>
 <hr>
 
@@ -28,6 +28,7 @@ function content_5d43a19fc6f948_14088361 (Smarty_Internal_Template $_smarty_tpl)
 <section class="row">
     
     <center>
+        <p>Clique no nome para ver os dados do cliente</p>
     <table class="table table-bordered">
     
         
@@ -52,8 +53,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
 "><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_nome'];?>
  <?php echo $_smarty_tpl->tpl_vars['C']->value['cli_sobrenome'];?>
 </a></td>
-            <td><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
-</td>
+            <td><a href="https://wa.me/55<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
+"><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
+</a></td>
             <td class="hiddenonmobile"><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_email'];?>
 </td>
             <td class="hiddenonmobile"><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_data_cad'];?>

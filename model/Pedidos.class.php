@@ -82,8 +82,20 @@ class Pedidos extends Conexao{
                 'ped_pag_codigo'   => $lista['ped_pag_codigo'],
                 'ped_frete_valor' => $lista['ped_frete_valor'],
                 'ped_frete_tipo'  => $lista['ped_frete_tipo'],
+                
+                'cli_id'  => $lista['cli_id'],
                 'cli_nome'  => $lista['cli_nome'],
                 'cli_sobrenome'  => $lista['cli_sobrenome'],
+                'cli_celular'  => $lista['cli_celular'],
+                'cli_endereco'  => $lista['cli_endereco'],
+                'cli_numero'  => $lista['cli_numero'],
+                'cli_ponto_referencia'  => $lista['cli_ponto_referencia'],
+                'cli_bairro'  => $lista['cli_bairro'],
+                'cli_cidade'  => $lista['cli_cidade'],
+                'cli_cep'  => $lista['cli_cep'],
+                'cli_cpf'  => $lista['cli_cpf'],
+                'cli_fone'  => $lista['cli_fone'],
+                'cli_email'  => $lista['cli_email'],
             );
 
             $i++;

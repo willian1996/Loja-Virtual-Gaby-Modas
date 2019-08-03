@@ -5,6 +5,7 @@
 <section class="row">
     
     <center>
+        <p>Clique no nome para ver os dados do cliente</p>
     <table class="table table-bordered">
     
         
@@ -21,7 +22,7 @@
         
         <tr>
             <td><a href="{$PAG_EDITAR}/{$C.cli_id}">{$C.cli_nome} {$C.cli_sobrenome}</a></td>
-            <td>{$C.cli_celular}</td>
+            <td><a href="https://wa.me/55{$C.cli_celular}">{$C.cli_celular}</a></td>
             <td class="hiddenonmobile">{$C.cli_email}</td>
             <td class="hiddenonmobile">{$C.cli_data_cad}</td>
             <td><a href="{$PAG_PEDIDOS}/{$C.cli_id} ">Pedidos</a> </td>
