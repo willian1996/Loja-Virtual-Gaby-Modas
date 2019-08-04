@@ -1,12 +1,14 @@
 <?php
-
+//VERIFICANDO SE O USUARIO ESTA LOGADO 
 if(!Login::Logado()){
     Login::AcessoNegado();
     Rotas::Redirecionar(0, Rotas::pag_ClienteLogin());
 }else{
     
+    //VERIFICANDO SE O CARRINHO NÃO ESTA VAZIO 
     if(isset($_SESSION['PRO'])){
-
+        
+        //VERIFICANDO SE O FRETE ESTA SETADO
         if(!isset($_SESSION['PED']['frete'])){
         echo '<script>alert("Selecione o frete");</script>';
         Rotas::Redirecionar(2, Rotas::pag_Carrinho().'#dadosfrete');

@@ -16,6 +16,16 @@
     border-radius: 50%;
 
 }
+#bloco_login_adm{
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 30px;
+}
+#section_login_adm{
+    margin: 0 auto;
+
+}
 
 
 #topo{
@@ -31,6 +41,10 @@ color: #fff;
     font-family: 'Anton', sans-serif;
     font-weight: 800;
     padding-left: 20px;
+    
+}
+#logotipo h1 a{
+    color: #FFF;
 }
 
 @media only screen and (max-width: 990px) {
@@ -123,16 +137,17 @@ a.list-group-item{
 
 }
 
-section.minhaconta{
-    padding-top: 20px;
-    min-height: 300px;
-}
 section#fazerlogin{
     padding-top: 20px;
     min-height: 400px;
 }
 
-#minhaconta div a{
+section.minhaconta,{
+    padding-top: 20px;
+    min-height: 300px;
+}
+
+#menuadm div a, #minhaconta div a{
     margin-bottom: 5px;
 }
 .thumbnail{

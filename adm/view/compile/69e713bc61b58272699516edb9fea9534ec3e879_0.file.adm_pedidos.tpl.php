@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-03 00:40:35
+/* Smarty version 3.1.33, created on 2019-08-04 05:15:15
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d450233957799_66227661',
+  'unifunc' => 'content_5d469413db6277_36874568',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69e713bc61b58272699516edb9fea9534ec3e879' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_pedidos.tpl',
-      1 => 1564803631,
+      1 => 1564906506,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d450233957799_66227661 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d469413db6277_36874568 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center"> Gerenciar Pedidos </h2>
 <hr>
 
@@ -90,9 +90,6 @@ function content_5d450233957799_66227661 (Smarty_Internal_Template $_smarty_tpl)
     
       
     <center>
-        <p>Clique na data para ver o pedido</p>
-        <p>Clique no nome para abrir o whatsapp</p>
-        <p>Clique no X para cancelar o pedido</p>
     <table class="table table-bordered " style="width: 90%">
         
         <tr class="text-success bg-success">

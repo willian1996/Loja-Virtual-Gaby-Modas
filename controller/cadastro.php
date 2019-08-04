@@ -26,20 +26,12 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_email']) and isset($_POST['cl
 
     if($clientes->Inserir()){
         
-
-
-
-
-
         $smarty->assign('NOME', $cli_nome);
         $smarty->assign('SITE', Config::SITE_NOME);
         $smarty->assign('EMAIL', $cli_email);
         $smarty->assign('SENHA', $cli_senha);
         $smarty->assign('PAG_MINHA_CONTA', Rotas::pag_ClienteConta());
         $smarty->assign('SITE_HOME', Rotas::get_SiteHOME());
-        
-    
-    
         
         $email = new EnviarEmail();
         

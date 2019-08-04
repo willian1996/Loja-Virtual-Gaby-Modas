@@ -17,6 +17,9 @@ if(!isset($_SESSION['PED']['ref'])){
 
 require '../lib/autoload.php';
 
+if(!Login::LogadoADM()){
+    Rotas::Redirecionar(0, 'login.php');
+}
 
 $smarty = new Template();
 $categorias = new Categorias();
@@ -35,16 +38,23 @@ $smarty->assign('PAG_CONTATO', Rotas::pag_Contato());
 $smarty->assign('PAG_CATEGORIAS', Rotas::pag_CategoriasADM());
 $smarty->assign('PAG_ADM_PRODUTOS', Rotas::pag_ProdutosADM());
 $smarty->assign('PAG_PRODUTOS', Rotas::pag_Produtos());
+
+$smarty->assign('PAG_SENHA', Rotas::get_SiteADM(). '/adm_senha');
+$smarty->assign('PAG_LOGOFF', Rotas::get_SiteADM(). '/adm_logoff');
+
+
 $smarty->assign('CATEGORIAS', $categorias->GetItens());
 $smarty->assign('DATA', Sistema::DataAtualBR());
-$smarty->assign('LOGADO', Login::Logado());
+$smarty->assign('LOGADO', Login::LogadoADM());
 $smarty->assign('TITULO_SITE', Config::SITE_NOME);
 //$smarty->assign('LOGADO', Login::LogadoADM());
 //$smarty->assign('PAG_LOGOFF', Rotas::get_SiteADM() .'/logoff');
 //$smarty->assign('PAG_SENHA', Rotas::get_SiteADM() .'/adm_senha');
 
-if(Login::Logado()){
-    $smarty->assign('USER', $_SESSION['CLI']['cli_nome']);
+if(Login::LogadoADM()){
+    $smarty->assign('USER', $_SESSION['ADM']['user_nome']);
+    $smarty->assign('DATA', $_SESSION['ADM']['user_data']);
+    $smarty->assign('HORA', $_SESSION['ADM']['user_hora']);
 }
 
 

@@ -67,9 +67,6 @@
     
       
     <center>
-        <p>Clique na data para ver o pedido</p>
-        <p>Clique no nome para abrir o whatsapp</p>
-        <p>Clique no X para cancelar o pedido</p>
     <table class="table table-bordered " style="width: 90%">
         
         <tr class="text-success bg-success">

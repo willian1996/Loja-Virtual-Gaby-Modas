@@ -25,7 +25,7 @@
 
 <!--         começa  o container geral <i class="glyphicon glyphicon-user"></i>-->
         <div class="container-fluid">
-
+            <a id="minhacontaflutua" href="{$PAG_LOGOFF}"><img src="{$GET_TEMA}/imagens/security_icon.png" alt=""></a>
 
 
             <!-- começa a div topo -->
@@ -35,7 +35,7 @@
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
                         <br>
-                        <h1>GABY<br> MODAS ADM</h1>
+                        <h1><a href="{$GET_SITE_ADM}">GABY<br> MODAS ADM</a></h1>
                         <br>
                     </div>
 
@@ -71,7 +71,7 @@
                                 <li><a href="{$PAG_CATEGORIAS}"><i class="glyphicon glyphicon-list-alt"></i> Cetegorias </a> </li>
                                 <li><a href="{$PAG_ADM_CLIENTE}"><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
                                 <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
-                                <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
+                                <li><a href="http://gabymodas.com/Relatorios-Gaby-Modas" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
                             </ul>
 
 
@@ -118,13 +118,29 @@
 
                 <!-- coluna direita CONYEUDO CENTRAL -->
                 <div class="col-md-10">
+<section class="row" id="menuadm">
+    
+    <div class="text-center">
+        <a href="{$PAG_ADM_PRODUTOS}" class="btn btn-success"><i class="glyphicon glyphicon-tag"></i> Produtos</a>
+        
+        <a href="{$PAG_CATEGORIAS}" class="btn btn-success"><i class="glyphicon glyphicon-list-alt"></i>Categorias</a>
+        
+        <a href="{$PAG_ADM_CLIENTE}" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Clientes </a>
+        <a href="{$PAG_ADM_PEDIDOS}" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a>
+        <a href="http://gabymodas.com/Relatorios-Gaby-Modas" class="btn btn-info"><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a>
+        
+    
+    </div>
+</section><!--minhaconta-->
+<hr>
 
-
+<!--
                     <ul class="breadcrumb">
                         <li><a href="#"><i class="glyphicon glyphicon-home"></i> Home </a></li>
                         <li><a href="#"> Produtos </a></li>
                         <li><a href="#"> Info </a></li>
                     </ul>
+-->
                     <!-- fim do menu breadcrumb-->
                     {php}
                     Rotas::get_Pagina();
@@ -135,15 +151,15 @@
 
                 </div>  <!--fim coluna direita-->
 
+                
+
             </div>
-
-
-
-
-
-
-
+                
+                
+            
             </div><!-- fim DIV conteudo-->
+            
+            
 
             <!-- começa div rodape -->
             <div class="row" id="rodape">

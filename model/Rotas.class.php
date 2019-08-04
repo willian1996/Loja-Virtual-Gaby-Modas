@@ -52,6 +52,11 @@ class Rotas{
         return self::get_SiteHOME() . '/logoff';
     }
     
+    static function pag_LogoffADM(){
+        return self::get_SiteHOME() . '/adm_logoff';
+    }
+    
+    
     static function pag_ClienteLogin(){
         return self::get_SiteHOME() . '/login';
     }

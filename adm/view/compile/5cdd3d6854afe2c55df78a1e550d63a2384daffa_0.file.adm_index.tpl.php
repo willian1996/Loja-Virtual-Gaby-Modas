@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 23:34:25
+/* Smarty version 3.1.33, created on 2019-08-04 05:53:23
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d43a131dd29b7_44263393',
+  'unifunc' => 'content_5d469d03c07c31_44061983',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5cdd3d6854afe2c55df78a1e550d63a2384daffa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_index.tpl',
-      1 => 1564713262,
+      1 => 1564908800,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d43a131dd29b7_44263393 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d469d03c07c31_44061983 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -56,7 +56,9 @@ function content_5d43a131dd29b7_44263393 (Smarty_Internal_Template $_smarty_tpl)
 
 <!--         começa  o container geral <i class="glyphicon glyphicon-user"></i>-->
         <div class="container-fluid">
-
+            <a id="minhacontaflutua" href="<?php echo $_smarty_tpl->tpl_vars['PAG_LOGOFF']->value;?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/imagens/security_icon.png" alt=""></a>
 
 
             <!-- começa a div topo -->
@@ -66,7 +68,8 @@ function content_5d43a131dd29b7_44263393 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
                         <br>
-                        <h1>GABY<br> MODAS ADM</h1>
+                        <h1><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_ADM']->value;?>
+">GABY<br> MODAS ADM</a></h1>
                         <br>
                     </div>
 
@@ -107,8 +110,7 @@ function content_5d43a131dd29b7_44263393 (Smarty_Internal_Template $_smarty_tpl)
 "><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
 " ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
-" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
+                                <li><a href="http://gabymodas.com/Relatorios-Gaby-Modas" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
                             </ul>
 
 
@@ -165,13 +167,33 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 <!-- coluna direita CONYEUDO CENTRAL -->
                 <div class="col-md-10">
+<section class="row" id="menuadm">
+    
+    <div class="text-center">
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PRODUTOS']->value;?>
+" class="btn btn-success"><i class="glyphicon glyphicon-tag"></i> Produtos</a>
+        
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CATEGORIAS']->value;?>
+" class="btn btn-success"><i class="glyphicon glyphicon-list-alt"></i>Categorias</a>
+        
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_CLIENTE']->value;?>
+" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Clientes </a>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
+" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a>
+        <a href="http://gabymodas.com/Relatorios-Gaby-Modas" class="btn btn-info"><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a>
+        
+    
+    </div>
+</section><!--minhaconta-->
+<hr>
 
-
+<!--
                     <ul class="breadcrumb">
                         <li><a href="#"><i class="glyphicon glyphicon-home"></i> Home </a></li>
                         <li><a href="#"> Produtos </a></li>
                         <li><a href="#"> Info </a></li>
                     </ul>
+-->
                     <!-- fim do menu breadcrumb-->
                     <?php 
                     Rotas::get_Pagina();
@@ -182,15 +204,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 </div>  <!--fim coluna direita-->
 
+                
+
             </div>
-
-
-
-
-
-
-
+                
+                
+            
             </div><!-- fim DIV conteudo-->
+            
+            
 
             <!-- começa div rodape -->
             <div class="row" id="rodape">
