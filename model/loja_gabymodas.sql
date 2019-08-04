@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Ago-2019 às 01:11
+-- Tempo de geração: 04-Ago-2019 às 10:57
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.3.7
 
@@ -405,7 +405,7 @@ CREATE TABLE IF NOT EXISTS `gm_clientes` (
 --
 
 INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_sobrenome`, `cli_endereco`, `cli_numero`, `cli_ponto_referencia`, `cli_bairro`, `cli_cidade`, `cli_cep`, `cli_cpf`, `cli_fone`, `cli_celular`, `cli_email`, `cli_pass`, `cli_data_cad`, `cli_hora_cad`) VALUES
-(24, 'Willian', 'Sales', 'Rua Cleusa Fátima dos Santos, 62', '62', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '43593584824', '12996417887', '12996417887', 'williansalesgabriel@hotmail.com', 'f8bf5f221cef51838766c7e8348bf5da', '2019-07-31', '08:22:41'),
+(24, 'Willian', 'Sales Gabriel', 'Rua Cleusa Fátima dos Santos', '62', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '43593584824', '1238894092', '12996417887', 'williansalesgabriel@hotmail.com', 'f8bf5f221cef51838766c7e8348bf5da', '2019-07-31', '08:22:41'),
 (25, 'Rebeca ', 'Lorraine Mendes de Oliveira ', 'Rua Safira ', '60', 'Proximo ao Rocha ', 'Pegorelli', 'Caraguatatuba', '11669309', '55865748610', '1238833040', '12996278049', 'rebeca@gmail.com', '202cb962ac59075b964b07152d234b70', '2019-08-01', '20:29:21'),
 (26, 'Stephany', 'de Oliveira', 'Rua Avelido Ferreira', '60', 'perto do pier ', 'Praia Deserta ', 'Sao Sebastiao', '11600000', '63346405931', '1238894092', '12980807000', 'stephany@gmail.com', '202cb962ac59075b964b07152d234b70', '2019-08-02', '13:12:29'),
 (27, 'Elaine ', 'de Oliveira', 'Rua Major Aires', '26A', 'Proximo ao Mercadinho Domingues', 'Centro ', 'Ilhabela', '11660000', '28067597308', '', '12988554477', 'elaine@gmail.com', '202cb962ac59075b964b07152d234b70', '2019-08-02', '13:28:49');
@@ -454,7 +454,7 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos` (
   `ped_frete_valor` double(9,2) DEFAULT NULL,
   `ped_frete_tipo` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`ped_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=75 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos`
@@ -471,9 +471,8 @@ INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_
 (69, '2019-08-02', '17:38:38', 24, '19080217083424', '19080217083424', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
 (70, '2019-08-02', '17:40:04', 24, '19080217080024', '19080217080024', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
 (71, '2019-08-02', '17:40:43', 24, '19080217083924', '19080217083924', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
-(72, '2019-08-02', '17:41:43', 24, '19080217083924', '19080217083924', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
-(73, '2019-08-02', '17:42:43', 24, '19080217083924', '19080217083924', 'SOLICITADO', NULL, NULL, NULL, 115.80, NULL),
-(74, '2019-08-02', '17:43:29', 24, '19080217082524', '19080217082524', 'SOLICITADO', NULL, NULL, NULL, 115.80, NULL);
+(75, '2019-08-04', '02:33:03', 24, '19080402085924', '19080402085924', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
+(74, '2019-08-02', '17:43:29', 24, '19080217082524', '19080217082524', 'CANCELADO', NULL, NULL, NULL, 115.80, NULL);
 
 -- --------------------------------------------------------
 
@@ -489,7 +488,7 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos_itens` (
   `item_qtd` int(6) NOT NULL,
   `item_ped_cod` varchar(50) NOT NULL,
   PRIMARY KEY (`item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=93 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos_itens`
@@ -566,7 +565,8 @@ INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_valor`, `item_q
 (88, 13, 99.99, 1, '19080217083924'),
 (89, 11, 99.99, 1, '19080217083924'),
 (90, 5, 89.90, 1, '19080217083924'),
-(91, 14, 69.90, 1, '19080217082524');
+(91, 14, 69.90, 1, '19080217082524'),
+(92, 25, 40.00, 1, '19080402085924');
 
 -- --------------------------------------------------------
 
@@ -618,6 +618,30 @@ INSERT INTO `gm_produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `p
 (24, 14, 'Conjunto Saia Branca e Blusa Preta', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160254conjunto-brancoepreto.jpg.jpg', 'conjunto-saia-branca-e-blusa-preta', 10, NULL, '12335863632', NULL, '1', 'Não'),
 (25, 14, 'Conjunto Saia Branca e Blusa Vermelha', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160452consjunto-brancoevermelho.jpg.jpg', 'conjunto-saia-branca-e-blusa-vermelha', 10, NULL, '422200336589', NULL, '1', 'Não'),
 (26, 14, 'Conjunto Saia Branca e Blusa Rosa', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 40.00, NULL, NULL, NULL, '190802160643conjunto-brancoerosa.jpg.jpg', 'conjunto-saia-branca-e-blusa-rosa', 10, NULL, '54200033555', NULL, '1', 'Não');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `gm_user`
+--
+
+DROP TABLE IF EXISTS `gm_user`;
+CREATE TABLE IF NOT EXISTS `gm_user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_nome` varchar(255) CHARACTER SET utf16 NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `user_pw` varchar(255) NOT NULL,
+  `user_data` date DEFAULT NULL,
+  `user_hora` time DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `gm_user`
+--
+
+INSERT INTO `gm_user` (`user_id`, `user_nome`, `user_email`, `user_pw`, `user_data`, `user_hora`) VALUES
+(1, 'Willian', 'williansalesgabriel@hotmail.com', 'f8bf5f221cef51838766c7e8348bf5da', '2019-08-04', '02:46:00');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
