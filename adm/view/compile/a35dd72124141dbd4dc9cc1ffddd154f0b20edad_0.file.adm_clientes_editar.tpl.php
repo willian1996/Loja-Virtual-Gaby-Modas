@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 23:20:05
+/* Smarty version 3.1.33, created on 2019-08-05 06:18:15
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes_editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d439dd57b9ec4_98665303',
+  'unifunc' => 'content_5d47f457d5aa78_49430054',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a35dd72124141dbd4dc9cc1ffddd154f0b20edad' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes_editar.tpl',
-      1 => 1564712391,
+      1 => 1564996362,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d439dd57b9ec4_98665303 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d47f457d5aa78_49430054 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -194,17 +194,7 @@ if ($_prefixVariable4 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilhabela</o
             </div>
 
 
-            <!-- E-Mail-->
-            <div class="form-group">
-              <label class="col-md-4 control-label">E-Mail</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-              <input type="email" value="<?php echo $_smarty_tpl->tpl_vars['CLI_EMAIL']->value;?>
-" name="cli_email" class="form-control" required>
-                </div>
-              </div>
-            </div>
+           
             <!-- Senha-->
             <div class="form-group">
                 <div class="col-md-4 inputGroupContainer">

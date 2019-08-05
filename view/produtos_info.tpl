@@ -19,6 +19,7 @@
 
         <br>
           <img width="80%" src="{$TEMA}/imagens/banner_cartao.jpg" alt="">
+          <center><p>Com 3% de acréscimo no débito ou 5% de acréscimo no crédito</p></center>
         <hr>
 
 

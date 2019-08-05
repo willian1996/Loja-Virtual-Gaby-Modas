@@ -1,5 +1,5 @@
 <?php
-
+/*
 if(isset($_POST['txtinputnome']) && !empty($_POST['txtinputnome'])){
     $nome = addslashes($_POST['txtinputnome']);
     $email = addslashes($_POST['txtinputemail']);

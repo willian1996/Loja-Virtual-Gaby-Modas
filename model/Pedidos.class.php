@@ -95,7 +95,6 @@ class Pedidos extends Conexao{
                 'cli_cep'  => $lista['cli_cep'],
                 'cli_cpf'  => $lista['cli_cpf'],
                 'cli_fone'  => $lista['cli_fone'],
-                'cli_email'  => $lista['cli_email'],
             );
 
             $i++;

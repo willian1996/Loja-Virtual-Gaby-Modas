@@ -1,5 +1,5 @@
 <?php
- 
+
 class Clientes extends Conexao{
 
     private $cli_nome;
@@ -13,7 +13,6 @@ class Clientes extends Conexao{
     private $cli_bairro;
     private $cli_cidade;
     private $cli_cep;
-    private $cli_email;
     private $cli_data_cad;
     private $cli_hora_cad;
     private $cli_senha;
@@ -25,7 +24,7 @@ class Clientes extends Conexao{
 
     public function Preparar($cli_nome, $cli_sobrenome,
             $cli_cpf  , $cli_fone , $cli_celular , $cli_endereco , $cli_numero, $cli_ponto_referencia,
-            $cli_bairro , $cli_cidade , $cli_cep ,$cli_email , $cli_data_cad,
+            $cli_bairro , $cli_cidade , $cli_cep , $cli_data_cad,
             $cli_hora_cad, $cli_senha){
 
         $this->setCli_nome($cli_nome);
@@ -39,7 +38,6 @@ class Clientes extends Conexao{
         $this->setCli_bairro($cli_bairro);
         $this->setCli_cidade($cli_cidade);
         $this->setCli_cep($cli_cep);
-        $this->setCli_email($cli_email);
         $this->setCli_data_cad($cli_data_cad);
         $this->setCli_hora_cad($cli_hora_cad);
         $this->setCli_senha($cli_senha);
@@ -55,13 +53,6 @@ class Clientes extends Conexao{
             return false;
         }
 
-        if($this->GetClienteEmail($this->getCli_email()) > 0){
-            echo '<div class="alert alert-danger" id="erro_mostrar">Este Email já está cadastrado! ';
-            Sistema::VoltarPagina();
-            echo "</div>";
-            return false;
-        }
-
         if($this->GetClienteCelular($this->getCli_celular()) > 0){
             echo '<div class="alert alert-danger" id="erro_mostrar">Este Whatsapp já está cadastrado! ';
             Sistema::VoltarPagina();
@@ -72,11 +63,11 @@ class Clientes extends Conexao{
         //Inserir os dados da função
         $query = " INSERT INTO {$this->prefix}clientes (cli_nome, cli_sobrenome,";
         $query .=" cli_cpf, cli_fone,cli_celular ,cli_endereco ,cli_numero, cli_ponto_referencia, cli_bairro ,";
-        $query .=" cli_cidade ,cli_cep ,cli_email ,cli_data_cad, cli_hora_cad, cli_pass)";
+        $query .=" cli_cidade ,cli_cep ,cli_data_cad, cli_hora_cad, cli_pass)";
         $query .=" VALUES ";
         $query .=" (:cli_nome, :cli_sobrenome,";
         $query .=" :cli_cpf, :cli_fone,:cli_celular ,:cli_endereco ,:cli_numero, :cli_ponto_referencia, :cli_bairro ,";
-        $query .=" :cli_cidade ,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
+        $query .=" :cli_cidade ,:cli_cep ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
 
         $params = array(
         ':cli_nome'     => $this->getCli_nome() ,
@@ -90,7 +81,6 @@ class Clientes extends Conexao{
         ':cli_bairro'   => $this->getCli_bairro() ,
         ':cli_cidade'   => $this->getCli_cidade() ,
         ':cli_cep'      => $this->getCli_cep() ,
-        ':cli_email'    => $this->getCli_email() ,
         ':cli_data_cad' => $this->getCli_data_cad() ,
         ':cli_hora_cad' => $this->getCli_hora_cad() ,
         ':cli_senha'    => $this->getCli_senha()
@@ -111,9 +101,9 @@ class Clientes extends Conexao{
                 echo '</div>';
                 exit();
         endif;
-          // verifica se o email já esta cadastrado
-          if($this->GetClienteEmail($this->getCli_email()) > 0 && $this->getCli_email() != $_SESSION['CLI']['cli_email']):
-                echo '<div class="alert alert-danger " id="erro_mostrar"> Este Email já esta cadastrado ';
+          // verifica se o whatsapp já esta cadastrado
+          if($this->GetClienteCelular($this->getCli_celular()) > 0 && $this->getCli_celular() != $_SESSION['CLI']['cli_celular']):
+                echo '<div class="alert alert-danger " id="erro_mostrar"> Este Whatsapp já esta cadastrado ';
                 Sistema::VoltarPagina();
                 echo '</div>';
                 exit();
@@ -124,11 +114,9 @@ class Clientes extends Conexao{
 
         $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, cli_sobrenome=:cli_sobrenome,";
         $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia , cli_bairro=:cli_bairro ,";
-        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_email=:cli_email ,cli_data_cad=:cli_data_cad, cli_hora_cad=:cli_hora_cad, cli_pass=:cli_senha ";
+        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_data_cad=:cli_data_cad, cli_hora_cad=:cli_hora_cad, cli_pass=:cli_senha ";
         $query .=" WHERE  cli_id = :cli_id";
-      //  $query .=" (:cli_nome, :cli_sobrenome,";
-      //  $query .=" :cli_cpf, :cli_fone,:cli_celular ,:cli_endereco ,:cli_numero,:cli_bairro ,";
-      //  $query .=" :cli_cidade ,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
+     
 
         $params = array(
             ':cli_nome'     => $this->getCli_nome() ,
@@ -142,7 +130,6 @@ class Clientes extends Conexao{
             ':cli_bairro'   => $this->getCli_bairro() ,
             ':cli_cidade'   => $this->getCli_cidade() ,
             ':cli_cep'      => $this->getCli_cep() ,
-            ':cli_email'    => $this->getCli_email() ,
             ':cli_data_cad' => $this->getCli_data_cad() ,
             ':cli_hora_cad' => $this->getCli_hora_cad() ,
             ':cli_senha'    => $this->getCli_senha(),
@@ -176,9 +163,10 @@ class Clientes extends Conexao{
                 echo '</div>';
                 exit();
         endif;
-          // verifica se o email já esta cadstrado 
-          if($this->GetClienteEmail($this->getCli_email()) > 0 && $this->getCli_email() !=  $_REQUEST['cli_email']):
-                echo '<div class="alert alert-danger " id="erro_mostrar"> Este Email já esta cadastrado ';
+    
+        // verifica se o whatsapp já esta cadastrado
+          if($this->GetClienteCelular($this->getCli_celular()) > 0 && $this->getCli_celular() != $_SESSION['CLI']['cli_celular']):
+                echo '<div class="alert alert-danger " id="erro_mostrar"> Este Whatsapp já esta cadastrado ';
                 Sistema::VoltarPagina();
                 echo '</div>';
                 exit();
@@ -189,11 +177,9 @@ class Clientes extends Conexao{
         
         $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, cli_sobrenome=:cli_sobrenome,";
         $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia, cli_bairro=:cli_bairro ,";
-        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_email=:cli_email  ";   
+        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ";   
         $query .=" WHERE  cli_id = :cli_id";
-      //  $query .=" (:cli_nome, :cli_sobrenome,:cli_data_nasc,";
-      //  $query .=" :cli_cpf, :cli_ddd,:cli_fone,:cli_celular ,:cli_endereco ,:cli_numero,:cli_bairro ,";
-      //  $query .=" :cli_cidade,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";  
+      
    
         $params = array(
         ':cli_nome'     => $this->getCli_nome() ,    
@@ -206,9 +192,7 @@ class Clientes extends Conexao{
         ':cli_ponto_referencia' => $this->getCli_ponto_referencia() ,
         ':cli_bairro'   => $this->getCli_bairro() ,   
         ':cli_cidade'   => $this->getCli_cidade() ,   
-        ':cli_cep'      => $this->getCli_cep() ,   
-        ':cli_email'    => $this->getCli_email() ,   
-       
+        ':cli_cep'      => $this->getCli_cep() ,          
         ':cli_id'       => (int)$id   
             
         );
@@ -245,15 +229,7 @@ class Clientes extends Conexao{
     
     
 
-//Verificando se o EMAIL do cliente ja existe
-    public function GetClienteEmail($email){
-        $query = "SELECT * FROM {$this->prefix}clientes ";
-        $query .= "WHERE cli_email = :email ";
 
-        $params = array(':email'=> $email);
-        $this->ExecuteSQL($query, $params);
-        return $this->TotalDados();
-    }
 
 //Verificando se o Celular do cliente ja existe
     public function GetClienteCelular($celular){
@@ -265,15 +241,15 @@ class Clientes extends Conexao{
         return $this->TotalDados();
     }
 
-    public function SenhaUpdate($senha, $email){
+    public function SenhaUpdate($senha, $whatsapp){
         $query = "UPDATE {$this->prefix}clientes SET cli_pass = :senha ";
         
-        $query .="WHERE cli_email = :email ";
+        $query .="WHERE cli_celular = :celular ";
         $this->setCli_senha($senha);
-        $this->setCli_email($email);
+        $this->setCli_celular($whatsapp);
     
         $params = array(':senha'=> $this->getCli_senha(),
-                        ':email'=> $this->getCli_email());
+                        ':celular'=> $this->getCli_celular());
         $this->ExecuteSQL($query, $params);
         return $this->TotalDados();
     }
@@ -336,7 +312,6 @@ class Clientes extends Conexao{
              'cli_cpf'       =>  $lista['cli_cpf'],
              'cli_cep'       =>  $lista['cli_cep'],
              'cli_fone'      =>  $lista['cli_fone'],
-             'cli_email'     =>  $lista['cli_email'],
              'cli_celular'   =>  $lista['cli_celular'],
              'cli_pass'      =>  $lista['cli_pass'],
              'cli_hora_cad'  => $lista['cli_hora_cad'],
@@ -403,10 +378,6 @@ class Clientes extends Conexao{
 
     function getCli_cep() {
         return $this->cli_cep;
-    }
-
-    function getCli_email() {
-        return $this->cli_email;
     }
 
     function getCli_data_cad() {
@@ -519,24 +490,7 @@ class Clientes extends Conexao{
 
     }
 
-    function setCli_email($cli_email) {
 
-        if(!filter_var($cli_email, FILTER_VALIDATE_EMAIL)):
-
-                echo '<div class="alert alert-danger " id="erro_mostrar"> Email incorreto ';
-                Sistema::VoltarPagina();
-                echo '</div>';
-
-            exit();
-
-        else:
-
-                $this->cli_email = $cli_email;
-        endif;
-
-
-
-    }
 
     function setCli_data_cad($cli_data_cad) {
         $this->cli_data_cad = $cli_data_cad;

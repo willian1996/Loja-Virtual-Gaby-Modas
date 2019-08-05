@@ -1,3 +1,4 @@
+<br><br>
 <h4 class="text-center">Dados do pedido</h4>
 
 <!-- informações sobre o pedido -->

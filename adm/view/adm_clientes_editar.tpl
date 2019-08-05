@@ -100,7 +100,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Próximo de..." value="{$CLI_PONTO_REFERENCIA}" name="cli_ponto_referencia"  class="form-control" minlength="5">
+              <input type="text" placeholder="Próximo de..." value="{$CLI_PONTO_REFERENCIA}" name="cli_ponto_referencia"  class="form-control" minlength="5" required>
                 </div>
               </div>
             </div>
@@ -147,16 +147,7 @@
             </div>
 
 
-            <!-- E-Mail-->
-            <div class="form-group">
-              <label class="col-md-4 control-label">E-Mail</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-              <input type="email" value="{$CLI_EMAIL}" name="cli_email" class="form-control" required>
-                </div>
-              </div>
-            </div>
+           
             <!-- Senha-->
             <div class="form-group">
                 <div class="col-md-4 inputGroupContainer">

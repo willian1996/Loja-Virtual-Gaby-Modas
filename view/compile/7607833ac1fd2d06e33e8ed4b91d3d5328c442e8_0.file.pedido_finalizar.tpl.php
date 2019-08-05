@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-02 17:38:38
+/* Smarty version 3.1.33, created on 2019-08-05 02:29:53
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d449f4e827401_27680965',
+  'unifunc' => 'content_5d47bed1113887_77946550',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7607833ac1fd2d06e33e8ed4b91d3d5328c442e8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\pedido_finalizar.tpl',
-      1 => 1564778149,
+      1 => 1564982970,
       2 => 'file',
     ),
   ),
@@ -20,19 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d449f4e827401_27680965 (Smarty_Internal_Template $_smarty_tpl) {
-?><h2 id="tabelafinalizar">Finalizando Pedido...</h2>
-<hr>
+function content_5d47bed1113887_77946550 (Smarty_Internal_Template $_smarty_tpl) {
+?><hr>
 
 
 <!--  table listagem de itens -->
-<section class="row ">
+<section id="tabelafinalizar" class="row ">
     
     
 
     <center>
         <?php echo '<script'; ?>
->alert("Pedido Finalizado com Sucesso! avisaremos pelo Whatsapp no momento da saperação e da entrega");<?php echo '</script'; ?>
+>alert("Pedido Finalizado com Sucesso!");<?php echo '</script'; ?>
 >
         <div class="alert alert-success">
         Pedido Finalizado com Sucesso!
@@ -125,9 +124,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </section>
 
 <section class="row">
-            <br><hr>
-            <h4 class="text-center"><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHA_CONTA']->value;?>
-#tabelapedidos">Ver meus pedidos</a></h4>
+           
             
 
             <!-- botao de pagamento  -->
@@ -149,12 +146,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <br>
                 <img width="100%" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
 /imagens/banner_cartao.jpg" alt="">
+                <center><p>Com 3% de acréscimo no débito ou 5% de acréscimo no crédito</p></center>
                 <br>
             </div>
 
             <div class="col-md-4">
 
             </div>
+
+
+</section>
+
+<section class="row">
+     <br><hr>
+    <center>
+        <a  href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHA_CONTA']->value;?>
+#tabelapedidos"><button class="btn btn-success btn-lg">Ver meus pedidos</button></a>
+    </center>
 
 
 </section>

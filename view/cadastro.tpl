@@ -139,19 +139,42 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Digite o seu CEP" name="cli_cep" class="form-control">
+              <input type="text" placeholder="Opcional" name="cli_cep" class="form-control">
                 </div>
             </div>
             </div>
 
 
             <!-- E-Mail-->
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label">E-Mail</label>
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
               <input type="email" placeholder="Digite o seu e-mail" name="cli_email" class="form-control" required>
+                </div>
+              </div>
+            </div>
+-->
+            
+            <!-- Senha-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Nova Senha</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input type="password" placeholder="No minimo 8 caracteres" name="senha" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="col-md-4 control-label">Redigite a senha</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input type="password" placeholder="Confirme a senha" name="cli_senha" class="form-control" required>
                 </div>
               </div>
             </div>

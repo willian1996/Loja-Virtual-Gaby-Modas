@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-04 17:47:03
+/* Smarty version 3.1.33, created on 2019-08-05 01:15:07
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d474447cf3ac5_48391075',
+  'unifunc' => 'content_5d47ad4b14c7a8_58448151',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5cdd3d6854afe2c55df78a1e550d63a2384daffa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_index.tpl',
-      1 => 1564951617,
+      1 => 1564978461,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d474447cf3ac5_48391075 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d47ad4b14c7a8_58448151 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -167,6 +167,26 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 <!-- coluna direita CONYEUDO CENTRAL -->
                 <div class="col-md-10">
+                    <section class="row" id="menuadm">
+
+    <div class="text-center">
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PRODUTOS']->value;?>
+" class="btn btn-success"><i class="glyphicon glyphicon-tag"></i> Produtos</a>
+
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CATEGORIAS']->value;?>
+" class="btn btn-success"><i class="glyphicon glyphicon-list-alt"></i>Categorias</a>
+
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_CLIENTE']->value;?>
+" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Clientes </a>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
+" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a>
+        <a href="http://gabymodas.com/Relatorios-Gaby-Modas" class="btn btn-info"><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a>
+
+
+    </div>
+</section><!--minhaconta-->
+<hr>
+
 
 
 <!--

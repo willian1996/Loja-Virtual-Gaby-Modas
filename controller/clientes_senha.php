@@ -7,7 +7,7 @@ Login::MenuCliente();
 if(isset($_POST['cli_senha_atual']) and isset($_POST['cli_senha'])){
     $senha_atual = md5($_POST['cli_senha_atual']);
     $senha_nova = $_POST['cli_senha'];
-    $email = $_SESSION['CLI']['cli_email'];
+    $whatsapp = $_SESSION['CLI']['cli_celular'];
 
     if($senha_atual != $_SESSION['CLI']['cli_pass']){
         echo '<script>alert("Senha atual inválida");</script>';
@@ -17,7 +17,7 @@ if(isset($_POST['cli_senha_atual']) and isset($_POST['cli_senha'])){
     }else{
 
         $clientes = new Clientes();
-        $clientes->SenhaUpdate($senha_nova, $email);
+        $clientes->SenhaUpdate($senha_nova, $whatsapp);
         echo '<script>alert("A senha foi alterada com sucesso, faça o login com a nova senha!");</script>';
         echo '<div class="alert alert-success"> A senha foi alterada com sucesso, faça o login com a nova senha!</div><br/><br/>';
 

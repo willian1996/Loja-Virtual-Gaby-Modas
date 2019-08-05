@@ -1,5 +1,5 @@
 <?php
- 
+/* 
 $smarty = new Template();
 
 $cliente = new Clientes();
@@ -35,3 +35,4 @@ if(isset($_POST['cli_email'])){
     $smarty->display('clientes_recovery.tpl');
 }
 
+*/

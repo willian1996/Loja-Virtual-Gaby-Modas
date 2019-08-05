@@ -1,14 +1,13 @@
-<h2 id="tabelafinalizar">Finalizando Pedido...</h2>
 <hr>
 
 
 <!--  table listagem de itens -->
-<section class="row ">
+<section id="tabelafinalizar" class="row ">
     
     
 
     <center>
-        <script>alert("Pedido Finalizado com Sucesso! avisaremos pelo Whatsapp no momento da saperação e da entrega");</script>
+        <script>alert("Pedido Finalizado com Sucesso!");</script>
         <div class="alert alert-success">
         Pedido Finalizado com Sucesso!
         </div>
@@ -84,8 +83,7 @@
         </section>
 
 <section class="row">
-            <br><hr>
-            <h4 class="text-center"><a href="{$PAG_MINHA_CONTA}#tabelapedidos">Ver meus pedidos</a></h4>
+           
             
 
             <!-- botao de pagamento  -->
@@ -103,12 +101,22 @@
             <div class="col-md-4">
                 <br>
                 <img width="100%" src="{$TEMA}/imagens/banner_cartao.jpg" alt="">
+                <center><p>Com 3% de acréscimo no débito ou 5% de acréscimo no crédito</p></center>
                 <br>
             </div>
 
             <div class="col-md-4">
 
             </div>
+
+
+</section>
+
+<section class="row">
+     <br><hr>
+    <center>
+        <a  href="{$PAG_MINHA_CONTA}#tabelapedidos"><button class="btn btn-success btn-lg">Ver meus pedidos</button></a>
+    </center>
 
 
 </section>

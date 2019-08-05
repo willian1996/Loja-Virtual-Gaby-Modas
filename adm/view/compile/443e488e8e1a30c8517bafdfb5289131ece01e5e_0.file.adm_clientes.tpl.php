@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-03 00:38:56
+/* Smarty version 3.1.33, created on 2019-08-05 06:14:31
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4501d0d890d0_36395672',
+  'unifunc' => 'content_5d47f37795a802_37519839',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '443e488e8e1a30c8517bafdfb5289131ece01e5e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes.tpl',
-      1 => 1564803534,
+      1 => 1564996468,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4501d0d890d0_36395672 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d47f37795a802_37519839 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center">Gerenciar Clientes </h2>
 <hr>
 
@@ -36,7 +36,6 @@ function content_5d4501d0d890d0_36395672 (Smarty_Internal_Template $_smarty_tpl)
             
             <td>Nome</td>
             <td>Whatsapp </td>
-            <td class="hiddenonmobile">E-mail</td>
             <td class="hiddenonmobile">Data cadastro</td>
             <td></td>
         </tr>
@@ -56,8 +55,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
             <td><a href="https://wa.me/55<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
 "><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
 </a></td>
-            <td class="hiddenonmobile"><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_email'];?>
-</td>
             <td class="hiddenonmobile"><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_data_cad'];?>
 </td>
             <td><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PEDIDOS']->value;?>

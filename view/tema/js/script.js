@@ -1,4 +1,4 @@
-  $(document).ready(function() {
+  $(document).ready(function() { 
     $('#cadcliente').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
@@ -13,7 +13,7 @@
                         min: 2,
                     },
                         notEmpty: {
-                        message: 'Por favor, forneça seu primeiro nome'
+                        message: 'Por favor, digite seu primeiro nome'
                     }
                 }
             },
@@ -23,7 +23,7 @@
                         min: 2,
                     },
                     notEmpty: {
-                        message: 'Por favor, forneça seu sobrenome'
+                        message: 'Por favor, digite seu sobrenome'
                     }
                 }
             },
@@ -70,29 +70,18 @@
                    }
                 }
            },
-
-            cli_email: {
-                validators: {
-                    notEmpty: {
-                        message: 'Por favor forneça o seu e-mail'
-                    },
-                    emailAddress: {
-                        message: 'Por favor, forneça um endereço de email válido'
-                    }
-                }
-            },
             cli_celular: {
                 validators: {
                     notEmpty: {
-                        message: 'Por favor, forneça seu número do whatsapp'
+                        message: 'Por favor, digite seu número do whatsapp'
                     },
                     regexp: {
                         regexp: /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/,
-                        message: 'Por favor, forneça um número de Whatsapp com DDD sem o zero, nesse formato 12981819956'
+                        message: 'Por favor, digite um número de Whatsapp com DDD sem o zero, nesse formato 12981819956'
                     },
 //                    phone: {
 //                        country: 'BR',
-//                        message: 'Por favor, forneça um número de whatsapp válido com DDD'
+//                        message: 'Por favor, digite um número de whatsapp válido com DDD'
 //                    }
                 }
             },
@@ -100,15 +89,15 @@
              cli_fone: {
                 validators: {
 //                    notEmpty: {
-//                        message: 'Por favor, forneça seu número do whatsapp'
+//                        message: 'Por favor, digite seu número do whatsapp'
 //                    },
                     regexp: {
                         regexp: /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/,
-                        message: 'Por favor, forneça um número de telefone com DDD sem o zero'
+                        message: 'Por favor, digite um número de telefone com DDD sem o zero'
                     },
 //                    phone: {
 //                        country: 'BR',
-//                        message: 'Por favor, forneça um número de whatsapp válido com DDD'
+//                        message: 'Por favor, digite um número de whatsapp válido com DDD'
 //                    }
                 }
             },
@@ -118,7 +107,7 @@
                         min: 8,
                     },
                     notEmpty: {
-                        message: 'Por favor, forneça seu rua'
+                        message: 'Por favor, digite sua rua'
                     }
                 }
             },
@@ -128,7 +117,7 @@
                         min: 3,
                     },
                     notEmpty: {
-                        message: 'Por favor, forneça seu bairro'
+                        message: 'Por favor, digite seu bairro'
                     }
                 }
             },
@@ -145,11 +134,11 @@
             cli_cep: {
                 validators: {
 //                    notEmpty: {
-//                        message: 'Por favor, forneça seu CEP'
+//                        message: 'Por favor, digite seu CEP'
 //                    },
                     regexp: {
                         regexp: /^\d{8}$/,
-                        message: 'Por favor, forneça um CEP válido'
+                        message: 'Por favor, digite um CEP válido'
                     },
 
                 }
@@ -162,10 +151,27 @@
                         message:'Por favor insira mais informações'
                     },
                     notEmpty: {
-                        message: 'Por favor informe um ponto de referência como comercio ou locais próximos a sua residencia'
+                        message: 'Por favor digite um ponto de referência como comercio ou locais próximos a sua residencia'
                     }
+                    }
+                },
+            senha: {
+                validators: {
+                    stringLength: {
+                        min: 8,
+                        max: 30,
+                        message:'Por favor digite uma senha entre 8 e 30 cara'
                     }
                 }
+            },
+            cli_senha: {
+                validators: {
+                    identical: {
+                        field: 'senha',
+                        message: 'A senha e sua confirmação não são as mesmas'
+                    }
+                }
+            }
             }
         })
         .on('success.form.bv', function(e) {

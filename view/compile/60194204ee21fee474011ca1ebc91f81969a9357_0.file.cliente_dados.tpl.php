@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-04 18:14:57
+/* Smarty version 3.1.33, created on 2019-08-05 05:58:56
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d474ad179f0d2_77513734',
+  'unifunc' => 'content_5d47efd0d254b5_25994802',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '60194204ee21fee474011ca1ebc91f81969a9357' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\cliente_dados.tpl',
-      1 => 1564951884,
+      1 => 1564995529,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d474ad179f0d2_77513734 (Smarty_Internal_Template $_smarty_tpl) {
-?><br>
+function content_5d47efd0d254b5_25994802 (Smarty_Internal_Template $_smarty_tpl) {
+?><br> 
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -188,25 +188,15 @@ if ($_prefixVariable3 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilha Bela</
             </div>
 
 
-            <!-- E-Mail-->
-            <div class="form-group">
-              <label class="col-md-4 control-label">E-Mail</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-              <input type="email" value="<?php echo $_smarty_tpl->tpl_vars['CLI_EMAIL']->value;?>
-" name="cli_email" class="form-control" required>
-                </div>
-              </div>
-            </div>
-            <br><hr><br>
+      
+            <br><hr>
             <!-- Senha-->
             <div class="form-group">
               <label class="col-md-4 control-label">Digite sua senha atual por segurança<br>(<small>sua senha não será alterada</small>)</label>
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input type="password" name="cli_senha" id="cli_senha" class="form-control" required>
+                    <input type="password" name="txt_senha" id="cli_senha" class="form-control" required>
                 </div>
               </div>
             </div>

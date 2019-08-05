@@ -131,10 +131,6 @@
                 <td class="bg-info"><b>CEP</b></td>
                 <td>{$C.cli_cep}</td>
               </tr>
-              <tr>
-                <td class="bg-info"><b>E-mail</b></td>
-                <td>{$C.cli_email}</td>
-              </tr>
             {/foreach}
         </table>
     </center>

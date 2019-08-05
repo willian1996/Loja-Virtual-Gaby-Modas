@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-04 17:51:35
+/* Smarty version 3.1.33, created on 2019-08-05 03:03:28
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4745572d8373_29531819',
+  'unifunc' => 'content_5d47c6b0931a32_70549631',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9b92145741b023d8a74265a0cc50d1f88567e382' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\cadastro.tpl',
-      1 => 1564951838,
+      1 => 1564984999,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4745572d8373_29531819 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d47c6b0931a32_70549631 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -162,19 +162,42 @@ function content_5d4745572d8373_29531819 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Digite o seu CEP" name="cli_cep" class="form-control">
+              <input type="text" placeholder="Opcional" name="cli_cep" class="form-control">
                 </div>
             </div>
             </div>
 
 
             <!-- E-Mail-->
+<!--
             <div class="form-group">
               <label class="col-md-4 control-label">E-Mail</label>
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
               <input type="email" placeholder="Digite o seu e-mail" name="cli_email" class="form-control" required>
+                </div>
+              </div>
+            </div>
+-->
+            
+            <!-- Senha-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Nova Senha</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input type="password" placeholder="No minimo 8 caracteres" name="senha" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="col-md-4 control-label">Redigite a senha</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input type="password" placeholder="Confirme a senha" name="cli_senha" class="form-control" required>
                 </div>
               </div>
             </div>

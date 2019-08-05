@@ -1,4 +1,4 @@
-<br>
+<br> 
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -100,7 +100,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Próximo de..." value="{$CLI_PONTO_REFERENCIA}" name="cli_ponto_referencia"  class="form-control" minlength="5">
+              <input type="text" placeholder="Próximo de..." value="{$CLI_PONTO_REFERENCIA}" name="cli_ponto_referencia"  class="form-control" minlength="5" required>
                 </div>
               </div>
             </div>
@@ -146,24 +146,15 @@
             </div>
 
 
-            <!-- E-Mail-->
-            <div class="form-group">
-              <label class="col-md-4 control-label">E-Mail</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-              <input type="email" value="{$CLI_EMAIL}" name="cli_email" class="form-control" required>
-                </div>
-              </div>
-            </div>
-            <br><hr><br>
+      
+            <br><hr>
             <!-- Senha-->
             <div class="form-group">
               <label class="col-md-4 control-label">Digite sua senha atual por segurança<br>(<small>sua senha não será alterada</small>)</label>
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input type="password" name="cli_senha" id="cli_senha" class="form-control" required>
+                    <input type="password" name="txt_senha" id="cli_senha" class="form-control" required>
                 </div>
               </div>
             </div>

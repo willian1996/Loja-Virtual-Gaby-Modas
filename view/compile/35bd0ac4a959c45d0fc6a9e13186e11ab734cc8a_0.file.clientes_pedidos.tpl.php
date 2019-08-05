@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-02 12:41:23
+/* Smarty version 3.1.33, created on 2019-08-05 01:44:02
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4459a3b49a61_74676467',
+  'unifunc' => 'content_5d47b4124e4593_62565857',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '35bd0ac4a959c45d0fc6a9e13186e11ab734cc8a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\clientes_pedidos.tpl',
-      1 => 1564760481,
+      1 => 1564953255,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4459a3b49a61_74676467 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d47b4124e4593_62565857 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br><br>
 <section class="row" id="pedidos">
 

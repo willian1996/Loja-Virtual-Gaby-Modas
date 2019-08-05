@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-02 15:40:30
+/* Smarty version 3.1.33, created on 2019-08-05 02:05:32
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d44839e658984_45939883',
+  'unifunc' => 'content_5d47b91cd13b93_61606597',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e3525291305fddccdf9ee808d2ca2cc5117afc1b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\produtos_info.tpl',
-      1 => 1564771206,
+      1 => 1564981520,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d44839e658984_45939883 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d47b91cd13b93_61606597 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
@@ -47,6 +47,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
         <br>
           <img width="80%" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
 /imagens/banner_cartao.jpg" alt="">
+          <center><p>Com 3% de acréscimo no débito ou 5% de acréscimo no crédito</p></center>
         <hr>
 
 

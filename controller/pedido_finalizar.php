@@ -52,20 +52,6 @@ if(!Login::Logado()){
         $ref = $_SESSION['PED']['ref'];
         $frete = $_SESSION['PED']['frete'];
 
-
-        $email = new EnviarEmail();
-        
-        $destinatarios = array(Config::SITE_EMAIL_ADMIN, $_SESSION['CLI']['cli_email']);
-        
-        $assunto = "Pedido na GabyModas.com -".Sistema::DataAtualBR();
-        
-        $msg = $smarty->fetch('email_compra.tpl');
-        
-        
-        
-        $email->Enviar($assunto, $msg, $destinatarios);
-        
-
         if($pedido->PedidoGravar($cliente, $codigo, $ref, $frete)){
             $pedido->LimparSessoes();
         }

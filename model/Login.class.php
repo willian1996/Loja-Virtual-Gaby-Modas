@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 class Login extends Conexao{
     private $user;
@@ -15,10 +15,10 @@ class Login extends Conexao{
         $this->setUser($user);
         $this->setSenha($senha);
         
-        $query = "SELECT * FROM {$this->prefix}clientes WHERE cli_email = :email AND cli_pass = :senha";
+        $query = "SELECT * FROM {$this->prefix}clientes WHERE cli_celular = :cli_celular AND cli_pass = :senha";
         
         $params = array(
-            ':email' => $this->getUser(), 
+            ':cli_celular' => $this->getUser(), 
             ':senha' => $this->getSenha()
         
         );
@@ -42,7 +42,6 @@ class Login extends Conexao{
             $_SESSION['CLI']['cli_cpf']       =  $lista['cli_cpf'];
             $_SESSION['CLI']['cli_cep']       =  $lista['cli_cep'];
             $_SESSION['CLI']['cli_fone']      =  $lista['cli_fone'];
-            $_SESSION['CLI']['cli_email']     =  $lista['cli_email'];
             $_SESSION['CLI']['cli_celular']   =  $lista['cli_celular'];
             $_SESSION['CLI']['cli_hora_cad']  =  $lista['cli_hora_cad'];
             $_SESSION['CLI']['cli_data_cad']  =  $lista['cli_data_cad'];
@@ -50,7 +49,7 @@ class Login extends Conexao{
 
 
         }else{
-            echo '<script>alert("E-mail ou Senha inválidos");</script>';
+            echo '<script>alert("Whatsapp ou Senha inválidos");</script>';
         }
         
     }
@@ -103,7 +102,7 @@ class Login extends Conexao{
     }
     
     static function Logado(){
-        if(isset($_SESSION['CLI']['cli_email']) && isset($_SESSION['CLI']['cli_id'])){
+        if(isset($_SESSION['CLI']['cli_celular']) && isset($_SESSION['CLI']['cli_id'])){
             return true;
         }else{
             return false;
