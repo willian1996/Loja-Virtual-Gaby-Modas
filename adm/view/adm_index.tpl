@@ -118,21 +118,7 @@
 
                 <!-- coluna direita CONYEUDO CENTRAL -->
                 <div class="col-md-10">
-<section class="row" id="menuadm">
-    
-    <div class="text-center">
-        <a href="{$PAG_ADM_PRODUTOS}" class="btn btn-success"><i class="glyphicon glyphicon-tag"></i> Produtos</a>
-        
-        <a href="{$PAG_CATEGORIAS}" class="btn btn-success"><i class="glyphicon glyphicon-list-alt"></i>Categorias</a>
-        
-        <a href="{$PAG_ADM_CLIENTE}" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Clientes </a>
-        <a href="{$PAG_ADM_PEDIDOS}" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a>
-        <a href="http://gabymodas.com/Relatorios-Gaby-Modas" class="btn btn-info"><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a>
-        
-    
-    </div>
-</section><!--minhaconta-->
-<hr>
+
 
 <!--
                     <ul class="breadcrumb">

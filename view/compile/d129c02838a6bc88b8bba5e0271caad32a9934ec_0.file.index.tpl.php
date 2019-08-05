@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-02 15:49:55
+/* Smarty version 3.1.33, created on 2019-08-05 00:27:35
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4485d3ccfac7_03671540',
+  'unifunc' => 'content_5d47a227380014_81462632',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd129c02838a6bc88b8bba5e0271caad32a9934ec' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\index.tpl',
-      1 => 1564771792,
+      1 => 1564975651,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4485d3ccfac7_03671540 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d47a227380014_81462632 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -110,9 +110,9 @@ function content_5d4485d3ccfac7_03671540 (Smarty_Internal_Template $_smarty_tpl)
                             </ul>
 
 
-                            <form class="navbar-form navbar-right" role="search">
+                            <form name="txt_buscar" method="post" action="" class="navbar-form navbar-right" role="search">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Digite para buscar" required>
+                                    <input name="txt_buscar" type="text" class="form-control" placeholder="Digite para buscar" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Buscar</button>
                             </form>

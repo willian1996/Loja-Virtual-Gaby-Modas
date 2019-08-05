@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 18:56:26
+/* Smarty version 3.1.33, created on 2019-08-04 17:51:35
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d43600a4050e8_25657738',
+  'unifunc' => 'content_5d4745572d8373_29531819',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9b92145741b023d8a74265a0cc50d1f88567e382' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\cadastro.tpl',
-      1 => 1564691744,
+      1 => 1564951838,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d43600a4050e8_25657738 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4745572d8373_29531819 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -150,8 +150,6 @@ function content_5d43600a4050e8_25657738 (Smarty_Internal_Template $_smarty_tpl)
                     <option value="Sao Sebastiao">São Sebastião</option>
                     <option value="Ilhabela">Ilhabela</option>
                     <option value="Caraguatatuba">Caraguatatuba</option>
-                    <option value="Ubatuba">Ubatuba</option>
-
                 </select>
               </div>
             </div>

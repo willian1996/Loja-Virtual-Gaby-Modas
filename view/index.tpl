@@ -71,9 +71,9 @@
                             </ul>
 
 
-                            <form class="navbar-form navbar-right" role="search">
+                            <form name="txt_buscar" method="post" action="" class="navbar-form navbar-right" role="search">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Digite para buscar" required>
+                                    <input name="txt_buscar" type="text" class="form-control" placeholder="Digite para buscar" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Buscar</button>
                             </form>

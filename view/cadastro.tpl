@@ -127,8 +127,6 @@
                     <option value="Sao Sebastiao">São Sebastião</option>
                     <option value="Ilhabela">Ilhabela</option>
                     <option value="Caraguatatuba">Caraguatatuba</option>
-                    <option value="Ubatuba">Ubatuba</option>
-
                 </select>
               </div>
             </div>

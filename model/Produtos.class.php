@@ -1,4 +1,4 @@
-<?php
+<?php 
 class Produtos extends Conexao{
     private $pro_nome;
     private $pro_categoria;
@@ -50,6 +50,24 @@ class Produtos extends Conexao{
 
         $this->GetLista();
 
+    }
+    
+
+    public function GetProdutosNome($nome){
+        $nome = $this->filtraEntrada($nome);
+        
+          // monto a SQL
+        $query = "SELECT * FROM {$this->prefix}produtos p 
+        INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = c.cate_id";        
+        $query .= " WHERE pro_nome LIKE '%$nome%' ";
+        $query .= $this->PaginacaoLinks("pro_id", $this->prefix."produtos WHERE pro_nome LIKE '%$nome%' ");
+        
+        // passando parametros
+        $params = array(':nome'=>$nome);
+       // executando a SQL                      
+        $this->ExecuteSQL($query,$params);
+        // trazendo a listagem 
+        $this->GetLista();
     }
 
     public function GetProdutosCateID($id){

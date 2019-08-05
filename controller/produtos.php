@@ -6,6 +6,11 @@ $produtos = new Produtos();
 
 if(isset(Rotas::$pag[1])){
     $produtos->GetProdutosCateID(Rotas::$pag[1]);
+}elseif(isset($_POST['txt_buscar'])){
+    
+    $nome = filter_var($_POST['txt_buscar'], FILTER_SANITIZE_STRING);
+    $produtos->GetProdutosNome($nome);
+    
 }else{
     $produtos->GetProdutos();
 }

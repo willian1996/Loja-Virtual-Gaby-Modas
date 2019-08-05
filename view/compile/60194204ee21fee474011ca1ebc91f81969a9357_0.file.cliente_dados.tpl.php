@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-02 17:01:11
+/* Smarty version 3.1.33, created on 2019-08-04 18:14:57
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4496874d2ee1_43844392',
+  'unifunc' => 'content_5d474ad179f0d2_77513734',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '60194204ee21fee474011ca1ebc91f81969a9357' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\cliente_dados.tpl',
-      1 => 1564712253,
+      1 => 1564951884,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4496874d2ee1_43844392 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d474ad179f0d2_77513734 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -165,14 +165,10 @@ if ($_prefixVariable1 == 'Caraguatatuba') {?>selected="selected"<?php }?>>Caragu
 echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
 $_prefixVariable2 = ob_get_clean();
 if ($_prefixVariable2 == 'Sao Sebastiao') {?>selected="selected"<?php }?>>São Sebastião</option>
-                    <option value="Ubatuba" <?php ob_start();
-echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
-$_prefixVariable3 = ob_get_clean();
-if ($_prefixVariable3 == 'Ubatuba') {?>selected="selected"<?php }?>>Ubatuba</option>
                     <option value="Ilhabela" <?php ob_start();
 echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
-$_prefixVariable4 = ob_get_clean();
-if ($_prefixVariable4 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilha Bela</option>
+$_prefixVariable3 = ob_get_clean();
+if ($_prefixVariable3 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilha Bela</option>
                 </select>
               </div>
             </div>
