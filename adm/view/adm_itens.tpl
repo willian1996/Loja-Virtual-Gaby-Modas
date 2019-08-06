@@ -1,15 +1,12 @@
-<h3 class="text-center">Dados do Pedido</h3>
+<h3 class="text-center">Dados do Pedido</h3> 
 
 <!-- informações sobre o pedido -->
 <section class="row">
-    
     <center>
     <table class="table table-bordered" style="width: 100%">
         <tr class="bg-success">
             <td><b>Data:</b> {$ITENS.1.ped_data}</td>
-            
             <td><b>Hora:</b> {$ITENS.1.ped_hora}</td>
-            
             <td><b>Ref:</b> {$ITENS.1.ped_ref}</td>
         </tr>  
     </table>
@@ -18,10 +15,8 @@
 
 <!-- listagem dos itens --->
 <section class="row" id="listaitens">
-    
     <center>
     <table class="table table-bordered" style="width: 100%">
-        
         <tr class="text-success bg-success">
             <td></td>
             <td>Item</td>
@@ -31,7 +26,6 @@
         </tr>
         
         {foreach from=$ITENS item=P}
-        
         <tr>
             <td><img src="{$P.item_img}" alt=""> </td>
             <td><a href="{$PRO_INFO}/{$P.item_produto}#nomeproduto">{$P.item_nome}</a></td>
@@ -42,11 +36,7 @@
         {/foreach}
     </table>
     </center>
-    
-    
-    
 </section>
-        
 
 <section class="row" id="resumo">
     <br>
@@ -64,26 +54,33 @@
         {/if}
     </center>
     <br>
-
     <center>
         <table class="table table-bordered" style="width: 100%">
             <tr>
-
                 <td class="text-danger"> <b>Frete:</b> R${$ITENS.1.ped_frete_valor}</td>
-
                 <td class="text-danger"> <b>Total:</b> R${$TOTAL}</td>
-
                 <td class="text-danger"> <b>Final:</b> R${$ITENS.1.ped_frete_valor+$TOTAL}</td>
-
-            </tr>  
-
-
+            </tr> 
         </table>
     </center>
-
-
+    
+    <br><hr>
+    <center>
+        <h4>Mudar Status do Pedido</h4>
+        <form method="post" action="">
+            <select name="ped_status">
+                <option value="SOLICITADO" {if {$P.ped_pag_status} == 'SOLICITADO'}selected="selected"{/if}>SOLICITADO</option>
+                <option value="SEPARADO" {if {$P.ped_pag_status} == 'SEPARADO'}selected="selected"{/if}>SEPARADO</option>
+                <option value="ENTREGUE" {if {$P.ped_pag_status} == 'ENTREGUE'}selected="selected"{/if}>ENTREGUE</option>
+                <option value="CANCELADO" {if {$P.ped_pag_status} == 'CANCELADO'}selected="selected"{/if}>CANCELADO</option>
+            </select>
+            <br><br>
+            <button name="mudar_status" class="btn btn-danger btn-sm">Mudar</button>
+        </form>
+    </center>
 </section>
-<hr>
+
+<hr><br>    
 
     <h3 class="text-center">Dados do Cliente</h3>
 <section>

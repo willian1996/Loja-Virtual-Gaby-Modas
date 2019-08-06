@@ -1,4 +1,8 @@
 <?php
+echo "<script>
+        alert('Esqueceu a senha? me avise por whatsapp');
+        window.location.href = 'https://wa.me/5512981819956'; 
+    </script>";
 /* 
 $smarty = new Template();
 

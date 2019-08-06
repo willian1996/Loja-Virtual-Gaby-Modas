@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 18:33:01
+/* Smarty version 3.1.33, created on 2019-08-06 03:37:10
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_produtos_editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d435a8d5410f4_23556690',
+  'unifunc' => 'content_5d492016a07946_32960295',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c360bf5e599f48dbd5f191b06d0ba1cbe54c22c3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_produtos_editar.tpl',
-      1 => 1564691744,
+      1 => 1565073280,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d435a8d5410f4_23556690 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d492016a07946_32960295 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <h4 class="text-center"> Editar produto </h4>
@@ -74,35 +74,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <label>Ativo</label>
             <select name="pro_ativo" id="pro_cativo" class="form-control" required >
                 <option value=""> Escolha </option>
-                <option value="NAO" <?php ob_start();
-echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ativo'];
-$_prefixVariable1 = ob_get_clean();
-if ($_prefixVariable1 == 'NAO') {?>selected="selected"<?php }?>> Não </option>
                 <option value="SIM" <?php ob_start();
 echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ativo'];
+$_prefixVariable1 = ob_get_clean();
+if ($_prefixVariable1 == 'SIM') {?>selected="selected"<?php }?>> Sim </option>
+                <option value="NAO" <?php ob_start();
+echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ativo'];
 $_prefixVariable2 = ob_get_clean();
-if ($_prefixVariable2 == 'SIM') {?>selected="selected"<?php }?>> Sim </option>
+if ($_prefixVariable2 == 'NAO') {?>selected="selected"<?php }?>> Não </option>
             </select>
         </div>
 
 
-
-<!--
-        <div class="col-md-3">
-            <label>Modelo</label>
-            <input type="text" name="pro_modelo" id="pro_modelo" class="form-control " value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_modelo'];?>
-"  >
-
-        </div>
--->
-
-
-           <div class="col-md-2">
-            <label>Referencia</label>
-            <input type="text" name="pro_ref" id="pro_ref" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ref'];?>
-" >
-
-        </div>
+    
 
 
 
@@ -112,51 +96,13 @@ if ($_prefixVariable2 == 'SIM') {?>selected="selected"<?php }?>> Sim </option>
 ">
 
         </div>
-
-
-
-           <div class="col-md-2">
-            <label>Estoque</label>
-            <input type="text" name="pro_estoque" id="pro_estoque" class="form-control" required value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_estoque'];?>
+        
+        <div class="col-md-2">
+            <label>Tamanho</label>
+            <input type="text"  name="pro_tamanho" id="pro_tamanho" class="form-control" required value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_tamanho'];?>
 ">
 
           </div>
-
-
-
-           <div class="col-md-2">
-            <label>Peso</label>
-            <input type="text" name="pro_peso" id="pro_peso" class="form-control" required value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_peso'];?>
-">
-
-          </div>
-
-
-<!--
-           <div class="col-md-2">
-            <label>Altura</label>
-            <input type="text" name="pro_altura" id="pro_altura" class="form-control" required value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_altura'];?>
-">
-
-          </div>
-
-
-           <div class="col-md-2">
-            <label>Largura</label>
-            <input type="text" name="pro_largura" id="pro_largura" class="form-control" required value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_largura'];?>
-">
-
-          </div>
-
-
-           <div class="col-md-2">
-            <label>Comprimento</label>
-            <input type="text" name="pro_comprimento" id="pro_comprimento" class="form-control" required value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_comprimento'];?>
-">
-
-          </div>
-
--->
 
         <div class="col-md-12">
 

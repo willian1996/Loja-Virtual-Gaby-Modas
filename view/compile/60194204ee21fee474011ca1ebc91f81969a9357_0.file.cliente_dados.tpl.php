@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 05:58:56
+/* Smarty version 3.1.33, created on 2019-08-05 18:19:41
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47efd0d254b5_25994802',
+  'unifunc' => 'content_5d489d6d30aeb8_12696480',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '60194204ee21fee474011ca1ebc91f81969a9357' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\cliente_dados.tpl',
-      1 => 1564995529,
+      1 => 1564997359,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47efd0d254b5_25994802 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d489d6d30aeb8_12696480 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br> 
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -131,7 +131,7 @@ function content_5d47efd0d254b5_25994802 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
               <input type="text" placeholder="Próximo de..." value="<?php echo $_smarty_tpl->tpl_vars['CLI_PONTO_REFERENCIA']->value;?>
-" name="cli_ponto_referencia"  class="form-control" minlength="5">
+" name="cli_ponto_referencia"  class="form-control" minlength="5" required>
                 </div>
               </div>
             </div>

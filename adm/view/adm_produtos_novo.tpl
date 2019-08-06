@@ -35,32 +35,11 @@
         <div class="col-md-2">
             <label>Ativo</label>
             <select name="pro_ativo" id="pro_cativo" class="form-control" required>
-
-                <option value=""> Escolha </option>
-                <option value="0"> Não </option>
-                <option value="1" selected> Sim </option>
-
+                <option value="">Escolha </option>
+                <option value="SIM" selected>Sim</option>
+                <option value="NAO">Não</option>
             </select>
 
-
-        </div>
-
-
-
-
-
-<!--
-           <div class="col-md-3">
-            <label>Modelo</label>
-            <input type="text" name="pro_modelo" id="pro_modelo" class="form-control"  >
-
-        </div>
--->
-
-
-           <div class="col-md-2">
-            <label>Referencia</label>
-            <input type="text" name="pro_ref" id="pro_ref" class="form-control"  >
 
         </div>
 
@@ -71,45 +50,35 @@
             <input type="text" name="pro_valor" id="pro_valor" class="form-control" required >
 
         </div>
+        
+    
+        
+        <br>
+        <hr>
+        <div class="col-md-2">
+            <label>Tamanho</label><br>
+            <div class="checkbox">
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="36">36</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="38">38</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="40">40</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="42">42</label>
+            </div><br>
+            <div class="checkbox">
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="44">44</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="46">46</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="48">48</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="50">50</label>
+            </div><br>
+            <div class="checkbox">
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="P">P</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="M">M</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="G">G</label>
+                <label class="tamanho-roupas"><input type="checkbox" name="tamanho[]" value="GG">GG</label>
+            </div><br>
+        </div>
+        
 
-
-
-           <div class="col-md-2">
-            <label>Estoque</label>
-            <input type="number" name="pro_estoque" id="pro_estoque" class="form-control" required >
-
-          </div>
-
-
-
-           <div class="col-md-2">
-            <label>Peso</label>
-            <input type="text"  name="pro_peso" id="pro_peso" class="form-control" required >
-
-          </div>
-
-
-<!--
-           <div class="col-md-2">
-            <label>Altura</label>
-            <input type="number" name="pro_altura" id="pro_altura" class="form-control" required >
-
-          </div>
-
-
-           <div class="col-md-2">
-            <label>Largura</label>
-            <input type="number" name="pro_largura" id="pro_largura" class="form-control" required >
-
-          </div>
-
-
-           <div class="col-md-2">
-            <label>Comprimento</label>
-            <input type="number" name="pro_comprimento" id="pro_comprimento" class="form-control" required >
-
-          </div>
--->
+        
 
 
         <div class="col-md-12">
@@ -143,12 +112,13 @@
             <textarea style="min-height:150px;" name="pro_desc" id="pro_desc" rows="5" class="form-control">
             <b>OS PEDIDOS SERÃO SEPARADOS NA PRÓXIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</b><br><br>
 
-            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega<br><br>
-            ->NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.<br>
-            ->NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br>
-            ->NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br>
-            ->NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.<br><br>
-
+            Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento será feito no momento da entrega
+            <ul>
+                <li>NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.</li><br>
+                <li>NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li><br>
+                <li>NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li><br>
+                <li>NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.</li>
+            </ul>
             <i>Aceitamos cartões com 5% de acréscimo</i><br><br>
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 06:18:15
+/* Smarty version 3.1.33, created on 2019-08-05 18:31:43
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes_editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47f457d5aa78_49430054',
+  'unifunc' => 'content_5d48a03fc9b7b3_87367958',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a35dd72124141dbd4dc9cc1ffddd154f0b20edad' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes_editar.tpl',
-      1 => 1564996362,
+      1 => 1565040701,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47f457d5aa78_49430054 (Smarty_Internal_Template $_smarty_tpl) {
-?><br>
+function content_5d48a03fc9b7b3_87367958 (Smarty_Internal_Template $_smarty_tpl) {
+?><br> 
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -133,7 +133,7 @@ function content_5d47f457d5aa78_49430054 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
               <input type="text" placeholder="Próximo de..." value="<?php echo $_smarty_tpl->tpl_vars['CLI_PONTO_REFERENCIA']->value;?>
-" name="cli_ponto_referencia"  class="form-control" minlength="5">
+" name="cli_ponto_referencia"  class="form-control" minlength="5" required>
                 </div>
               </div>
             </div>
@@ -196,6 +196,17 @@ if ($_prefixVariable4 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilhabela</o
 
            
             <!-- Senha-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Troque a senha só se o cliente pedir</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input type="password" placeholder="Nova senha" name="txt_senha" class="form-control">
+                </div>
+              </div>
+            </div>
+            
+            
             <div class="form-group">
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">

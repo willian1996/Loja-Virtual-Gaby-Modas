@@ -16,7 +16,7 @@
 
             <div class="form-group"> 
                 <label> Whatsapp: </label>
-                <input type="number" placeholder="Com o DDD sem o zero" name="txt_celular" class="form-control" maxlength="11" min="11111111111"  required>
+                <input type="number" placeholder="Com o DDD sem o zero" name="txt_celular" class="form-control" max="99999999999" min="11111111111"  required>
 
             </div>
 

@@ -1,5 +1,5 @@
 ﻿#minhacontaflutua{
-    margin: 0;
+    margin: 0; 
     font-size: 23px /*smaller*/;
     font-weight: bold;
     line-height: 1.1;
@@ -46,6 +46,13 @@ color: #fff;
 #logotipo h1 a{
     color: #FFF;
 }
+
+.tamanho-roupas{
+    margin: 15px;
+    
+}
+
+
 
 @media only screen and (max-width: 990px) {
     #logotipo {

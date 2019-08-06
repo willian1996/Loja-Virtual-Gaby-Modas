@@ -1,4 +1,4 @@
-<?php  
+<?php   
  
 class Pedidos extends Conexao{ 
     
@@ -167,7 +167,23 @@ class Pedidos extends Conexao{
         $this->GetLista();
     }
 
-
+//FUNÇÃO PARA MUDAR STATUS
+    
+    public function mudarStatusPedido($status, $pedido){
+        $query = " UPDATE {$this->prefix}pedidos SET ped_pag_status=:ped_pag_status WHERE ped_cod = :ped_cod";
+        
+        $params = array(
+            ':ped_pag_status'=> $status,
+            ':ped_cod'=>$pedido
+        );
+        
+        // executo a minha SQL
+         if($this->ExecuteSQL($query, $params)){
+             return TRUE;
+         }else{
+             return FALSE;
+         }
+    }
     
     
 //FUNÇÃO Cancelar PEDIDOS

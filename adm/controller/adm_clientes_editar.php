@@ -1,5 +1,5 @@
 <?php
-
+ 
 $smarty = new Template();
 $clientes = new Clientes();
 
@@ -19,7 +19,7 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_celular']) and isset($_POST['
     $cli_bairro    = $_POST['cli_bairro'];
     $cli_cidade    = $_POST['cli_cidade'];
     $cli_cep       = $_POST['cli_cep'];
-    $cli_senha     = "";
+    $cli_senha     = isset($_POST['txt_senha'])?$_POST['txt_senha']:"";
     $cli_data_cad  = "";
     $cli_hora_cad  = "";
 

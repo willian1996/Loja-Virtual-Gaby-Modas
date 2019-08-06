@@ -1,5 +1,5 @@
 <?php
-
+ 
 class Clientes extends Conexao{
 
     private $cli_nome;
@@ -26,7 +26,7 @@ class Clientes extends Conexao{
             $cli_cpf  , $cli_fone , $cli_celular , $cli_endereco , $cli_numero, $cli_ponto_referencia,
             $cli_bairro , $cli_cidade , $cli_cep , $cli_data_cad,
             $cli_hora_cad, $cli_senha){
-
+        
         $this->setCli_nome($cli_nome);
         $this->setCli_sobrenome($cli_sobrenome);
         $this->setCli_cpf($cli_cpf);
@@ -165,7 +165,7 @@ class Clientes extends Conexao{
         endif;
     
         // verifica se o whatsapp já esta cadastrado
-          if($this->GetClienteCelular($this->getCli_celular()) > 0 && $this->getCli_celular() != $_SESSION['CLI']['cli_celular']):
+          if($this->GetClienteCelular($this->getCli_celular()) > 0 && $this->getCli_celular() != $_REQUEST['cli_celular']):
                 echo '<div class="alert alert-danger " id="erro_mostrar"> Este Whatsapp já esta cadastrado ';
                 Sistema::VoltarPagina();
                 echo '</div>';
@@ -177,10 +177,10 @@ class Clientes extends Conexao{
         
         $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, cli_sobrenome=:cli_sobrenome,";
         $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia, cli_bairro=:cli_bairro ,";
-        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ";   
+        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep, cli_pass=:cli_senha ";   
         $query .=" WHERE  cli_id = :cli_id";
       
-   
+    
         $params = array(
         ':cli_nome'     => $this->getCli_nome() ,    
         ':cli_sobrenome'=> $this->getCli_sobrenome() ,   
@@ -192,7 +192,8 @@ class Clientes extends Conexao{
         ':cli_ponto_referencia' => $this->getCli_ponto_referencia() ,
         ':cli_bairro'   => $this->getCli_bairro() ,   
         ':cli_cidade'   => $this->getCli_cidade() ,   
-        ':cli_cep'      => $this->getCli_cep() ,          
+        ':cli_cep'      => $this->getCli_cep() , 
+        ':cli_senha'      => $this->getCli_senha() ,          
         ':cli_id'       => (int)$id   
             
         );
