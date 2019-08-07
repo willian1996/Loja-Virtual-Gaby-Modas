@@ -21,16 +21,16 @@
             <td></td>
             <td>Item</td>
             <td>Valor Uni</td>
-            <td>X</td>
+            <td>T</td>
             <td>Sub</td>
         </tr>
         
         {foreach from=$ITENS item=P}
         <tr>
             <td><img src="{$P.item_img}" alt=""> </td>
-            <td><a href="{$PRO_INFO}/{$P.item_produto}#nomeproduto">{$P.item_nome}</a></td>
-            <td class="text-right">{$P.item_valor}</td>
-            <td class="text-center"> {$P.item_qtd}</td>
+            <td><a href="{$PRO_INFO}/{$P.item_produto}#nomeproduto">{$P.item_qtd} {$P.item_nome}</a></td>
+            <td class="text-right"> {$P.item_valor}</td>
+            <td class="text-center"> {$P.item_tamanho}</td>
             <td class="text-right"> {$P.item_sub}</td>
         </tr>
         {/foreach}

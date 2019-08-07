@@ -1,5 +1,5 @@
 <?php
-
+ 
 if(!Login::Logado()){
     Login::AcessoNegado();
     Rotas::Redirecionar(0, Rotas::pag_ClienteLogin());
@@ -13,7 +13,7 @@ if(!Login::Logado()){
             exit('<h4 class="alert alert-danger"> Selecione o frete </h4>');
         }
 
-
+ 
         $smarty = new Template();
 
         $carrinho = new Carrinho();
@@ -36,7 +36,7 @@ if(!Login::Logado()){
 
         $smarty->assign('PAG_CARRINHO_ALTERAR', Rotas::pag_CarrinhoAlterar());
 
-        $smarty->assign('PAG_CARRINHO', Rotas::pag_Carrinho());
+        $smarty->assign('PAG_CARRINHO', Rotas::pag_Carrinho()."#tabelacarrinho");
 
         $smarty->assign('PAG_FINALIZAR', Rotas::pag_PedidoFinzalizar()."#tabelafinalizar");
 

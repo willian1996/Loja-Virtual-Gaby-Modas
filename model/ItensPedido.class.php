@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 class Itens extends Conexao{
     private $total_valor;
@@ -55,6 +55,7 @@ class Itens extends Conexao{
                 'item_produto' => $lista['item_produto'],
                 'item_id'  => $lista['item_id'],
                 'item_nome'  => $lista['pro_nome'],
+                'item_tamanho'  => $lista['item_tamanho'],
                 'item_valor'  => Sistema::MoedaBR($lista['item_valor']),
                 'item_valor_us'  => $lista['item_valor'],
                 'item_qtd'  => $lista['item_qtd'],

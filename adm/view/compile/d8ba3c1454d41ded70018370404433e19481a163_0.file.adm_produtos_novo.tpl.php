@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 03:18:45
+/* Smarty version 3.1.33, created on 2019-08-07 02:16:11
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_produtos_novo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d491bc5579b11_86302961',
+  'unifunc' => 'content_5d4a5e9b8edd48_16998342',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd8ba3c1454d41ded70018370404433e19481a163' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_produtos_novo.tpl',
-      1 => 1565072322,
+      1 => 1565154932,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d491bc5579b11_86302961 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4a5e9b8edd48_16998342 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center"> Adicionar novo produto </h4>
 <hr>
 
@@ -68,8 +68,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <label>Ativo</label>
             <select name="pro_ativo" id="pro_cativo" class="form-control" required>
                 <option value="">Escolha </option>
-                <option value="1" selected>Sim</option>
-                <option value="0">Não</option>
+                <option value="SIM" selected>Sim</option>
+                <option value="NAO">Não</option>
             </select>
 
 
@@ -149,9 +149,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <li>NA PRÓXIMA QUARTA-FEIRA ENTREGAREMOS EM SÃO SEBASTIÃO.</li><br>
                 <li>NA PRÓXIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li><br>
                 <li>NA PRÓXIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li><br>
-                <li>NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.</li>
+                <li>NO PRÓXIMO SÁBADO ENTREGAREMOS NA COSTA SUL DE SÃO SEBASTIÃO ATÉ BORACÉIA.</li><br>
             </ul>
-            <i>Aceitamos cartões com 5% de acréscimo</i><br><br>
+            <em>Aceitamos cartões com 5% de acréscimo</em><br><br>
 
 
             </textarea>

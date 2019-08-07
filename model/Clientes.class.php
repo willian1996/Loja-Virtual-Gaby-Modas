@@ -433,10 +433,15 @@ class Clientes extends Conexao{
 
 
     function setCli_cpf($cli_cpf) {
+        
+        if(!Sistema::ValidarCPF($cli_cpf)){
+            echo '<div class="alert alert-danger " id="erro_mostrar"> CPF incorreto ';
+            Sistema::VoltarPagina();
+            echo '</div>';
 
-
-
-          $this->cli_cpf = $cli_cpf;
+        }else{
+            $this->cli_cpf = $cli_cpf;
+        }    
 
     }
 

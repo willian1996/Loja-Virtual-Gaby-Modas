@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 02:05:32
+/* Smarty version 3.1.33, created on 2019-08-07 02:03:09
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47b91cd13b93_61606597',
+  'unifunc' => 'content_5d4a5b8d50b439_45952904',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e3525291305fddccdf9ee808d2ca2cc5117afc1b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\produtos_info.tpl',
-      1 => 1564981520,
+      1 => 1565154187,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47b91cd13b93_61606597 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4a5b8d50b439_45952904 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
-?>
+?> 
 
       <h3 id="nomeproduto" class="text-center"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
- - Ref: <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_ref'];?>
 </h3>
 <hr>
 
@@ -61,21 +60,30 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
             <form name="carrinho" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_COMPRAR']->value;?>
 ">
                 <br>
+                <?php $_smarty_tpl->_assignInScope('tamanhos', explode(",",$_smarty_tpl->tpl_vars['P']->value['pro_tamanho']));?>
+            
                 <center><h4>Selecione o tamanho</h4></center>
                 <select name="pro_tamanho" class="form-control selectpicker" required>
+                    
                     <option value="">selecione</option>
-                    <option value="P">P</option>
-                    <option value="M">M</option>
-                    <option value="G">G</option>
-                    <option value="GG">GG</option>
-
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['tamanhos']->value, 't');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['t']->value) {
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['t']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['t']->value;?>
+</option>
+                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </select>
                 <br>
 
                 <input type="hidden" name="pro_id" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
 ">
 
-<!--                adicionar um select option para P M G GG -->
 
 
                 <input type="hidden" name="acao" value="add">

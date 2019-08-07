@@ -99,7 +99,7 @@ class Pedidos extends Conexao{
 
             $i++;
 
-        endwhile;
+        endwhile; 
     }
     
     public function ItensGravar($codPedido){
@@ -108,11 +108,12 @@ class Pedidos extends Conexao{
         foreach($carrinho->GetCarrinho() as $item){
             
             $query  = "INSERT INTO ".$this->prefix."pedidos_itens ";
-            $query .= "(item_produto, item_valor, item_qtd, item_ped_cod) ";
-            $query .= "VALUES (:produto, :valor, :qtd, :cod)";
+            $query .= "(item_produto, item_tamanho,  item_valor, item_qtd, item_ped_cod) ";
+            $query .= "VALUES (:produto, :item_tamanho, :valor, :qtd, :cod)";
 
             $params = array(
                 ':produto' => $item['pro_id'],
+                'item_tamanho' => $item['pro_tamanho'],
                 ':valor'   => $item['pro_valor_us'],
                 ':qtd'     => (int)$item['pro_qtd'],
                 ':cod'     =>  $codPedido  

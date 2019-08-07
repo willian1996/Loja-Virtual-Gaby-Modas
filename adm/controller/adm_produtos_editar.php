@@ -21,7 +21,7 @@ if(isset($_POST['pro_nome']) && isset($_POST['pro_valor'])){
 	$pro_nome      = $_POST['pro_nome'];
     $pro_categoria = $_POST['pro_categoria'];
     $pro_ativo     = $_POST['pro_ativo'];
-    $pro_ref       = "";
+    $pro_ref       = $_POST['pro_ref'];
     $pro_valor     = $_POST['pro_valor'];
     $pro_peso      = "0,050";
     $pro_tamanho    = $_POST['pro_tamanho'];

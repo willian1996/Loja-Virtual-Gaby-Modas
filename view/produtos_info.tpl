@@ -1,6 +1,6 @@
-{foreach from=$PRO item=P}
+{foreach from=$PRO item=P} 
 
-      <h3 id="nomeproduto" class="text-center">{$P.pro_nome} - Ref: {$P.pro_ref}</h3>
+      <h3 id="nomeproduto" class="text-center">{$P.pro_nome}</h3>
 <hr>
 
 <div class="row">
@@ -31,20 +31,20 @@
         <div class="col-md-6">
             <form name="carrinho" method="post" action="{$PAG_COMPRAR}">
                 <br>
+                {$tamanhos = explode(",", $P.pro_tamanho)}
+            
                 <center><h4>Selecione o tamanho</h4></center>
                 <select name="pro_tamanho" class="form-control selectpicker" required>
+                    
                     <option value="">selecione</option>
-                    <option value="P">P</option>
-                    <option value="M">M</option>
-                    <option value="G">G</option>
-                    <option value="GG">GG</option>
-
+                    {foreach from=$tamanhos $t}
+                    <option value="{$t}">{$t}</option>
+                    {/foreach}
                 </select>
                 <br>
 
                 <input type="hidden" name="pro_id" value="{$P.pro_id}">
 
-<!--                adicionar um select option para P M G GG -->
 
 
                 <input type="hidden" name="acao" value="add">

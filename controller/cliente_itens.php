@@ -3,7 +3,7 @@
 $smarty = new Template();
 
 
-$pedidos = new Pedidos();
+$pedidos = new Pedidos(); 
 
 Login::MenuCliente();
 

@@ -15,7 +15,7 @@
 
         </div>
 
-
+ 
 
         <div class="col-md-4">
             <label>Catogoria</label>
@@ -45,7 +45,11 @@
         </div>
 
 
-    
+        <div class="col-md-2">
+            <label>Referencia</label>
+            <input type="hidden" name="pro_ref" id="pro_ref" class="form-control" value="{$PRO.1.pro_ref}" >
+            
+        </div>
 
 
 

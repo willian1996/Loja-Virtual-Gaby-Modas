@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 23:53:04
+/* Smarty version 3.1.33, created on 2019-08-07 00:33:21
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d43a590ceef21_97357896',
+  'unifunc' => 'content_5d4a468169d747_03525020',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c2ef9ff9f29e27fc6e15f0902de928027d6fc336' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\pedido_confirmar.tpl',
-      1 => 1564691744,
+      1 => 1565148799,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d43a590ceef21_97357896 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4a468169d747_03525020 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -28,12 +28,12 @@ function content_5d43a590ceef21_97357896 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="col-md-4 ">
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
-" class="btn btn-success" title="">Voltar para Carrinho</a>
+" class="btn btn-success" title="">Voltar para carrinho e alterar pedido</a>
     </div>
 
 
 </section>
-    <br>
+    <br> 
 
 <!--  table listagem de itens -->
 <section class="row ">
@@ -47,7 +47,7 @@ function content_5d43a590ceef21_97357896 (Smarty_Internal_Template $_smarty_tpl)
             <td></td>
             <td>Produto</td>
             <td>Valor R$</td>
-            <td>X</td>
+            <td>T</td>
             <td>Sub Total R$</td>
         </tr>
 
@@ -63,11 +63,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
             <td> <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
 "> </td>
-            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+            <td><strong><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_qtd'];?>
+</strong> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
  </td>
             <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
  </td>
-            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_qtd'];?>
+            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_tamanho'];?>
  </td>
             <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_subTotal'];?>
 </td>

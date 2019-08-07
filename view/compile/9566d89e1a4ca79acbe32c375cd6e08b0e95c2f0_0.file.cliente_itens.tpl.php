@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 02:33:49
+/* Smarty version 3.1.33, created on 2019-08-07 01:45:39
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\cliente_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47bfbd57da29_39429848',
+  'unifunc' => 'content_5d4a5773bdd226_35315862',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9566d89e1a4ca79acbe32c375cd6e08b0e95c2f0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\cliente_itens.tpl',
-      1 => 1564983226,
+      1 => 1565153136,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47bfbd57da29_39429848 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4a5773bdd226_35315862 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br><br>
 <h4 class="text-center">Dados do pedido</h4>
 
@@ -61,7 +61,7 @@ function content_5d47bfbd57da29_39429848 (Smarty_Internal_Template $_smarty_tpl)
             <td></td>
             <td>Item</td>
             <td>Valor Uni</td>
-            <td>X</td>
+            <td>T</td>
             <td>Sub</td>
         </tr>
         
@@ -74,11 +74,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
             
             <td><img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['item_img'];?>
 " alt=""> </td>
-            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_nome'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['P']->value['item_qtd'];?>
+ <?php echo $_smarty_tpl->tpl_vars['P']->value['item_nome'];?>
 </td>
             <td class="text-right"> R$<?php echo $_smarty_tpl->tpl_vars['P']->value['item_valor'];?>
 </td>
-            <td class="text-center"> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_qtd'];?>
+            <td class="text-center"> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_tamanho'];?>
 </td>
             <td class="text-right"> R$<?php echo $_smarty_tpl->tpl_vars['P']->value['item_sub'];?>
 </td>

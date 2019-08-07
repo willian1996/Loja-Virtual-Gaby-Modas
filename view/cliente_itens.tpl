@@ -35,7 +35,7 @@
             <td></td>
             <td>Item</td>
             <td>Valor Uni</td>
-            <td>X</td>
+            <td>T</td>
             <td>Sub</td>
         </tr>
         
@@ -43,9 +43,9 @@
         <tr>
             
             <td><img src="{$P.item_img}" alt=""> </td>
-            <td> {$P.item_nome}</td>
+            <td>{$P.item_qtd} {$P.item_nome}</td>
             <td class="text-right"> R${$P.item_valor}</td>
-            <td class="text-center"> {$P.item_qtd}</td>
+            <td class="text-center"> {$P.item_tamanho}</td>
             <td class="text-right"> R${$P.item_sub}</td>
             
         </tr>

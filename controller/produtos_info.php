@@ -1,4 +1,4 @@
-<?php
+<?php 
 $smarty = new Template();
 
 
@@ -12,6 +12,8 @@ $smarty->assign('PRO', $produtos->GetItens());
 $smarty->assign('TEMA', Rotas::get_SiteTEMA());
 $smarty->assign('IMAGES', $image->GetItens());
 $smarty->assign('PAG_COMPRAR', Rotas::pag_CarrinhoAlterar());
+
+
 
 /*
 $ID = Rotas::$pag[1];

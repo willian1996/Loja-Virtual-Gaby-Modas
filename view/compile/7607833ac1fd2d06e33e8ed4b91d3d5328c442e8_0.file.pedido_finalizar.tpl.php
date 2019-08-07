@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 02:29:53
+/* Smarty version 3.1.33, created on 2019-08-07 00:41:11
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47bed1113887_77946550',
+  'unifunc' => 'content_5d4a485785a322_29220367',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7607833ac1fd2d06e33e8ed4b91d3d5328c442e8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\pedido_finalizar.tpl',
-      1 => 1564982970,
+      1 => 1565149263,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47bed1113887_77946550 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4a485785a322_29220367 (Smarty_Internal_Template $_smarty_tpl) {
 ?><hr>
-
-
 <!--  table listagem de itens -->
 <section id="tabelafinalizar" class="row ">
     
@@ -37,7 +35,7 @@ function content_5d47bed1113887_77946550 (Smarty_Internal_Template $_smarty_tpl)
         Pedido Finalizado com Sucesso!
         </div>
         <div class="alert alert-info">
-        Será separado na proxima segunda-feira e será entregue na quarta-feira da proxima semana!
+        Será entregue na proxima semana! <br>Antes entraremos em contato para confirmar este pedido.
         </div>
         <div class="alert alert-warning">
         Atenção pagamento será feito no momento da entrega, aceitamos cartões com 5% de acréscimo!
@@ -52,7 +50,7 @@ function content_5d47bed1113887_77946550 (Smarty_Internal_Template $_smarty_tpl)
             <td></td>
             <td>Produto</td>
             <td>Valor R$</td>
-            <td>X</td>
+            <td>T</td>
             <td>Sub Total R$</td>
         </tr>
 
@@ -68,11 +66,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
             <td> <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
 "> </td>
-            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+            <td><strong><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_qtd'];?>
+</strong> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
  </td>
             <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
  </td>
-            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_qtd'];?>
+            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_tamanho'];?>
  </td>
             <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_subTotal'];?>
 </td>

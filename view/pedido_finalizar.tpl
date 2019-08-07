@@ -1,6 +1,4 @@
 <hr>
-
-
 <!--  table listagem de itens -->
 <section id="tabelafinalizar" class="row ">
     
@@ -12,7 +10,7 @@
         Pedido Finalizado com Sucesso!
         </div>
         <div class="alert alert-info">
-        Será separado na proxima segunda-feira e será entregue na quarta-feira da proxima semana!
+        Será entregue na proxima semana! <br>Antes entraremos em contato para confirmar este pedido.
         </div>
         <div class="alert alert-warning">
         Atenção pagamento será feito no momento da entrega, aceitamos cartões com 5% de acréscimo!
@@ -27,7 +25,7 @@
             <td></td>
             <td>Produto</td>
             <td>Valor R$</td>
-            <td>X</td>
+            <td>T</td>
             <td>Sub Total R$</td>
         </tr>
 
@@ -37,9 +35,9 @@
         <tr>
 
             <td> <img src="{$P.pro_img}" alt="{$P.pro_img}"> </td>
-            <td> {$P.pro_nome} </td>
+            <td><strong>{$P.pro_qtd}</strong> {$P.pro_nome} </td>
             <td> {$P.pro_valor} </td>
-            <td> {$P.pro_qtd} </td>
+            <td> {$P.pro_tamanho} </td>
             <td> {$P.pro_subTotal}</td>
 <!--
             <td>

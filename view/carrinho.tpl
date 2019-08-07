@@ -1,4 +1,4 @@
- 
+   
 <h3>Meu Carrinho</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -24,7 +24,7 @@
             <td></td>
             <td>Produto</td>
             <td>Valor R$</td>
-            <td>X</td>
+            <td>T</td>
             <td>Sub Total R$</td>
         </tr>
 
@@ -34,9 +34,9 @@
         <tr>
 
             <td> <img src="{$P.pro_img}" alt="{$P.pro_img}"> </td>
-            <td> {$P.pro_nome} </td>
+            <td>{$P.pro_qtd} {$P.pro_nome} </td>
             <td> {$P.pro_valor} </td>
-            <td> {$P.pro_qtd} </td>
+            <td> {$P.pro_tamanho} </td>
             <td> {$P.pro_subTotal}
                 <form name="carrinho_dell" method="post" action="{$PAG_CARRINHO_ALTERAR}">
 

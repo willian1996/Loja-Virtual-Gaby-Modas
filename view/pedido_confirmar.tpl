@@ -4,12 +4,12 @@
 <section class="row">
 
     <div class="col-md-4 ">
-        <a href="{$PAG_CARRINHO}" class="btn btn-success" title="">Voltar para Carrinho</a>
+        <a href="{$PAG_CARRINHO}" class="btn btn-success" title="">Voltar para carrinho e alterar pedido</a>
     </div>
 
 
 </section>
-    <br>
+    <br> 
 
 <!--  table listagem de itens -->
 <section class="row ">
@@ -23,7 +23,7 @@
             <td></td>
             <td>Produto</td>
             <td>Valor R$</td>
-            <td>X</td>
+            <td>T</td>
             <td>Sub Total R$</td>
         </tr>
 
@@ -33,9 +33,9 @@
         <tr>
 
             <td> <img src="{$P.pro_img}" alt="{$P.pro_img}"> </td>
-            <td> {$P.pro_nome} </td>
+            <td><strong>{$P.pro_qtd}</strong> {$P.pro_nome} </td>
             <td> {$P.pro_valor} </td>
-            <td> {$P.pro_qtd} </td>
+            <td> {$P.pro_tamanho} </td>
             <td> {$P.pro_subTotal}</td>
 <!--
             <td>

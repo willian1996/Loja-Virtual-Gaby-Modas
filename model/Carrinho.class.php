@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 class Carrinho{
     private $total_valor;
@@ -24,6 +24,7 @@ class Carrinho{
             $this->itens[$i] = array(
                 'pro_id' => $lista['ID'],
                 'pro_nome' => $lista['NOME'],
+                'pro_tamanho' => $lista['TAMANHO'],
                 'pro_valor' => $lista['VALOR'],
                 'pro_valor_us' => $lista['VALOR_US'],
                 'pro_peso' => $lista['PESO'],
@@ -52,7 +53,7 @@ class Carrinho{
         return $this->total_peso;
     }
 
-    public function CarrinhoADD($id){
+    public function CarrinhoADD($id, $tamanho){
         $produtos = new Produtos();
         $produtos->GetProdutosID($id);
 
@@ -73,6 +74,7 @@ class Carrinho{
                 if(!isset($_SESSION['PRO'][$ID]['ID'])){
                     $_SESSION['PRO'][$ID]['ID'] = $ID;
                     $_SESSION['PRO'][$ID]['NOME']  = $NOME;
+                    $_SESSION['PRO'][$ID]['TAMANHO']  = $tamanho;
                     $_SESSION['PRO'][$ID]['VALOR'] = $VALOR;
                     $_SESSION['PRO'][$ID]['VALOR_US'] = $VALOR_US;
                     $_SESSION['PRO'][$ID]['PESO']  = $PESO;

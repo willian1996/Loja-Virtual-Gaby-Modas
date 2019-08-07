@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 03:37:10
+/* Smarty version 3.1.33, created on 2019-08-06 23:25:59
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_produtos_editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d492016a07946_32960295',
+  'unifunc' => 'content_5d4a36b7d43313_06053638',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c360bf5e599f48dbd5f191b06d0ba1cbe54c22c3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_produtos_editar.tpl',
-      1 => 1565073280,
+      1 => 1565144757,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d492016a07946_32960295 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4a36b7d43313_06053638 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <h4 class="text-center"> Editar produto </h4>
@@ -39,7 +39,7 @@ function content_5d492016a07946_32960295 (Smarty_Internal_Template $_smarty_tpl)
 
         </div>
 
-
+ 
 
         <div class="col-md-4">
             <label>Catogoria</label>
@@ -86,7 +86,12 @@ if ($_prefixVariable2 == 'NAO') {?>selected="selected"<?php }?>> Não </option>
         </div>
 
 
-    
+        <div class="col-md-2">
+            <label>Referencia</label>
+            <input type="hidden" name="pro_ref" id="pro_ref" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['PRO']->value[1]['pro_ref'];?>
+" >
+            
+        </div>
 
 
 
