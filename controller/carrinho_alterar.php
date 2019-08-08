@@ -5,15 +5,19 @@ if(!isset($_POST['pro_id']) || $_POST['pro_id'] < 1){
     Rotas::Redirecionar(1,Rotas::pag_Carrinho());
     exit;
 }
-
-if(!isset($_POST['pro_tamanho']) || $_POST['pro_tamanho'] == ""){
-    echo '<script>alert("Eacolha o tamanho");</script>';
-    echo "<script>javascript:history.back(-2)</script>";
-    exit;
+$id = (int)$_POST['pro_id'];
+if(!isset($_POST['pro_tamanho']) || empty($_POST['pro_tamanho'])){
+    if(!isset($_SESSION['PRO'][$id]['TAMANHO'])){
+        echo '<script>alert("Escolha o tamanho");</script>';
+        echo "<script>javascript:history.back(-2)</script>";
+        exit; 
+    }
+    
 }
 
-$id = (int)$_POST['pro_id'];
-$tamanho = filter_var($_POST['pro_tamanho'], FILTER_SANITIZE_STRING);
+$tamanho = isset($_POST['pro_tamanho'])?$_POST['pro_tamanho']:'';
+
+$tamanho = filter_var($tamanho, FILTER_SANITIZE_STRING);
 
 $carrinho = new Carrinho();
 
@@ -24,4 +28,4 @@ try{
     echo '<h4 class="alert alert-danger"> Erro na operação! </h4>';
 }
 
-Rotas::Redirecionar(1,Rotas::pag_Carrinho());
+Rotas::Redirecionar(0,Rotas::pag_Carrinho());

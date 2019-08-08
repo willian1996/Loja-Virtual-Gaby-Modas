@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-08 05:16:17
+/* Smarty version 3.1.33, created on 2019-08-08 06:51:48
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4bda5140d551_97010733',
+  'unifunc' => 'content_5d4bf0b4b6e973_79899060',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '60194204ee21fee474011ca1ebc91f81969a9357' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\cliente_dados.tpl',
-      1 => 1565252175,
+      1 => 1565257906,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4bda5140d551_97010733 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4bf0b4b6e973_79899060 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>  
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -58,7 +58,7 @@ function content_5d4bda5140d551_97010733 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CPF']->value;?>
-" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required readonly>
+" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required>
                 </div>
               </div>
             </div>
