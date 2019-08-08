@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 03:03:28
+/* Smarty version 3.1.33, created on 2019-08-08 04:02:33
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47c6b0931a32_70549631',
+  'unifunc' => 'content_5d4bc909ae8c83_53053169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9b92145741b023d8a74265a0cc50d1f88567e382' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\cadastro.tpl',
-      1 => 1564984999,
+      1 => 1565247014,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47c6b0931a32_70549631 (Smarty_Internal_Template $_smarty_tpl) {
-?><div>
+function content_5d4bc909ae8c83_53053169 (Smarty_Internal_Template $_smarty_tpl) {
+?>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
         <fieldset>
@@ -220,6 +220,6 @@ function content_5d47c6b0931a32_70549631 (Smarty_Internal_Template $_smarty_tpl)
 
         </fieldset>
     </form>
-</div><!-- /.container -->
+
 <?php }
 }

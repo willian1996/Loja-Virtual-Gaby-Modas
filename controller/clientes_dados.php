@@ -1,5 +1,5 @@
 <?php  
-
+ 
 $smarty = new Template();
 
 Login::MenuCliente();
@@ -11,7 +11,6 @@ foreach($_SESSION['CLI'] as $campo => $valor){
 
 if(isset($_POST['cli_nome']) and isset($_POST['cli_celular']) and isset($_POST['cli_cpf'])){
     $cli_nome = $_POST['cli_nome'];
-    $cli_sobrenome = $_POST['cli_sobrenome'];
     $cli_cpf       = $_POST['cli_cpf'];
     $cli_fone      = $_POST['cli_fone'];
     $cli_celular   = $_POST['cli_celular'];
@@ -23,7 +22,6 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_celular']) and isset($_POST['
     $cli_cep       = $_POST['cli_cep'];
     $cli_senha     = $_POST['txt_senha'];
     $cli_data_cad  = $_SESSION['CLI']['cli_data_cad'];
-    $cli_hora_cad  = $_SESSION['CLI']['cli_hora_cad'];
 
     if($_SESSION['CLI']['cli_pass'] != md5($cli_senha)){
         echo '<script>alert("A senha para confirmar está inválida!");</script>';
@@ -35,7 +33,7 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_celular']) and isset($_POST['
 
         $clientes = new Clientes();
 
-        $clientes->Preparar($cli_nome, $cli_sobrenome, $cli_cpf, $cli_fone, $cli_celular, $cli_endereco, $cli_numero, $cli_ponto_referencia, $cli_bairro, $cli_cidade, $cli_cep, $cli_data_cad, $cli_hora_cad, $cli_senha);
+        $clientes->Preparar($cli_nome, $cli_cpf, $cli_fone, $cli_celular, $cli_endereco, $cli_numero, $cli_ponto_referencia, $cli_bairro, $cli_cidade, $cli_cep, $cli_data_cad, $cli_senha);
 
         if(!$clientes->Editar($_SESSION['CLI']['cli_id'])){
             echo '<script>alert("Ocorreu um erro ao editar os dados!");</script>';

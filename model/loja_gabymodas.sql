@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Ago-2019 às 07:42
+-- Tempo de geração: 08-Ago-2019 às 10:21
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.3.7
 
@@ -382,7 +382,6 @@ DROP TABLE IF EXISTS `gm_clientes`;
 CREATE TABLE IF NOT EXISTS `gm_clientes` (
   `cli_id` int(11) NOT NULL AUTO_INCREMENT,
   `cli_nome` varchar(80) NOT NULL,
-  `cli_sobrenome` varchar(80) NOT NULL,
   `cli_endereco` varchar(100) NOT NULL,
   `cli_numero` varchar(20) NOT NULL,
   `cli_ponto_referencia` varchar(255) DEFAULT NULL,
@@ -393,19 +392,20 @@ CREATE TABLE IF NOT EXISTS `gm_clientes` (
   `cli_fone` varchar(12) NOT NULL,
   `cli_celular` varchar(12) NOT NULL,
   `cli_pass` varchar(150) NOT NULL,
-  `cli_data_cad` date NOT NULL,
-  `cli_hora_cad` time NOT NULL,
+  `cli_data_cad` datetime NOT NULL,
   PRIMARY KEY (`cli_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_clientes`
 --
 
-INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_sobrenome`, `cli_endereco`, `cli_numero`, `cli_ponto_referencia`, `cli_bairro`, `cli_cidade`, `cli_cep`, `cli_cpf`, `cli_fone`, `cli_celular`, `cli_pass`, `cli_data_cad`, `cli_hora_cad`) VALUES
-(35, 'Rebeca Lorraine', 'Mendes de Oliveira ', 'Rua Safira ', '60', 'Perto do Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '18165387367', '1238894092', '12996278049', 'd41d8cd98f00b204e9800998ecf8427e', '2019-08-05', '19:22:39'),
-(34, 'Willian', 'Sales', 'Rua Safira', '62', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '43593584824', '1238894092', '12996417887', 'a9c0eb8997768557f677db14e207f80c', '2019-08-05', '05:30:11'),
-(36, 'Diego ', 'Jesus ', 'Rua Safira', '30', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '36551290094', '1238894092', '12996482564', '25f9e794323b453885f5181f1b624d0b', '2019-08-07', '02:34:02');
+INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_endereco`, `cli_numero`, `cli_ponto_referencia`, `cli_bairro`, `cli_cidade`, `cli_cep`, `cli_cpf`, `cli_fone`, `cli_celular`, `cli_pass`, `cli_data_cad`) VALUES
+(35, 'Rebeca Lorraine Mendes de Olievira', '12996278049', '62', 'Perto do Hortifruti JC ', 'Pegorelli', 'Sao Sebastiao', '11669309', '65447654220', '1238894092', '12996278049', '25f9e794323b453885f5181f1b624d0b', '2019-08-05 00:00:00'),
+(34, 'Willian Sales Gabriel', 'Rua Safira', '62', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '43593584824', '1238894092', '12996417887', 'a9c0eb8997768557f677db14e207f80c', '2019-08-05 00:00:00'),
+(36, 'Diego Batista', 'Rua Safira', '30', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '36551290094', '1238894092', '12996482564', '25f9e794323b453885f5181f1b624d0b', '2019-08-07 00:00:00'),
+(37, 'Luana  Souza da Silva ', 'Rua Safira', '30', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Caraguatatuba', '11669309', '17241172205', '1238894092', '12988888888', '25f9e794323b453885f5181f1b624d0b', '2019-08-08 00:00:00'),
+(38, 'Joana  da Silva ', 'Rua Safira', '30', 'Proximo ao Hortifruti JC ', 'Pegorelli', 'Sao Sebastiao', '11669309', '20879636300', '1238894092', '12955555555', 'f8bf5f221cef51838766c7e8348bf5da', '2019-08-08 04:41:55');
 
 -- --------------------------------------------------------
 
@@ -451,7 +451,7 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos` (
   `ped_frete_valor` double(9,2) DEFAULT NULL,
   `ped_frete_tipo` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`ped_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos`
@@ -462,7 +462,8 @@ INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_
 (91, '2019-08-07', '01:46:24', 34, '190807010824534', '190807010824534', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
 (90, '2019-08-07', '01:46:05', 34, '190807010805134', '190807010805134', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
 (89, '2019-08-07', '01:35:54', 34, '190807010854634', '190807010854634', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL),
-(93, '2019-08-07', '01:52:14', 34, '190807010814234', '190807010814234', 'SOLICITADO', NULL, NULL, NULL, 115.80, NULL);
+(93, '2019-08-07', '01:52:14', 34, '190807010814234', '190807010814234', 'SOLICITADO', NULL, NULL, NULL, 115.80, NULL),
+(94, '2019-08-08', '00:02:18', 36, '190808000818436', '190808000818436', 'SOLICITADO', NULL, NULL, NULL, 112.40, NULL);
 
 -- --------------------------------------------------------
 
@@ -479,7 +480,7 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos_itens` (
   `item_qtd` int(6) NOT NULL,
   `item_ped_cod` varchar(50) NOT NULL,
   PRIMARY KEY (`item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=117 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=121 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos_itens`
@@ -494,7 +495,11 @@ INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_tamanho`, `item
 (113, 26, '38', 40.00, 1, '190807010805134'),
 (114, 17, 'G', 49.90, 1, '190807010824534'),
 (115, 22, 'GG', 99.90, 1, '190807010845534'),
-(116, 26, '36', 40.00, 1, '190807010814234');
+(116, 26, '36', 40.00, 1, '190807010814234'),
+(117, 39, '38', 25.00, 1, '190808000818436'),
+(118, 25, 'G', 40.00, 1, '190808000818436'),
+(119, 13, 'M', 99.99, 1, '190808000818436'),
+(120, 36, 'M', 30.00, 1, '190808000818436');
 
 -- --------------------------------------------------------
 

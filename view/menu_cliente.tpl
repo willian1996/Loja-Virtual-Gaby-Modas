@@ -1,4 +1,4 @@
-<h4 class="text-center text-danger"> Olá <b>{$USER}</b>, seja bem vindo! O que deseja fazer agora?</h4> 
+<h4 class="text-center text-danger"> Olá <b>{$USER}</b><br> O que deseja fazer agora?</h4> 
 <section class="row" id="minhaconta">
     
     <div class="text-center">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 18:47:33
+/* Smarty version 3.1.33, created on 2019-08-08 04:02:31
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d48a3f598c945_37544097',
+  'unifunc' => 'content_5d4bc907b75400_54771450',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70fea44267113317bde5751e3285ddbbf9716f88' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\login.tpl',
-      1 => 1565041651,
+      1 => 1565247128,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d48a3f598c945_37544097 (Smarty_Internal_Template $_smarty_tpl) {
-?>
+function content_5d4bc907b75400_54771450 (Smarty_Internal_Template $_smarty_tpl) {
+?> 
 <section class="row" id="fazerlogin">
 
 

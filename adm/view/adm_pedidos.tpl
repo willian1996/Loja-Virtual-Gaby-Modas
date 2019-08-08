@@ -57,7 +57,7 @@
         
         {foreach from=$PEDIDOS item=P}
         <tr>
-            <td><a href="{$PAG_EDITAR}/{$P.cli_id}">{$P.cli_nome} {$P.cli_sobrenome}</a></td>
+            <td><a href="{$PAG_EDITAR}/{$P.cli_id}">{$P.cli_nome}</a></td>
             <td >
                 <a href="{$PAG_ITENS}?cod_pedido={$P.ped_cod}"><button style="background-color: #FFF;">{$P.ped_data} {$P.ped_hora}</button></a>
             </td>

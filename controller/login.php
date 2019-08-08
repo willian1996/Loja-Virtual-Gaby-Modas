@@ -1,4 +1,4 @@
-<?php 
+<?php  
 $smarty = new Template();
 $login = new Login();
 

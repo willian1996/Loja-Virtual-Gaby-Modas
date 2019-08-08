@@ -90,7 +90,7 @@
             {foreach from=$PEDIDOS item=C}
               <tr>
                 <td class="bg-info"><b>Nome</b></td>
-                <td><a href="{$PAG_EDITAR}/{$C.cli_id}">{$C.cli_nome} {$C.cli_sobrenome}</a></td>
+                <td><a href="{$PAG_EDITAR}/{$C.cli_id}">{$C.cli_nome}</a></td>
               </tr>
               <tr>
                 <td class="bg-info"><b>CPF</b></td>
@@ -127,6 +127,10 @@
               <tr>
                 <td class="bg-info"><b>CEP</b></td>
                 <td>{$C.cli_cep}</td>
+              </tr>
+             <tr>
+                <td class="bg-info"><b>Cadastrado em</b></td>
+                <td>{date('d/m/Y H:i',strtotime($C.cli_data_cad))}</td>
               </tr>
             {/foreach}
         </table>

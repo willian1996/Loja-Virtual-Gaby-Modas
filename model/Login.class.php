@@ -1,4 +1,4 @@
-<?php  
+<?php   
 
 class Login extends Conexao{
     private $user;
@@ -33,7 +33,6 @@ class Login extends Conexao{
             
             $_SESSION['CLI']['cli_id'] = $lista['cli_id'];
             $_SESSION['CLI']['cli_nome']      =  $lista['cli_nome'];
-            $_SESSION['CLI']['cli_sobrenome'] =  $lista['cli_sobrenome'];
             $_SESSION['CLI']['cli_endereco']  =  $lista['cli_endereco'];
             $_SESSION['CLI']['cli_numero']    =  $lista['cli_numero'];
             $_SESSION['CLI']['cli_ponto_referencia']    =  $lista['cli_ponto_referencia'];
@@ -43,7 +42,6 @@ class Login extends Conexao{
             $_SESSION['CLI']['cli_cep']       =  $lista['cli_cep'];
             $_SESSION['CLI']['cli_fone']      =  $lista['cli_fone'];
             $_SESSION['CLI']['cli_celular']   =  $lista['cli_celular'];
-            $_SESSION['CLI']['cli_hora_cad']  =  $lista['cli_hora_cad'];
             $_SESSION['CLI']['cli_data_cad']  =  $lista['cli_data_cad'];
             $_SESSION['CLI']['cli_pass']      =  $lista['cli_pass']; 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 23:50:54
+/* Smarty version 3.1.33, created on 2019-08-08 04:11:46
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d48eb0ec6b677_44294358',
+  'unifunc' => 'content_5d4bcb32cd9453_72071281',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69e713bc61b58272699516edb9fea9534ec3e879' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_pedidos.tpl',
-      1 => 1565059761,
+      1 => 1565248268,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d48eb0ec6b677_44294358 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4bcb32cd9453_72071281 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center"> Gerenciar Pedidos </h2>
 <hr>
 
@@ -87,7 +87,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
             <td><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_EDITAR']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['P']->value['cli_id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['P']->value['cli_nome'];?>
- <?php echo $_smarty_tpl->tpl_vars['P']->value['cli_sobrenome'];?>
 </a></td>
             <td >
                 <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ITENS']->value;?>

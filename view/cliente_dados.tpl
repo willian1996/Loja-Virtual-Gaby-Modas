@@ -1,4 +1,4 @@
-<br> 
+<br>  
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -8,6 +8,8 @@
             <center>
             <h3 id="meusdados">Meus Dados</h3>
             </center>
+            <br>
+            <center><p style="color: red;">Cadastrado em {date('d/m/Y H:i',strtotime($CLI_DATA_CAD))}</p> </center>
             <br>
             <!-- Nome-->
 
@@ -21,17 +23,6 @@
               </div>
             </div>
 
-            <!-- Sobrenome-->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label" >Sobrenome</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" value="{$CLI_SOBRENOME}" name="cli_sobrenome" class="form-control"  minlength="3" required>
-                </div>
-              </div>
-            </div>
 
 
             <!-- CPF-->

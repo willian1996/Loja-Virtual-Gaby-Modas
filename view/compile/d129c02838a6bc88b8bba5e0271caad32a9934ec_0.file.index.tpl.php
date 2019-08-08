@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 00:27:35
+/* Smarty version 3.1.33, created on 2019-08-08 04:18:25
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47a227380014_81462632',
+  'unifunc' => 'content_5d4bccc1e7b647_22260963',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd129c02838a6bc88b8bba5e0271caad32a9934ec' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\index.tpl',
-      1 => 1564975651,
+      1 => 1565248703,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47a227380014_81462632 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4bccc1e7b647_22260963 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -103,7 +103,7 @@ function content_5d47a227380014_81462632 (Smarty_Internal_Template $_smarty_tpl)
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
 #produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
-"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
+#minhaconta"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
 #tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
                                 <li><a href="https://api.whatsapp.com/send?phone=5512981819956" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>

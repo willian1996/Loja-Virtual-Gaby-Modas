@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $smarty = new Template();
 
@@ -16,12 +16,15 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_senha']) and isset($_POST['cl
     $cli_cidade    = $_POST['cli_cidade'];
     $cli_cep       = $_POST['cli_cep'];
     $cli_senha     = $_POST['cli_senha'];
-    $cli_data_cad  = Sistema::DataAtualUS();
-    $cli_hora_cad  = Sistema::HoraAtual();
+    $cli_data_cad  = Sistema::DataAtualUS()." ".Sistema::HoraAtual();
+
+    
+    //------
+    $cli_nome = $cli_nome ." ". $cli_sobrenome;
 
     $clientes = new Clientes();
 
-    $clientes->Preparar($cli_nome, $cli_sobrenome, $cli_cpf, $cli_fone, $cli_celular, $cli_endereco, $cli_numero, $cli_ponto_referencia, $cli_bairro, $cli_cidade, $cli_cep, $cli_data_cad, $cli_hora_cad, $cli_senha);
+    $clientes->Preparar($cli_nome, $cli_cpf, $cli_fone, $cli_celular, $cli_endereco, $cli_numero, $cli_ponto_referencia, $cli_bairro, $cli_cidade, $cli_cep, $cli_data_cad, $cli_senha);
 
     if($clientes->Inserir()){
         

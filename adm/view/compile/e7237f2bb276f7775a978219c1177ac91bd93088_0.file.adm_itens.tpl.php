@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-07 01:51:26
+/* Smarty version 3.1.33, created on 2019-08-08 05:06:59
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4a58ced6a441_68286302',
+  'unifunc' => 'content_5d4bd823b210b7_21127468',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e7237f2bb276f7775a978219c1177ac91bd93088' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_itens.tpl',
-      1 => 1565153485,
+      1 => 1565251617,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4a58ced6a441_68286302 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4bd823b210b7_21127468 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3 class="text-center">Dados do Pedido</h3> 
 
 <!-- informações sobre o pedido -->
@@ -158,7 +158,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
                 <td><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_EDITAR']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_nome'];?>
- <?php echo $_smarty_tpl->tpl_vars['C']->value['cli_sobrenome'];?>
 </a></td>
               </tr>
               <tr>
@@ -205,6 +204,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
               <tr>
                 <td class="bg-info"><b>CEP</b></td>
                 <td><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_cep'];?>
+</td>
+              </tr>
+             <tr>
+                <td class="bg-info"><b>Cadastrado em</b></td>
+                <td><?php echo date('d/m/Y H:i',strtotime($_smarty_tpl->tpl_vars['C']->value['cli_data_cad']));?>
 </td>
               </tr>
             <?php

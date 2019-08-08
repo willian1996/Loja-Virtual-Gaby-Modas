@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 06:14:31
+/* Smarty version 3.1.33, created on 2019-08-08 04:07:36
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47f37795a802_37519839',
+  'unifunc' => 'content_5d4bca38224d99_03312201',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '443e488e8e1a30c8517bafdfb5289131ece01e5e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes.tpl',
-      1 => 1564996468,
+      1 => 1565248054,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47f37795a802_37519839 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4bca38224d99_03312201 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center">Gerenciar Clientes </h2>
-<hr>
+<hr> 
 
 <!--- listando clientes ---->
+<section class="row">    
+    <div >
+        <!--- faz  uma busca  por texto ---> 
+        <label> Buscar por nome ou Whatsapp</label>
+        <form name="buscarpornome" method="get" action="">  
+            <div class="col-md-3">
+                <input type="text" name="txt_nome" class="form-control" required>   
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-success"> Buscar </button>   
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </form>
+
+    </div>
+</section>
 <section class="row">
     
     <center>
@@ -50,7 +67,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
             <td><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_EDITAR']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_nome'];?>
- <?php echo $_smarty_tpl->tpl_vars['C']->value['cli_sobrenome'];?>
 </a></td>
             <td><a href="https://wa.me/55<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
 "><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>

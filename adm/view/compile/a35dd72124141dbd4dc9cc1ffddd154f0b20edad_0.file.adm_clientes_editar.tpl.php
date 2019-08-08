@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 18:31:43
+/* Smarty version 3.1.33, created on 2019-08-08 04:06:38
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes_editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d48a03fc9b7b3_87367958',
+  'unifunc' => 'content_5d4bc9feaa90d9_20494228',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a35dd72124141dbd4dc9cc1ffddd154f0b20edad' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes_editar.tpl',
-      1 => 1565040701,
+      1 => 1565247996,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d48a03fc9b7b3_87367958 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4bc9feaa90d9_20494228 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br> 
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -30,8 +30,7 @@ function content_5d48a03fc9b7b3_87367958 (Smarty_Internal_Template $_smarty_tpl)
             <!-- Form Name -->
             <center>
             <h3 id="meusdados"><?php echo $_smarty_tpl->tpl_vars['CLI_NOME']->value;?>
- <?php echo $_smarty_tpl->tpl_vars['CLI_SOBRENOME']->value;?>
-</h3>
+ </h3>
             </center>
             <br>
             <!-- Nome-->
@@ -47,18 +46,6 @@ function content_5d48a03fc9b7b3_87367958 (Smarty_Internal_Template $_smarty_tpl)
               </div>
             </div>
 
-            <!-- Sobrenome-->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label" >Sobrenome</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_SOBRENOME']->value;?>
-" name="cli_sobrenome" class="form-control"  minlength="3" required>
-                </div>
-              </div>
-            </div>
 
 
             <!-- CPF-->

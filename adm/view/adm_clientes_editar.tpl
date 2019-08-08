@@ -6,7 +6,7 @@
 
             <!-- Form Name -->
             <center>
-            <h3 id="meusdados">{$CLI_NOME} {$CLI_SOBRENOME}</h3>
+            <h3 id="meusdados">{$CLI_NOME} </h3>
             </center>
             <br>
             <!-- Nome-->
@@ -21,17 +21,6 @@
               </div>
             </div>
 
-            <!-- Sobrenome-->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label" >Sobrenome</label>
-                <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" value="{$CLI_SOBRENOME}" name="cli_sobrenome" class="form-control"  minlength="3" required>
-                </div>
-              </div>
-            </div>
 
 
             <!-- CPF-->

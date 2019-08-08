@@ -1,9 +1,8 @@
-<?php
+<?php 
  
 class Clientes extends Conexao{
 
     private $cli_nome;
-    private $cli_sobrenome;
     private $cli_cpf;
     private $cli_fone;
     private $cli_celular;
@@ -14,7 +13,6 @@ class Clientes extends Conexao{
     private $cli_cidade;
     private $cli_cep;
     private $cli_data_cad;
-    private $cli_hora_cad;
     private $cli_senha;
 
     public function __construct(){
@@ -22,13 +20,12 @@ class Clientes extends Conexao{
     }
 
 
-    public function Preparar($cli_nome, $cli_sobrenome,
+    public function Preparar($cli_nome,
             $cli_cpf  , $cli_fone , $cli_celular , $cli_endereco , $cli_numero, $cli_ponto_referencia,
             $cli_bairro , $cli_cidade , $cli_cep , $cli_data_cad,
-            $cli_hora_cad, $cli_senha){
+             $cli_senha){
         
         $this->setCli_nome($cli_nome);
-        $this->setCli_sobrenome($cli_sobrenome);
         $this->setCli_cpf($cli_cpf);
         $this->setCli_fone($cli_fone);
         $this->setCli_celular($cli_celular);
@@ -39,7 +36,6 @@ class Clientes extends Conexao{
         $this->setCli_cidade($cli_cidade);
         $this->setCli_cep($cli_cep);
         $this->setCli_data_cad($cli_data_cad);
-        $this->setCli_hora_cad($cli_hora_cad);
         $this->setCli_senha($cli_senha);
 
     }
@@ -61,17 +57,16 @@ class Clientes extends Conexao{
         }
 
         //Inserir os dados da função
-        $query = " INSERT INTO {$this->prefix}clientes (cli_nome, cli_sobrenome,";
+        $query = " INSERT INTO {$this->prefix}clientes (cli_nome,";
         $query .=" cli_cpf, cli_fone,cli_celular ,cli_endereco ,cli_numero, cli_ponto_referencia, cli_bairro ,";
-        $query .=" cli_cidade ,cli_cep ,cli_data_cad, cli_hora_cad, cli_pass)";
+        $query .=" cli_cidade ,cli_cep ,cli_data_cad, cli_pass)";
         $query .=" VALUES ";
-        $query .=" (:cli_nome, :cli_sobrenome,";
+        $query .=" (:cli_nome,";
         $query .=" :cli_cpf, :cli_fone,:cli_celular ,:cli_endereco ,:cli_numero, :cli_ponto_referencia, :cli_bairro ,";
-        $query .=" :cli_cidade ,:cli_cep ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
+        $query .=" :cli_cidade ,:cli_cep ,:cli_data_cad, :cli_senha)";
 
         $params = array(
         ':cli_nome'     => $this->getCli_nome() ,
-        ':cli_sobrenome'=> $this->getCli_sobrenome() ,
         ':cli_cpf'      => $this->getCli_cpf() ,
         ':cli_fone'     => $this->getCli_fone() ,
         ':cli_celular'  => $this->getCli_celular() ,
@@ -82,7 +77,6 @@ class Clientes extends Conexao{
         ':cli_cidade'   => $this->getCli_cidade() ,
         ':cli_cep'      => $this->getCli_cep() ,
         ':cli_data_cad' => $this->getCli_data_cad() ,
-        ':cli_hora_cad' => $this->getCli_hora_cad() ,
         ':cli_senha'    => $this->getCli_senha()
 
         );
@@ -112,15 +106,14 @@ class Clientes extends Conexao{
 
         // caso passou na verificação grava no banco
 
-        $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, cli_sobrenome=:cli_sobrenome,";
+        $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, ";
         $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia , cli_bairro=:cli_bairro ,";
-        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_data_cad=:cli_data_cad, cli_hora_cad=:cli_hora_cad, cli_pass=:cli_senha ";
+        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_data_cad=:cli_data_cad,  cli_pass=:cli_senha ";
         $query .=" WHERE  cli_id = :cli_id";
      
 
         $params = array(
             ':cli_nome'     => $this->getCli_nome() ,
-            ':cli_sobrenome'=> $this->getCli_sobrenome() ,
             ':cli_cpf'      => $this->getCli_cpf() ,
             ':cli_fone'     => $this->getCli_fone() ,
             ':cli_celular'  => $this->getCli_celular() ,
@@ -131,7 +124,6 @@ class Clientes extends Conexao{
             ':cli_cidade'   => $this->getCli_cidade() ,
             ':cli_cep'      => $this->getCli_cep() ,
             ':cli_data_cad' => $this->getCli_data_cad() ,
-            ':cli_hora_cad' => $this->getCli_hora_cad() ,
             ':cli_senha'    => $this->getCli_senha(),
             ':cli_id'       => (int)$id
         );
@@ -175,7 +167,7 @@ class Clientes extends Conexao{
         
         // caso passou na verificação grava no banco
         
-        $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, cli_sobrenome=:cli_sobrenome,";
+        $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, ";
         $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia, cli_bairro=:cli_bairro ,";
         $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep, cli_pass=:cli_senha ";   
         $query .=" WHERE  cli_id = :cli_id";
@@ -183,7 +175,6 @@ class Clientes extends Conexao{
     
         $params = array(
         ':cli_nome'     => $this->getCli_nome() ,    
-        ':cli_sobrenome'=> $this->getCli_sobrenome() ,   
         ':cli_cpf'      => $this->getCli_cpf() ,   
         ':cli_fone'     => $this->getCli_fone() ,   
         ':cli_celular'  => $this->getCli_celular() , 
@@ -262,9 +253,9 @@ class Clientes extends Conexao{
 //CLASSE DE CLIENTS - FUNÇÕES PARA BUSCAR
 
   
-    function GetClientes(){
+    public function GetClientes(){
         
-        $query = " SELECT * FROM {$this->prefix}clientes ";
+        $query = " SELECT * FROM {$this->prefix}clientes order by cli_id desc";
         
         $this->ExecuteSQL($query);
         
@@ -276,7 +267,7 @@ class Clientes extends Conexao{
     * 
     * @param INT $id id do cliente 
     */
-    function GetClientesID($id){
+    public function GetClientesID($id){
         
         // monto a SQL
         $query  = " SELECT * FROM {$this->prefix}clientes ";
@@ -285,6 +276,21 @@ class Clientes extends Conexao{
         $params = array(':id'=>(int)$id);
         //executo a SQL
         $this->ExecuteSQL($query, $params);
+        // chamo a listagem 
+        $this->GetLista();
+        
+        
+    }
+    
+    public function GetClientesByNomeOrCell($campo){
+        $campo = $this->filtraEntrada($campo);
+        
+        // monto a SQL
+        $query  = " SELECT * FROM {$this->prefix}clientes ";
+        $query .= " WHERE cli_nome LIKE '%$campo%' or cli_celular LIKE '%$campo%'";
+        
+        //executo a SQL
+        $this->ExecuteSQL($query);
         // chamo a listagem 
         $this->GetLista();
         
@@ -304,7 +310,6 @@ class Clientes extends Conexao{
         
              'cli_id'        =>  $lista['cli_id'],
              'cli_nome'      =>  $lista['cli_nome'],
-             'cli_sobrenome' =>  $lista['cli_sobrenome'],
              'cli_endereco'  =>  $lista['cli_endereco'],
              'cli_numero'    =>  $lista['cli_numero'],
              'cli_ponto_referencia' =>  $lista['cli_ponto_referencia'],
@@ -315,7 +320,6 @@ class Clientes extends Conexao{
              'cli_fone'      =>  $lista['cli_fone'],
              'cli_celular'   =>  $lista['cli_celular'],
              'cli_pass'      =>  $lista['cli_pass'],
-             'cli_hora_cad'  => $lista['cli_hora_cad'],
              'cli_data_cad'  =>  Sistema::Fdata($lista['cli_data_cad']),
            
             
@@ -336,11 +340,6 @@ class Clientes extends Conexao{
     public function getCli_nome() {
         return $this->cli_nome;
     }
-
-    function getCli_sobrenome() {
-        return $this->cli_sobrenome;
-    }
-
 
     function getCli_cpf() {
 
@@ -385,10 +384,6 @@ class Clientes extends Conexao{
         return $this->cli_data_cad;
     }
 
-    function getCli_hora_cad() {
-        return $this->cli_hora_cad;
-    }
-
     function getCli_senha() {
         return $this->cli_senha;
     }
@@ -415,21 +410,6 @@ class Clientes extends Conexao{
 
     }
 
-    function setCli_sobrenome($cli_sobrenome) {
-
-        if(strlen($cli_sobrenome) < 3):
-             echo '<div class="alert alert-danger " id="erro_mostrar"> Digite seu sobrenome ';
-                Sistema::VoltarPagina();
-                echo '</div>';
-
-
-            else:
-             $this->cli_sobrenome = $cli_sobrenome;
-
-        endif;
-
-
-    }
 
 
     function setCli_cpf($cli_cpf) {
@@ -502,9 +482,6 @@ class Clientes extends Conexao{
         $this->cli_data_cad = $cli_data_cad;
     }
 
-    function setCli_hora_cad($cli_hora_cad) {
-        $this->cli_hora_cad = $cli_hora_cad;
-    }
 
     function setCli_senha($cli_senha) {
 

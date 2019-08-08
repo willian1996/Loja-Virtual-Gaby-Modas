@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 20:25:53
+/* Smarty version 3.1.33, created on 2019-08-08 04:15:19
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\menu_cliente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d437501c101f5_38414494',
+  'unifunc' => 'content_5d4bcc07d2d591_41484839',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '28f4a9b51c6b0496292e5ae4f8821b7cb3c5567e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\menu_cliente.tpl',
-      1 => 1564691744,
+      1 => 1565248518,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d437501c101f5_38414494 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4bcc07d2d591_41484839 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center text-danger"> Olá <b><?php echo $_smarty_tpl->tpl_vars['USER']->value;?>
-</b>, seja bem vindo! O que deseja fazer agora?</h4> 
+</b><br> O que deseja fazer agora?</h4> 
 <section class="row" id="minhaconta">
     
     <div class="text-center">

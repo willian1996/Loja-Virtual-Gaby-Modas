@@ -1,4 +1,4 @@
-<?php   
+<?php    
  
 class Pedidos extends Conexao{ 
     
@@ -85,7 +85,6 @@ class Pedidos extends Conexao{
                 
                 'cli_id'  => $lista['cli_id'],
                 'cli_nome'  => $lista['cli_nome'],
-                'cli_sobrenome'  => $lista['cli_sobrenome'],
                 'cli_celular'  => $lista['cli_celular'],
                 'cli_endereco'  => $lista['cli_endereco'],
                 'cli_numero'  => $lista['cli_numero'],
@@ -95,6 +94,8 @@ class Pedidos extends Conexao{
                 'cli_cep'  => $lista['cli_cep'],
                 'cli_cpf'  => $lista['cli_cpf'],
                 'cli_fone'  => $lista['cli_fone'],
+                'cli_data_cad'  => $lista['cli_data_cad'],
+             
             );
 
             $i++;

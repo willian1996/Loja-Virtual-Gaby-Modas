@@ -1,4 +1,4 @@
-<div>
+
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
         <fieldset>
@@ -197,4 +197,4 @@
 
         </fieldset>
     </form>
-</div><!-- /.container -->
+
