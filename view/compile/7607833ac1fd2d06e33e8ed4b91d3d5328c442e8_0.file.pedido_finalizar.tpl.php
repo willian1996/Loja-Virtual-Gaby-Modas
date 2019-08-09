@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-07 00:41:11
+/* Smarty version 3.1.33, created on 2019-08-09 00:02:02
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4a485785a322_29220367',
+  'unifunc' => 'content_5d4ce22a849f56_88429914',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7607833ac1fd2d06e33e8ed4b91d3d5328c442e8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\pedido_finalizar.tpl',
-      1 => 1565149263,
+      1 => 1565319094,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4a485785a322_29220367 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4ce22a849f56_88429914 (Smarty_Internal_Template $_smarty_tpl) {
 ?><hr>
 <!--  table listagem de itens -->
 <section id="tabelafinalizar" class="row ">
@@ -35,7 +35,7 @@ function content_5d4a485785a322_29220367 (Smarty_Internal_Template $_smarty_tpl)
         Pedido Finalizado com Sucesso!
         </div>
         <div class="alert alert-info">
-        Será entregue na proxima semana! <br>Antes entraremos em contato para confirmar este pedido.
+        Será entregue na proxima semana! <br>Antes entraremos em contato pelo Whatsapp para confirmar este pedido e informar o valor do frete.
         </div>
         <div class="alert alert-warning">
         Atenção pagamento será feito no momento da entrega, aceitamos cartões com 5% de acréscimo!
@@ -44,7 +44,7 @@ function content_5d4a485785a322_29220367 (Smarty_Internal_Template $_smarty_tpl)
         <h4>Resumo do seu pedido</h4>
     <table class="table table-bordered" style="width: 95%">
 
-
+ 
         
         <tr class="text-danger bg-danger">
             <td></td>
@@ -109,14 +109,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </h4>
                 <h4>
-               Frete : R$ <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
-
+               Frete : A calcular...
             </h4>
                 <hr>
+<!--
             <h4>
                Total do Pedido : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
 
             </h4>
+-->
             </div>
 
 

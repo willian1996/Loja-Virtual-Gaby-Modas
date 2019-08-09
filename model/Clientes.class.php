@@ -1,5 +1,5 @@
 <?php 
- 
+  
 class Clientes extends Conexao{
 
     private $cli_nome;
@@ -251,12 +251,13 @@ class Clientes extends Conexao{
     
     
 //CLASSE DE CLIENTS - FUNÇÕES PARA BUSCAR
-
+ 
   
     public function GetClientes(){
         
-        $query = " SELECT * FROM {$this->prefix}clientes order by cli_id desc";
+        $query = " SELECT * FROM {$this->prefix}clientes order by cli_data_cad desc";
         
+        $query .= $this->PaginacaoLinks("cli_id", $this->prefix."clientes");
         $this->ExecuteSQL($query);
         
         $this->GetLista();
@@ -289,6 +290,7 @@ class Clientes extends Conexao{
         $query  = " SELECT * FROM {$this->prefix}clientes ";
         $query .= " WHERE cli_nome LIKE '%$campo%' or cli_celular LIKE '%$campo%'";
         
+        $query .= $this->PaginacaoLinks("cli_id", $this->prefix."clientes");
         //executo a SQL
         $this->ExecuteSQL($query);
         // chamo a listagem 

@@ -10,7 +10,7 @@
         Pedido Finalizado com Sucesso!
         </div>
         <div class="alert alert-info">
-        Será entregue na proxima semana! <br>Antes entraremos em contato para confirmar este pedido.
+        Será entregue na proxima semana! <br>Antes entraremos em contato pelo Whatsapp para confirmar este pedido e informar o valor do frete.
         </div>
         <div class="alert alert-warning">
         Atenção pagamento será feito no momento da entrega, aceitamos cartões com 5% de acréscimo!
@@ -19,7 +19,7 @@
         <h4>Resumo do seu pedido</h4>
     <table class="table table-bordered" style="width: 95%">
 
-
+ 
         
         <tr class="text-danger bg-danger">
             <td></td>
@@ -69,12 +69,14 @@
                Total : R$ {$TOTAL}
             </h4>
                 <h4>
-               Frete : R$ {$FRETE}
+               Frete : A calcular...
             </h4>
                 <hr>
+<!--
             <h4>
                Total do Pedido : R$ {$TOTAL_FRETE}
             </h4>
+-->
             </div>
 
 

@@ -17,7 +17,7 @@
     <center>
     <table class="table table-bordered" style="width: 95%">
 
-
+ 
 
         <tr class="text-danger bg-danger">
             <td></td>
@@ -67,23 +67,50 @@
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
+        <br>
         <h4>
            Total : R$ {$TOTAL}
         </h4>
         <h4>
-           Frete : R$ {$FRETE}
+           Frete : A calcular...
         </h4>
         <hr>
+<!--
         <h4>
            Total com Frete : R$ {$TOTAL_FRETE}
         </h4>
+-->
     </div>
 
 
+</section>     
+<hr>
+<section class="row">
+    <div>
+        <center>
+            <h4><strong>Entregaremos no</strong></h4>
+            <p>Endereço: {$CLI_ENDERECO}</p>
+            <p>Numero: {$CLI_NUMERO}</p>
+            <p>Ponto de Referência: {$CLI_PONTO_REFERENCIA}</p>
+            <p>Bairro: {$CLI_BAIRRO}</p>
+            <p>Cidade: {$CLI_CIDADE}</p>
+            <p>CEP: {$CLI_CEP}</p>
+            
+            
 
+
+        
+        
+        
+        </center>
+    
+    
+    
+    
+    </div>
 </section>
-            <br>
-            <hr>
+<br>
+<hr>
 <section class="row" id="confirmarpedido">
     <div class="col-md-4 ">
     </div>

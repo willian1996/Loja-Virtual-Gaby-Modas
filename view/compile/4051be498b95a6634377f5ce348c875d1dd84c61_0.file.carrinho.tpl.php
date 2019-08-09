@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-07 00:21:38
+/* Smarty version 3.1.33, created on 2019-08-08 23:46:26
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4a43c2c374e1_87346603',
+  'unifunc' => 'content_5d4cde825f5862_38173632',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4051be498b95a6634377f5ce348c875d1dd84c61' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\view\\carrinho.tpl',
-      1 => 1565148097,
+      1 => 1565318784,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4a43c2c374e1_87346603 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4cde825f5862_38173632 (Smarty_Internal_Template $_smarty_tpl) {
 ?>   
 <h3>Meu Carrinho</h3>
 <hr>
@@ -33,7 +33,7 @@ function content_5d4a43c2c374e1_87346603 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 
 
-</section>
+</section> 
     <br>
 
 <!--  table listagem de itens -->
@@ -107,6 +107,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </section><!-- fim da listagem itens -->
 
 <!--  bloco frete -->
+<!--
 <section class="row" id="dadosfrete">
 
 
@@ -116,8 +117,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
        <div class="col-md-4">
+-->
 
            <!-- campos para tratar  do  frete -->
+<!--
            <input type="hidden" name="peso_frete" id="peso_frete" value="<?php echo $_smarty_tpl->tpl_vars['PESO']->value;?>
 " class="form-control " readonly required>
 
@@ -131,7 +134,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
        <div class="col-md-4">
+-->
            <!-- botão frete -->
+<!--
            <button class="btn btn-warning btn-block" id="buscar_frete"> <i class="glyphicon glyphicon-send"></i> Calcular Frete </button>
 
 
@@ -142,6 +147,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </section>
 <br><hr>
+-->
 
 <!-- botoes de baixo e valor total -->
 <section class="row" id="total">
@@ -158,8 +164,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <div class="col-md-4 text-right text-danger bg-warning">
     <h4>
        Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
-
+ + Frete
     </h4>
+        
 
     </div>
 
@@ -182,11 +189,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </section>
 <br>
 
+<section><center><h4><strong>Pagamento na Entrega</strong></h4> 
+    <p>O valor do frete será informado pelo Whatsapp na confirmação do pedido.</p></center></section>
 
 
 
 
 
+<br>
 <section class="row" id="confirmarpedido">
     <div class="col-lg-4 ">
     </div>

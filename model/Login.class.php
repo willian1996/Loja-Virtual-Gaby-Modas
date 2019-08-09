@@ -46,7 +46,7 @@ class Login extends Conexao{
             $_SESSION['CLI']['cli_pass']      =  $lista['cli_pass']; 
 
 
-        }else{
+        }else{ 
             echo '<script>alert("Whatsapp ou Senha inválidos");</script>';
         }
         

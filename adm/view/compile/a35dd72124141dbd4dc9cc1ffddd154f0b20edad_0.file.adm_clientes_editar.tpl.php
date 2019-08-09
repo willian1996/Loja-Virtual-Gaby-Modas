@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-08 04:06:38
+/* Smarty version 3.1.33, created on 2019-08-09 01:20:02
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes_editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4bc9feaa90d9_20494228',
+  'unifunc' => 'content_5d4cf472dfe981_12541320',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a35dd72124141dbd4dc9cc1ffddd154f0b20edad' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes_editar.tpl',
-      1 => 1565247996,
+      1 => 1565324399,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4bc9feaa90d9_20494228 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4cf472dfe981_12541320 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br> 
 <div>
-    <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
+    <form name="cadcliente" class="well form-horizontal" action="" method="post">
 
         <fieldset>
 
@@ -56,7 +56,7 @@ function content_5d4bc9feaa90d9_20494228 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CPF']->value;?>
-" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required>
+" name="cli_cpf" class="form-control" minlength="11" maxlength="11">
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ function content_5d4bc9feaa90d9_20494228 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_FONE']->value;?>
-" name="cli_fone" class="form-control" required maxlength="11">
+" name="cli_fone" class="form-control" maxlength="11">
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ function content_5d4bc9feaa90d9_20494228 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
               <input type="text" placeholder="Próximo de..." value="<?php echo $_smarty_tpl->tpl_vars['CLI_PONTO_REFERENCIA']->value;?>
-" name="cli_ponto_referencia"  class="form-control" minlength="5" required>
+" name="cli_ponto_referencia"  class="form-control" minlength="5">
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@ if ($_prefixVariable4 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilhabela</o
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CEP']->value;?>
-" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
+" name="cli_cep" class="form-control" minlength="8" maxlength="8">
                 </div>
             </div>
             </div>

@@ -9,7 +9,7 @@
             <h3 id="meusdados">Meus Dados</h3>
             </center>
             <br>
-            <center><p style="color: red;">Cadastrado em {date('d/m/Y H:i',strtotime($CLI_DATA_CAD))}</p> </center>
+            <center><p style="color: red;">Cadastrado em {date('d/m/y H:i',strtotime($CLI_DATA_CAD))}</p> </center>
             <br>
             <!-- Nome-->
 
@@ -95,7 +95,7 @@
                 </div>
               </div>
             </div>
-
+ 
             <!-- Bairro-->
             <div class="form-group">
               <label class="col-md-4 control-label">Bairro</label>

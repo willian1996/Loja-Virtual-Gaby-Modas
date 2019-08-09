@@ -30,16 +30,14 @@
             
             <td>Nome</td>
             <td>Whatsapp </td>
-            <td class="hiddenonmobile">Data cadastro</td>
-            <td></td>
+            <td></td> 
         </tr>
         
         {foreach from=$CLIENTES item=C}
         
         <tr>
             <td><a href="{$PAG_EDITAR}/{$C.cli_id}">{$C.cli_nome}</a></td>
-            <td><a href="https://wa.me/55{$C.cli_celular}">{$C.cli_celular}</a></td>
-            <td class="hiddenonmobile">{$C.cli_data_cad}</td>
+            <td><a class="linkvisualizado" href="https://wa.me/55{$C.cli_celular}">{$C.cli_celular}</a></td>
             <td><a href="{$PAG_PEDIDOS}/{$C.cli_id} ">Pedidos</a> </td>
         </tr>
         
@@ -49,4 +47,11 @@
     </center >
     
 </section>
+
+  <!--  paginação inferior   -->
+    <section id="pagincao" class="row">
+    <center>
+    {$PAGINAS}
+    </center>
+    </section>
 

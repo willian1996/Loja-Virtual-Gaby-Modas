@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-08 05:06:59
+/* Smarty version 3.1.33, created on 2019-08-09 00:13:16
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4bd823b210b7_21127468',
+  'unifunc' => 'content_5d4ce4ccc3a845_09697511',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e7237f2bb276f7775a978219c1177ac91bd93088' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_itens.tpl',
-      1 => 1565251617,
+      1 => 1565320395,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4bd823b210b7_21127468 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4ce4ccc3a845_09697511 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3 class="text-center">Dados do Pedido</h3> 
 
 <!-- informações sobre o pedido -->
@@ -107,8 +107,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </td>
                 <td class="text-danger"> <b>Total:</b> R$<?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 </td>
-                <td class="text-danger"> <b>Final:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value;?>
-</td>
+<!--                <td class="text-danger"> <b>Final:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value;?>
+</td>-->
             </tr> 
         </table>
     </center>
@@ -141,7 +141,8 @@ if ($_prefixVariable4 == 'CANCELADO') {?>selected="selected"<?php }?>>CANCELADO<
     </center>
 </section>
 
-<hr><br>    
+<br>
+<hr>    
 
     <h3 class="text-center">Dados do Cliente</h3>
 <section>

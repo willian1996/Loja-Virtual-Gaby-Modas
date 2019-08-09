@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-08 04:07:36
+/* Smarty version 3.1.33, created on 2019-08-09 01:07:24
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4bca38224d99_03312201',
+  'unifunc' => 'content_5d4cf17c28be79_70569413',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '443e488e8e1a30c8517bafdfb5289131ece01e5e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes.tpl',
-      1 => 1565248054,
+      1 => 1565323612,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4bca38224d99_03312201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4cf17c28be79_70569413 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center">Gerenciar Clientes </h2>
 <hr> 
 
@@ -53,8 +53,7 @@ function content_5d4bca38224d99_03312201 (Smarty_Internal_Template $_smarty_tpl)
             
             <td>Nome</td>
             <td>Whatsapp </td>
-            <td class="hiddenonmobile">Data cadastro</td>
-            <td></td>
+            <td></td> 
         </tr>
         
         <?php
@@ -68,11 +67,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
 /<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_nome'];?>
 </a></td>
-            <td><a href="https://wa.me/55<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
+            <td><a class="linkvisualizado" href="https://wa.me/55<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
 "><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_celular'];?>
 </a></td>
-            <td class="hiddenonmobile"><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_data_cad'];?>
-</td>
             <td><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PEDIDOS']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_id'];?>
  ">Pedidos</a> </td>
@@ -87,6 +84,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </center >
     
 </section>
+
+  <!--  paginação inferior   -->
+    <section id="pagincao" class="row">
+    <center>
+    <?php echo $_smarty_tpl->tpl_vars['PAGINAS']->value;?>
+
+    </center>
+    </section>
 
 <?php }
 }

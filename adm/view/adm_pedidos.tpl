@@ -1,4 +1,4 @@
-<h2 class="text-center"> Gerenciar Pedidos </h2>
+<h2 class="text-center"> Gerenciar Pedidos </h2> 
 <hr>
 
 <section class="row" id="pesquisa">

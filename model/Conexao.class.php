@@ -96,7 +96,12 @@ class Conexao extends Config{
             $pag .= '<li><a href="?p=1"> << Inicio</a></li>';
 
             foreach($paginas as $p):
-                $pag .= '<li><a href="?p='.$p.'">'.$p.'</a></li>';
+                if(!isset($_GET['p'])){
+                    $q = 1;
+                }else{
+                    $q = $this->filtraEntrada($_GET['p']);
+                }
+                $pag .= "<li class=".($q==$p ?'active':'')."><a href='?p=".$p."'>".$p."</a></li>";
             endforeach;
             $pag .= '<li><a href="?p='.$this->totalpags.'"> ...'.$this->totalpags.' >></a></li>';
 

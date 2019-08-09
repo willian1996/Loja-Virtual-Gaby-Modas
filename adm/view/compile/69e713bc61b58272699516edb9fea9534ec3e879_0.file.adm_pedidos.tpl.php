@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-08 04:11:46
+/* Smarty version 3.1.33, created on 2019-08-09 01:26:54
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4bcb32cd9453_72071281',
+  'unifunc' => 'content_5d4cf60ed030c5_80561572',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69e713bc61b58272699516edb9fea9534ec3e879' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_pedidos.tpl',
-      1 => 1565248268,
+      1 => 1565324813,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4bcb32cd9453_72071281 (Smarty_Internal_Template $_smarty_tpl) {
-?><h2 class="text-center"> Gerenciar Pedidos </h2>
+function content_5d4cf60ed030c5_80561572 (Smarty_Internal_Template $_smarty_tpl) {
+?><h2 class="text-center"> Gerenciar Pedidos </h2> 
 <hr>
 
 <section class="row" id="pesquisa">

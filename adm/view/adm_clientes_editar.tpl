@@ -1,6 +1,6 @@
 <br> 
 <div>
-    <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
+    <form name="cadcliente" class="well form-horizontal" action="" method="post">
 
         <fieldset>
 
@@ -30,7 +30,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" value="{$CLI_CPF}" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required>
+              <input type="text" value="{$CLI_CPF}" name="cli_cpf" class="form-control" minlength="11" maxlength="11">
                 </div>
               </div>
             </div>
@@ -54,7 +54,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-              <input type="number" value="{$CLI_FONE}" name="cli_fone" class="form-control" required maxlength="11">
+              <input type="number" value="{$CLI_FONE}" name="cli_fone" class="form-control" maxlength="11">
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Próximo de..." value="{$CLI_PONTO_REFERENCIA}" name="cli_ponto_referencia"  class="form-control" minlength="5" required>
+              <input type="text" placeholder="Próximo de..." value="{$CLI_PONTO_REFERENCIA}" name="cli_ponto_referencia"  class="form-control" minlength="5">
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="number" value="{$CLI_CEP}" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
+              <input type="number" value="{$CLI_CEP}" name="cli_cep" class="form-control" minlength="8" maxlength="8">
                 </div>
             </div>
             </div>
