@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-09 00:13:16
+/* Smarty version 3.1.33, created on 2019-08-10 01:34:00
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4ce4ccc3a845_09697511',
+  'unifunc' => 'content_5d4e4938a5e461_82101036',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e7237f2bb276f7775a978219c1177ac91bd93088' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_itens.tpl',
-      1 => 1565320395,
+      1 => 1565411638,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4ce4ccc3a845_09697511 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4e4938a5e461_82101036 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3 class="text-center">Dados do Pedido</h3> 
 
 <!-- informações sobre o pedido -->
@@ -155,10 +155,10 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
 ?>
               <tr>
-                <td class="bg-info"><b>Nome</b></td>
+                <td style="width: 20%;" class="bg-info"><b>Nome</b></td>
                 <td><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_EDITAR']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['C']->value['cli_id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_nome'];?>
+"><?php echo strtoupper($_smarty_tpl->tpl_vars['C']->value['cli_nome']);?>
 </a></td>
               </tr>
               <tr>
@@ -179,7 +179,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
               </tr>
               <tr>
                 <td class="bg-info"><b>Rua</b></td>
-                <td><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_endereco'];?>
+                <td><?php echo strtoupper($_smarty_tpl->tpl_vars['C']->value['cli_endereco']);?>
 </td>
               </tr>
               <tr>
@@ -189,17 +189,17 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
               </tr>
               <tr>
                 <td class="bg-info"><b>Ponto de referencia</b></td>
-                <td><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_ponto_referencia'];?>
+                <td><?php echo strtoupper($_smarty_tpl->tpl_vars['C']->value['cli_ponto_referencia']);?>
 </td>
               </tr>
               <tr>
                 <td class="bg-info"><b>Bairro</b></td>
-                <td><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_bairro'];?>
+                <td><?php echo strtoupper($_smarty_tpl->tpl_vars['C']->value['cli_bairro']);?>
 </td>
               </tr>
               <tr>
                 <td class="bg-info"><b>Cidade</b></td>
-                <td><?php echo $_smarty_tpl->tpl_vars['C']->value['cli_cidade'];?>
+                <td><?php echo strtoupper($_smarty_tpl->tpl_vars['C']->value['cli_cidade']);?>
 </td>
               </tr>
               <tr>

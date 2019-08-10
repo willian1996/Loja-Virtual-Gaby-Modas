@@ -90,8 +90,8 @@
         <table class="table table-bordered" style="width: 100%">
             {foreach from=$PEDIDOS item=C}
               <tr>
-                <td class="bg-info"><b>Nome</b></td>
-                <td><a href="{$PAG_EDITAR}/{$C.cli_id}">{$C.cli_nome}</a></td>
+                <td style="width: 20%;" class="bg-info"><b>Nome</b></td>
+                <td><a href="{$PAG_EDITAR}/{$C.cli_id}">{strtoupper($C.cli_nome)}</a></td>
               </tr>
               <tr>
                 <td class="bg-info"><b>CPF</b></td>
@@ -107,7 +107,7 @@
               </tr>
               <tr>
                 <td class="bg-info"><b>Rua</b></td>
-                <td>{$C.cli_endereco}</td>
+                <td>{strtoupper($C.cli_endereco)}</td>
               </tr>
               <tr>
                 <td class="bg-info"><b>Número</b></td>
@@ -115,15 +115,15 @@
               </tr>
               <tr>
                 <td class="bg-info"><b>Ponto de referencia</b></td>
-                <td>{$C.cli_ponto_referencia}</td>
+                <td>{strtoupper($C.cli_ponto_referencia)}</td>
               </tr>
               <tr>
                 <td class="bg-info"><b>Bairro</b></td>
-                <td>{$C.cli_bairro}</td>
+                <td>{strtoupper($C.cli_bairro)}</td>
               </tr>
               <tr>
                 <td class="bg-info"><b>Cidade</b></td>
-                <td>{$C.cli_cidade}</td>
+                <td>{strtoupper($C.cli_cidade)}</td>
               </tr>
               <tr>
                 <td class="bg-info"><b>CEP</b></td>
