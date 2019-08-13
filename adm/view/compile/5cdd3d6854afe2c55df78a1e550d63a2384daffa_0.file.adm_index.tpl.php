@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-05 01:15:07
+/* Smarty version 3.1.33, created on 2019-08-11 03:28:36
   from 'C:\xampp\htdocs\Loja-Virtual-Gaby-Modas\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d47ad4b14c7a8_58448151',
+  'unifunc' => 'content_5d4fb5946315e3_78747373',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5cdd3d6854afe2c55df78a1e550d63a2384daffa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_index.tpl',
-      1 => 1564978461,
+      1 => 1565504574,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d47ad4b14c7a8_58448151 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4fb5946315e3_78747373 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -110,7 +110,7 @@ function content_5d47ad4b14c7a8_58448151 (Smarty_Internal_Template $_smarty_tpl)
 "><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
 " ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
-                                <li><a href="http://gabymodas.com/Relatorios-Gaby-Modas" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
+                                <li><a href="http://williansaleswebdev.com/Relatorios-Gaby-Modas/" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
                             </ul>
 
 

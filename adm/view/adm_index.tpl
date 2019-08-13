@@ -71,7 +71,7 @@
                                 <li><a href="{$PAG_CATEGORIAS}"><i class="glyphicon glyphicon-list-alt"></i> Cetegorias </a> </li>
                                 <li><a href="{$PAG_ADM_CLIENTE}"><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
                                 <li><a href="{$PAG_ADM_PEDIDOS}" ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
-                                <li><a href="http://gabymodas.com/Relatorios-Gaby-Modas" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
+                                <li><a href="http://williansaleswebdev.com/Relatorios-Gaby-Modas/" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
                             </ul>
 
 
@@ -127,7 +127,7 @@
 
         <a href="{$PAG_ADM_CLIENTE}" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Clientes </a>
         <a href="{$PAG_ADM_PEDIDOS}" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a>
-        <a href="http://gabymodas.com/Relatorios-Gaby-Modas" class="btn btn-info"><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a>
+        <a href="http://williansaleswebdev.com/Relatorios-Gaby-Modas/" class="btn btn-info"><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a>
 
 
     </div>
