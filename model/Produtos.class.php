@@ -86,7 +86,7 @@ class Produtos extends Conexao{
 
     }
 
-
+ 
     private function GetLista(){
         $i = 1;
         while($lista = $this->ListarDados()):
@@ -98,8 +98,8 @@ class Produtos extends Conexao{
             'pro_valor' => Sistema::MoedaBR($lista['pro_valor']),
             'pro_valor_us' => $lista['pro_valor'],
             'pro_tamanho' => $lista['pro_tamanho'],
-            'pro_img' => Rotas::ImageLink($lista['pro_img'], 180,250),
-            'pro_img_g' => Rotas::ImageLink($lista['pro_img'], 250,300),
+            'pro_img' => Rotas::ImageLink($lista['pro_img'], 250,250),
+            'pro_img_g' => Rotas::ImageLink($lista['pro_img'], 350,350),
             'pro_img_p' => Rotas::ImageLink($lista['pro_img'], 70,70),
             'pro_slug' => $lista['pro_slug'],
             'pro_ref' => $lista['pro_ref'],

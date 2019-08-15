@@ -1,4 +1,4 @@
-{foreach from=$PRO item=P} 
+{foreach from=$PRO item=P}  
 
       <h3 id="nomeproduto" class="text-center">{$P.pro_nome}</h3>
 <hr>
@@ -7,9 +7,9 @@
 
 
     {*  <!--div da esquerda imagem do produto  -->*}
-    <div class="col-md-6">
+    <div class="col-md-6 thumbnail">
 
-        <img class="thumbnail" src="{$P.pro_img_g}" alt="" width="100%">
+        <img  src="{$P.pro_img_g}" alt="" width="100%" height="100%">
 
     </div>
 
