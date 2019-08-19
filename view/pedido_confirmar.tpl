@@ -88,7 +88,7 @@
 <section class="row">
     <div>
         <center>
-            <h4><strong>Entregaremos no</strong></h4>
+            <h4><strong>Entregaremos na Próxima Semana</strong></h4>
             <p>Endereço: {$CLI_ENDERECO}</p>
             <p>Numero: {$CLI_NUMERO}</p>
             <p>Ponto de Referência: {$CLI_PONTO_REFERENCIA}</p>

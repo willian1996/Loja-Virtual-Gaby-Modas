@@ -1,11 +1,35 @@
-   
+<?php
+/* Smarty version 3.1.33, created on 2019-08-17 16:49:32
+  from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\carrinho.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5d585a4c390564_41901128',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'cd77c7c29f5a7a6fdfe77b8f2b9fc57b4a60a9d5' => 
+    array (
+      0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\carrinho.tpl',
+      1 => 1566071369,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5d585a4c390564_41901128 (Smarty_Internal_Template $_smarty_tpl) {
+?>   
 <h3>Meu Carrinho</h3>
 <hr>
 <!-- botoes e opções de cima -->
 <section class="row">
 
     <div class="col-md-4 ">
-        <a href="{$PAG_PRODUTOS}" class="btn btn-success" title="">Comprar mais</a>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
+" class="btn btn-success" title="">Comprar mais</a>
     </div>
 
 
@@ -29,18 +53,31 @@
         </tr>
 
 
-       {foreach from=$PRO item=P}
+       <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
+?>
 
         <tr>
 
-            <td> <img src="{$P.pro_img}" alt="{$P.pro_img}"> </td>
-            <td>{$P.pro_qtd} {$P.pro_nome} </td>
-            <td> {$P.pro_valor} </td>
-            <td> {$P.pro_tamanho} </td>
-            <td> {$P.pro_subTotal}
-                <form name="carrinho_dell" method="post" action="{$PAG_CARRINHO_ALTERAR}">
+            <td> <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
+"> </td>
+            <td><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_qtd'];?>
+ <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+ </td>
+            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
+ </td>
+            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_tamanho'];?>
+ </td>
+            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_subTotal'];?>
 
-                    <input type="hidden" name="pro_id" value="{$P.pro_id}">
+                <form name="carrinho_dell" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO_ALTERAR']->value;?>
+">
+
+                    <input type="hidden" name="pro_id" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
+">
                     <input type="hidden" name="acao" value="del">
 
                     <button class="btn btn-danger btn-sm"> <i class="glyphicon glyphicon-trash"></i> </button>
@@ -56,7 +93,10 @@
 
 
         </tr>
-        {/foreach}
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
     </table>
@@ -81,7 +121,8 @@
 
            <!-- campos para tratar  do  frete -->
 <!--
-           <input type="hidden" name="peso_frete" id="peso_frete" value="{$PESO}" class="form-control " readonly required>
+           <input type="hidden" name="peso_frete" id="peso_frete" value="<?php echo $_smarty_tpl->tpl_vars['PESO']->value;?>
+" class="form-control " readonly required>
 
            <input type="text" name="cep_frete" class="form-control" id="cep_frete" value="" placeholder="digite seu cep" >
 
@@ -122,7 +163,8 @@
 
     <div class="col-md-4 text-right text-danger bg-warning">
     <h4>
-       Total : R$ {$TOTAL} + Frete
+       Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
+ + Frete
     </h4>
         
 
@@ -133,7 +175,8 @@
 <!--
     <div class="col-md-4 ">
 
-        <form name="limpar" method="post" action="{$PAG_CARRINHO_ALTERAR}">
+        <form name="limpar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO_ALTERAR']->value;?>
+">
             <input type="hidden" name="acao" value="limpar">
             <input type="hidden" name="pro_id" value="1">
 
@@ -173,7 +216,8 @@
     </div>
     <div class="col-md-4 text-right">
 
-        <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="{$PAG_CONFIRMAR}">
+        <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_CONFIRMAR']->value;?>
+">
             <span id="frete"></span>
            <!-- botão finalzar -->
            <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
@@ -190,3 +234,5 @@
        <br>
        <br>
        <br>
+<?php }
+}
