@@ -52,7 +52,7 @@ if(Login::Logado()){
 
 
 
-$smarty->display('index.tpl');
+$smarty->display('index.tp');
 
 
 
