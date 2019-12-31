@@ -78,7 +78,7 @@
 
 
                       <li class="col-md-3 ">
-                          <img src="{$I.img_nome}" alt="" class="thumbnail">
+                          <a class='example-image-link' href="{$I.img_nome}" data-lightbox='example-1'><img src="{$I.img_nome}" alt="" class="thumbnail" style='max-width:200px'></a>
 
 
                       </li>
