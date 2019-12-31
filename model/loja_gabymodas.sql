@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 08-Ago-2019 às 11:56
--- Versão do servidor: 10.3.16-MariaDB
--- versão do PHP: 7.3.7
+-- Host: 127.0.0.1:3306
+-- Generation Time: 31-Dez-2019 às 16:01
+-- Versão do servidor: 5.7.26
+-- versão do PHP: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `loja_gabymodas`
+-- Database: `loja_gabymodas`
 --
 
 -- --------------------------------------------------------
@@ -1198,7 +1198,7 @@ CREATE TABLE IF NOT EXISTS `gm_imagens` (
   `img_pro_id` int(11) NOT NULL,
   `img_pasta` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`img_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_imagens`
@@ -1206,7 +1206,10 @@ CREATE TABLE IF NOT EXISTS `gm_imagens` (
 
 INSERT INTO `gm_imagens` (`img_id`, `img_nome`, `img_pro_id`, `img_pasta`) VALUES
 (17, '190731222958vestido-preto2.jpg.jpg', 22, NULL),
-(18, '190731223007vestido-preto.jpg.jpg', 22, NULL);
+(18, '190731223007vestido-preto.jpg.jpg', 22, NULL),
+(20, '191231135620vestido-preto.jpg.jpg', 40, NULL),
+(21, '191231140057vestido-preto.jpg.jpg', 40, NULL),
+(22, '191231140106vestido-rosa.jpg.jpg', 40, NULL);
 
 -- --------------------------------------------------------
 
@@ -1229,7 +1232,14 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos` (
   `ped_frete_valor` double(9,2) DEFAULT NULL,
   `ped_frete_tipo` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`ped_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=96 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `gm_pedidos`
+--
+
+INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_cod`, `ped_ref`, `ped_pag_status`, `ped_pag_forma`, `ped_pag_tipo`, `ped_pag_codigo`, `ped_frete_valor`, `ped_frete_tipo`) VALUES
+(95, '2019-08-17', '13:26:57', 13, '190817130857913', '190817130857913', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1246,7 +1256,14 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos_itens` (
   `item_qtd` int(6) NOT NULL,
   `item_ped_cod` varchar(50) NOT NULL,
   PRIMARY KEY (`item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=121 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=122 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `gm_pedidos_itens`
+--
+
+INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_tamanho`, `item_valor`, `item_qtd`, `item_ped_cod`) VALUES
+(121, 39, '38', 25.00, 1, '190817130857913');
 
 -- --------------------------------------------------------
 
@@ -1269,7 +1286,7 @@ CREATE TABLE IF NOT EXISTS `gm_produtos` (
   `pro_ativo` varchar(3) NOT NULL,
   `pro_frete_gratis` varchar(100) NOT NULL DEFAULT 'Não',
   PRIMARY KEY (`pro_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_produtos`
@@ -1298,7 +1315,8 @@ INSERT INTO `gm_produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `p
 (36, 4, 'CALÇA RIBANA VERMELHA', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n<p><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 30.00, 'P,M,G,GG', '190807020759calca-ribana-vermelha.jpg.jpg', 'calca-ribana-vermelha', '5d4a5caf4c4a7', 'SIM', 'Não'),
 (37, 4, 'Calça Moletom Listrada ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n<p><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 30.00, 'P,M,G,GG', '190807020900calca-moletom-listrada.jpg.jpg', 'calca-moletom-listrada', '5d4a5cecbac52', 'SIM', 'Não'),
 (38, 3, 'Vestido Preto ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n<p><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 30.00, '36,38,40,42', '190807021302vestido-preto.jpg.jpg', 'vestido-preto', '5d4a5dde0b741', 'SIM', 'Não'),
-(39, 5, 'Blusa Preta ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n</ul>\r\n<p><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 25.00, '36,38,40', '190807021700blusa-preta.jpg.jpg', 'blusa-preta', '5d4a5ecc5d288', 'SIM', 'Não');
+(39, 5, 'Blusa Preta ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n</ul>\r\n<p><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 25.00, '36,38,40', '190807021700blusa-preta.jpg.jpg', 'blusa-preta', '5d4a5ecc5d288', 'SIM', 'Não'),
+(40, 3, 'Vestido Preto Longo ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n</ul>\r\n<p><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 49.90, '38,40,42', '191231013353vestido-rosa.jpg.jpg', 'vestido-preto-longo', '5e0ac1a124161', 'SIM', 'Não');
 
 -- --------------------------------------------------------
 

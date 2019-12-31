@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-16 04:13:19
+/* Smarty version 3.1.33, created on 2019-12-31 13:30:31
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d56578f6b23f9_86699695',
+  'unifunc' => 'content_5e0b69977c1b87_71644036',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '16dd6f4d8101145840ca9c81f4d2603681994cb3' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\produtos.tpl',
-      1 => 1565859984,
+      1 => 1577806210,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d56578f6b23f9_86699695 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e0b69977c1b87_71644036 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <hr>
 
@@ -55,7 +55,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 
 
                     <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
-" alt="" >
+" style='max-height:250px' alt="" >
 
                     <div class="caption">
 
