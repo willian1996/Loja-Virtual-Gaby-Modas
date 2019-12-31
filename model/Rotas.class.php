@@ -201,6 +201,14 @@ class Rotas{
 
     }
 
+    //METODO PARA ABRIR IMAGEM GRANDE SEM PERDER QUALIDADE
+    static function ImageLinkForInfo($img){
+        $imagem  = self::get_ImageURL()."/{$img}";
+
+        return $imagem;
+
+    }
+
     static function get_Pasta_Controller(){
         return self::$pasta_controller;
     }
