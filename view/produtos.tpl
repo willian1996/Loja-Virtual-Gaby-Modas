@@ -24,7 +24,7 @@
                     <a href="{$PRO_INFO}/{$P.pro_id}/{$P.pro_slug}#nomeproduto">
 
 
-                    <img src="{$P.pro_img}" alt="" >
+                    <img src="{$P.pro_img}" style='max-height:250px' alt="" >
 
                     <div class="caption">
 
