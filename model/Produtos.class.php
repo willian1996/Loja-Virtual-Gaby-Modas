@@ -98,7 +98,7 @@ class Produtos extends Conexao{
             'pro_valor' => Sistema::MoedaBR($lista['pro_valor']),
             'pro_valor_us' => $lista['pro_valor'],
             'pro_tamanho' => $lista['pro_tamanho'],
-            'pro_img' => Rotas::ImageLink($lista['pro_img'], 250,250),
+            'pro_img' => Rotas::ImageLinkForInfo($lista['pro_img']),
             'pro_img_g' => Rotas::ImageLinkForInfo($lista['pro_img']),
             'pro_img_p' => Rotas::ImageLink($lista['pro_img'], 70,70),
             'pro_slug' => $lista['pro_slug'],
