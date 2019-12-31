@@ -1,6 +1,6 @@
 <?php
 
-$smarty = new Template();
+$smarty = new Templat();
 
 
 $smarty->assign('IMG1', Rotas::ImageLink('img1.jpg', 600, 350));
