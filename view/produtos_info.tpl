@@ -9,7 +9,7 @@
     {*  <!--div da esquerda imagem do produto  -->*}
     <div class="col-md-6 thumbnail">
 
-        <img  src="{$P.pro_img_g}" alt="" width="100%" height="100%">
+        <a class='example-image-link' style='max-width:900px' href="{$P.pro_img_g}" data-lightbox='example-1'><img  src="{$P.pro_img_g}" alt="" width="100%" height="100%"></a>
 
     </div>
 
