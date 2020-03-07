@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-29 01:00:32
+/* Smarty version 3.1.33, created on 2019-12-31 14:20:07
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e0816d0837d51_43167234',
+  'unifunc' => 'content_5e0b7537217a02_26441446',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43c77373537eee80d441b1f6021a73ea605eb05f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\cliente_dados.tpl',
-      1 => 1576112509,
+      1 => 1577762731,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e0816d0837d51_43167234 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e0b7537217a02_26441446 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>  
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -159,7 +159,7 @@ if ($_prefixVariable2 == 'Sao Sebastiao') {?>selected="selected"<?php }?>>São S
                     <option value="Ilhabela" <?php ob_start();
 echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
 $_prefixVariable3 = ob_get_clean();
-if ($_prefixVariable3 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilhabela</option>
+if ($_prefixVariable3 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilha Bela</option>
                 </select>
               </div>
             </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-31 14:00:10
+/* Smarty version 3.1.33, created on 2019-12-31 14:48:15
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e0b708a2d5cb6_34957459',
+  'unifunc' => 'content_5e0b7bcfe45fb3_99719311',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e8a9594187db2e68a1850e99a42be47e7d86103' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\produtos_info.tpl',
-      1 => 1577807831,
+      1 => 1577810883,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e0b708a2d5cb6_34957459 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e0b7bcfe45fb3_99719311 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
@@ -121,8 +121,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['I']->value) {
 
 
                       <li class="col-md-3 ">
-                          <img src="<?php echo $_smarty_tpl->tpl_vars['I']->value['img_nome'];?>
-" alt="" class="thumbnail">
+                          <a class='example-image-link' href="<?php echo $_smarty_tpl->tpl_vars['I']->value['img_nome'];?>
+" data-lightbox='example-1'><img src="<?php echo $_smarty_tpl->tpl_vars['I']->value['img_nome'];?>
+" alt="" class="thumbnail" style='max-width:200px'></a>
 
 
                       </li>
