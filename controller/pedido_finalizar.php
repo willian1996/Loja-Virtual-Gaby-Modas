@@ -1,4 +1,4 @@
-<?php 
+<?php  
 //VERIFICANDO SE O USUARIO ESTA LOGADO 
 if(!Login::Logado()){
     Login::AcessoNegado();

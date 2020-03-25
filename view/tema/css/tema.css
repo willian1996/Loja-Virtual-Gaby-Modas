@@ -8,7 +8,7 @@
     left: auto;
     width: 0.5em;
     right: 1em;
-    color: #000;
+    color: #000; 
     cursor: pointer;
 
 }
@@ -66,8 +66,42 @@ color: #fff;
     .hiddenonmobile{
         display: none;
     }
+    #navhorizontal{
+        padding: 8px 15px;
+        margin-bottom: 20px;
+        list-style: none;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        
+    }
+/*
+    #navhorizontal li{
+        text-align: center;
+        
+    }
+*/
+    
 
 }
+@media only screen and (min-width: 760px){
+    .hiddenonexpand{
+        display: none;
+    }
+}
+
+#navhorizontal{
+    padding-left: 15px;
+    
+}
+
+
+#navhorizontal li{
+    float: left;
+    
+}
+
+
+
 .espacamento{
     margin-left: 25px;
 }

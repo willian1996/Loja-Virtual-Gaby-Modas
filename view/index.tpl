@@ -51,6 +51,13 @@
 
                     <!-- container navBAr-->
                     <div class="container">
+                        <ul id="navhorizontal" class="nav navbar-nav hiddenonmobile">
+                            <li><a href="{$GET_SITE_HOME}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
+                            <li><a href="{$PAG_PRODUTOS}#produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
+                            <li><a href="{$PAG_MINHACONTA}#minhaconta"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
+                            <li><a href="{$PAG_CARRINHO}#tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
+                            <li><a href="https://api.whatsapp.com/send?phone=5512981819956" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
+                        </ul>
                         <!-- header da navbar-->
                         <div class="navbar-header">
                            <!-- botao que mostra e esconde a navbar-->
@@ -64,21 +71,28 @@
                         </div><!--fim header navbar-->
 
                         <div class="collapse navbar-collapse" id="navbar">
-                            <ul class="nav navbar-nav">
-                                <li><a href="{$GET_SITE_HOME}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-                                <li><a href="{$PAG_PRODUTOS}#produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
-                                <li><a href="{$PAG_MINHACONTA}#minhaconta"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
-                                <li><a href="{$PAG_CARRINHO}#tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
-                                <li><a href="https://api.whatsapp.com/send?phone=5512981819956" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
-                            </ul>
+                            
+                <div class="list-group hiddenonexpand">
+                    <span class="list-group-item active"> Categorias</span>
+
+                    <a href="{$PAG_PRODUTOS}#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
+
+                    {foreach from = $CATEGORIAS item = C}
+                    <a href="{$C.cate_link}#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>{$C.cate_nome}</a>
+
+                    {/foreach}
+
+                </div>
+                    <!--fim da list group-->
+                    
 
 
-                            <form name="txt_buscar" method="post" action="" class="navbar-form navbar-right" role="search">
-                                <div class="form-group">
-                                    <input name="txt_buscar" type="text" class="form-control" placeholder="Digite para buscar" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Buscar</button>
-                            </form>
+                    <form name="txt_buscar" method="post" action="" class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input name="txt_buscar" type="text" class="form-control" placeholder="Digite para buscar" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
 
                          </div><!-- fim navbar collapse-->
 
@@ -100,7 +114,7 @@
                 <!-- coluna da esquerda -->
                 <div class="col-md-2" id="lateral">
 
-                <div class="list-group">
+                <div class="list-group hiddenonmobile">
                     <span class="list-group-item active"> Categorias</span>
 
                     <a href="{$PAG_PRODUTOS}#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
@@ -117,11 +131,13 @@
                 <!-- coluna direita CONYEUDO CENTRAL -->
                 <div class="col-md-10">
 
-
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="glyphicon glyphicon-home"></i> Home </a></li>
-                        <li><a href="#"> Produtos </a></li>
-                        <li><a href="#"> Info </a></li>
+       
+                    <ul id="navhorizontal" class="nav navbar-nav  hiddenonexpand">
+                            <li><a href="{$GET_SITE_HOME}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
+                            <li><a href="{$PAG_PRODUTOS}#produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
+                            <li><a href="{$PAG_MINHACONTA}#minhaconta"><i class="glyphicon glyphicon-user"></i> Conta </a> </li>
+                            <li><a href="{$PAG_CARRINHO}#tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Meu Carrinho </a> </li>
+                            <li><a href="https://api.whatsapp.com/send?phone=5512981819956" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
                     </ul>
                     <!-- fim do menu breadcrumb-->
                     {php}
