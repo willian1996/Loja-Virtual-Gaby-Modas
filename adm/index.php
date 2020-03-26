@@ -38,6 +38,7 @@ $smarty->assign('PAG_CONTATO', Rotas::pag_Contato());
 $smarty->assign('PAG_CATEGORIAS', Rotas::pag_CategoriasADM());
 $smarty->assign('PAG_ADM_PRODUTOS', Rotas::pag_ProdutosADM());
 $smarty->assign('PAG_PRODUTOS', Rotas::pag_Produtos());
+$smarty->assign('PAG_ADM_FRETES', Rotas::pag_FretesADM());
 
 $smarty->assign('PAG_SENHA', Rotas::get_SiteADM(). '/adm_senha');
 $smarty->assign('PAG_LOGOFF', Rotas::get_SiteADM(). '/adm_logoff');

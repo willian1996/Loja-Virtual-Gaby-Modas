@@ -106,6 +106,47 @@
                 </div>
               </div>
             </div>
+            
+            <!-- Estados -->
+            
+            <div class="form-group">
+              <label class="col-md-4 control-label">Estado</label>
+                <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                <select name="cli_uf" class="form-control selectpicker" required>
+                    <option value="">selecione o seu estado</option>
+                    <option value="SP" {if {$CLI_UF} == 'SP'}selected="selected"{/if}>São Paulo</option>
+                    <option value="AC" {if {$CLI_UF} == 'AC'}selected="selected"{/if}>Acre</option>
+                    <option value="AL" {if {$CLI_UF} == 'AL'}selected="selected"{/if}>Alagoas</option>
+                    <option value="AP" {if {$CLI_UF} == 'AP'}selected="selected"{/if}>Amapá</option>
+                    <option value="AM" {if {$CLI_UF} == 'AM'}selected="selected"{/if}>Amazonas</option>
+                    <option value="BA" {if {$CLI_UF} == 'BA'}selected="selected"{/if}>Bahia</option>
+                    <option value="CE" {if {$CLI_UF} == 'CE'}selected="selected"{/if}>Ceará</option>
+                    <option value="DF" {if {$CLI_UF} == 'DF'}selected="selected"{/if}>Distrito Federal</option>
+                    <option value="ES" {if {$CLI_UF} == 'ES'}selected="selected"{/if}>Espírito Santo</option>
+                    <option value="GO" {if {$CLI_UF} == 'GO'}selected="selected"{/if}>Goiás</option>
+                    <option value="MA" {if {$CLI_UF} == 'MA'}selected="selected"{/if}>Maranhão</option>
+                    <option value="MT" {if {$CLI_UF} == 'MT'}selected="selected"{/if}>Mato Grosso</option>
+                    <option value="MS" {if {$CLI_UF} == 'MS'}selected="selected"{/if}>Mato Grosso do Sul</option>
+                    <option value="MG" {if {$CLI_UF} == 'MG'}selected="selected"{/if}>Minas Gerais</option>
+                    <option value="PA" {if {$CLI_UF} == 'PA'}selected="selected"{/if}>Pará</option>
+                    <option value="PB" {if {$CLI_UF} == 'PB'}selected="selected"{/if}>Paraíba</option>
+                    <option value="PR" {if {$CLI_UF} == 'PR'}selected="selected"{/if}>Paraná</option>
+                    <option value="PE" {if {$CLI_UF} == 'PE'}selected="selected"{/if}>Pernambuco</option>
+                    <option value="PI" {if {$CLI_UF} == 'PI'}selected="selected"{/if}>Piauí</option>
+                    <option value="RJ" {if {$CLI_UF} == 'RJ'}selected="selected"{/if}>Rio de Janeiro</option>
+                    <option value="RN" {if {$CLI_UF} == 'RN'}selected="selected"{/if}>Rio Grande do Norte</option>
+                    <option value="RS" {if {$CLI_UF} == 'RS'}selected="selected"{/if}>Rio Grande do Sul</option>
+                    <option value="RO" {if {$CLI_UF} == 'RO'}selected="selected"{/if}>Rondônia</option>
+                    <option value="RR" {if {$CLI_UF} == 'RR'}selected="selected"{/if}>Roraima</option>
+                    <option value="SC" {if {$CLI_UF} == 'SC'}selected="selected"{/if}>Santa Catarina</option>
+                    <option value="SE" {if {$CLI_UF} == 'SE'}selected="selected"{/if}>Sergipe</option>
+                    <option value="TO" {if {$CLI_UF} == 'TO'}selected="selected"{/if}>Tocantins</option>
+                </select>
+              </div>
+            </div>
+            </div>
 
             <!-- Cidade -->
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-26 05:13:09
-  from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\cliente_dados.tpl' */
+/* Smarty version 3.1.33, created on 2020-03-26 05:55:50
+  from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\adm\view\adm_clientes_editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7c64150edd28_70774755',
+  'unifunc' => 'content_5e7c6e16999cb8_61404584',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '43c77373537eee80d441b1f6021a73ea605eb05f' => 
+    '18403767bad9f500b4718694ac15a381255cdff4' => 
     array (
-      0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\cliente_dados.tpl',
-      1 => 1585210386,
+      0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_clientes_editar.tpl',
+      1 => 1585212896,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7c64150edd28_70774755 (Smarty_Internal_Template $_smarty_tpl) {
-?><br>  
+function content_5e7c6e16999cb8_61404584 (Smarty_Internal_Template $_smarty_tpl) {
+?><br> 
 <div>
-    <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
+    <form name="cadcliente" class="well form-horizontal" action="" method="post">
 
         <fieldset>
 
             <!-- Form Name -->
             <center>
-            <h3 id="meusdados">Meus Dados</h3>
+            <h3 id="meusdados"><?php echo $_smarty_tpl->tpl_vars['CLI_NOME']->value;?>
+ </h3>
             </center>
-            <br>
-            <center><p style="color: red;">Cadastrado em <?php echo date('d/m/y H:i',strtotime($_smarty_tpl->tpl_vars['CLI_DATA_CAD']->value));?>
-</p> </center>
             <br>
             <!-- Nome-->
 
@@ -58,7 +56,7 @@ function content_5e7c64150edd28_70774755 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CPF']->value;?>
-" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required>
+" name="cli_cpf" class="form-control" minlength="11" maxlength="11">
                 </div>
               </div>
             </div>
@@ -84,7 +82,7 @@ function content_5e7c64150edd28_70774755 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_FONE']->value;?>
-" name="cli_fone" class="form-control" required maxlength="11">
+" name="cli_fone" class="form-control" maxlength="11">
                 </div>
               </div>
             </div>
@@ -122,11 +120,11 @@ function content_5e7c64150edd28_70774755 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
               <input type="text" placeholder="Próximo de..." value="<?php echo $_smarty_tpl->tpl_vars['CLI_PONTO_REFERENCIA']->value;?>
-" name="cli_ponto_referencia"  class="form-control" minlength="5" required>
+" name="cli_ponto_referencia"  class="form-control" minlength="5">
                 </div>
               </div>
             </div>
- 
+
             <!-- Bairro-->
             <div class="form-group">
               <label class="col-md-4 control-label">Bairro</label>
@@ -138,8 +136,6 @@ function content_5e7c64150edd28_70774755 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
             </div>
-            
-            <!-- Estados -->
             
             <div class="form-group">
               <label class="col-md-4 control-label">Estado</label>
@@ -278,14 +274,14 @@ if ($_prefixVariable28 == 'Caraguatatuba') {?>selected="selected"<?php }?>>Carag
 echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
 $_prefixVariable29 = ob_get_clean();
 if ($_prefixVariable29 == 'Sao Sebastiao') {?>selected="selected"<?php }?>>São Sebastião</option>
-                    <option value="Ilhabela" <?php ob_start();
-echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
-$_prefixVariable30 = ob_get_clean();
-if ($_prefixVariable30 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilha Bela</option>
                     <option value="Ubatuba" <?php ob_start();
 echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
+$_prefixVariable30 = ob_get_clean();
+if ($_prefixVariable30 == 'Ubatuba') {?>selected="selected"<?php }?>>Ubatuba</option>
+                    <option value="Ilhabela" <?php ob_start();
+echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
 $_prefixVariable31 = ob_get_clean();
-if ($_prefixVariable31 == 'Ubatuba') {?>selected="selected"<?php }?>>Ubatuba</option>
+if ($_prefixVariable31 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilhabela</option>
                 </select>
               </div>
             </div>
@@ -299,21 +295,30 @@ if ($_prefixVariable31 == 'Ubatuba') {?>selected="selected"<?php }?>>Ubatuba</op
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CEP']->value;?>
-" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
+" name="cli_cep" class="form-control" minlength="8" maxlength="8">
                 </div>
             </div>
             </div>
 
 
-      
-            <br><hr>
+           
             <!-- Senha-->
             <div class="form-group">
-              <label class="col-md-4 control-label">Digite sua senha atual por segurança<br>(<small>sua senha não será alterada</small>)</label>
+              <label class="col-md-4 control-label">Troque a senha só se o cliente pedir</label>
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input type="password" name="txt_senha" id="cli_senha" class="form-control" required>
+              <input type="password" placeholder="Nova senha" name="txt_senha" class="form-control">
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="form-group">
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <input type="hidden" name="cli_id" value="<?php echo $_smarty_tpl->tpl_vars['CLI_ID']->value;?>
+" class="form-control">
                 </div>
               </div>
             </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-16 18:11:13
+/* Smarty version 3.1.33, created on 2020-03-25 20:56:23
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5df7e4e1a007a1_15228280',
+  'unifunc' => 'content_5e7befa7783498_84899570',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e514448b900f4b69c98ac93f753e50b0686b71b6' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_index.tpl',
-      1 => 1565505600,
+      1 => 1585180167,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5df7e4e1a007a1_15228280 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7befa7783498_84899570 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -110,6 +110,8 @@ function content_5df7e4e1a007a1_15228280 (Smarty_Internal_Template $_smarty_tpl)
 "><i class="glyphicon glyphicon-user"></i> Clientes </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
 " ><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a> </li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
+" ><i class="glyphicon glyphicon-shopping-cart"></i> Frete </a> </li>
                                 <li><a href="http://williansaleswebdev.com/Relatorios-Gaby-Modas/" ><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a> </li>
                             </ul>
 
@@ -171,15 +173,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     <div class="text-center">
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PRODUTOS']->value;?>
-" class="btn btn-success"><i class="glyphicon glyphicon-tag"></i> Produtos</a>
+" class="btn btn-primary"><i class="glyphicon glyphicon-tag"></i> Produtos</a>
 
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CATEGORIAS']->value;?>
-" class="btn btn-success"><i class="glyphicon glyphicon-list-alt"></i>Categorias</a>
+" class="btn btn-default"><i class="glyphicon glyphicon-list-alt"></i>Categorias</a>
 
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_CLIENTE']->value;?>
 " class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Clientes </a>
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_PEDIDOS']->value;?>
-" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a>
+" class="btn btn-danger"><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_ADM_FRETES']->value;?>
+" class="btn btn-warning"><i class="glyphicon glyphicon-plane"></i> Fretes </a>
         <a href="http://williansaleswebdev.com/Relatorios-Gaby-Modas/" class="btn btn-info"><i class="glyphicon glyphicon-piggy-bank"></i> Relatórios </a>
 
 

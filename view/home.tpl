@@ -8,6 +8,7 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -26,6 +27,9 @@
 
      <div class="item">
         <img src="{$IMG4}" alt="New york" class="img img-responsive" style="width:100%;">
+      </div>
+     <div class="item">
+        <img src="{$IMG5}" alt="New york" class="img img-responsive" style="width:100%;">
       </div>
     </div>
 

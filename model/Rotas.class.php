@@ -142,7 +142,8 @@ class Rotas{
     static function pag_ProdutosADM(){
         return self::get_SiteADM(). '/adm_produtos';
 
-    }
+    } 
+    
 
     static function pag_ProdutosNovoADM(){
         return self::get_SiteADM(). '/adm_produtos_novo';
@@ -187,6 +188,10 @@ class Rotas{
     static function pag_CategoriasADM(){
         return self::get_SiteADM(). '/adm_categorias';
 
+    }
+    
+    static function pag_FretesADM(){
+        return self::get_SiteADM(). '/adm_fretes';
     }
 
 

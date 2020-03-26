@@ -37,6 +37,7 @@ class Login extends Conexao{
             $_SESSION['CLI']['cli_numero']    =  $lista['cli_numero'];
             $_SESSION['CLI']['cli_ponto_referencia']    =  $lista['cli_ponto_referencia'];
             $_SESSION['CLI']['cli_bairro']    =  $lista['cli_bairro'];
+            $_SESSION['CLI']['cli_uf']        =  $lista['cli_uf'];
             $_SESSION['CLI']['cli_cidade']    =  $lista['cli_cidade'];
             $_SESSION['CLI']['cli_cpf']       =  $lista['cli_cpf'];
             $_SESSION['CLI']['cli_cep']       =  $lista['cli_cep'];

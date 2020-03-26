@@ -7,7 +7,7 @@
         <a href="{$PAG_CARRINHO}" class="btn btn-success" title="">Voltar para carrinho e alterar pedido</a>
     </div>
 
-
+ 
 </section>
     <br> 
 

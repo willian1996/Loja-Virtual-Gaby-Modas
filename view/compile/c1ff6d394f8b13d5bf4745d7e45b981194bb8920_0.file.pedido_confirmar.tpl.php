@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-17 16:51:35
+/* Smarty version 3.1.33, created on 2020-03-26 05:43:21
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d585ac701f8d4_32409103',
+  'unifunc' => 'content_5e7c6b2940f420_56868265',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1ff6d394f8b13d5bf4745d7e45b981194bb8920' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\pedido_confirmar.tpl',
-      1 => 1566071493,
+      1 => 1585192576,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d585ac701f8d4_32409103 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7c6b2940f420_56868265 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -31,7 +31,7 @@ function content_5d585ac701f8d4_32409103 (Smarty_Internal_Template $_smarty_tpl)
 " class="btn btn-success" title="">Voltar para carrinho e alterar pedido</a>
     </div>
 
-
+ 
 </section>
     <br> 
 

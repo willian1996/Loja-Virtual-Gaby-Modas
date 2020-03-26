@@ -10,10 +10,11 @@ class Clientes extends Conexao{
     private $cli_numero;
     private $cli_ponto_referencia;
     private $cli_bairro;
+    private $cli_uf;
     private $cli_cidade;
     private $cli_cep;
     private $cli_data_cad;
-    private $cli_senha;
+    private $cli_senha; 
 
     public function __construct(){
         parent::__construct();
@@ -22,7 +23,7 @@ class Clientes extends Conexao{
 
     public function Preparar($cli_nome,
             $cli_cpf  , $cli_fone , $cli_celular , $cli_endereco , $cli_numero, $cli_ponto_referencia,
-            $cli_bairro , $cli_cidade , $cli_cep , $cli_data_cad,
+            $cli_bairro , $cli_uf, $cli_cidade , $cli_cep , $cli_data_cad,
              $cli_senha){
         
         $this->setCli_nome($cli_nome);
@@ -33,6 +34,7 @@ class Clientes extends Conexao{
         $this->setCli_numero($cli_numero);
         $this->setCli_ponto_referencia($cli_ponto_referencia);
         $this->setCli_bairro($cli_bairro);
+        $this->setCli_uf($cli_uf);
         $this->setCli_cidade($cli_cidade);
         $this->setCli_cep($cli_cep);
         $this->setCli_data_cad($cli_data_cad);
@@ -59,11 +61,11 @@ class Clientes extends Conexao{
         //Inserir os dados da função
         $query = " INSERT INTO {$this->prefix}clientes (cli_nome,";
         $query .=" cli_cpf, cli_fone,cli_celular ,cli_endereco ,cli_numero, cli_ponto_referencia, cli_bairro ,";
-        $query .=" cli_cidade ,cli_cep ,cli_data_cad, cli_pass)";
+        $query .=" cli_uf, cli_cidade ,cli_cep ,cli_data_cad, cli_pass)";
         $query .=" VALUES ";
         $query .=" (:cli_nome,";
         $query .=" :cli_cpf, :cli_fone,:cli_celular ,:cli_endereco ,:cli_numero, :cli_ponto_referencia, :cli_bairro ,";
-        $query .=" :cli_cidade ,:cli_cep ,:cli_data_cad, :cli_senha)";
+        $query .=" :cli_uf, :cli_cidade ,:cli_cep ,:cli_data_cad, :cli_senha)";
 
         $params = array(
         ':cli_nome'     => $this->getCli_nome() ,
@@ -74,6 +76,7 @@ class Clientes extends Conexao{
         ':cli_numero'   => $this->getCli_numero() ,
         ':cli_ponto_referencia'   => $this->getCli_ponto_referencia(),
         ':cli_bairro'   => $this->getCli_bairro() ,
+        ':cli_uf'       => $this->getCli_uf() ,  
         ':cli_cidade'   => $this->getCli_cidade() ,
         ':cli_cep'      => $this->getCli_cep() ,
         ':cli_data_cad' => $this->getCli_data_cad() ,
@@ -108,7 +111,7 @@ class Clientes extends Conexao{
 
         $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, ";
         $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia , cli_bairro=:cli_bairro ,";
-        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_data_cad=:cli_data_cad,  cli_pass=:cli_senha ";
+        $query .=" cli_uf=:cli_uf, cli_cidade=:cli_cidade ,cli_cep=:cli_cep ,cli_data_cad=:cli_data_cad,  cli_pass=:cli_senha ";
         $query .=" WHERE  cli_id = :cli_id";
      
 
@@ -121,6 +124,7 @@ class Clientes extends Conexao{
             ':cli_numero'   => $this->getCli_numero() ,
             ':cli_ponto_referencia' => $this->getCli_ponto_referencia(),
             ':cli_bairro'   => $this->getCli_bairro() ,
+            ':cli_uf'       => $this->getCli_uf() ,   
             ':cli_cidade'   => $this->getCli_cidade() ,
             ':cli_cep'      => $this->getCli_cep() ,
             ':cli_data_cad' => $this->getCli_data_cad() ,
@@ -169,7 +173,7 @@ class Clientes extends Conexao{
         
         $query = " UPDATE {$this->prefix}clientes SET cli_nome=:cli_nome, ";
         $query .=" cli_cpf=:cli_cpf, cli_fone=:cli_fone,cli_celular=:cli_celular ,cli_endereco=:cli_endereco ,cli_numero=:cli_numero, cli_ponto_referencia=:cli_ponto_referencia, cli_bairro=:cli_bairro ,";
-        $query .=" cli_cidade=:cli_cidade ,cli_cep=:cli_cep, cli_pass=:cli_senha ";   
+        $query .="cli_uf=:cli_uf, cli_cidade=:cli_cidade ,cli_cep=:cli_cep, cli_pass=:cli_senha ";   
         $query .=" WHERE  cli_id = :cli_id";
       
     
@@ -181,7 +185,8 @@ class Clientes extends Conexao{
         ':cli_endereco' => $this->getCli_endereco() ,   
         ':cli_numero'   => $this->getCli_numero() ,
         ':cli_ponto_referencia' => $this->getCli_ponto_referencia() ,
-        ':cli_bairro'   => $this->getCli_bairro() ,   
+        ':cli_bairro'   => $this->getCli_bairro() ,
+        ':cli_uf'       => $this->getCli_uf() , 
         ':cli_cidade'   => $this->getCli_cidade() ,   
         ':cli_cep'      => $this->getCli_cep() , 
         ':cli_senha'      => $this->getCli_senha() ,          
@@ -316,6 +321,7 @@ class Clientes extends Conexao{
              'cli_numero'    =>  $lista['cli_numero'],
              'cli_ponto_referencia' =>  $lista['cli_ponto_referencia'],
              'cli_bairro'    =>  $lista['cli_bairro'],
+             'cli_uf'        =>  $lista['cli_uf'],
              'cli_cidade'    =>  $lista['cli_cidade'],
              'cli_cpf'       =>  $lista['cli_cpf'],
              'cli_cep'       =>  $lista['cli_cep'],
@@ -372,6 +378,10 @@ class Clientes extends Conexao{
 
     function getCli_bairro() {
         return $this->cli_bairro;
+    }
+    
+    function getCli_uf() {
+        return $this->cli_uf;
     }
 
     function getCli_cidade() {
@@ -454,6 +464,22 @@ class Clientes extends Conexao{
 
     function setCli_bairro($cli_bairro) {
         $this->cli_bairro = $cli_bairro;
+    }
+    
+    function setCli_uf($cli_uf) {
+        
+         $uf = filter_var($cli_uf, FILTER_SANITIZE_STRING);
+        
+       if(strlen($uf) != 2): // 11111
+                echo '<div class="alert alert-danger " id="erro_mostrar"> UF incorreto ';
+                Sistema::VoltarPagina();
+                echo '</div>';
+           
+           else:
+           $this->cli_uf = $cli_uf;
+           
+       endif;
+            
     }
 
     function setCli_cidade($cli_cidade) {

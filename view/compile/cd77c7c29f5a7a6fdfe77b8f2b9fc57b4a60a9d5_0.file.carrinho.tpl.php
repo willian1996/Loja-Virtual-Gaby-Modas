@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-17 16:49:32
+/* Smarty version 3.1.33, created on 2020-03-26 03:52:34
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d585a4c390564_41901128',
+  'unifunc' => 'content_5e7c5132f1d156_71451435',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd77c7c29f5a7a6fdfe77b8f2b9fc57b4a60a9d5' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\carrinho.tpl',
-      1 => 1566071369,
+      1 => 1585192515,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d585a4c390564_41901128 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7c5132f1d156_71451435 (Smarty_Internal_Template $_smarty_tpl) {
 ?>   
 <h3>Meu Carrinho</h3>
 <hr>
@@ -168,7 +168,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </h4>
         
 
-    </div>
+    </div> 
 
 
     <!-- botão de limpar-->

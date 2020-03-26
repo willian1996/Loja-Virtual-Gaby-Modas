@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-23 09:53:21
+/* Smarty version 3.1.33, created on 2020-03-26 03:40:39
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e78b1418523c6_67136033',
+  'unifunc' => 'content_5e7c4e67c4e724_38531428',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd9396ce560e384b4fd3406d01b7a60f41eaf422f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\cadastro.tpl',
-      1 => 1583616579,
+      1 => 1585200662,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e78b1418523c6_67136033 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7c4e67c4e724_38531428 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -135,6 +135,48 @@ function content_5e78b1418523c6_67136033 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
             </div>
+            
+            <!-- Estado -->
+   
+            
+            <div class="form-group">
+              <label class="col-md-4 control-label">Estado</label>
+                <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                <select name="cli_uf" class="form-control selectpicker" required>
+                    <option value="">selecione seu estado</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+              </div>
+            </div>
+            </div>
 
 
 
@@ -163,7 +205,7 @@ function content_5e78b1418523c6_67136033 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-              <input type="text" placeholder="Opcional" name="cli_cep" class="form-control">
+              <input type="text" placeholder="Digite o cep" name="cli_cep" class="form-control">
                 </div>
             </div>
             </div>
