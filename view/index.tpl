@@ -35,7 +35,7 @@
 
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
-                        <a href="{$GET_SITE_HOME}"><img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt=""></a>
+<!--                        <a href="{$GET_SITE_HOME}"><img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt=""></a>-->
                     </div>
 
                 </div>

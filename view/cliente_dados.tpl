@@ -107,6 +107,20 @@
               </div>
             </div>
             
+            
+
+            <!-- Cidade -->
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Cidade</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <input type="text" value="{$CLI_CIDADE}" name="cli_cidade" class="form-control" minlength="3" required>
+                </div>
+              </div>
+            </div>
+            
             <!-- Estados -->
             
             <div class="form-group">
@@ -143,24 +157,6 @@
                     <option value="SC" {if {$CLI_UF} == 'SC'}selected="selected"{/if}>Santa Catarina</option>
                     <option value="SE" {if {$CLI_UF} == 'SE'}selected="selected"{/if}>Sergipe</option>
                     <option value="TO" {if {$CLI_UF} == 'TO'}selected="selected"{/if}>Tocantins</option>
-                </select>
-              </div>
-            </div>
-            </div>
-
-            <!-- Cidade -->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label">Cidade</label>
-                <div class="col-md-4 selectContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_cidade" class="form-control selectpicker" required>
-                    <option value="">selecione sua cidade</option>
-                    <option value="Caraguatatuba" {if {$CLI_CIDADE} == 'Caraguatatuba'}selected="selected"{/if}>Caraguatatuba</option>
-                    <option value="Sao Sebastiao" {if {$CLI_CIDADE} == 'Sao Sebastiao'}selected="selected"{/if}>São Sebastião</option>
-                    <option value="Ilhabela" {if {$CLI_CIDADE} == 'Ilhabela'}selected="selected"{/if}>Ilha Bela</option>
-                    <option value="Ubatuba" {if {$CLI_CIDADE} == 'Ubatuba'}selected="selected"{/if}>Ubatuba</option>
                 </select>
               </div>
             </div>

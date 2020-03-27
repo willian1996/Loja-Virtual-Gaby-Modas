@@ -113,7 +113,25 @@
               </div>
             </div>
             
-            <!-- Estado -->
+           
+
+
+
+            <!-- Cidade -->
+
+            
+            
+            <div class="form-group">
+              <label class="col-md-4 control-label">Cidade</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <input type="text" placeholder="Digite o sua cidade" name="cli_cidade" class="form-control" minlength="3" required>
+                </div>
+              </div>
+            </div>
+            
+             <!-- Estado -->
    
             
             <div class="form-group">
@@ -150,26 +168,6 @@
                     <option value="SC">Santa Catarina</option>
                     <option value="SE">Sergipe</option>
                     <option value="TO">Tocantins</option>
-                </select>
-              </div>
-            </div>
-            </div>
-
-
-
-            <!-- Cidade -->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label">Cidade</label>
-                <div class="col-md-4 selectContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_cidade" class="form-control selectpicker" required>
-                    <option value="">selecione sua cidade</option>
-                    <option value="Sao Sebastiao">São Sebastião</option>
-                    <option value="Ilhabela">Ilhabela</option>
-                    <option value="Caraguatatuba">Caraguatatuba</option>
-                    <option value="Ubatuba">Ubatuba</option>
                 </select>
               </div>
             </div>

@@ -17,6 +17,7 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_celular']) and isset($_POST['
     $cli_ponto_referencia = $_POST['cli_ponto_referencia'];
     $cli_bairro    = $_POST['cli_bairro'];
     $cli_cidade    = $_POST['cli_cidade'];
+    $cli_uf        = $_POST['cli_uf'];
     $cli_cep       = $_POST['cli_cep'];
     $cli_senha     = isset($_POST['txt_senha'])?$_POST['txt_senha']:"";
     $cli_data_cad  = "";
@@ -24,7 +25,7 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_celular']) and isset($_POST['
 
 
 
-    $clientes->Preparar($cli_nome, $cli_cpf, $cli_fone, $cli_celular, $cli_endereco, $cli_numero, $cli_ponto_referencia, $cli_bairro, $cli_cidade, $cli_cep, $cli_data_cad, $cli_senha);
+    $clientes->Preparar($cli_nome, $cli_cpf, $cli_fone, $cli_celular, $cli_endereco, $cli_numero, $cli_ponto_referencia, $cli_bairro, $cli_uf, $cli_cidade,  $cli_cep, $cli_data_cad, $cli_senha);
 
     if(!$clientes->EditarADM($cli_id)){
         echo '<script>alert("Ocorreu um erro ao alterar os dados!");</script>';

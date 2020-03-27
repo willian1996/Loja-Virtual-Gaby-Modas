@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-24 23:34:53
+/* Smarty version 3.1.33, created on 2020-03-27 18:27:18
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7ac34da915c5_92594143',
+  'unifunc' => 'content_5e7e6fb611ac49_23423801',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99102affd5ec37fd147ed70c49139a68667280ad' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\index.tpl',
-      1 => 1585103691,
+      1 => 1585344435,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7ac34da915c5_92594143 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7e6fb611ac49_23423801 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -69,9 +69,9 @@ function content_5e7ac34da915c5_92594143 (Smarty_Internal_Template $_smarty_tpl)
 
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
-                        <a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
+<!--                        <a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/imagens/logo-gaby.jpg" alt=""></a>
+/imagens/logo-gaby.jpg" alt=""></a>-->
                     </div>
 
                 </div>

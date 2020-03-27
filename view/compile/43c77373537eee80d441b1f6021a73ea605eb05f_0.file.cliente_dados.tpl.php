@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-26 05:13:09
+/* Smarty version 3.1.33, created on 2020-03-26 21:27:44
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7c64150edd28_70774755',
+  'unifunc' => 'content_5e7d488094bee2_82149753',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43c77373537eee80d441b1f6021a73ea605eb05f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\cliente_dados.tpl',
-      1 => 1585210386,
+      1 => 1585268861,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7c64150edd28_70774755 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7d488094bee2_82149753 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>  
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -135,6 +135,21 @@ function content_5e7c64150edd28_70774755 (Smarty_Internal_Template $_smarty_tpl)
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
                     <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_BAIRRO']->value;?>
 " name="cli_bairro" class="form-control" minlength="3" required>
+                </div>
+              </div>
+            </div>
+            
+            
+
+            <!-- Cidade -->
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Cidade</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;?>
+" name="cli_cidade" class="form-control" minlength="3" required>
                 </div>
               </div>
             </div>
@@ -256,36 +271,6 @@ if ($_prefixVariable26 == 'SE') {?>selected="selected"<?php }?>>Sergipe</option>
 echo $_smarty_tpl->tpl_vars['CLI_UF']->value;
 $_prefixVariable27 = ob_get_clean();
 if ($_prefixVariable27 == 'TO') {?>selected="selected"<?php }?>>Tocantins</option>
-                </select>
-              </div>
-            </div>
-            </div>
-
-            <!-- Cidade -->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label">Cidade</label>
-                <div class="col-md-4 selectContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_cidade" class="form-control selectpicker" required>
-                    <option value="">selecione sua cidade</option>
-                    <option value="Caraguatatuba" <?php ob_start();
-echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
-$_prefixVariable28 = ob_get_clean();
-if ($_prefixVariable28 == 'Caraguatatuba') {?>selected="selected"<?php }?>>Caraguatatuba</option>
-                    <option value="Sao Sebastiao" <?php ob_start();
-echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
-$_prefixVariable29 = ob_get_clean();
-if ($_prefixVariable29 == 'Sao Sebastiao') {?>selected="selected"<?php }?>>São Sebastião</option>
-                    <option value="Ilhabela" <?php ob_start();
-echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
-$_prefixVariable30 = ob_get_clean();
-if ($_prefixVariable30 == 'Ilhabela') {?>selected="selected"<?php }?>>Ilha Bela</option>
-                    <option value="Ubatuba" <?php ob_start();
-echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;
-$_prefixVariable31 = ob_get_clean();
-if ($_prefixVariable31 == 'Ubatuba') {?>selected="selected"<?php }?>>Ubatuba</option>
                 </select>
               </div>
             </div>

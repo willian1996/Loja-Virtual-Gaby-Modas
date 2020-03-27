@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-26 03:40:39
+/* Smarty version 3.1.33, created on 2020-03-26 21:15:17
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7c4e67c4e724_38531428',
+  'unifunc' => 'content_5e7d459597e9e2_50374411',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd9396ce560e384b4fd3406d01b7a60f41eaf422f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\cadastro.tpl',
-      1 => 1585200662,
+      1 => 1585268115,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7c4e67c4e724_38531428 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7d459597e9e2_50374411 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
@@ -136,7 +136,25 @@ function content_5e7c4e67c4e724_38531428 (Smarty_Internal_Template $_smarty_tpl)
               </div>
             </div>
             
-            <!-- Estado -->
+           
+
+
+
+            <!-- Cidade -->
+
+            
+            
+            <div class="form-group">
+              <label class="col-md-4 control-label">Cidade</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <input type="text" placeholder="Digite o sua cidade" name="cli_cidade" class="form-control" minlength="3" required>
+                </div>
+              </div>
+            </div>
+            
+             <!-- Estado -->
    
             
             <div class="form-group">
@@ -173,26 +191,6 @@ function content_5e7c4e67c4e724_38531428 (Smarty_Internal_Template $_smarty_tpl)
                     <option value="SC">Santa Catarina</option>
                     <option value="SE">Sergipe</option>
                     <option value="TO">Tocantins</option>
-                </select>
-              </div>
-            </div>
-            </div>
-
-
-
-            <!-- Cidade -->
-
-            <div class="form-group">
-              <label class="col-md-4 control-label">Cidade</label>
-                <div class="col-md-4 selectContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                <select name="cli_cidade" class="form-control selectpicker" required>
-                    <option value="">selecione sua cidade</option>
-                    <option value="Sao Sebastiao">São Sebastião</option>
-                    <option value="Ilhabela">Ilhabela</option>
-                    <option value="Caraguatatuba">Caraguatatuba</option>
-                    <option value="Ubatuba">Ubatuba</option>
                 </select>
               </div>
             </div>
