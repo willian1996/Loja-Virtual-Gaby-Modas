@@ -9,6 +9,7 @@ if(isset($_POST['custoPorKM']) && isset($_POST['remetente'])){
     $custoPorKM = $_POST['custoPorKM'];
     $remetente = $_POST['remetente'];
     $cidade = $_POST['cidade'];
+   
     $cidade = implode(",", $cidade);
 }
 

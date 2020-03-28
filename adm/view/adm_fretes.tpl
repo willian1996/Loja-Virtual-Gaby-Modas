@@ -41,7 +41,7 @@
 
             <div class="col-md-4">
                 <br>
-                <button class="btn btn-success btn-block btn-md" name="btn_gravar">Cadastrar Produto</button>
+                <button class="btn btn-success btn-block btn-md" name="btn_gravar">Enviar</button>
             </div>
 
             <div class="col-md-4">

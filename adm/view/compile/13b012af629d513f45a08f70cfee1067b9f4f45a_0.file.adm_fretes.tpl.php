@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-28 03:54:46
+/* Smarty version 3.1.33, created on 2020-03-28 12:05:10
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\adm\view\adm_fretes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7ef4b68bb748_87984496',
+  'unifunc' => 'content_5e7f67a613bdc3_46337396',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '13b012af629d513f45a08f70cfee1067b9f4f45a' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\adm\\view\\adm_fretes.tpl',
-      1 => 1585378484,
+      1 => 1585407906,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7ef4b68bb748_87984496 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7f67a613bdc3_46337396 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center">Frete Motoboy</h2>
 <hr>
 
@@ -64,7 +64,7 @@ function content_5e7ef4b68bb748_87984496 (Smarty_Internal_Template $_smarty_tpl)
 
             <div class="col-md-4">
                 <br>
-                <button class="btn btn-success btn-block btn-md" name="btn_gravar">Cadastrar Produto</button>
+                <button class="btn btn-success btn-block btn-md" name="btn_gravar">Enviar</button>
             </div>
 
             <div class="col-md-4">
