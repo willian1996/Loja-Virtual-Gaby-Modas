@@ -2,7 +2,7 @@
 <hr>
 
 <section class="row">
-    <form>
+    <form method="post" action=""> 
 
         
         <div class="checkbox">
@@ -16,7 +16,7 @@
         
         <div class="col-md-2">
             <label>Custo por km</label>
-            <input type="text" name="pro_valor" id="pro_valor" class="form-control" required >
+            <input type="text" name="custoPorKM" id="custoPorKM" class="form-control" required >
 
         </div>
         
@@ -24,20 +24,35 @@
         
         <div class="col-md-6">
             <label>Endereço remetente</label>
-            <input type="text" name="pro_nome" id="pro_nome" class="form-control"  required >
+            <input type="text" name="remetente" id="remetente" class="form-control"  required >
 
         </div>
-        <br><br>
         
         
         
+        
+<!-- botão gravar -->
 
+
+
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+                <br>
+                <button class="btn btn-success btn-block btn-md" name="btn_gravar">Cadastrar Produto</button>
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
 
 
     </form>
 
 
 
-
+<br><br>
 
 </section>
