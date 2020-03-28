@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-26 03:52:34
+/* Smarty version 3.1.33, created on 2020-03-27 23:09:54
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7c5132f1d156_71451435',
+  'unifunc' => 'content_5e7eb1f220a341_45270568',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd77c7c29f5a7a6fdfe77b8f2b9fc57b4a60a9d5' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\carrinho.tpl',
-      1 => 1585192515,
+      1 => 1585361391,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7c5132f1d156_71451435 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7eb1f220a341_45270568 (Smarty_Internal_Template $_smarty_tpl) {
 ?>   
 <h3>Meu Carrinho</h3>
 <hr>
@@ -169,6 +169,32 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         
 
     </div> 
+</section>
+    
+    <br>
+    
+<section class="row" id="confirmarpedido">
+    <div class="col-lg-4 ">
+    </div>
+    <div class="col-lg-4 ">
+    </div>
+    <div class="col-md-4 text-right">
+
+        <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_CONFIRMAR']->value;?>
+">
+            <span id="frete"></span>
+           <!-- botão finalzar -->
+           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
+
+
+       </form>
+
+   </div>
+
+
+
+
+       <br>
 
 
     <!-- botão de limpar-->
@@ -208,29 +234,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 
-<br>
-<section class="row" id="confirmarpedido">
-    <div class="col-lg-4 ">
-    </div>
-    <div class="col-lg-4 ">
-    </div>
-    <div class="col-md-4 text-right">
 
-        <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_CONFIRMAR']->value;?>
-">
-            <span id="frete"></span>
-           <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
-
-
-       </form>
-
-   </div>
-
-
-
-</section>
-       <br>
        <br>
        <br>
        <br>

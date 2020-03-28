@@ -10,10 +10,13 @@
         Pedido Finalizado com Sucesso!
         </div>
         <div class="alert alert-info">
-        Será entregue na proxima semana! <br>Antes entraremos em contato pelo Whatsapp para confirmar este pedido e informar o valor do frete.
+        Será enviado em 7 dias! <br>Entraremos em contato pelo Whatsapp para confirmar este pedido.
         </div>
         <div class="alert alert-warning">
-        Atenção pagamento será feito no momento da entrega, aceitamos cartões com 5% de acréscimo!
+        Atenção pagamento será feito no momento da entrega apenas nas cidades de Caraguatatuba, São Sebastião e Ilhabela aceitamos cartões.
+        </div>
+        <div class="alert alert-danger">
+        Caso seja de outra cidade enviaremos um link da PagSeguro para pagamento via whatsapp 
         </div>
         <br><br>
         <h4>Resumo do seu pedido</h4>

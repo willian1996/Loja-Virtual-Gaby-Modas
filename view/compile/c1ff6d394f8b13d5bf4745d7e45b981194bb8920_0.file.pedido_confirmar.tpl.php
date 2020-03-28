@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-26 05:43:21
+/* Smarty version 3.1.33, created on 2020-03-27 23:17:36
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7c6b2940f420_56868265',
+  'unifunc' => 'content_5e7eb3c0405640_29910615',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1ff6d394f8b13d5bf4745d7e45b981194bb8920' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\pedido_confirmar.tpl',
-      1 => 1585192576,
+      1 => 1585361774,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7c6b2940f420_56868265 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7eb3c0405640_29910615 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -114,6 +114,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
            Frete : A calcular...
         </h4>
         <hr>
+        
 <!--
         <h4>
            Total com Frete : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
@@ -125,10 +126,30 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </section>     
 <hr>
+<section class="row" id="confirmarpedido">
+    <div class="col-md-4 ">
+    </div>
+    <div class="col-md-4 ">
+
+        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_FINALIZAR']->value;?>
+">
+
+           <!-- botão finalzar -->
+           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+
+
+       </form>
+
+   </div>
+    <div class="col-md-4 ">
+    </div>
+
+</section>
+<br>
 <section class="row">
     <div>
         <center>
-            <h4><strong>Entregaremos na Próxima Semana</strong></h4>
+            <h4><strong>Enviaremos em 7 dias</strong></h4>
             <p>Endereço: <?php echo $_smarty_tpl->tpl_vars['CLI_ENDERECO']->value;?>
 </p>
             <p>Numero: <?php echo $_smarty_tpl->tpl_vars['CLI_NUMERO']->value;?>
@@ -156,26 +177,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 </section>
 <br>
-<hr>
-<section class="row" id="confirmarpedido">
-    <div class="col-md-4 ">
-    </div>
-    <div class="col-md-4 ">
 
-        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_FINALIZAR']->value;?>
-">
-
-           <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
-
-
-       </form>
-
-   </div>
-    <div class="col-md-4 ">
-    </div>
-
-</section>
        <br>
        <br>
        <br>

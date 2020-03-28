@@ -70,7 +70,7 @@ color: #fff;
         padding: 8px 15px;
         margin-bottom: 20px;
         list-style: none;
-        background-color: #E2E2E2;
+        background-color: ghostwhite;
         border-radius: 4px;
         
     }
@@ -95,8 +95,8 @@ color: #fff;
 }
 
 .navbar-header, .navbar-inverse{
-    background-color: #E2E2E2;
-    border-color: #E2E2E2;
+    background-color: #FFD5E9;
+    border-color: #FFD5E9;
 }
 
 
@@ -166,14 +166,16 @@ color: #fff;
 
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
 
-   background-color: #1D1D1D;
+    background-color: #FFD5E9;
+    border-color: #FFD5E9;
+    color: #000;
 
 }
 
 a.list-group-item:hover{
 
-    background-color: #1D1D1D;
-     color: #FFF;
+    background-color: #FFD5E9;
+    color: #000;
 
 
 }
@@ -209,7 +211,7 @@ section.minhaconta{
 #rodape{
 
  min-height: 150px;
- background-color: #E2E2E2;
+ background-color: #FFD5E9;
 color: #fff;
 
 

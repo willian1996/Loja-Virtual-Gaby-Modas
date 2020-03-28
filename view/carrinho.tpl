@@ -127,6 +127,31 @@
         
 
     </div> 
+</section>
+    
+    <br>
+    
+<section class="row" id="confirmarpedido">
+    <div class="col-lg-4 ">
+    </div>
+    <div class="col-lg-4 ">
+    </div>
+    <div class="col-md-4 text-right">
+
+        <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="{$PAG_CONFIRMAR}">
+            <span id="frete"></span>
+           <!-- botão finalzar -->
+           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
+
+
+       </form>
+
+   </div>
+
+
+
+
+       <br>
 
 
     <!-- botão de limpar-->
@@ -165,28 +190,7 @@
 
 
 
-<br>
-<section class="row" id="confirmarpedido">
-    <div class="col-lg-4 ">
-    </div>
-    <div class="col-lg-4 ">
-    </div>
-    <div class="col-md-4 text-right">
 
-        <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="{$PAG_CONFIRMAR}">
-            <span id="frete"></span>
-           <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
-
-
-       </form>
-
-   </div>
-
-
-
-</section>
-       <br>
        <br>
        <br>
        <br>

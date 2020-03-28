@@ -75,6 +75,7 @@
            Frete : A calcular...
         </h4>
         <hr>
+        
 <!--
         <h4>
            Total com Frete : R$ {$TOTAL_FRETE}
@@ -85,10 +86,29 @@
 
 </section>     
 <hr>
+<section class="row" id="confirmarpedido">
+    <div class="col-md-4 ">
+    </div>
+    <div class="col-md-4 ">
+
+        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
+
+           <!-- botão finalzar -->
+           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+
+
+       </form>
+
+   </div>
+    <div class="col-md-4 ">
+    </div>
+
+</section>
+<br>
 <section class="row">
     <div>
         <center>
-            <h4><strong>Entregaremos na Próxima Semana</strong></h4>
+            <h4><strong>Enviaremos em 7 dias</strong></h4>
             <p>Endereço: {$CLI_ENDERECO}</p>
             <p>Numero: {$CLI_NUMERO}</p>
             <p>Ponto de Referência: {$CLI_PONTO_REFERENCIA}</p>
@@ -110,25 +130,7 @@
     </div>
 </section>
 <br>
-<hr>
-<section class="row" id="confirmarpedido">
-    <div class="col-md-4 ">
-    </div>
-    <div class="col-md-4 ">
 
-        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
-
-           <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
-
-
-       </form>
-
-   </div>
-    <div class="col-md-4 ">
-    </div>
-
-</section>
        <br>
        <br>
        <br>

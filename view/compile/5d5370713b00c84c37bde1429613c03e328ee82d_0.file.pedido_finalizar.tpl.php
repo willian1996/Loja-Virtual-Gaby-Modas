@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-17 13:26:57
+/* Smarty version 3.1.33, created on 2020-03-27 23:58:31
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d582ad1b230f4_16105794',
+  'unifunc' => 'content_5e7ebd57292f58_02344829',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d5370713b00c84c37bde1429613c03e328ee82d' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\pedido_finalizar.tpl',
-      1 => 1565319094,
+      1 => 1585364282,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d582ad1b230f4_16105794 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7ebd57292f58_02344829 (Smarty_Internal_Template $_smarty_tpl) {
 ?><hr>
 <!--  table listagem de itens -->
 <section id="tabelafinalizar" class="row ">
@@ -35,10 +35,13 @@ function content_5d582ad1b230f4_16105794 (Smarty_Internal_Template $_smarty_tpl)
         Pedido Finalizado com Sucesso!
         </div>
         <div class="alert alert-info">
-        Será entregue na proxima semana! <br>Antes entraremos em contato pelo Whatsapp para confirmar este pedido e informar o valor do frete.
+        Será enviado em 7 dias! <br>Entraremos em contato pelo Whatsapp para confirmar este pedido.
         </div>
         <div class="alert alert-warning">
-        Atenção pagamento será feito no momento da entrega, aceitamos cartões com 5% de acréscimo!
+        Atenção pagamento será feito no momento da entrega apenas nas cidades de Caraguatatuba, São Sebastião e Ilhabela aceitamos cartões.
+        </div>
+        <div class="alert alert-danger">
+        Caso seja de outra cidade enviaremos um link da PagSeguro para pagamento via whatsapp 
         </div>
         <br><br>
         <h4>Resumo do seu pedido</h4>
