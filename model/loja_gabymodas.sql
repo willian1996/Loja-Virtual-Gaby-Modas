@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 27-Mar-2020 às 21:58
+-- Generation Time: 29-Mar-2020 às 18:29
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.3.5
 
@@ -404,7 +404,7 @@ CREATE TABLE IF NOT EXISTS `gm_clientes` (
 
 INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_endereco`, `cli_numero`, `cli_ponto_referencia`, `cli_bairro`, `cli_uf`, `cli_cidade`, `cli_cep`, `cli_cpf`, `cli_fone`, `cli_celular`, `cli_telefone2`, `cli_pass`, `cli_data_cad`) VALUES
 (800, 'Rodrigo  Sales ', 'Rua Emilio Marcondes Ribas ', '62', 'perto da creche ', 'Pereque-Mirim ', 'SP', 'Caraguatatuba', '11668308', '79232933411', '', '12919191919', NULL, '25f9e794323b453885f5181f1b624d0b', '2020-03-26 03:52:33'),
-(801, 'Willian  Sales Gabriel', 'Rua Safira', '60', 'Hortifruti JC ', 'Pegorelli', 'SP', 'Caraguatatuba', '11669309', '43593584824', '12996417887', '12996417887', NULL, 'a9c0eb8997768557f677db14e207f80c', '2020-03-26 05:15:31'),
+(801, 'Willian  Sales Gabriel', 'Rua Safira', '60', 'Hortifruti JC ', 'Pegorelli', 'SP', 'Caraguatatuba', '11669309', '43593584824', '12996417887', '12996417887', NULL, 'f8bf5f221cef51838766c7e8348bf5da', '2020-03-26 05:15:31'),
 (802, 'Rebeca Lorraine Mendes de Oliveira ', 'Rua Raimundo Fernandes Vaz', '204', 'Atras da praça ', 'Pereque-Mirim ', 'SP', 'Caraguatatuba', '11668308', '50332421805', '1238894092', '12996278049', NULL, 'd41d8cd98f00b204e9800998ecf8427e', '2020-03-26 21:19:04');
 
 -- --------------------------------------------------------
@@ -436,6 +436,29 @@ INSERT INTO `gm_imagens` (`img_id`, `img_nome`, `img_pro_id`, `img_pasta`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `gm_motoboy`
+--
+
+DROP TABLE IF EXISTS `gm_motoboy`;
+CREATE TABLE IF NOT EXISTS `gm_motoboy` (
+  `mot_id` int(11) NOT NULL AUTO_INCREMENT,
+  `mot_remetente` varchar(100) NOT NULL,
+  `mot_custoporkm` double(9,2) NOT NULL,
+  `mot_cidade` varchar(100) NOT NULL,
+  PRIMARY KEY (`mot_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `gm_motoboy`
+--
+
+INSERT INTO `gm_motoboy` (`mot_id`, `mot_remetente`, `mot_custoporkm`, `mot_cidade`) VALUES
+(1, 'Rua Cleusa Fátima dos Santos, Travessão, Caraguatatuba', 0.25, 'Caraguatatuba,Sao Sebastiao,Ilhabela,Ubatuba'),
+(2, 'Pegorelli, Caraguatatuba', 0.25, 'Caraguatatuba,Sao Sebastiao,Ilhabela,Ubatuba');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `gm_pedidos`
 --
 
@@ -454,7 +477,7 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos` (
   `ped_frete_valor` double(9,2) DEFAULT NULL,
   `ped_frete_tipo` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`ped_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=112 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos`
@@ -465,7 +488,19 @@ INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_
 (96, '2020-03-23', '10:42:24', 799, '2003231003242799', '2003231003242799', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
 (97, '2020-03-23', '10:53:20', 799, '2003231003209799', '2003231003209799', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
 (98, '2019-04-23', '10:57:44', 799, '2003231003443799', '2003231003443799', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
-(99, '2020-03-26', '05:43:22', 801, '2003260503229801', '2003260503229801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL);
+(99, '2020-03-26', '05:43:22', 801, '2003260503229801', '2003260503229801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(100, '2020-03-27', '23:31:42', 801, '2003272303425801', '2003272303425801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(101, '2020-03-27', '23:44:07', 801, '2003272303074801', '2003272303074801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(102, '2020-03-27', '23:51:02', 801, '2003272303023801', '2003272303023801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(103, '2020-03-27', '23:57:47', 801, '2003272303474801', '2003272303474801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(104, '2020-03-27', '23:58:31', 801, '2003272303311801', '2003272303311801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(105, '2020-03-28', '21:11:02', 801, '2003282103025801', '2003282103025801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(106, '2020-03-28', '21:12:09', 801, '2003282103096801', '2003282103096801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(107, '2020-03-28', '21:12:48', 801, '2003282103485801', '2003282103485801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(108, '2020-03-28', '21:13:43', 801, '2003282103439801', '2003282103439801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(109, '2020-03-28', '21:14:44', 801, '2003282103442801', '2003282103442801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(110, '2020-03-28', '21:15:21', 801, '2003282103215801', '2003282103215801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(111, '2020-03-28', '21:16:09', 801, '2003282103091801', '2003282103091801', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -482,7 +517,7 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos_itens` (
   `item_qtd` int(6) NOT NULL,
   `item_ped_cod` varchar(50) NOT NULL,
   PRIMARY KEY (`item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=126 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos_itens`
@@ -493,7 +528,22 @@ INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_tamanho`, `item
 (122, 40, '40', 49.90, 1, '2003231003242799'),
 (123, 34, 'GG', 30.00, 1, '2003231003209799'),
 (124, 25, 'GG', 40.00, 1, '2003231003443799'),
-(125, 40, '40', 49.90, 1, '2003260503229801');
+(125, 40, '40', 49.90, 1, '2003260503229801'),
+(126, 40, '38', 49.90, 1, '2003272303425801'),
+(127, 39, '36', 25.00, 1, '2003272303425801'),
+(128, 37, 'P', 30.00, 1, '2003272303425801'),
+(129, 40, '38', 49.90, 1, '2003272303074801'),
+(130, 40, '38', 49.90, 1, '2003272303023801'),
+(131, 40, '38', 49.90, 1, '2003272303474801'),
+(132, 39, '36', 25.00, 1, '2003272303311801'),
+(133, 40, '38', 49.90, 5, '2003282103025801'),
+(134, 38, '36', 30.00, 1, '2003282103025801'),
+(135, 40, '40', 49.90, 1, '2003282103096801'),
+(136, 37, 'P', 30.00, 1, '2003282103485801'),
+(137, 37, 'P', 30.00, 1, '2003282103439801'),
+(138, 36, 'P', 30.00, 1, '2003282103442801'),
+(139, 36, 'P', 30.00, 1, '2003282103215801'),
+(140, 35, 'P', 30.00, 1, '2003282103091801');
 
 -- --------------------------------------------------------
 
