@@ -1,4 +1,4 @@
-<?php  
+<?php   
 class Produtos extends Conexao{
     private $pro_nome;
     private $pro_categoria;

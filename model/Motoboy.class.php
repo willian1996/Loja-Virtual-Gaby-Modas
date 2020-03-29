@@ -20,18 +20,37 @@ class Motoboy extends Conexao{
     
     //FUNÇÃO PARA SALVAR NO BANCO DE DADOS 
     public function Inserir(){
+        $query = "INSERT INTO {$this->prefix}motoboy ";
+        $query .= "(mot_custoporkm, mot_remetente, mot_cidade) ";
+        $query .= "VALUES ";
+        $query .= "(:mot_custoporkm, :mot_remetente, :mot_cidade)";
+        
+        $params = array(
+        ':mot_remetente' => $this->remetente,
+        ':mot_custoporkm' => $this->custoPorKM,
+        ':mot_cidade' => $this->cidade
+        );
+        
+        if($this->ExecuteSQL($query, $params)){
+            return true;
+        }else{
+            return false;
+        }
+        
         
     }
     
     
-    // FUNÇÃO PARA EDITAR NO BANCO DE DADOS 
-    public function Editar(){
-        
-    }
     
-    //FUNÇÃO PARA PEGAR O ENDEREÇO DO REMETENTE DO BANCO DE DADOS
+    
+    //FUNÇÃO PARA PEGAR O ENDEREÇO DO ULTIMO REMETENTE NO BANCO DE DADOS
     public function pegarRemetente(){
+        $query = "SELECT MAX(mot_remetente) FROM {$this->prefix}motoboy";
         
+        $params = array(":mot_remetente"=>$remetente);
+        $this->ExecuteSQL($query, $params);
+        return $this->TotalDados();
+
     }
     
     
@@ -46,6 +65,9 @@ class Motoboy extends Conexao{
         
         
         //Buscar a API aqui enviandos os parametros acima
+        
+        
+        return 
         
     }
     
@@ -73,6 +95,8 @@ class Motoboy extends Conexao{
     //Setters
     
     public function setCustoPorKM($custoPorKM){
+        $custoPorKM = str_replace('.', '', $custoPorKM);
+        $custoPorKM = str_replace(',', '.', $custoPorKM);
         $this->custoPorKM = $custoPorKM;
     }
     
