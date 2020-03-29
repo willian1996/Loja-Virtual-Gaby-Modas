@@ -4,7 +4,7 @@
 <section class="row">
 
     <div class="col-md-4 ">
-        <a href="{$PAG_CARRINHO}" class="btn btn-success" title="">Voltar para carrinho e alterar pedido</a>
+        <a href="{$PAG_CARRINHO}" class="btn btn-success botaoroxo" title="">Voltar para carrinho e alterar pedido</a>
     </div>
 
  
@@ -94,7 +94,7 @@
         <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
 
            <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+           <button class="btn btn-success btn-block btn-lg botaoroxo" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
 
 
        </form>

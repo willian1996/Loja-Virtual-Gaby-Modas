@@ -48,7 +48,7 @@
 
 
                 <input type="hidden" name="acao" value="add">
-                <center><button  class="btn btn-success btn-lg">Colocar no Carrinho</button></center>
+                <center><button  class="btn btn-success btn-lg botaoroxo">Colocar no Carrinho</button></center>
                 <br><br>
              </form>
 

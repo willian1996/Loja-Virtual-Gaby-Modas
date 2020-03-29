@@ -13,12 +13,12 @@
         Será enviado em 7 dias! <br>Entraremos em contato pelo Whatsapp para confirmar este pedido.
         </div>
         <div class="alert alert-warning">
-        Atenção pagamento será feito no momento da entrega apenas nas cidades de Caraguatatuba, São Sebastião e Ilhabela aceitamos cartões.
+        Atenção pagamento será feito no momento da entrega apenas nas cidades de Caraguatatuba, São Sebastião e Ilhabela.
         </div>
         <div class="alert alert-danger">
-        Caso seja de outra cidade enviaremos um link da PagSeguro para pagamento via whatsapp 
+        Caso seja de outra cidade enviaremos um link da PagSeguro para pagamento via whatsapp antes da postagem nos correios 
         </div>
-        <br><br>
+        <br>
         <h4>Resumo do seu pedido</h4>
     <table class="table table-bordered" style="width: 95%">
 
@@ -86,6 +86,20 @@
         </section>
 
 <section class="row">
+     <br><hr>
+    <center>
+        <a  href="{$PAG_MINHA_CONTA}#tabelapedidos"><button class="btn btn-success btn-lg botaoroxo">Ver meus pedidos</button></a>
+    </center>
+
+
+</section>
+
+                    <br>
+                    <hr>
+
+<section class="row">
+
+
            
             
 
@@ -115,17 +129,6 @@
 
 </section>
 
-<section class="row">
-     <br><hr>
-    <center>
-        <a  href="{$PAG_MINHA_CONTA}#tabelapedidos"><button class="btn btn-success btn-lg">Ver meus pedidos</button></a>
-    </center>
-
-
-</section>
-
-                    <br>
-                    <hr>
 
        <br>
        <br>

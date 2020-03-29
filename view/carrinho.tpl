@@ -5,7 +5,7 @@
 <section class="row">
 
     <div class="col-md-4 ">
-        <a href="{$PAG_PRODUTOS}" class="btn btn-success" title="">Comprar mais</a>
+        <a href="{$PAG_PRODUTOS}" class="btn btn-success botaoroxo" title="">Comprar mais</a>
     </div>
 
 
@@ -43,7 +43,7 @@
                     <input type="hidden" name="pro_id" value="{$P.pro_id}">
                     <input type="hidden" name="acao" value="del">
 
-                    <button class="btn btn-danger btn-sm"> <i class="glyphicon glyphicon-trash"></i> </button>
+                    <button class="btn btn-danger btn-sm botaoroxo"> <i class="glyphicon glyphicon-trash"></i> </button>
                 </form>
 
 
@@ -141,7 +141,7 @@
         <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="{$PAG_CONFIRMAR}">
             <span id="frete"></span>
            <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
+           <button class="btn btn-success btn-block btn-lg botaoroxo" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
 
 
        </form>

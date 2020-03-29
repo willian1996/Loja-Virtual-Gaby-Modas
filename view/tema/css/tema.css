@@ -46,6 +46,11 @@ color: #fff;
 #logotipo h1 a{
     color: #FFF;
 }
+.botaoroxo{
+    background-color: #9F40CB;
+    border-color: #9F40CB;
+    
+}
 
 .tamanho-roupas{
     margin: 15px;
@@ -74,6 +79,11 @@ color: #fff;
         border-radius: 4px;
         
     }
+    a.list-group-item{
+
+        color: #FFF;
+
+    }
 /*
     #navhorizontal li{
         text-align: center;
@@ -95,8 +105,8 @@ color: #fff;
 }
 
 .navbar-header, .navbar-inverse{
-    background-color: #FFD5E9;
-    border-color: #FFD5E9;
+    background-color: #9F40CB;
+    border-color: #9F40CB;
 }
 
 
@@ -150,7 +160,7 @@ color: #fff;
 
 .navbar-inverse .navbar-nav > li > a{
 
-  color: #1D1D1D;
+  color: #FFF;
   font-size: 16px;
 
 }
@@ -166,16 +176,16 @@ color: #fff;
 
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
 
-    background-color: #FFD5E9;
-    border-color: #FFD5E9;
-    color: #000;
+    background-color: #9F40CB;
+    border-color: #9F40CB;
+    color: #fff;
 
 }
 
 a.list-group-item:hover{
 
-    background-color: #FFD5E9;
-    color: #000;
+    background-color: #9F40CB;
+    color: #555;
 
 
 }
@@ -184,9 +194,15 @@ a.list-group-item{
 
     border: 0;
     font-size: 16px;
-
+    
 
 }
+
+.itenscategoria{
+    background-color: #9F40CB;
+    
+}
+
 
 section#fazerlogin{
     padding-top: 20px;
@@ -211,7 +227,7 @@ section.minhaconta{
 #rodape{
 
  min-height: 150px;
- background-color: #FFD5E9;
+ background-color: #1D1D1D;
 color: #fff;
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-27 23:09:54
+/* Smarty version 3.1.33, created on 2020-03-28 21:10:12
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7eb1f220a341_45270568',
+  'unifunc' => 'content_5e7fe76457e661_49420101',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd77c7c29f5a7a6fdfe77b8f2b9fc57b4a60a9d5' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\carrinho.tpl',
-      1 => 1585361391,
+      1 => 1585440610,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7eb1f220a341_45270568 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7fe76457e661_49420101 (Smarty_Internal_Template $_smarty_tpl) {
 ?>   
 <h3>Meu Carrinho</h3>
 <hr>
@@ -29,7 +29,7 @@ function content_5e7eb1f220a341_45270568 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="col-md-4 ">
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
-" class="btn btn-success" title="">Comprar mais</a>
+" class="btn btn-success botaoroxo" title="">Comprar mais</a>
     </div>
 
 
@@ -80,7 +80,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 ">
                     <input type="hidden" name="acao" value="del">
 
-                    <button class="btn btn-danger btn-sm"> <i class="glyphicon glyphicon-trash"></i> </button>
+                    <button class="btn btn-danger btn-sm botaoroxo"> <i class="glyphicon glyphicon-trash"></i> </button>
                 </form>
 
 
@@ -184,7 +184,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 ">
             <span id="frete"></span>
            <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
+           <button class="btn btn-success btn-block btn-lg botaoroxo" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
 
 
        </form>

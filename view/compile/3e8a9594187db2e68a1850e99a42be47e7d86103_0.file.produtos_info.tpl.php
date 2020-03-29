@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-31 14:48:15
+/* Smarty version 3.1.33, created on 2020-03-28 21:09:25
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e0b7bcfe45fb3_99719311',
+  'unifunc' => 'content_5e7fe73586bf67_56206259',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e8a9594187db2e68a1850e99a42be47e7d86103' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\produtos_info.tpl',
-      1 => 1577810883,
+      1 => 1585440561,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e0b7bcfe45fb3_99719311 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7fe73586bf67_56206259 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
@@ -88,7 +88,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
                 <input type="hidden" name="acao" value="add">
-                <center><button  class="btn btn-success btn-lg">Colocar no Carrinho</button></center>
+                <center><button  class="btn btn-success btn-lg botaoroxo">Colocar no Carrinho</button></center>
                 <br><br>
              </form>
 

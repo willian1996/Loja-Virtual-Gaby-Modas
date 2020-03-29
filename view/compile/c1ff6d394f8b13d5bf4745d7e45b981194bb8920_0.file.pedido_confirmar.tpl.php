@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-27 23:17:36
+/* Smarty version 3.1.33, created on 2020-03-28 21:10:52
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7eb3c0405640_29910615',
+  'unifunc' => 'content_5e7fe78c2133a7_19250646',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1ff6d394f8b13d5bf4745d7e45b981194bb8920' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\pedido_confirmar.tpl',
-      1 => 1585361774,
+      1 => 1585440649,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7eb3c0405640_29910615 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7fe78c2133a7_19250646 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -28,7 +28,7 @@ function content_5e7eb3c0405640_29910615 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="col-md-4 ">
         <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
-" class="btn btn-success" title="">Voltar para carrinho e alterar pedido</a>
+" class="btn btn-success botaoroxo" title="">Voltar para carrinho e alterar pedido</a>
     </div>
 
  
@@ -135,7 +135,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 ">
 
            <!-- botão finalzar -->
-           <button class="btn btn-success btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+           <button class="btn btn-success btn-block btn-lg botaoroxo" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
 
 
        </form>

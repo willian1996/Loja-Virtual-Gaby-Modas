@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-27 23:58:31
+/* Smarty version 3.1.33, created on 2020-03-28 21:16:09
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7ebd57292f58_02344829',
+  'unifunc' => 'content_5e7fe8c9b82a61_18202115',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d5370713b00c84c37bde1429613c03e328ee82d' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\pedido_finalizar.tpl',
-      1 => 1585364282,
+      1 => 1585440958,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7ebd57292f58_02344829 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7fe8c9b82a61_18202115 (Smarty_Internal_Template $_smarty_tpl) {
 ?><hr>
 <!--  table listagem de itens -->
 <section id="tabelafinalizar" class="row ">
@@ -38,12 +38,12 @@ function content_5e7ebd57292f58_02344829 (Smarty_Internal_Template $_smarty_tpl)
         Será enviado em 7 dias! <br>Entraremos em contato pelo Whatsapp para confirmar este pedido.
         </div>
         <div class="alert alert-warning">
-        Atenção pagamento será feito no momento da entrega apenas nas cidades de Caraguatatuba, São Sebastião e Ilhabela aceitamos cartões.
+        Atenção pagamento será feito no momento da entrega apenas nas cidades de Caraguatatuba, São Sebastião e Ilhabela.
         </div>
         <div class="alert alert-danger">
-        Caso seja de outra cidade enviaremos um link da PagSeguro para pagamento via whatsapp 
+        Caso seja de outra cidade enviaremos um link da PagSeguro para pagamento via whatsapp antes da postagem nos correios 
         </div>
-        <br><br>
+        <br>
         <h4>Resumo do seu pedido</h4>
     <table class="table table-bordered" style="width: 95%">
 
@@ -127,6 +127,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </section>
 
 <section class="row">
+     <br><hr>
+    <center>
+        <a  href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHA_CONTA']->value;?>
+#tabelapedidos"><button class="btn btn-success btn-lg botaoroxo">Ver meus pedidos</button></a>
+    </center>
+
+
+</section>
+
+                    <br>
+                    <hr>
+
+<section class="row">
+
+
            
             
 
@@ -160,18 +175,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </section>
 
-<section class="row">
-     <br><hr>
-    <center>
-        <a  href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHA_CONTA']->value;?>
-#tabelapedidos"><button class="btn btn-success btn-lg">Ver meus pedidos</button></a>
-    </center>
-
-
-</section>
-
-                    <br>
-                    <hr>
 
        <br>
        <br>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-27 18:27:18
+/* Smarty version 3.1.33, created on 2020-03-28 17:28:12
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7e6fb611ac49_23423801',
+  'unifunc' => 'content_5e7fb35c51b167_36279662',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99102affd5ec37fd147ed70c49139a68667280ad' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\index.tpl',
-      1 => 1585344435,
+      1 => 1585427290,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7e6fb611ac49_23423801 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7fb35c51b167_36279662 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -116,15 +116,15 @@ function content_5e7e6fb611ac49_23423801 (Smarty_Internal_Template $_smarty_tpl)
                     <span class="list-group-item active"> Categorias</span>
 
                     <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
-#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
+#produtos" class="list-group-item itenscategoria"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
 
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIAS']->value, 'C');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
 ?>
-                    <a href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
-#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span><?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
+                    <a  href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
+#produtos" class="list-group-item itenscategoria"><span class="glyphicon glyphicon-menu-right"></span><?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
 </a>
 
                     <?php
@@ -175,7 +175,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
 ?>
-                    <a href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
+                    <a  href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
 #produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span><?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
 </a>
 
@@ -198,7 +198,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
 #produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
-#minhaconta"><i class="glyphicon glyphicon-user"></i> Conta </a> </li>
+#minhaconta"><i class="glyphicon glyphicon-user"></i> Conta</a> </li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
 #tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Meu Carrinho </a> </li>
                             <li><a href="https://api.whatsapp.com/send?phone=5512981819956" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
