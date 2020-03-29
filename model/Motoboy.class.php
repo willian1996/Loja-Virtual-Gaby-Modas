@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 class Motoboy extends Conexao{
     private $custoPorKM;
@@ -9,23 +9,45 @@ class Motoboy extends Conexao{
         parent::__construct();
     }
     
+    
+    //FUNÇÃO PARA SETTAR DADOS 
     public function Preparar($custoPorKM, $remetente, $cidade){
         $this->setCustoPorKM($custoPorKM);
         $this->setRemetente($remetente);
         $this->setCidade($cidade);
     }
     
-    //fução para salvar no banco de dados 
+    
+    //FUNÇÃO PARA SALVAR NO BANCO DE DADOS 
+    public function Inserir(){
+        
+    }
     
     
+    // FUNÇÃO PARA EDITAR NO BANCO DE DADOS 
+    public function Editar(){
+        
+    }
+    
+    //FUNÇÃO PARA PEGAR O ENDEREÇO DO REMETENTE DO BANCO DE DADOS
+    public function pegarRemetente(){
+        
+    }
     
     
-    
-    
-    
-    //Função para puxar API do google
-    
-    
+    //FUNÇÃO PARA ENVIAR E TRAZER DADOS DA API DO GOOGLE 
+    //PARAMETRO É O ENDEREÇO DO CLIENTE
+    public function GetDistancia($destino){
+        $origins = $this->pegarRemetente();
+        $destinations = $this->$destino;
+        $mode = "CAR";
+        $language = "PT";
+        $sensor = "false";
+        
+        
+        //Buscar a API aqui enviandos os parametros acima
+        
+    }
     
     
     

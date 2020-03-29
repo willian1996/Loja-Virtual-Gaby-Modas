@@ -1,4 +1,4 @@
-<h2 class="text-center">Frete Motoboy</h2>
+<h2 class="text-center">Frete Motoboy</h2> 
 <hr>
 
 <section class="row">

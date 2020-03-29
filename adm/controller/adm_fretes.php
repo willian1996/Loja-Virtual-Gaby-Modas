@@ -1,4 +1,4 @@
-<?php
+<?php 
 //Estanciando a classe template
 $smarty = new Template();
 
@@ -11,6 +11,17 @@ if(isset($_POST['custoPorKM']) && isset($_POST['remetente'])){
     $cidade = $_POST['cidade'];
    
     $cidade = implode(",", $cidade);
+    
+    //Instanciando classe motoboy 
+    $gravar = new Motoboy();
+    $gravar->Preparar($custoPorKM, $remetente, $cidade);
+    
+    //Gravando no banco de dados
+    if($gravar->Inserir()){
+        echo "Dados inseridos com sucesso";
+    }else{
+        echo "Erro ao inserir dados";
+    }
 }
 
 
