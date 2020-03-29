@@ -31,7 +31,7 @@
 
             <div class="form-group"> 
 
-                <button class="btn btn-success btn-block btn-lg"><i class="glyphicon glyphicon-log-in"></i> Entrar </button>
+                <button class="btn btn-success btn-block btn-lg botaoroxo"><i class="glyphicon glyphicon-log-in"></i> Entrar </button>
 
 
 

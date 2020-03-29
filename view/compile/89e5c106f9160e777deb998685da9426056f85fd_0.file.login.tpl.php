@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-16 04:13:24
+/* Smarty version 3.1.33, created on 2020-03-28 21:57:41
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d565794d41333_85561443',
+  'unifunc' => 'content_5e7ff285a8ec48_01078659',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89e5c106f9160e777deb998685da9426056f85fd' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\login.tpl',
-      1 => 1565247128,
+      1 => 1585443459,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d565794d41333_85561443 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7ff285a8ec48_01078659 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <section class="row" id="fazerlogin">
 
@@ -54,7 +54,7 @@ function content_5d565794d41333_85561443 (Smarty_Internal_Template $_smarty_tpl)
 
             <div class="form-group"> 
 
-                <button class="btn btn-success btn-block btn-lg"><i class="glyphicon glyphicon-log-in"></i> Entrar </button>
+                <button class="btn btn-success btn-block btn-lg botaoroxo"><i class="glyphicon glyphicon-log-in"></i> Entrar </button>
 
 
 

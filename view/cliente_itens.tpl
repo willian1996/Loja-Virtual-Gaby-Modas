@@ -112,7 +112,7 @@
                 <center>
                     <form name="deletar" method="post" action="">
                          <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">
-                         <button class="btn btn-danger btn-sm" name="ped_apagar" value="ped_apagar">Cancelar</button>
+                         <button class="btn btn-danger btn-sm botaoroxo" name="ped_apagar" value="ped_apagar">Cancelar</button>
                     </form> 
                 </center>
                 

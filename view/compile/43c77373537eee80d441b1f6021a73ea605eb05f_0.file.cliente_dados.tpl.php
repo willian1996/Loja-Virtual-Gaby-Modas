@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-26 21:27:44
+/* Smarty version 3.1.33, created on 2020-03-28 21:57:05
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e7d488094bee2_82149753',
+  'unifunc' => 'content_5e7ff261a291a6_39025058',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43c77373537eee80d441b1f6021a73ea605eb05f' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\cliente_dados.tpl',
-      1 => 1585268861,
+      1 => 1585443316,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e7d488094bee2_82149753 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e7ff261a291a6_39025058 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>  
 <div>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
@@ -313,7 +313,7 @@ if ($_prefixVariable27 == 'TO') {?>selected="selected"<?php }?>>Tocantins</optio
             <div class="form-group">
               <label class="col-md-4 control-label"></label>
               <div class="col-md-4">
-                <button type="submit" class="btn btn-success" >Atualizar cadastro <span class="glyphicon glyphicon-send"></span></button>
+                <button type="submit" class="btn btn-success botaoroxo" >Atualizar cadastro <span class="glyphicon glyphicon-send"></span></button>
               </div>
             </div>
 

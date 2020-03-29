@@ -231,7 +231,7 @@
               <label class="col-md-4 control-label"></label>
               <div class="col-md-4">
                   <center>
-                <button type="submit" class="btn btn-success" >Cadastrar <span class="glyphicon glyphicon-send"></span></button>
+                <button type="submit" class="btn btn-success botaoroxo" >Cadastrar <span class="glyphicon glyphicon-send"></span></button>
                   </center>
               </div>
             </div>
