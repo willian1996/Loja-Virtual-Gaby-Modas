@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-29 15:27:14
+/* Smarty version 3.1.34-dev-7, created on 2020-03-31 10:50:35
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e80e882c079f7_99490714',
+  'unifunc' => 'content_5e834aabdc4fd0_48441038',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99102affd5ec37fd147ed70c49139a68667280ad' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\index.tpl',
-      1 => 1585427290,
+      1 => 1585662632,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e80e882c079f7_99490714 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+function content_5e834aabdc4fd0_48441038 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html> 
 
 <html>
     <head>
@@ -61,7 +61,7 @@ function content_5e80e882c079f7_99490714 (Smarty_Internal_Template $_smarty_tpl)
 
             <a id="minhacontaflutua" href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
 #minhaconta"><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/imagens/botaominhaconta.png" alt=""></a>
+/imagens/whatsapp-logo-4-1.png" alt=""></a>
 
             <!-- começa a div topo -->
             <div class="row" id="topo">
@@ -69,9 +69,9 @@ function content_5e80e882c079f7_99490714 (Smarty_Internal_Template $_smarty_tpl)
 
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
-<!--                        <a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/imagens/logo-gaby.jpg" alt=""></a>-->
+/imagens/larraine2.jpeg" alt=""></a>
                     </div>
 
                 </div>

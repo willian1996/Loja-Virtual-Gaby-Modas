@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 
 <html>
     <head>
@@ -27,7 +27,7 @@
 <!--         começa  o container geral <i class="glyphicon glyphicon-user"></i>-->
         <div class="container-fluid">
 
-            <a id="minhacontaflutua" href="{$PAG_MINHACONTA}#minhaconta"><img src="{$GET_TEMA}/imagens/botaominhaconta.png" alt=""></a>
+            <a id="minhacontaflutua" href="{$PAG_MINHACONTA}#minhaconta"><img src="{$GET_TEMA}/imagens/whatsapp-logo-4-1.png" alt=""></a>
 
             <!-- começa a div topo -->
             <div class="row" id="topo">
@@ -35,7 +35,7 @@
 
                 <div class="container">
                     <div id="logotipo" class="col-md-6" >
-<!--                        <a href="{$GET_SITE_HOME}"><img src="{$GET_TEMA}/imagens/logo-gaby.jpg" alt=""></a>-->
+                        <a href="{$GET_SITE_HOME}"><img src="{$GET_TEMA}/imagens/larraine2.jpeg" alt=""></a>
                     </div>
 
                 </div>
