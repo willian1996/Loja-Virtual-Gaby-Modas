@@ -4,7 +4,11 @@
     <head>
         <title>{$TITULO_SITE}</title>
         <meta charset="UTF-8">
+        <meta name="keywords" content="Lorraine, Modas, Feminina">
+        <meta name="description" content="Loja de Roupas Feminina">
+        <meta name="author" content="Willian Sales">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
 
         <link href="{$GET_TEMA}/tema/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
