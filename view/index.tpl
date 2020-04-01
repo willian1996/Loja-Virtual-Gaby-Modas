@@ -4,7 +4,7 @@
     <head>
         <title>{$TITULO_SITE}</title>
         <meta charset="UTF-8">
-        <meta name="keywords" content="Lorraine, Modas, Feminina">
+        <meta name="keywords" content="Lorraine Modas, Lorrainemodas, Lorraine, Modas, Feminina">
         <meta name="description" content="Loja de Roupas Feminina">
         <meta name="author" content="Willian Sales">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

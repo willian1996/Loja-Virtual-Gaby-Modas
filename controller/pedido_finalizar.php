@@ -20,7 +20,7 @@ if(!Login::Logado()){
 
         $carrinho = new Carrinho();
 
-        $ref_cod_pedido = date('ymdHms') .rand(1,9). $_SESSION['CLI']['cli_id'];
+        $ref_cod_pedido = $_SESSION['CLI']['cli_id'] . date('ymdHms') . rand(1,9);
 
         if(!isset($_SESSION['PED']['pedido'])){
             $_SESSION['PED']['pedido'] = $ref_cod_pedido;

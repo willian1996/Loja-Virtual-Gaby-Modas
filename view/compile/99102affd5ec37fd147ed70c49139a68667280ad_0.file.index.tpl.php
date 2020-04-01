@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-31 10:50:35
+/* Smarty version 3.1.34-dev-7, created on 2020-03-31 15:47:44
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e834aabdc4fd0_48441038',
+  'unifunc' => 'content_5e839050d86d09_04177847',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99102affd5ec37fd147ed70c49139a68667280ad' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\index.tpl',
-      1 => 1585662632,
+      1 => 1585680364,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e834aabdc4fd0_48441038 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e839050d86d09_04177847 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html> 
 
 <html>
@@ -28,7 +28,11 @@ function content_5e834aabdc4fd0_48441038 (Smarty_Internal_Template $_smarty_tpl)
         <title><?php echo $_smarty_tpl->tpl_vars['TITULO_SITE']->value;?>
 </title>
         <meta charset="UTF-8">
+        <meta name="keywords" content="Lorraine Modas, Lorrainemodas, Lorraine, Modas, Feminina">
+        <meta name="description" content="Loja de Roupas Feminina">
+        <meta name="author" content="Willian Sales">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
 
         <link href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /tema/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
