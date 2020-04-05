@@ -1,4 +1,4 @@
-   
+     
 <h3>Meu Carrinho</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -121,10 +121,13 @@
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
+        <hr>
     <h4>
-       Total : R$ {$TOTAL} + Frete
+       Total : R$ {$TOTAL} + Frete R$ {$FRETE_PRECO}
+        <br><br>
+       {$FRETE_TIPO}
     </h4>
-        
+        <hr>
 
     </div> 
 </section>

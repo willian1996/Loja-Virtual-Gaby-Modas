@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-31 16:53:56
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 18:43:53
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e839fd4cad940_59286598',
+  'unifunc' => 'content_5e87ae194d7e51_24161870',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd77c7c29f5a7a6fdfe77b8f2b9fc57b4a60a9d5' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\carrinho.tpl',
-      1 => 1585440610,
+      1 => 1585943940,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e839fd4cad940_59286598 (Smarty_Internal_Template $_smarty_tpl) {
-?>   
+function content_5e87ae194d7e51_24161870 (Smarty_Internal_Template $_smarty_tpl) {
+?>     
 <h3>Meu Carrinho</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -162,11 +162,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
+        <hr>
     <h4>
        Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
- + Frete
+ + Frete R$ <?php echo $_smarty_tpl->tpl_vars['FRETE_PRECO']->value;?>
+
+        <br><br>
+       <?php echo $_smarty_tpl->tpl_vars['FRETE_TIPO']->value;?>
+
     </h4>
-        
+        <hr>
 
     </div> 
 </section>

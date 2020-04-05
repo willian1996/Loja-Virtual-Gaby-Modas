@@ -45,31 +45,77 @@ class Motoboy extends Conexao{
     
     //FUNÇÃO PARA PEGAR O ENDEREÇO DO ULTIMO REMETENTE NO BANCO DE DADOS
     public function pegarRemetente(){
-        $query = "SELECT MAX(mot_remetente) FROM {$this->prefix}motoboy";
+//        $query = "SELECT MAX(mot_remetente) FROM {$this->prefix}motoboy";
+//        
+//        $this->ExecuteSQL($query);
+//        return $this->TotalDados();
+//        
+//        $this->GetLista();
         
-        $params = array(":mot_remetente"=>$remetente);
-        $this->ExecuteSQL($query, $params);
-        return $this->TotalDados();
+        return "Rua Cleuza Fátima dos Santos, Caraguatatuba - SP";
 
     }
     
+
     
     //FUNÇÃO PARA ENVIAR E TRAZER DADOS DA API DO GOOGLE 
     //PARAMETRO É O ENDEREÇO DO CLIENTE
-    public function GetDistancia($destino){
-        $origins = $this->pegarRemetente();
-        $destinations = $this->$destino;
-        $mode = "CAR";
-        $language = "PT";
-        $sensor = "false";
-        
-        
-        //Buscar a API aqui enviandos os parametros acima
-        
-        
-        return 
-        
+//    public function GetDistancia($destino){
+//        $origins = $this->pegarRemetente();
+//        $destinations = $this->$destino;
+//        $mode = "CAR";
+//        $language = "PT";
+//        $sensor = "false";
+//        
+//        
+//        //Buscar a API aqui enviandos os parametros acima
+//        
+//        
+//        return 
+//        
+//    }
+    
+    public function getKM($bairroDestino, $cidadeDestino){
+
+        //deixando as string no padrão de URL: Ex: bairro: santa+terezinha
+
+
+
+        $bairroDestino = urlencode($bairroDestino);
+        $cidadeDestino = urlencode($cidadeDestino);
+
+
+        $origem = urlencode($this->pegarRemetente());
+        $destino = "{$bairroDestino},{$cidadeDestino},SP";
+
+
+        $url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" . $origem . "&destinations=" . $destino . "&key=AIzaSyAPjjfHBbaKFrN619M9f3owEWCrFasX7MY";
+
+
+        $result = file_get_contents($url);
+
+
+
+        $result = json_decode($result);
+
+
+        $array = [];
+
+        $distanciaEmKm = ($result->rows[0]->elements[0]->distance->value) / 1000;
+        $tempoViagem = $result->rows[0]->elements[0]->duration->text;
+
+        $array["km"] = $distanciaEmKm;
+
+
+
+        return ceil($array["km"]);
     }
+    
+    public function ValorPorKM(){
+        return 0.30;
+    }
+    
+    
     
     
     
