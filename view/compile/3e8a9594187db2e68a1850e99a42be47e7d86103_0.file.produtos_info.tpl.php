@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-29 15:28:08
+/* Smarty version 3.1.34-dev-7, created on 2020-04-06 00:50:28
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e80e8b87bbf26_00934562',
+  'unifunc' => 'content_5e8aa7041ba7f4_96990956',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e8a9594187db2e68a1850e99a42be47e7d86103' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\produtos_info.tpl',
-      1 => 1585440561,
+      1 => 1586145024,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e80e8b87bbf26_00934562 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8aa7041ba7f4_96990956 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
@@ -53,8 +53,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 
         <div class="col-md-6">
             <br>
-           <h3 class="text-center preco">R$ <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
-</h3>
+           <h1 class="text-center preco">R$ <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
+</h1>
 
         </div>
         <div class="col-md-6">

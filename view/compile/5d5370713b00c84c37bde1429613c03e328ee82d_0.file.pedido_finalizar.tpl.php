@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-31 21:43:11
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 20:23:13
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e83e39f317a14_36634922',
+  'unifunc' => 'content_5e8a686145c945_52249187',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d5370713b00c84c37bde1429613c03e328ee82d' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\pedido_finalizar.tpl',
-      1 => 1585440958,
+      1 => 1586128946,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e83e39f317a14_36634922 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8a686145c945_52249187 (Smarty_Internal_Template $_smarty_tpl) {
 ?><hr>
 <!--  table listagem de itens -->
 <section id="tabelafinalizar" class="row ">
@@ -107,20 +107,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
 
             <div class="col-md-12 text-right text-danger bg-warning">
-            <h4>
-               Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
-
-            </h4>
                 <h4>
-               Frete : A calcular...
-            </h4>
-                <hr>
-<!--
-            <h4>
-               Total do Pedido : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
+                   Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 
-            </h4>
--->
+                </h4>
+                    <h4>
+                   Frete : <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+
+                </h4>
+                    <hr>
+                <h4>
+                   Total do Pedido : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
+
+                </h4>
             </div>
 
 

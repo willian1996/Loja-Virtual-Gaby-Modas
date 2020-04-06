@@ -120,12 +120,16 @@
 
     </div>
 
-    <div class="col-md-4 text-right text-danger bg-warning">
+        <div class="col-md-4 text-right text-danger bg-warning">
         <hr>
     <h4>
        Total : R$ {$TOTAL} + Frete R$ {$FRETE_PRECO}
         <br><br>
-       {$FRETE_TIPO}
+       {if !Login::Logado()}
+        <a href="{$PAG_LOGIN}">Faça o login para calcular frete</a>
+        {/if}
+        <br><br>
+        {$CLI_ENDERECO}
     </h4>
         <hr>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-04-03 18:43:53
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 19:54:58
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e87ae194d7e51_24161870',
+  'unifunc' => 'content_5e8a61c2c40ce9_49811509',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd77c7c29f5a7a6fdfe77b8f2b9fc57b4a60a9d5' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\carrinho.tpl',
-      1 => 1585943940,
+      1 => 1586127296,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e87ae194d7e51_24161870 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8a61c2c40ce9_49811509 (Smarty_Internal_Template $_smarty_tpl) {
 ?>     
 <h3>Meu Carrinho</h3>
 <hr>
@@ -161,14 +161,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     </div>
 
-    <div class="col-md-4 text-right text-danger bg-warning">
+        <div class="col-md-4 text-right text-danger bg-warning">
         <hr>
     <h4>
        Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
  + Frete R$ <?php echo $_smarty_tpl->tpl_vars['FRETE_PRECO']->value;?>
 
         <br><br>
-       <?php echo $_smarty_tpl->tpl_vars['FRETE_TIPO']->value;?>
+       <?php if (!Login::Logado()) {?>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_LOGIN']->value;?>
+">Faça o login para calcular frete</a>
+        <?php }?>
+        <br><br>
+        <?php echo $_smarty_tpl->tpl_vars['CLI_ENDERECO']->value;?>
 
     </h4>
         <hr>

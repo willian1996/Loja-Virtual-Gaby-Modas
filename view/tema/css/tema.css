@@ -87,8 +87,11 @@ color: #fff;
     }
     a.list-group-item{
 
-        color: #FFF;
+        color: #fff;
 
+    }
+    #lateral a.list-group-item{
+        color: #000;
     }
 /*
     #navhorizontal li{

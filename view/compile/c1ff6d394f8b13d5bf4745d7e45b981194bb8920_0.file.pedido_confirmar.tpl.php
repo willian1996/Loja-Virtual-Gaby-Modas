@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-31 16:54:08
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 20:19:44
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e839fe0691216_80078925',
+  'unifunc' => 'content_5e8a67900f4cb5_89156705',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1ff6d394f8b13d5bf4745d7e45b981194bb8920' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\pedido_confirmar.tpl',
-      1 => 1585440649,
+      1 => 1586128780,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e839fe0691216_80078925 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8a67900f4cb5_89156705 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3>Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -105,22 +105,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
-        <br>
+        <hr>
         <h4>
            Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 
         </h4>
         <h4>
-           Frete : A calcular...
+           Frete : <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+
         </h4>
-        <hr>
         
-<!--
         <h4>
            Total com Frete : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
 
         </h4>
--->
+        <hr>
     </div>
 
 
@@ -149,7 +148,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <section class="row">
     <div>
         <center>
-            <h4><strong>Enviaremos em 7 dias</strong></h4>
+            <h4><strong>Enviaremos em 5 dias úteis para</strong></h4>
             <p>Endereço: <?php echo $_smarty_tpl->tpl_vars['CLI_ENDERECO']->value;?>
 </p>
             <p>Numero: <?php echo $_smarty_tpl->tpl_vars['CLI_NUMERO']->value;?>

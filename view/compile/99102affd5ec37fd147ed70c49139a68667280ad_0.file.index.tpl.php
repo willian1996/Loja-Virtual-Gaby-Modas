@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-31 15:47:44
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 19:40:32
   from 'C:\wamp64\www\Loja-Virtual-Gaby-Modas\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e839050d86d09_04177847',
+  'unifunc' => 'content_5e8a5e6033d183_56248746',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99102affd5ec37fd147ed70c49139a68667280ad' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja-Virtual-Gaby-Modas\\view\\index.tpl',
-      1 => 1585680364,
+      1 => 1586126430,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e839050d86d09_04177847 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8a5e6033d183_56248746 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html> 
 
 <html>
@@ -104,6 +104,7 @@ function content_5e839050d86d09_04177847 (Smarty_Internal_Template $_smarty_tpl)
                         </ul>
                         <!-- header da navbar-->
                         <div class="navbar-header">
+                        
                            <!-- botao que mostra e esconde a navbar-->
                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                <span class="sr-only">Toggle navigation</span>
@@ -168,6 +169,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <!-- coluna da esquerda -->
                 <div class="col-md-2" id="lateral">
 
+                    
+<!-- MENU CATEGORIAS LATERAL PC-->
                 <div class="list-group hiddenonmobile">
                     <span class="list-group-item active"> Categorias</span>
 
@@ -189,23 +192,34 @@ foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 </div><!--fim da list group-->
+<!-- MENU CATEGORIAS LATERAL PC-->
+                <div class="list-group hiddenonexpand">
+                    <span class="list-group-item active"> OPÇÕES</span>
+
+                    
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
+" class="list-group-item "><i class="glyphicon glyphicon-home"></i> Home </a>
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
+#produtos" class="list-group-item"><i class="glyphicon glyphicon-tag"></i> Produtos </a> 
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
+#minhaconta" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> 
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
+#tabelacarrinho" class="list-group-item"><i class="glyphicon glyphicon-shopping-cart"></i> Meu Carrinho </a> 
+                        
+                    
+
+                </div><!--fim da list group-->
+                    
+                    
 
                 </div> <!-- finm coluna esquerda -->
 
                 <!-- coluna direita CONYEUDO CENTRAL -->
                 <div class="col-md-10">
-
-       
-                    <ul id="navhorizontal" class="nav navbar-nav  hiddenonexpand">
-                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
-"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
-#produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
-                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
-#minhaconta"><i class="glyphicon glyphicon-user"></i> Conta</a> </li>
-                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
-#tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Meu Carrinho </a> </li>
-                            <li><a href="https://api.whatsapp.com/send?phone=5512981819956" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="glyphicon glyphicon-home"></i> Home </a></li>
+                        <li><a href="#"> Produtos </a></li>
+                        <li><a href="#"> Info </a></li>
                     </ul>
                     <!-- fim do menu breadcrumb-->
                     <?php 

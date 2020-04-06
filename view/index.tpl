@@ -64,6 +64,7 @@
                         </ul>
                         <!-- header da navbar-->
                         <div class="navbar-header">
+                        
                            <!-- botao que mostra e esconde a navbar-->
                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                <span class="sr-only">Toggle navigation</span>
@@ -118,6 +119,8 @@
                 <!-- coluna da esquerda -->
                 <div class="col-md-2" id="lateral">
 
+                    
+<!-- MENU CATEGORIAS LATERAL PC-->
                 <div class="list-group hiddenonmobile">
                     <span class="list-group-item active"> Categorias</span>
 
@@ -129,19 +132,30 @@
                     {/foreach}
 
                 </div><!--fim da list group-->
+<!-- MENU CATEGORIAS LATERAL PC-->
+                <div class="list-group hiddenonexpand">
+                    <span class="list-group-item active"> OPÇÕES</span>
+
+                    
+                        <a href="{$GET_SITE_HOME}" class="list-group-item "><i class="glyphicon glyphicon-home"></i> Home </a>
+                        <a href="{$PAG_PRODUTOS}#produtos" class="list-group-item"><i class="glyphicon glyphicon-tag"></i> Produtos </a> 
+                        <a href="{$PAG_MINHACONTA}#minhaconta" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> 
+                        <a href="{$PAG_CARRINHO}#tabelacarrinho" class="list-group-item"><i class="glyphicon glyphicon-shopping-cart"></i> Meu Carrinho </a> 
+                        
+                    
+
+                </div><!--fim da list group-->
+                    
+                    
 
                 </div> <!-- finm coluna esquerda -->
 
                 <!-- coluna direita CONYEUDO CENTRAL -->
                 <div class="col-md-10">
-
-       
-                    <ul id="navhorizontal" class="nav navbar-nav  hiddenonexpand">
-                            <li><a href="{$GET_SITE_HOME}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-                            <li><a href="{$PAG_PRODUTOS}#produtos"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
-                            <li><a href="{$PAG_MINHACONTA}#minhaconta"><i class="glyphicon glyphicon-user"></i> Conta</a> </li>
-                            <li><a href="{$PAG_CARRINHO}#tabelacarrinho"><i class="glyphicon glyphicon-shopping-cart"></i> Meu Carrinho </a> </li>
-                            <li><a href="https://api.whatsapp.com/send?phone=5512981819956" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="glyphicon glyphicon-home"></i> Home </a></li>
+                        <li><a href="#"> Produtos </a></li>
+                        <li><a href="#"> Info </a></li>
                     </ul>
                     <!-- fim do menu breadcrumb-->
                     {php}

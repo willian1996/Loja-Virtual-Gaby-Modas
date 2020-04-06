@@ -59,22 +59,6 @@ class Motoboy extends Conexao{
 
     
     //FUNÇÃO PARA ENVIAR E TRAZER DADOS DA API DO GOOGLE 
-    //PARAMETRO É O ENDEREÇO DO CLIENTE
-//    public function GetDistancia($destino){
-//        $origins = $this->pegarRemetente();
-//        $destinations = $this->$destino;
-//        $mode = "CAR";
-//        $language = "PT";
-//        $sensor = "false";
-//        
-//        
-//        //Buscar a API aqui enviandos os parametros acima
-//        
-//        
-//        return 
-//        
-//    }
-    
     public function getKM($bairroDestino, $cidadeDestino){
 
         //deixando as string no padrão de URL: Ex: bairro: santa+terezinha

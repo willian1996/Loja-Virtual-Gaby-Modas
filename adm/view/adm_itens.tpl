@@ -57,9 +57,9 @@
     <center>
         <table class="table table-bordered" style="width: 100%">
             <tr>
-                <td class="text-danger"> <b>Frete:</b> R${$ITENS.1.ped_frete_valor}</td>
-                <td class="text-danger"> <b>Total:</b> R${$TOTAL}</td>
-<!--                <td class="text-danger"> <b>Final:</b> R${$ITENS.1.ped_frete_valor+$TOTAL}</td>-->
+                <td class="text-danger"> <b>Frete </b>R$ {$ITENS.1.ped_frete_valor}</td>
+                <td class="text-danger"> <b>Total </b>R$ {$TOTAL}</td>
+                <td class="text-danger"> <b>Final </b>R$ {$ITENS.1.ped_frete_valor+$TOTAL}</td>
             </tr> 
         </table>
     </center>

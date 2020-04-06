@@ -67,20 +67,18 @@
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
-        <br>
+        <hr>
         <h4>
            Total : R$ {$TOTAL}
         </h4>
         <h4>
-           Frete : A calcular...
+           Frete : {$FRETE}
         </h4>
-        <hr>
         
-<!--
         <h4>
            Total com Frete : R$ {$TOTAL_FRETE}
         </h4>
--->
+        <hr>
     </div>
 
 
@@ -108,7 +106,7 @@
 <section class="row">
     <div>
         <center>
-            <h4><strong>Enviaremos em 7 dias</strong></h4>
+            <h4><strong>Enviaremos em 5 dias úteis para</strong></h4>
             <p>Endereço: {$CLI_ENDERECO}</p>
             <p>Numero: {$CLI_NUMERO}</p>
             <p>Ponto de Referência: {$CLI_PONTO_REFERENCIA}</p>

@@ -1,11 +1,9 @@
 
-
-
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
+<!--      <li data-target="#myCarousel" data-slide-to="0" ></li>-->
+      <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
       <li data-target="#myCarousel" data-slide-to="4"></li>
@@ -13,11 +11,13 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active">
+<!--
+      <div class="item ">
         <img src="{$IMG1}" alt="Los Angeles" class="img img-responsive"  style="width:100%;">
       </div>
+-->
 
-      <div class="item">
+      <div class="item active">
         <img src="{$IMG2}" alt="Chicago" class="img img-responsive" style="width:100%;">
       </div>
 
